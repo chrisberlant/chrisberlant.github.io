@@ -6,19 +6,19 @@ function ThemeToggler() {
 	const { theme, setTheme } = useContext(ThemeProviderContext);
 
 	return (
-		<div className='flex flex-row w-full border theme-toggler'>
+		<>
 			{theme === 'light' ? (
 				<Moon
 					onClick={() => setTheme('dark')}
-					className='cursor-pointer'
+					className='ml-auto cursor-pointer'
 				/>
 			) : (
 				<Sun
 					onClick={() => setTheme('light')}
-					className='justify-end cursor-pointer'
+					className='ml-auto cursor-pointer '
 				/>
 			)}
-		</div>
+		</>
 	);
 }
 

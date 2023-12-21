@@ -19,6 +19,8 @@ const buttonVariants = cva(
 					'bg-secondary text-secondary-foreground hover:bg-secondary/80',
 				ghost: 'hover:bg-accent hover:text-accent-foreground',
 				link: 'text-primary underline-offset-4 hover:underline',
+				linkedin:
+					'text-primary-foreground bg-blue-500 hover:bg-blue-600',
 			},
 			size: {
 				default: 'h-10 px-4 py-2',
@@ -34,7 +36,7 @@ const buttonVariants = cva(
 	}
 );
 
-export interface ButtonProps
+interface ButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
 		VariantProps<typeof buttonVariants> {
 	asChild?: boolean;
@@ -54,4 +56,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = 'Button';
 
-export { Button, buttonVariants };
+export default Button;
