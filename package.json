@@ -1,16 +1,16 @@
 {
-	"homepage": "https://chrisberlant.github.io/",
+	"base": "",
 	"name": "portfolio",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
+		"predeploy": "vite build && gh-pages -d dist",
+		"deploy": "gh-pages -d dist",
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-		"preview": "vite preview",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
+		"preview": "vite preview"
 	},
 	"dependencies": {
 		"@radix-ui/react-dropdown-menu": "^2.0.6",
