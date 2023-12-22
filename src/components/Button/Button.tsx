@@ -21,6 +21,7 @@ const buttonVariants = cva(
 				link: 'text-primary underline-offset-4 hover:underline',
 				linkedin:
 					'text-primary-foreground bg-blue-500 hover:bg-blue-600',
+				github: 'text-primary-foreground bg-gray-500 hover:bg-gray-600',
 			},
 			size: {
 				default: 'h-10 px-4 py-2',

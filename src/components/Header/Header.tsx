@@ -13,6 +13,7 @@ function Header() {
 			</div>
 			<ProfileLinks>
 				<Button
+					variant='github'
 					onClick={() =>
 						window.open('https://github.com/chrisberlant', '_blank')
 					}
