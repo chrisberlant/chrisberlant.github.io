@@ -3,16 +3,12 @@ import SkillElement from '../SkillsCard/SkillElement/SkillElement';
 import ReactLogo from '../../../assets/react-logo.svg';
 import ReduxLogo from '../../../assets/redux-logo.svg';
 import TailwindLogo from '../../../assets/tailwind-logo.svg';
-import TypeScriptLogo from '../../../assets/typescript-logo.svg';
+
+import SassLogo from '../../../assets/sass-logo.svg';
 
 function FrontEnd() {
 	return (
 		<SkillsCard title='Front-end' className='w-64 min-w-64'>
-			<SkillElement
-				title='TypeScript'
-				logo={TypeScriptLogo}
-				alt='Logo TypeScript'
-			/>
 			<SkillElement title='React' logo={ReactLogo} alt='Logo React' />
 			<SkillElement
 				title='Redux Toolkit'
@@ -24,6 +20,7 @@ function FrontEnd() {
 				logo={TailwindLogo}
 				alt='Logo Tailwind'
 			/>
+			<SkillElement title='Sass' logo={SassLogo} alt='Logo Sass' />
 		</SkillsCard>
 	);
 }
