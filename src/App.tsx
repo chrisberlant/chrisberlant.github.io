@@ -1,13 +1,15 @@
 import './App.css';
 import Header from './components/Header/Header';
+import Skills from './components/Skills/Skills';
 import ThemeProvider from './components/ThemeProvider/ThemeProvider';
 
 function App() {
 	return (
 		<ThemeProvider>
-			<div className='app'>
+			<main className='app'>
 				<Header />
-			</div>
+				<Skills />
+			</main>
 		</ThemeProvider>
 	);
 }

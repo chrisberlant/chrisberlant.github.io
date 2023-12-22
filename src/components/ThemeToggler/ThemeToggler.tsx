@@ -15,7 +15,7 @@ function ThemeToggler() {
 			) : (
 				<Sun
 					onClick={() => setTheme('light')}
-					className='ml-auto cursor-pointer '
+					className='ml-auto cursor-pointer'
 				/>
 			)}
 		</>
