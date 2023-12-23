@@ -18,8 +18,8 @@ const buttonVariants = cva(
 					'bg-secondary text-secondary-foreground hover:bg-secondary/80',
 				ghost: 'hover:bg-accent hover:text-accent-foreground',
 				link: 'text-primary underline-offset-4 hover:underline',
-				linkedin: 'text-white bg-blue-500 hover:bg-blue-600',
 				github: 'text-white bg-gray-500 hover:bg-gray-600',
+				linkedin: 'text-white bg-blue-500 hover:bg-blue-600',
 			},
 			size: {
 				default: 'h-10 px-4 py-2',
@@ -35,12 +35,31 @@ const buttonVariants = cva(
 	}
 );
 
+const logoVariants = cva('', {
+	variants: {
+		variant: {
+			default: 'mr-1 size-4',
+			destructive: '',
+			outline: '',
+			secondary: '',
+			ghost: '',
+			link: '',
+			github: 'mr-2 size-5',
+			linkedin: 'mr-1 size-7',
+		},
+	},
+	defaultVariants: {
+		variant: 'default',
+	},
+});
+
 interface ButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
 		VariantProps<typeof buttonVariants> {
 	text: string;
 	logo?: string;
 	logoSize?: number;
+	logoAlt?: string;
 }
 
 function Button({
@@ -49,7 +68,7 @@ function Button({
 	size,
 	text,
 	logo,
-	logoSize = 4,
+	logoAlt,
 	...props
 }: ButtonProps) {
 	return (
@@ -57,7 +76,13 @@ function Button({
 			className={cn(buttonVariants({ variant, size, className }))}
 			{...props}
 		>
-			{logo && <img src={logo} className={`mr-2 size-${logoSize}`} />}{' '}
+			{logo && (
+				<img
+					src={logo}
+					className={cn(logoVariants({ variant }))}
+					alt={logoAlt}
+				/>
+			)}
 			{text}
 		</button>
 	);
