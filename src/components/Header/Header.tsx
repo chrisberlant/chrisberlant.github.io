@@ -1,4 +1,4 @@
-import ProfileLinks from '../ProfileLinks/ProfileLinks';
+import ProfileLinks from './ProfileLinks/ProfileLinks';
 import ThemeToggler from '../ThemeToggler/ThemeToggler';
 
 function Header() {

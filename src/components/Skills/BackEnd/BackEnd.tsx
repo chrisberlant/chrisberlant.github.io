@@ -7,7 +7,7 @@ import SequelizeLogo from '../../../assets/sequelize-logo.svg';
 
 function BackEnd() {
 	return (
-		<SkillsCard title='Back-end' className='w-64 min-w-64'>
+		<SkillsCard title='Back-end' className='min-w-64'>
 			<SkillElement
 				title='Node.js'
 				logo={NodeJsLogo}
@@ -21,7 +21,6 @@ function BackEnd() {
 			<SkillElement
 				title='Express.js'
 				logo={ExpressLogo}
-				size={7}
 				alt='Logo Express.js'
 			/>
 			<SkillElement

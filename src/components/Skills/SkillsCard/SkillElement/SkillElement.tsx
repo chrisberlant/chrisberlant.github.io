@@ -2,13 +2,12 @@ interface SkillElementProps {
 	title: string;
 	logo: string;
 	alt: string;
-	size?: number;
 }
 
-function SkillElement({ title, logo, alt, size = 8 }: SkillElementProps) {
+function SkillElement({ title, logo, alt }: SkillElementProps) {
 	return (
-		<div className='flex flex-col items-center p-1'>
-			<img src={logo} className={`size-${size}`} alt={alt} />
+		<div className='flex items-center p-1 pb-3'>
+			<img src={logo} className='mr-2 size-8' alt={alt} />
 			<span>{title}</span>
 		</div>
 	);

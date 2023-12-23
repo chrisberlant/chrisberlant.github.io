@@ -8,7 +8,7 @@ import SassLogo from '../../../assets/sass-logo.svg';
 
 function FrontEnd() {
 	return (
-		<SkillsCard title='Front-end' className='w-64 min-w-64'>
+		<SkillsCard title='Front-end' className='min-w-64'>
 			<SkillElement title='React' logo={ReactLogo} alt='Logo React' />
 			<SkillElement
 				title='Redux Toolkit'
