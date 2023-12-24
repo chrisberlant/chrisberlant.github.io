@@ -58,7 +58,6 @@ interface ButtonProps
 		VariantProps<typeof buttonVariants> {
 	text: string;
 	logo?: string;
-	logoSize?: number;
 	logoAlt?: string;
 }
 

@@ -18,7 +18,6 @@ function ProfileLinks() {
 				variant='linkedin'
 				text='LinkedIn'
 				logo={LinkedinLogo}
-				logoSize={6}
 				logoAlt='Logo LinkedIn'
 				aria-label='Ouvrir le profil LinkedIn'
 				onClick={() =>

@@ -3,18 +3,15 @@ import { ThemeProviderContext } from '../ThemeProvider/ThemeProvider';
 import { useContext } from 'react';
 
 function ThemeToggler() {
-	const { theme, setTheme } = useContext(ThemeProviderContext);
+	const { theme, toggleTheme } = useContext(ThemeProviderContext);
 
 	return (
 		<>
 			{theme === 'light' ? (
-				<Moon
-					onClick={() => setTheme('dark')}
-					className='ml-auto cursor-pointer'
-				/>
+				<Sun onClick={toggleTheme} className='ml-auto cursor-pointer' />
 			) : (
-				<Sun
-					onClick={() => setTheme('light')}
+				<Moon
+					onClick={toggleTheme}
 					className='ml-auto cursor-pointer'
 				/>
 			)}
