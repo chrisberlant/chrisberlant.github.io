@@ -8,19 +8,19 @@ import SassLogo from '../../../assets/sass-logo.svg';
 
 function FrontEnd() {
 	return (
-		<SkillsCard title='Front-end' className='min-w-64'>
-			<SkillElement title='React' logo={ReactLogo} alt='Logo React' />
+		<SkillsCard title='Front-end'>
+			<SkillElement title='React' logo={ReactLogo} alt='React logo' />
 			<SkillElement
 				title='Redux Toolkit'
 				logo={ReduxLogo}
-				alt='Logo Redux'
+				alt='Redux logo'
 			/>
 			<SkillElement
 				title='Tailwind'
 				logo={TailwindLogo}
-				alt='Logo Tailwind'
+				alt='Tailwind logo'
 			/>
-			<SkillElement title='Sass' logo={SassLogo} alt='Logo Sass' />
+			<SkillElement title='Sass' logo={SassLogo} alt='Sass logo' />
 		</SkillsCard>
 	);
 }

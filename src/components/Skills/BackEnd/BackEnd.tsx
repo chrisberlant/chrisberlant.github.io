@@ -7,26 +7,26 @@ import SequelizeLogo from '../../../assets/sequelize-logo.svg';
 
 function BackEnd() {
 	return (
-		<SkillsCard title='Back-end' className='min-w-64'>
+		<SkillsCard title='Back-end'>
 			<SkillElement
 				title='Node.js'
 				logo={NodeJsLogo}
-				alt='Logo Node.js'
+				alt='Node.js logo'
 			/>
 			<SkillElement
 				title='PostgreSQL'
 				logo={PostgresLogo}
-				alt='Logo PostgreSQL'
+				alt='PostgreSQL logo'
 			/>
 			<SkillElement
 				title='Express.js'
 				logo={ExpressLogo}
-				alt='Logo Express.js'
+				alt='Express.js logo'
 			/>
 			<SkillElement
 				title='Sequelize'
 				logo={SequelizeLogo}
-				alt='Logo Sequelize'
+				alt='Sequelize logo'
 			/>
 		</SkillsCard>
 	);

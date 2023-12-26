@@ -9,12 +9,14 @@ function Skills() {
 			<h2 className='pb-0 mt-16 text-4xl font-bold text-center'>
 				Skills
 			</h2>
-			<div className='flex flex-wrap justify-around gap-10'>
+			<div className='flex flex-wrap justify-center gap-10'>
 				<Languages />
 				<FrontEnd />
 				<BackEnd />
 			</div>
-			<Others />
+			<div className='flex justify-center'>
+				<Others />
+			</div>
 		</div>
 	);
 }

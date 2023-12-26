@@ -7,7 +7,7 @@ import SqlLogo from '../../../assets/sql-logo.svg';
 
 function Languages() {
 	return (
-		<SkillsCard title='Languages' className='min-w-64'>
+		<SkillsCard title='Languages'>
 			<SkillElement
 				title='TypeScript'
 				logo={TypeScriptLogo}

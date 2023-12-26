@@ -38,7 +38,7 @@ const buttonVariants = cva(
 const logoVariants = cva('', {
 	variants: {
 		variant: {
-			default: 'mr-1 size-4',
+			default: 'mr-2 size-4',
 			destructive: '',
 			outline: '',
 			secondary: '',
