@@ -53,7 +53,7 @@ const logoVariants = cva('', {
 	},
 });
 
-interface ButtonProps
+interface ProfileButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
 		VariantProps<typeof buttonVariants> {
 	text: string;
@@ -61,7 +61,7 @@ interface ButtonProps
 	logoAlt?: string;
 }
 
-function Button({
+function ProfileButton({
 	className,
 	variant,
 	size,
@@ -69,7 +69,7 @@ function Button({
 	logo,
 	logoAlt,
 	...props
-}: ButtonProps) {
+}: ProfileButtonProps) {
 	return (
 		<button
 			className={cn(buttonVariants({ variant, size, className }))}
@@ -87,4 +87,4 @@ function Button({
 	);
 }
 
-export default Button;
+export default ProfileButton;

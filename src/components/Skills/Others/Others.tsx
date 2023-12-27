@@ -12,8 +12,8 @@ import UKFlag from '../../../assets/uk-flag.svg';
 
 function Others() {
 	return (
-		<SkillsCard title='Others' className='w-fit'>
-			<div className='flex flex-col flex-wrap justify-center md:flex-row'>
+		<SkillsCard title='Others'>
+			<div className='flex flex-col flex-wrap md:flex-row md:justify-around'>
 				<div className='mb-2 md:mr-10 md:mb-0'>
 					<SkillElement
 						title='Visual Studio Code'

@@ -1,12 +1,12 @@
-import Button from '../../Button/Button';
+import ProfileButton from '../../ProfileButton/ProfileButton';
 import GithubLogo from '../../../assets/github-logo.svg';
 import LinkedinLogo from '../../../assets/linkedin-logo.svg';
 import EmailLogo from '../../../assets/email-logo.svg';
 
 function ProfileLinks() {
 	return (
-		<div className='flex justify-center gap-4'>
-			<Button
+		<div className='flex flex-wrap justify-center gap-4'>
+			<ProfileButton
 				variant='github'
 				text='GitHub'
 				logo={GithubLogo}
@@ -14,7 +14,7 @@ function ProfileLinks() {
 				aria-label='Ouvrir le profil GitHub'
 				onClick={() => window.open('https://github.com/chrisberlant')}
 			/>
-			<Button
+			<ProfileButton
 				variant='linkedin'
 				text='LinkedIn'
 				logo={LinkedinLogo}
@@ -24,7 +24,7 @@ function ProfileLinks() {
 					window.open('https://www.linkedin.com/in/chris-berlant/')
 				}
 			/>
-			<Button
+			<ProfileButton
 				text='chris.berlant@gmail.com'
 				logo={EmailLogo}
 				variant='default'
