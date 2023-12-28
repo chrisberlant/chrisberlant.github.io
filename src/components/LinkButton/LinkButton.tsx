@@ -19,13 +19,13 @@ const buttonVariants = cva(
 				ghost: 'hover:bg-accent hover:text-accent-foreground',
 				link: 'text-primary underline-offset-4 hover:underline',
 				github: 'text-white bg-gray-500 hover:bg-gray-600',
+				githubProject: 'text-white bg-gray-500 hover:bg-gray-600',
 				linkedin: 'text-white bg-blue-500 hover:bg-blue-600',
 			},
 			size: {
 				default: 'h-10 px-4 py-2',
 				sm: 'h-9 rounded-md px-3',
 				lg: 'h-11 rounded-md px-8',
-				icon: 'h-10 w-10',
 			},
 		},
 		defaultVariants: {
@@ -45,6 +45,7 @@ const logoVariants = cva('', {
 			ghost: '',
 			link: '',
 			github: 'mr-2 size-5',
+			githubProject: 'mr-2 size-4',
 			linkedin: 'mr-1 size-7',
 		},
 	},
@@ -53,7 +54,7 @@ const logoVariants = cva('', {
 	},
 });
 
-interface ProfileButtonProps
+interface LinkButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
 		VariantProps<typeof buttonVariants> {
 	text: string;
@@ -61,7 +62,7 @@ interface ProfileButtonProps
 	logoAlt?: string;
 }
 
-function ProfileButton({
+function LinkButton({
 	className,
 	variant,
 	size,
@@ -69,7 +70,7 @@ function ProfileButton({
 	logo,
 	logoAlt,
 	...props
-}: ProfileButtonProps) {
+}: LinkButtonProps) {
 	return (
 		<button
 			className={cn(buttonVariants({ variant, size, className }))}
@@ -87,4 +88,4 @@ function ProfileButton({
 	);
 }
 
-export default ProfileButton;
+export default LinkButton;

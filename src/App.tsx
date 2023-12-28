@@ -7,7 +7,7 @@ function App() {
 		<main className='app'>
 			<Header />
 			<Skills />
-			{/* <Projects /> */}
+			<Projects />
 		</main>
 	);
 }
