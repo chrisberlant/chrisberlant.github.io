@@ -42,7 +42,7 @@ function Projects() {
 			<h2 className='pb-0 mt-10 text-4xl font-bold text-center'>
 				Projects
 			</h2>
-			<div className='flex flex-wrap items-start justify-center gap-10'>
+			<div className='flex flex-wrap justify-center gap-10'>
 				<ProjectCard project={gestionSmac}>
 					<LinkButton
 						size='sm'

@@ -4,10 +4,11 @@
 
 @layer base {
 	:root {
+		--app-background-img: url('/img/light-background.jpg');
 		--background: 0, 0%, 97%;
 		--foreground: 222.2 84% 4.9%;
 
-		--card: 0, 0%, 95%;
+		--card: 0, 0%, 95%, 0.3;
 		--card-foreground: 222.2 84% 4.9%;
 
 		--popover: 0 0% 100%;
@@ -36,10 +37,11 @@
 	}
 
 	.dark {
+		--app-background-img: url('/img/dark-background.jpg');
 		--background: 222.2 84% 4.9%;
 		--foreground: 210 40% 98%;
 
-		--card: 222.2 84% 7%;
+		--card: 214, 5%, 5%, 0.6;
 		--card-foreground: 210 40% 98%;
 
 		--popover: 222.2 84% 4.9%;
@@ -71,7 +73,7 @@
 		@apply border-border;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-app-background text-foreground;
 	}
 }
 

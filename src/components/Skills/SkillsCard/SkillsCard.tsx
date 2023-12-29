@@ -12,7 +12,7 @@ function SkillsCard({ title, children, className }: SkillsCardProps) {
 	return (
 		<div
 			className={cn(
-				'bg-card flex flex-col items-center rounded-lg border-2 shadow-xs px-10 pb-2',
+				'bg-card flex flex-col items-center rounded-lg shadow-lg px-10 pb-2 md:backdrop-blur-sm',
 				className
 			)}
 		>

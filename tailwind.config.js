@@ -30,10 +30,6 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))',
 				},
-				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))',
-				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))',
@@ -47,7 +43,7 @@ export default {
 					foreground: 'hsl(var(--popover-foreground))',
 				},
 				card: {
-					DEFAULT: 'hsl(var(--card))',
+					DEFAULT: 'hsla(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
 				},
 			},
@@ -69,6 +65,9 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
+			},
+			backgroundImage: {
+				'app-background': 'var(--app-background-img)',
 			},
 		},
 	},

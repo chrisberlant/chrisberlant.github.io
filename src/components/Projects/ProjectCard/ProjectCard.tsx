@@ -27,7 +27,7 @@ function ProjectCard({ project, children }: ProjectCardProps) {
 	return (
 		<div
 			className={cn(
-				'bg-card flex flex-col items-center rounded-lg border-2 shadow-xs px-5 md:px-12 pt-4 pb-5 w-96',
+				'bg-card flex flex-col items-center rounded-lg shadow-lg px-5 md:px-12 pt-4 pb-5 w-96 md:backdrop-blur-sm',
 				project.className
 			)}
 		>
@@ -63,7 +63,7 @@ function ProjectCard({ project, children }: ProjectCardProps) {
 				{project.description.title}
 			</div>
 			<div className='text-center'>{project.description.content}</div>
-			<div className='flex gap-5 mt-4'>{children}</div>
+			<div className='flex items-end h-full gap-5 mt-4'>{children}</div>
 		</div>
 	);
 }
