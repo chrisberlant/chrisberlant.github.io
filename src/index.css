@@ -8,7 +8,8 @@
 		--background: 0, 0%, 97%;
 		--foreground: 222.2 84% 4.9%;
 
-		--card: 0, 0%, 95%, 0.3;
+		--card: 0, 0%, 90%, 0.4;
+
 		--card-foreground: 222.2 84% 4.9%;
 
 		--popover: 0 0% 100%;
@@ -41,7 +42,7 @@
 		--background: 222.2 84% 4.9%;
 		--foreground: 210 40% 98%;
 
-		--card: 222, 70%, 15%, 0.5;
+		--card: 222, 70%, 15%, 0.6;
 		--card-foreground: 210 40% 98%;
 
 		--popover: 222.2 84% 4.9%;
@@ -70,7 +71,7 @@
 
 @layer base {
 	body {
-		@apply bg-app-background md:bg-cover text-foreground;
+		@apply bg-app-background bg-cover text-foreground;
 	}
 }
 
