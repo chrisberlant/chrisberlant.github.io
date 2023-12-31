@@ -55,12 +55,12 @@ function Others() {
 
 				<div>
 					<SkillElement
-						title='French language'
+						title='French'
 						logo={FrenchFlag}
 						alt='French flag'
 					/>
 					<SkillElement
-						title='English language'
+						title='English'
 						logo={UKFlag}
 						alt='United Kingdom flag'
 					/>
