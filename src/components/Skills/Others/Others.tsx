@@ -6,7 +6,6 @@ import WireframeLogo from '../../../assets/wireframe-logo.svg';
 import WindowsLogo from '../../../assets/windows-logo.svg';
 import LinuxLogo from '../../../assets/linux-logo.svg';
 import GitLogo from '../../../assets/git-logo.svg';
-import ZodLogo from '../../../assets/zod-logo.svg';
 import AgileLogo from '../../../assets/agile-logo.png';
 import FrenchFlag from '../../../assets/french-flag.svg';
 import UKFlag from '../../../assets/uk-flag.svg';
@@ -40,7 +39,6 @@ function Others() {
 
 				<div className='mb-2 md:mr-10 md:mb-0'>
 					<SkillElement title='Git' logo={GitLogo} alt='Git logo' />
-					<SkillElement title='Zod' logo={ZodLogo} alt='Zod logo' />
 					<SkillElement
 						title='Wireframes conception'
 						logo={WireframeLogo}

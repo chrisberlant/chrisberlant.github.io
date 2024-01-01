@@ -8,15 +8,17 @@ const gestionSmac: ProjectCardProps['project'] = {
 	slidesUrl: ['/img/image1.png', '/img/image2.png', '/img/image3.png'],
 	badges: {
 		React: 'front',
-		'Mantine UI': 'front',
+		Mantine: 'front',
+		'Tanstack Query': 'front',
 		Express: 'back',
 		PostgreSQL: 'back',
-		Zod: 'default',
+		JWT: 'back',
+		Zod: 'both',
 	},
 	description: {
-		title: 'Mobile devices management app',
+		title: 'Mobile devices management',
 		content:
-			'This app allows a team to manage a stock of various mobile devices (basic phones, smartphones, 4G modems)',
+			'Allows a team to manage a stock of various mobile devices (basic phones, smartphones, 4G modems)',
 	},
 };
 
@@ -25,14 +27,17 @@ const jobMemo: ProjectCardProps['project'] = {
 	slidesUrl: ['/img/image1.png', '/img/image2.png', '/img/image3.png'],
 	badges: {
 		React: 'front',
+		Redux: 'front',
+		'React Beautiful DnD': 'front',
 		Express: 'back',
 		PostgreSQL: 'back',
-		Joi: 'back',
+		JWT: 'back',
+		Joi: 'both',
 	},
 	description: {
-		title: 'Job finding helper app',
+		title: 'Job finding helper',
 		content:
-			'This app allows a user to manage his various job applications and their associated contacts',
+			'Allows a user to manage his various job applications and their associated contacts',
 	},
 };
 
@@ -42,7 +47,7 @@ function Projects() {
 			<h2 className='pb-0 mt-10 text-4xl font-bold text-center'>
 				Projects
 			</h2>
-			<div className='flex flex-wrap justify-center gap-10'>
+			<div className='flex flex-wrap justify-center gap-10 '>
 				<ProjectCard project={gestionSmac}>
 					<LinkButton
 						size='sm'

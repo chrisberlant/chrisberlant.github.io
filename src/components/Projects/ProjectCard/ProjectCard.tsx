@@ -14,7 +14,7 @@ export interface ProjectCardProps {
 		title: string;
 		slidesUrl: string[];
 		className?: string;
-		badges: Record<string, 'default' | 'front' | 'back'>;
+		badges: Record<string, 'default' | 'front' | 'back' | 'both'>;
 		description: {
 			title: string;
 			content: string;
