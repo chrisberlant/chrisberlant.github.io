@@ -2,6 +2,8 @@ import LinkButton from '../../LinkButton/LinkButton';
 import GithubLogo from '../../../assets/github-logo.svg';
 import LinkedinLogo from '../../../assets/linkedin-logo.svg';
 import EmailLogo from '../../../assets/email-logo.svg';
+import PdfLogo from '../../../assets/pdf-logo.svg';
+import CV from '../../../assets/CV_Chris_Berlant.pdf';
 
 function ProfileLinks() {
 	return (
@@ -34,6 +36,14 @@ function ProfileLinks() {
 					(window.location.href = 'mailto:chris.berlant@gmail.com')
 				}
 			/>
+			<a href={CV} download='Berlant Chris CV' target='_blank'>
+				<LinkButton
+					text='Download CV'
+					logo={PdfLogo}
+					variant='default'
+					logoAlt='PDF logo'
+				/>
+			</a>
 		</div>
 	);
 }
