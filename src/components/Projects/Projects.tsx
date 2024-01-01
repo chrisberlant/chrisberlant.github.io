@@ -38,7 +38,7 @@ const jobMemo: ProjectCardProps['project'] = {
 
 function Projects() {
 	return (
-		<div className='flex flex-col gap-10'>
+		<div className='flex flex-col gap-10 mt-12'>
 			<h2 className='pb-0 mt-10 text-4xl font-bold text-center'>
 				Projects
 			</h2>

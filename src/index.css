@@ -8,8 +8,7 @@
 		--background: 0, 0%, 97%;
 		--foreground: 222.2 84% 4.9%;
 
-		--card: 0, 0%, 90%, 0.4;
-
+		--card: 0, 0%, 100%, 0.6;
 		--card-foreground: 222.2 84% 4.9%;
 
 		--popover: 0 0% 100%;
@@ -40,15 +39,15 @@
 	.dark {
 		--app-background-img: url('/img/dark-background.jpg');
 		--background: 222.2 84% 4.9%;
-		--foreground: 210 40% 98%;
+		--foreground: 0 0% 90%;
 
-		--card: 222, 70%, 15%, 0.6;
+		--card: 222, 50%, 20%, 0.6;
 		--card-foreground: 210 40% 98%;
 
 		--popover: 222.2 84% 4.9%;
 		--popover-foreground: 210 40% 98%;
 
-		--primary: 210 40% 98%;
+		--primary: 0 0% 90%;
 		--primary-foreground: 222.2 47.4% 11.2%;
 
 		--secondary: 217.2 32.6% 17.5%;
@@ -76,5 +75,5 @@
 }
 
 .app {
-	margin: 2rem 5%;
+	margin: 2rem 5% 1rem 5%;
 }
