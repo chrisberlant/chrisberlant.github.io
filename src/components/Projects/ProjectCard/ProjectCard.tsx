@@ -39,9 +39,12 @@ function ProjectCard({ project, children }: ProjectCardProps) {
 			>
 				<CarouselContent>
 					{project.slidesUrl.map((slide) => (
-						<CarouselItem key={slide}>
-							<a href={slide}>
-								<img src={slide} />
+						<CarouselItem
+							key={slide}
+							className='flex justify-center'
+						>
+							<a href={slide} target='blank'>
+								<img src={slide} className=' max-h-20' />
 							</a>
 						</CarouselItem>
 					))}

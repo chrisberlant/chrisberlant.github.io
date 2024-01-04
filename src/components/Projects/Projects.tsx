@@ -5,7 +5,11 @@ import { ProjectCardProps } from './ProjectCard/ProjectCard';
 
 const gestionSmac: ProjectCardProps['project'] = {
 	title: 'Gestion SMAC',
-	slidesUrl: ['/img/image1.png', '/img/image2.png', '/img/image3.png'],
+	slidesUrl: [
+		'/img/gestion-smac1.png',
+		'/img/gestion-smac2.png',
+		'/img/gestion-smac3.png',
+	],
 	badges: {
 		React: 'front',
 		Mantine: 'front',
@@ -24,7 +28,14 @@ const gestionSmac: ProjectCardProps['project'] = {
 
 const jobMemo: ProjectCardProps['project'] = {
 	title: 'Jobmémo',
-	slidesUrl: ['/img/image1.png', '/img/image2.png', '/img/image3.png'],
+	slidesUrl: [
+		'/img/jobmemo1.png',
+		'/img/jobmemo2.png',
+		'/img/jobmemo3.png',
+		'/img/jobmemo4.png',
+		'/img/jobmemo5.png',
+		'/img/jobmemo6.png',
+	],
 	badges: {
 		React: 'front',
 		Redux: 'front',
