@@ -38,13 +38,22 @@ function ProjectCard({ project, children }: ProjectCardProps) {
 				className='w-32'
 			>
 				<CarouselContent>
-					{project.slidesUrl.map((slide) => (
+					{project.slidesUrl.map((slide, index) => (
 						<CarouselItem
 							key={slide}
 							className='flex justify-center'
 						>
 							<a href={slide} target='blank'>
-								<img src={slide} className=' max-h-20' />
+								<img
+									src={slide}
+									className='h-20'
+									alt={
+										'Screenshot ' +
+										`${project.title}` +
+										' ' +
+										`${index + 1}`
+									}
+								/>
 							</a>
 						</CarouselItem>
 					))}
