@@ -65,7 +65,7 @@ function LinkButton({
 	size,
 	text,
 	logo,
-	logoAlt,
+	logoAlt = '',
 	...props
 }: LinkButtonProps) {
 	return (
