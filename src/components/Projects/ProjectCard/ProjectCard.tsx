@@ -61,10 +61,10 @@ function ProjectCard({ project, children }: ProjectCardProps) {
 				<CarouselPrevious />
 				<CarouselNext />
 			</Carousel>
-			<h4 className='p-3 text-xl font-bold leading-none text-center'>
+			<h4 className='p-4 text-xl font-bold leading-none text-center'>
 				{project.title}
 			</h4>
-			<div className='flex flex-wrap justify-center gap-2 mb-2'>
+			<div className='flex flex-wrap justify-center gap-2 mb-3'>
 				{Object.entries(project.badges).map(([key, value]) => (
 					<Badge variant={value} key={key}>
 						{key}

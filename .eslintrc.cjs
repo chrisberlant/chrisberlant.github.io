@@ -9,6 +9,9 @@ module.exports = {
 	ignorePatterns: ['dist', '.eslintrc.cjs'],
 	settings: {
 		'import/resolver': {
+			alias: {
+				map: [['@assets', './src/assets']],
+			},
 			node: {
 				paths: ['src'],
 				extensions: ['.js', '.ts', '.d.ts', '.tsx'],

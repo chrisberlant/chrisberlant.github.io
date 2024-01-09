@@ -1,9 +1,9 @@
 import SkillsCard from '../SkillsCard/SkillsCard';
 import SkillElement from '../SkillsCard/SkillElement/SkillElement';
-import NodeJsLogo from '../../../assets/nodejs-logo.svg';
-import PostgresLogo from '../../../assets/postgresql-logo.svg';
-import ExpressLogo from '../../../assets/express-logo.png';
-import SequelizeLogo from '../../../assets/sequelize-logo.svg';
+import NodeJsLogo from '@assets/nodejs-logo.svg';
+import PostgresLogo from '@assets/postgresql-logo.svg';
+import ExpressLogo from '@assets/express-logo.png';
+import SequelizeLogo from '@assets/sequelize-logo.svg';
 
 function BackEnd() {
 	return (
@@ -19,9 +19,9 @@ function BackEnd() {
 				alt='PostgreSQL logo'
 			/>
 			<SkillElement
-				title='Express.js'
+				title='Express'
 				logo={ExpressLogo}
-				alt='Express.js logo'
+				alt='Express logo'
 			/>
 			<SkillElement
 				title='Sequelize'

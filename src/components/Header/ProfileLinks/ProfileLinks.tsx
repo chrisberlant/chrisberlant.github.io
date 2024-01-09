@@ -1,9 +1,9 @@
 import LinkButton from '../../LinkButton/LinkButton';
-import GithubLogo from '../../../assets/github-logo.svg';
-import LinkedinLogo from '../../../assets/linkedin-logo.svg';
-import EmailLogo from '../../../assets/email-logo.svg';
-import PdfLogo from '../../../assets/pdf-logo.svg';
-import CV from '../../../assets/CV_Chris_Berlant.pdf';
+import GithubLogo from '@assets/github-logo.svg';
+import LinkedinLogo from '@assets/linkedin-logo.svg';
+import EmailLogo from '@assets/email-logo.svg';
+import PdfLogo from '@assets/pdf-logo.svg';
+import CV from '@assets/cv/CV_Chris_Berlant.pdf';
 
 function ProfileLinks() {
 	return (

@@ -1,10 +1,9 @@
 import SkillsCard from '../SkillsCard/SkillsCard';
 import SkillElement from '../SkillsCard/SkillElement/SkillElement';
-import ReactLogo from '../../../assets/react-logo.svg';
-import ReduxLogo from '../../../assets/redux-logo.svg';
-import TailwindLogo from '../../../assets/tailwind-logo.svg';
-
-import SassLogo from '../../../assets/sass-logo.svg';
+import ReactLogo from '@assets/react-logo.svg';
+import ReduxLogo from '@assets/redux-logo.svg';
+import TailwindLogo from '@assets/tailwind-logo.svg';
+import SassLogo from '@assets/sass-logo.svg';
 
 function FrontEnd() {
 	return (

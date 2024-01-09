@@ -1,20 +1,21 @@
 import SkillsCard from '../SkillsCard/SkillsCard';
 import SkillElement from '../SkillsCard/SkillElement/SkillElement';
-import VSCodeLogo from '../../../assets/vscode-logo.svg';
-import InsomniaLogo from '../../../assets/insomnia-logo.svg';
-import WireframeLogo from '../../../assets/wireframe-logo.svg';
-import WindowsLogo from '../../../assets/windows-logo.svg';
-import LinuxLogo from '../../../assets/linux-logo.svg';
-import GitLogo from '../../../assets/git-logo.svg';
-import AgileLogo from '../../../assets/agile-logo.png';
-import FrenchFlag from '../../../assets/french-flag.svg';
-import UKFlag from '../../../assets/uk-flag.svg';
+import VSCodeLogo from '@assets/vscode-logo.svg';
+import InsomniaLogo from '@assets/insomnia-logo.svg';
+import WireframeLogo from '@assets/wireframe-logo.svg';
+import WindowsLogo from '@assets/windows-logo.svg';
+import LinuxLogo from '@assets/linux-logo.svg';
+import GitLogo from '@assets/git-logo.svg';
+import AgileLogo from '@assets/agile-logo.png';
+import AccessibilityLogo from '@assets/accessibility-logo.svg';
+import FrenchFlag from '@assets/french-flag.svg';
+import UKFlag from '@assets/uk-flag.svg';
 
 function Others() {
 	return (
 		<SkillsCard title='Others'>
-			<div className='flex flex-col flex-wrap md:flex-row md:justify-around'>
-				<div className='mb-2 md:mr-10 md:mb-0'>
+			<div className='flex flex-col flex-wrap md:flex-row md:gap-10'>
+				<div className='mb-2 md:mb-0'>
 					<SkillElement
 						title='Visual Studio Code'
 						logo={VSCodeLogo}
@@ -37,7 +38,7 @@ function Others() {
 					/>
 				</div>
 
-				<div className='mb-2 md:mr-10 md:mb-0'>
+				<div className='mb-2 md:mb-0'>
 					<SkillElement title='Git' logo={GitLogo} alt='Git logo' />
 					<SkillElement
 						title='Wireframes conception'
@@ -48,6 +49,11 @@ function Others() {
 						title='Agile methodology'
 						logo={AgileLogo}
 						alt='Agile logo'
+					/>
+					<SkillElement
+						title='Accessibility'
+						logo={AccessibilityLogo}
+						alt='Accessibility logo'
 					/>
 				</div>
 
