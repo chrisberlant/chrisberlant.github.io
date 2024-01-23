@@ -69,11 +69,8 @@
 }
 
 @layer base {
-	body {
+	.app {
 		@apply bg-app-background bg-cover text-foreground;
+		padding: 2rem 5% 1rem 5%;
 	}
-}
-
-.app {
-	margin: 2rem 5% 1rem 5%;
 }

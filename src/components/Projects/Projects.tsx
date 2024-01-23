@@ -1,7 +1,6 @@
 import GithubLogo from '../../assets/github-logo.svg';
-import ProjectCard from './ProjectCard/ProjectCard';
 import LinkButton from '../LinkButton/LinkButton';
-import { ProjectCardProps } from './ProjectCard/ProjectCard';
+import ProjectCard, { ProjectCardProps } from './ProjectCard/ProjectCard';
 
 const gestionSmac: ProjectCardProps['project'] = {
 	title: 'Gestion SMAC',
@@ -13,6 +12,7 @@ const gestionSmac: ProjectCardProps['project'] = {
 	badges: {
 		React: 'front',
 		Mantine: 'front',
+		'Tanstack Table': 'front',
 		'Tanstack Query': 'front',
 		Express: 'back',
 		PostgreSQL: 'back',

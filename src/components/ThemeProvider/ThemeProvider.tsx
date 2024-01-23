@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useState } from 'react';
 
 type Theme = 'dark' | 'light';
 
@@ -24,15 +24,11 @@ function ThemeProvider({ children, storageKey = 'theme' }: ThemeProviderProps) {
 		() => (localStorage.getItem(storageKey) as Theme) || 'dark'
 	);
 
-	function toggleTheme() {
+	const toggleTheme = () => {
 		const newTheme = theme === 'dark' ? 'light' : 'dark';
 		setTheme(newTheme);
 		localStorage.setItem(storageKey, newTheme);
-	}
-
-	useEffect(() => {
-		document.body.className = theme;
-	}, [theme]);
+	};
 
 	const value = {
 		theme,
