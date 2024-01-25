@@ -2,32 +2,25 @@ import { createContext, useState } from 'react';
 
 type Theme = 'dark' | 'light';
 
-type ThemeProviderProps = {
-	children: React.ReactNode;
-	storageKey?: string;
-};
-
 type ThemeProviderState = {
 	theme: Theme;
 	toggleTheme: () => void;
 };
 
 const initialState: ThemeProviderState = {
-	theme: 'dark',
+	theme: window.matchMedia('(prefers-color-scheme: dark)').matches
+		? 'dark'
+		: 'light',
 	toggleTheme: () => null,
 };
 
 export const ThemeProviderContext = createContext(initialState);
 
-function ThemeProvider({ children, storageKey = 'theme' }: ThemeProviderProps) {
-	const [theme, setTheme] = useState<Theme>(
-		() => (localStorage.getItem(storageKey) as Theme) || 'dark'
-	);
+function ThemeProvider({ children }: { children: React.ReactNode }) {
+	const [theme, setTheme] = useState<Theme>(initialState.theme);
 
 	const toggleTheme = () => {
-		const newTheme = theme === 'dark' ? 'light' : 'dark';
-		setTheme(newTheme);
-		localStorage.setItem(storageKey, newTheme);
+		theme === 'dark' ? setTheme('light') : setTheme('dark');
 	};
 
 	const value = {
