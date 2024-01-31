@@ -13,7 +13,6 @@ export interface ProjectCardProps {
 	project: {
 		title: string;
 		slidesUrl: string[];
-		className?: string;
 		badges: Record<string, 'default' | 'front' | 'back' | 'both'>;
 		description: {
 			title: string;
@@ -21,14 +20,15 @@ export interface ProjectCardProps {
 		};
 	};
 	children: ReactNode;
+	className?: string;
 }
 
-function ProjectCard({ project, children }: ProjectCardProps) {
+function ProjectCard({ project, children, className }: ProjectCardProps) {
 	return (
 		<div
 			className={cn(
 				'bg-card flex flex-col items-center rounded-xl shadow-lg px-5 md:px-12 pt-4 pb-5 w-96 md:backdrop-blur-sm',
-				project.className
+				className
 			)}
 		>
 			<Carousel

@@ -8,7 +8,10 @@ import JavaScriptLogo from '@assets/javascript-logo.svg';
 
 function Languages() {
 	return (
-		<SkillsCard title='Languages'>
+		<SkillsCard
+			title='Languages'
+			className='md:animate-slide-from-left animate-slide-from-top'
+		>
 			<SkillElement
 				title='JavaScript'
 				logo={JavaScriptLogo}

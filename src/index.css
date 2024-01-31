@@ -68,6 +68,16 @@
 	}
 }
 
+@font-face {
+	font-family: 'CommitMono';
+	src: url('./src/assets/fonts/CommitMono-400-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'MontSerrat';
+	src: url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+}
+
 @layer base {
 	.app {
 		@apply bg-app-background bg-cover text-foreground;

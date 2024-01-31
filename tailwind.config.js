@@ -16,6 +16,11 @@ export default {
 			},
 		},
 		extend: {
+			fontFamily: {
+				commitMono: ['CommitMono'],
+				montSerrat: ['MontSerrait'],
+			},
+
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,19 +57,53 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)',
 			},
-			keyframes: {
-				'accordion-down': {
-					from: { height: 0 },
-					to: { height: 'var(--radix-accordion-content-height)' },
-				},
-				'accordion-up': {
-					from: { height: 'var(--radix-accordion-content-height)' },
-					to: { height: 0 },
-				},
-			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
+				'slide-from-left': 'slideFromLeft 1s ease-in-out',
+				'slide-from-right': 'slideFromRight 1s ease-in-out',
+				'slide-from-top': 'slideFromTop 1s ease-in-out',
+				'slide-from-bottom': 'slideFromBottom 1s ease-in-out',
+			},
+			keyframes: {
+				slideFromLeft: {
+					'0%': {
+						opacity: 0,
+						transform: 'translateX(-100%)',
+					},
+					'100%': {
+						opacity: 1,
+						transform: 'translateX(0)',
+					},
+				},
+				slideFromRight: {
+					'0%': {
+						opacity: 0,
+						transform: 'translateX(+100%)',
+					},
+					'100%': {
+						opacity: 1,
+						transform: 'translateX(0)',
+					},
+				},
+				slideFromTop: {
+					'0%': {
+						opacity: 0,
+						transform: 'translateY(-100%)',
+					},
+					'100%': {
+						opacity: 1,
+						transform: 'translateY(0)',
+					},
+				},
+				slideFromBottom: {
+					'0%': {
+						opacity: 0,
+						transform: 'translateY(+100%)',
+					},
+					'100%': {
+						opacity: 1,
+						transform: 'translateY(0)',
+					},
+				},
 			},
 			backgroundImage: {
 				'app-background': 'var(--app-background-img)',

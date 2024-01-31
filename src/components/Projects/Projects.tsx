@@ -55,11 +55,14 @@ const jobMemo: ProjectCardProps['project'] = {
 function Projects() {
 	return (
 		<div className='flex flex-col gap-10 mt-12'>
-			<h2 className='pb-0 mt-10 text-4xl font-bold text-center'>
+			<h2 className='pb-0 mt-10 text-4xl font-bold text-center font-montSerrat'>
 				Projects
 			</h2>
 			<div className='flex flex-wrap justify-center gap-10 '>
-				<ProjectCard project={gestionSmac}>
+				<ProjectCard
+					project={gestionSmac}
+					className='animate-slide-from-left'
+				>
 					<LinkButton
 						size='sm'
 						variant='githubProject'
@@ -85,7 +88,10 @@ function Projects() {
 						}
 					/>
 				</ProjectCard>
-				<ProjectCard project={jobMemo}>
+				<ProjectCard
+					project={jobMemo}
+					className='animate-slide-from-right'
+				>
 					<LinkButton
 						size='sm'
 						variant='githubProject'
