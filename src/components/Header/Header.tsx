@@ -5,7 +5,7 @@ function Header() {
 	return (
 		<header className='flex flex-col'>
 			<div className='flex'>
-				<h1 className='mb-8 ml-auto text-5xl font-bold text-center font-montSerrat'>
+				<h1 className='mb-8 ml-auto text-5xl font-bold text-center font-montserrat'>
 					Chris Berlant's Webpage
 				</h1>
 				<ThemeToggler />

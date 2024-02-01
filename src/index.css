@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -66,16 +68,6 @@
 		--input: 217.2 32.6% 17.5%;
 		--ring: 212.7 26.8% 83.9%;
 	}
-}
-
-@font-face {
-	font-family: 'CommitMono';
-	src: url('./src/assets/fonts/CommitMono-400-Regular.otf') format('opentype');
-}
-
-@font-face {
-	font-family: 'MontSerrat';
-	src: url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 }
 
 @layer base {

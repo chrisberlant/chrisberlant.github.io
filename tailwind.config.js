@@ -17,8 +17,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				commitMono: ['CommitMono'],
-				montSerrat: ['MontSerrait'],
+				robotoMono: ['Roboto Mono', 'monospace'],
+				montserrat: ['Montserrat', 'sans-serif'],
 			},
 
 			colors: {
@@ -58,12 +58,21 @@ export default {
 				sm: 'calc(var(--radius) - 4px)',
 			},
 			animation: {
+				'fade-in': 'fadeIn 2s ease-in-out',
 				'slide-from-left': 'slideFromLeft 1s ease-in-out',
 				'slide-from-right': 'slideFromRight 1s ease-in-out',
 				'slide-from-top': 'slideFromTop 1s ease-in-out',
 				'slide-from-bottom': 'slideFromBottom 1s ease-in-out',
 			},
 			keyframes: {
+				fadeIn: {
+					'0%': {
+						opacity: 0,
+					},
+					'100%': {
+						opacity: 1,
+					},
+				},
 				slideFromLeft: {
 					'0%': {
 						opacity: 0,

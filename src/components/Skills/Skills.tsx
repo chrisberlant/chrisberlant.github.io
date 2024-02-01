@@ -5,8 +5,8 @@ import Others from './Others/Others';
 
 function Skills() {
 	return (
-		<div className='flex flex-col gap-10 font-montSerrat'>
-			<h2 className='pb-0 mt-16 text-4xl font-bold text-center'>
+		<div className='flex flex-col gap-10 font-montserrat'>
+			<h2 className='pb-0 mt-16 text-4xl font-bold text-center  animate-fade-in'>
 				Skills
 			</h2>
 			<div className='flex flex-wrap items-start justify-center gap-10'>
