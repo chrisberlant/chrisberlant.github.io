@@ -14,7 +14,6 @@ const buttonVariants = cva(
 					'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
 				secondary:
 					'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-				ghost: 'hover:bg-accent hover:text-accent-foreground',
 				link: 'text-primary underline-offset-4 hover:underline',
 				github: 'text-white bg-gray-500 hover:bg-gray-600',
 				githubProject: 'text-white bg-gray-500 hover:bg-gray-600',
@@ -39,7 +38,6 @@ const logoVariants = cva('', {
 			default: 'mr-2 size-4',
 			outline: '',
 			secondary: '',
-			ghost: '',
 			link: '',
 			github: 'mr-2 size-5',
 			githubProject: 'mr-2 size-4',
@@ -70,7 +68,10 @@ function LinkButton({
 }: LinkButtonProps) {
 	return (
 		<button
-			className={cn(buttonVariants({ variant, size, className }))}
+			className={cn(
+				'animate-fade-in',
+				buttonVariants({ variant, size, className })
+			)}
 			{...props}
 		>
 			{logo && (
