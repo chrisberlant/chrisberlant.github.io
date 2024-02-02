@@ -51,6 +51,11 @@ export default {
 					DEFAULT: 'hsla(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
 				},
+				ghPurple: 'hsl(var(--gh-purple))',
+				ghBlue: 'hsl(var(--gh-blue))',
+				ghLightBlue: 'hsl(var(--gh-light-blue))',
+				ghRed: 'hsl(var(--gh-red))',
+				ghGreen: 'hsl(var(--gh-green))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -113,9 +118,6 @@ export default {
 						transform: 'translateY(0)',
 					},
 				},
-			},
-			backgroundImage: {
-				'app-background': 'var(--app-background-img)',
 			},
 		},
 	},

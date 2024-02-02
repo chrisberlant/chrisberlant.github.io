@@ -6,11 +6,16 @@
 
 @layer base {
 	:root {
-		--app-background-img: url('/img/light-background.jpg');
-		--background: 0, 0%, 97%;
+		--background: 0, 0%, 85%;
 		--foreground: 222.2 84% 4.9%;
 
-		--card: 0, 0%, 100%, 0.6;
+		--gh-purple: 275 28% 57%;
+		--gh-blue: 213 68% 58%;
+		--gh-light-blue: 213 70% 73;
+		--gh-red: 356 64% 64%;
+		--gh-green: 120 41% 62%;
+
+		--card: 0, 0%, 100%, 1;
 		--card-foreground: 222.2 84% 4.9%;
 
 		--popover: 0 0% 100%;
@@ -39,11 +44,16 @@
 	}
 
 	.dark {
-		--app-background-img: url('/img/dark-background.jpg');
-		--background: 222.2 84% 4.9%;
-		--foreground: 0 0% 90%;
+		--background: 222.2 84% 6%;
+		--foreground: 0 0% 92%;
 
-		--card: 222, 50%, 20%, 0.6;
+		--gh-purple: 275 28% 57%;
+		--gh-blue: 213 68% 58%;
+		--gh-light-blue: 213 70% 73;
+		--gh-red: 356 64% 64%;
+		--gh-green: 120 41% 62%;
+
+		--card: 222, 50%, 20%, 1;
 		--card-foreground: 210 40% 98%;
 
 		--popover: 222.2 84% 4.9%;
@@ -72,7 +82,7 @@
 
 @layer base {
 	.app {
-		@apply bg-app-background bg-cover text-foreground;
+		@apply bg-background text-foreground;
 		padding: 2rem 5% 1rem 5%;
 	}
 }

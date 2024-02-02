@@ -3,15 +3,6 @@ import TypewriterEffect from '../../ui/Typewriter';
 function Description() {
 	const words = [
 		{
-			text: 'Hi',
-		},
-		{
-			text: "I'm",
-		},
-		{
-			text: 'Chris!',
-		},
-		{
 			text: "I'm",
 		},
 		{
@@ -19,7 +10,7 @@ function Description() {
 		},
 		{
 			text: 'Full-stack',
-			className: 'text-red-500',
+			className: 'text-ghPurple',
 		},
 		{
 			text: 'although',
@@ -29,13 +20,14 @@ function Description() {
 		},
 		{
 			text: 'Front-end',
-			className: 'text-blue-500',
+			className: 'text-ghBlue',
 		},
 		{
 			text: 'oriented',
 		},
 		{
 			text: 'React',
+			className: 'text-ghLightBlue',
 		},
 		{
 			text: 'developer.',
@@ -44,8 +36,8 @@ function Description() {
 	return (
 		<TypewriterEffect
 			words={words}
-			className='h-50 w-96 font-robotoMono'
-			cursorClassName='relative top-1 right-3 md:right-4'
+			className='font-robotoMono'
+			cursorClassName='relative md:bottom-1 right-4'
 		/>
 	);
 }

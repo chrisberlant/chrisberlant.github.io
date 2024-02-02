@@ -52,7 +52,7 @@ const TypewriterEffect = ({
 									initial={{}}
 									key={`char-${index}`}
 									className={cn(
-										`dark:text-white text-black opacity-0 hidden`,
+										'opacity-0 hidden',
 										word.className
 									)}
 								>
@@ -67,12 +67,7 @@ const TypewriterEffect = ({
 		);
 	};
 	return (
-		<div
-			className={cn(
-				'text-2xl md:text-3xl font-bold text-center',
-				className
-			)}
-		>
+		<div className={cn('text-center', className)}>
 			{renderWords()}
 			<motion.span
 				initial={{
@@ -87,7 +82,7 @@ const TypewriterEffect = ({
 					repeatType: 'reverse',
 				}}
 				className={cn(
-					'inline-block rounded-sm w-[4px] h-6 md:h-10 bg-black',
+					'relative top-1 inline-block rounded-sm w-[4px] h-7 md:h-6 lg:h-10 bg-foreground',
 					cursorClassName
 				)}
 			></motion.span>
