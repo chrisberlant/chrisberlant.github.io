@@ -27,7 +27,7 @@ function ProjectCard({ project, children, className }: ProjectCardProps) {
 	return (
 		<div
 			className={cn(
-				'bg-card flex flex-col items-center rounded-xl shadow-lg px-5 md:px-12 pt-4 pb-5 w-96 md:backdrop-blur-sm',
+				'bg-card flex flex-col items-center rounded-xl shadow-lg px-5 md:px-12 pt-4 pb-5 w-96',
 				className
 			)}
 		>

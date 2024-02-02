@@ -6,16 +6,14 @@ function ThemeToggler() {
 	const { theme, toggleTheme } = useContext(ThemeProviderContext);
 
 	return (
-		<>
-			{theme === 'light' ? (
-				<Sun onClick={toggleTheme} className='ml-auto cursor-pointer' />
-			) : (
-				<Moon
-					onClick={toggleTheme}
-					className='ml-auto cursor-pointer'
-				/>
-			)}
-		</>
+		<div>
+			<button
+				onClick={toggleTheme}
+				className='ml-auto cursor-pointer animate-slide-from-top hover:scale-110'
+			>
+				{theme === 'light' ? <Sun /> : <Moon />}
+			</button>
+		</div>
 	);
 }
 
