@@ -10,6 +10,7 @@ function ThemeToggler() {
 			<button
 				onClick={toggleTheme}
 				className='cursor-pointer animate-slide-from-top hover:scale-110'
+				aria-label='Toggle color theme'
 			>
 				{theme === 'light' ? <Sun /> : <Moon />}
 			</button>
