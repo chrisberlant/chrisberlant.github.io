@@ -9,7 +9,8 @@ function BackEnd() {
 	return (
 		<SkillsCard
 			title='Back-end'
-			className='mdanimate-slide-from-right animate-slide-from-right'
+			containerClassName='animate-slide-from-right'
+			delay={5}
 		>
 			<SkillElement
 				title='Node.js'

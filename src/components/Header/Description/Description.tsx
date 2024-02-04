@@ -10,7 +10,7 @@ function Description() {
 		},
 		{
 			text: 'Full-stack',
-			className: 'text-ghPurple',
+			className: 'text-violet-600 dark:text-violet-500',
 		},
 		{
 			text: 'although',
@@ -20,14 +20,14 @@ function Description() {
 		},
 		{
 			text: 'Front-end',
-			className: 'text-ghBlue',
+			className: 'text-blue-600 dark:text-blue-500',
 		},
 		{
 			text: 'oriented',
 		},
 		{
 			text: 'React',
-			className: 'text-ghLightBlue',
+			className: 'text-blue-500 dark:text-blue-400',
 		},
 		{
 			text: 'developer.',

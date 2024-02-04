@@ -9,7 +9,8 @@ function FrontEnd() {
 	return (
 		<SkillsCard
 			title='Front-end'
-			className='md:animate-slide-from-top animate-slide-from-left'
+			containerClassName='md:animate-slide-from-top animate-slide-from-left'
+			delay={3}
 		>
 			<SkillElement title='React' logo={ReactLogo} alt='React logo' />
 			<SkillElement

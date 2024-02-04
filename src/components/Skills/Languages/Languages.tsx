@@ -10,7 +10,8 @@ function Languages() {
 	return (
 		<SkillsCard
 			title='Languages'
-			className='md:animate-slide-from-left animate-slide-from-top'
+			containerClassName='md:animate-slide-from-left animate-slide-from-top'
+			delay={1}
 		>
 			<SkillElement
 				title='JavaScript'

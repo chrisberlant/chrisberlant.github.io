@@ -6,14 +6,8 @@
 
 @layer base {
 	:root {
-		--background: 0, 0%, 85%;
+		--background: 0 0% 88%;
 		--foreground: 222.2 84% 4.9%;
-
-		--gh-purple: 275 28% 57%;
-		--gh-blue: 213 68% 58%;
-		--gh-light-blue: 213 70% 73;
-		--gh-red: 356 64% 64%;
-		--gh-green: 120 41% 62%;
 
 		--card: 0, 0%, 97%, 1;
 		--card-foreground: 222.2 84% 4.9%;

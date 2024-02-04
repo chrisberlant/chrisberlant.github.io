@@ -13,7 +13,11 @@ import UKFlag from '@assets/uk-flag.svg';
 
 function Others() {
 	return (
-		<SkillsCard title='Others' className='animate-slide-from-bottom'>
+		<SkillsCard
+			title='Others'
+			containerClassName='animate-slide-from-bottom'
+			delay={7}
+		>
 			<div className='flex flex-col flex-wrap md:flex-row md:gap-10'>
 				<div className='mb-2 md:mb-0'>
 					<SkillElement

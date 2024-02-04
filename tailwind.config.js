@@ -51,11 +51,6 @@ export default {
 					DEFAULT: 'hsla(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
 				},
-				ghPurple: 'hsl(var(--gh-purple))',
-				ghBlue: 'hsl(var(--gh-blue))',
-				ghLightBlue: 'hsl(var(--gh-light-blue))',
-				ghRed: 'hsl(var(--gh-red))',
-				ghGreen: 'hsl(var(--gh-green))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -68,6 +63,7 @@ export default {
 				'slide-from-right': 'slideFromRight 1s ease-in-out',
 				'slide-from-top': 'slideFromTop 1s ease-in-out',
 				'slide-from-bottom': 'slideFromBottom 1s ease-in-out',
+				'meteor-effect': 'meteor 5s linear infinite',
 			},
 			keyframes: {
 				fadeIn: {
@@ -116,6 +112,17 @@ export default {
 					'100%': {
 						opacity: 1,
 						transform: 'translateY(0)',
+					},
+				},
+				meteor: {
+					'0%': {
+						transform: 'rotate(215deg) translateX(0)',
+						opacity: 1,
+					},
+					'70%': { opacity: 1 },
+					'100%': {
+						transform: 'rotate(215deg) translateX(-500px)',
+						opacity: 0,
 					},
 				},
 			},
