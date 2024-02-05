@@ -54,11 +54,11 @@ const jobMemo: ProjectCardProps['project'] = {
 
 function Projects() {
 	return (
-		<div className='flex flex-col gap-10 mt-12'>
-			<h2 className='pb-0 mt-10 text-4xl font-bold text-center animate-fade-in font-montserrat'>
+		<div className='flex flex-col gap-10 mt-20'>
+			<h2 className='text-4xl font-bold text-center animate-fade-in font-montserrat'>
 				My Projects
 			</h2>
-			<div className='flex flex-wrap justify-center gap-10 '>
+			<div className='flex flex-wrap justify-center gap-10'>
 				<ProjectCard
 					project={gestionSmac}
 					className='animate-slide-from-left'

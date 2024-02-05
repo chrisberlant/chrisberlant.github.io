@@ -24,11 +24,13 @@ function SkillsCard({
 		>
 			<div
 				className={cn(
-					'font-robotoMono bg-card flex flex-col items-center rounded-xl shadow-lg px-10 py-2',
+					'font-robotoMono bg-card flex flex-col items-center rounded-xl shadow-lg px-8 pt-5',
 					className
 				)}
 			>
-				<h3 className='p-4 text-2xl font-bold leading-none'>{title}</h3>
+				<h3 className='px-4 pb-5 text-2xl font-bold leading-none'>
+					{title}
+				</h3>
 				<div>{children}</div>
 			</div>
 		</BackgroundGradient>

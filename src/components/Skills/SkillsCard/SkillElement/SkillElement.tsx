@@ -6,7 +6,7 @@ interface SkillElementProps {
 
 function SkillElement({ title, logo, alt }: SkillElementProps) {
 	return (
-		<div className='flex items-center p-1 pb-3'>
+		<div className='flex items-center pb-5'>
 			<img src={logo} className='mr-3 size-8' alt={alt} />
 			<span>{title}</span>
 		</div>
