@@ -76,7 +76,7 @@
 
 @layer base {
 	.app {
-		@apply bg-background text-foreground;
+		@apply bg-background min-h-screen w-full text-foreground;
 		padding: 2rem 5% 2rem;
 	}
 }
