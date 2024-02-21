@@ -30,7 +30,7 @@ function ProfileLinks() {
 					(window.location.href = 'mailto:chris.berlant@gmail.com')
 				}
 			/>
-			<a href={CV} download='Berlant Chris CV' target='_blank'>
+			<a href={CV} download='CV_ChrisBerlant_ReactDev' target='_blank'>
 				<LinkButton
 					text='Download CV'
 					logo={PdfLogo}
