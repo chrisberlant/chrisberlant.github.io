@@ -3,7 +3,7 @@ import GithubLogo from '@assets/github-logo.svg';
 import LinkedinLogo from '@assets/linkedin-logo.svg';
 import EmailLogo from '@assets/email-logo.svg';
 import PdfLogo from '@assets/pdf-logo.svg';
-import CV from '@assets/cv/CV_Chris_Berlant.pdf';
+import CV from '@assets/cv/CV_ChrisBerlant_ReactDev.pdf';
 
 function ProfileLinks() {
 	return (
