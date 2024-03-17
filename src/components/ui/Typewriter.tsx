@@ -34,7 +34,7 @@ const TypewriterEffect = ({
 				},
 				{
 					duration: 0.3,
-					delay: stagger(0.1),
+					delay: stagger(0.05),
 					ease: 'easeInOut',
 				}
 			);
@@ -47,25 +47,27 @@ const TypewriterEffect = ({
 				{wordsArray.map((word, idx) => {
 					return (
 						<div key={`word-${idx}`} className='inline-block'>
-							{word.text.map((char, index) => (
-								<motion.span
-									initial={{}}
-									key={`char-${index}`}
-									className={cn(
-										'opacity-0 hidden',
-										word.className
-									)}
-								>
-									{char}
-								</motion.span>
-							))}
-							&nbsp;
+							{word.text.map((char, index) => {
+								return (
+									<motion.span
+										initial={{}}
+										key={`char-${index}`}
+										className={cn(
+											'opacity-0 hidden',
+											word.className
+										)}
+									>
+										{char !== ' ' ? char : '\u00A0'}
+									</motion.span>
+								);
+							})}
 						</div>
 					);
 				})}
 			</motion.div>
 		);
 	};
+
 	return (
 		<div className={cn('text-center', className)}>
 			{renderWords()}
@@ -82,7 +84,7 @@ const TypewriterEffect = ({
 					repeatType: 'reverse',
 				}}
 				className={cn(
-					'relative top-1 inline-block rounded-sm w-[4px] h-7 sm:h-9 bg-foreground',
+					'relative top-1 left-1 inline-block rounded-sm w-[4px] h-7 sm:h-9 bg-foreground',
 					cursorClassName
 				)}
 			></motion.span>

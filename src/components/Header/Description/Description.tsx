@@ -1,38 +1,33 @@
 import TypewriterEffect from '../../ui/Typewriter';
 
-function Description() {
+export default function Description() {
 	const words = [
 		{
-			text: "I'm",
-		},
-		{
-			text: 'a',
+			text: "I'm a ",
 		},
 		{
 			text: 'Full-stack',
 			className: 'text-violet-600 dark:text-violet-500',
 		},
 		{
-			text: 'although',
+			text: ', more ',
 		},
 		{
-			text: 'more',
-		},
-		{
-			text: 'Front-end',
+			text: 'Front-end ',
 			className: 'text-blue-600 dark:text-blue-500',
 		},
 		{
-			text: 'oriented',
+			text: 'oriented ',
 		},
 		{
-			text: 'React',
+			text: 'React ',
 			className: 'text-blue-500 dark:text-blue-400',
 		},
 		{
 			text: 'developer.',
 		},
 	];
+
 	return (
 		<TypewriterEffect
 			words={words}
@@ -41,5 +36,3 @@ function Description() {
 		/>
 	);
 }
-
-export default Description;
