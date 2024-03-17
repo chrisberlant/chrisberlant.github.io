@@ -17,6 +17,7 @@ const buttonVariants = cva(
 				github: 'text-white bg-gray-500 hover:bg-gray-600',
 				githubProject: 'text-white bg-gray-500 hover:bg-gray-600',
 				linkedin: 'text-white bg-blue-600 hover:bg-blue-700',
+				youtube: 'text-white bg-red-600 hover:bg-red-700',
 			},
 			size: {
 				default: 'h-10 px-4 py-2',
@@ -41,6 +42,7 @@ const logoVariants = cva('', {
 			github: 'mr-2 size-5',
 			githubProject: 'mr-2 size-4',
 			linkedin: 'mr-1 size-7',
+			youtube: 'mr-2 size-7',
 		},
 	},
 	defaultVariants: {
@@ -54,6 +56,7 @@ interface LinkButtonProps
 	text: string;
 	logo?: string;
 	logoAlt?: string;
+	link?: string;
 }
 
 function LinkButton({
@@ -63,14 +66,22 @@ function LinkButton({
 	text,
 	logo,
 	logoAlt = '',
+	link,
 	...props
 }: LinkButtonProps) {
+	const handleClick = () => {
+		if (link) {
+			const linkUrl = new URL(link);
+			window.open(linkUrl);
+		}
+	};
 	return (
 		<button
 			className={cn(
 				'animate-fade-in',
 				buttonVariants({ variant, size, className })
 			)}
+			onClick={handleClick}
 			{...props}
 		>
 			{logo && (

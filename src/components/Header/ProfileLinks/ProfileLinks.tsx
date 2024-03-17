@@ -12,15 +12,13 @@ function ProfileLinks() {
 				variant='github'
 				text='GitHub'
 				logo={GithubLogo}
-				onClick={() => window.open('https://github.com/chrisberlant')}
+				link='https://github.com/chrisberlant'
 			/>
 			<LinkButton
 				variant='linkedin'
 				text='LinkedIn'
 				logo={LinkedinLogo}
-				onClick={() =>
-					window.open('https://www.linkedin.com/in/chris-berlant/')
-				}
+				link='https://www.linkedin.com/in/chris-berlant/'
 			/>
 			<LinkButton
 				text='chris.berlant@gmail.com'
