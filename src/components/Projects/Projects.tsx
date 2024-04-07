@@ -22,7 +22,7 @@ const gestionSmac: ProjectCardProps['project'] = {
 		Zod: 'both',
 	},
 	description: {
-		title: 'Mobile devices management',
+		title: 'A mobile devices management application',
 		content:
 			'Allows a team to manage a stock of various mobile devices (basic phones, smartphones, 4G modems)',
 	},
@@ -72,18 +72,15 @@ function Projects() {
 								various mobile devices (basic phones,
 								smartphones, 4G modems).
 							</p>
-							<p>
-								{' '}
-								Main features :{' '}
-								<ul>
-									<li>A</li>
-									<li>B</li>
-									<li>C</li>
-									<li>D</li>
-								</ul>
-							</p>
+							{/* Main features :
+							<ul>
+								<li>A</li>
+								<li>B</li>
+								<li>C</li>
+								<li>D</li>
+							</ul> */}
 						</div>
-						<div className='flex flex-row gap-10'>
+						<div className='flex flex-row flex-wrap justify-around gap-6 mt-4'>
 							<LinkButton
 								size='sm'
 								variant='githubProject'
@@ -132,7 +129,7 @@ function Projects() {
 							link='https://github.com/chrisberlant/jobmemo-back'
 						/>
 					</ProjectCard>
-					<ProjectCard
+					{/* <ProjectCard
 						project={jobMemo}
 						className='animate-slide-from-right'
 					>
@@ -152,7 +149,7 @@ function Projects() {
 							aria-label='Open the JobMemo back-end repository'
 							link='https://github.com/chrisberlant/jobmemo-back'
 						/>
-					</ProjectCard>
+					</ProjectCard> */}
 				</div>
 			</div>
 		</div>

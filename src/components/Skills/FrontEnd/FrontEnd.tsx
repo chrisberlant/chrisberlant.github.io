@@ -5,12 +5,11 @@ import ReduxLogo from '@assets/redux-logo.svg';
 import TailwindLogo from '@assets/tailwind-logo.svg';
 import SassLogo from '@assets/sass-logo.svg';
 
-function FrontEnd() {
+export default function FrontEnd() {
 	return (
 		<SkillsCard
 			title='Front-end'
-			containerClassName='md:animate-slide-from-top animate-slide-from-left'
-			delay={3}
+			className='md:animate-slide-from-top animate-slide-from-left'
 		>
 			<SkillElement title='React' logo={ReactLogo} alt='React logo' />
 			<SkillElement
@@ -27,5 +26,3 @@ function FrontEnd() {
 		</SkillsCard>
 	);
 }
-
-export default FrontEnd;

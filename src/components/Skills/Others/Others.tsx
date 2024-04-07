@@ -11,13 +11,9 @@ import AccessibilityLogo from '@assets/accessibility-logo.svg';
 import FrenchFlag from '@assets/french-flag.svg';
 import UKFlag from '@assets/uk-flag.svg';
 
-function Others() {
+export default function Others() {
 	return (
-		<SkillsCard
-			title='Others'
-			containerClassName='animate-slide-from-bottom'
-			delay={7}
-		>
+		<SkillsCard title='Others' className='animate-slide-from-bottom'>
 			<div className='flex flex-col flex-wrap md:flex-row md:gap-10'>
 				<div className='mb-2 md:mb-0'>
 					<SkillElement
@@ -77,5 +73,3 @@ function Others() {
 		</SkillsCard>
 	);
 }
-
-export default Others;

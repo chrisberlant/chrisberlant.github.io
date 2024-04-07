@@ -1,10 +1,3 @@
-import {
-	Carousel,
-	CarouselContent,
-	CarouselItem,
-	CarouselNext,
-	CarouselPrevious,
-} from '../Carousel/Carousel';
 import Badge from '../../Badge/Badge';
 import { cn } from '../../../lib/utils';
 import { ProjectCardProps } from '../ProjectCard/ProjectCard';
@@ -15,57 +8,35 @@ export default function MainProjectCard({
 	children,
 	className,
 }: ProjectCardProps) {
+	const { badges, slidesUrl, title, description } = project;
 	return (
 		<div
 			className={cn(
-				'bg-card flex flex-col items-center rounded-xl shadow-lg px-5 md:px-12 pt-4 pb-5 w-auto h-auto',
+				'bg-card flex flex-col items-center rounded-xl shadow-lg px-5 md:px-12 pt-4 pb-5 w-auto h-auto border-2 border-border',
 				className
 			)}
 		>
-			<h3 className='p-4 text-xl font-bold leading-none text-center'>
-				Main Project : {project.title}
+			<h3 className='mb-2 text-xl font-bold leading-none text-center'>
+				Main Project : {title}
 			</h3>
+			<h4 className='mb-4 font-bold text-center'>{description.title}</h4>
 			<div className='flex flex-wrap justify-center gap-2 mb-3'>
-				{Object.entries(project.badges).map(([key, value]) => (
+				{Object.entries(badges).map(([key, value]) => (
 					<Badge variant={value} key={key}>
 						{key}
 					</Badge>
 				))}
 			</div>
-			<Carousel
-				opts={{
-					loop: 'true',
-				}}
-				className='w-32'
-			>
-				<CarouselContent>
-					{project.slidesUrl.map((slide, index) => (
-						<CarouselItem
-							key={slide}
-							className='flex justify-center'
-						>
-							<a href={slide} target='blank'>
-								<img
-									src={slide}
-									className='h-20'
-									alt={
-										'Screenshot ' +
-										`${project.title}` +
-										' ' +
-										`${index + 1}`
-									}
-								/>
-							</a>
-						</CarouselItem>
-					))}
-				</CarouselContent>
-				<CarouselPrevious />
-				<CarouselNext />
-			</Carousel>
 
-			<div className='font-bold text-center'>
-				{project.description.title}
+			<h4 className='mb-2 font-bold text-center'>Example screenshots</h4>
+			<div className='flex flex-wrap justify-center gap-2'>
+				{slidesUrl.map((slide) => (
+					<a href={slide} key={slide} target='_blank'>
+						<img src={slide} className='h-40 ' />
+					</a>
+				))}
 			</div>
+
 			<div className='flex h-full mt-4'>{children}</div>
 		</div>
 	);

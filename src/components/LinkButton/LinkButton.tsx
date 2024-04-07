@@ -59,7 +59,7 @@ interface LinkButtonProps
 	link?: string;
 }
 
-function LinkButton({
+export default function LinkButton({
 	className,
 	variant,
 	size,
@@ -95,5 +95,3 @@ function LinkButton({
 		</button>
 	);
 }
-
-export default LinkButton;

@@ -23,14 +23,22 @@ export interface ProjectCardProps {
 	className?: string;
 }
 
-function ProjectCard({ project, children, className }: ProjectCardProps) {
+export default function ProjectCard({
+	project,
+	children,
+	className,
+}: ProjectCardProps) {
+	const { title, slidesUrl, badges, description } = project;
 	return (
 		<div
 			className={cn(
-				'bg-card flex flex-col items-center rounded-xl shadow-lg px-5 md:px-12 pt-4 pb-5 w-96',
+				'bg-card flex flex-col items-center rounded-xl shadow-lg px-5 md:px-12 pt-4 pb-5 w-96 border-2 border-border',
 				className
 			)}
 		>
+			<h3 className='mb-4 text-2xl font-bold leading-none text-center'>
+				{title}
+			</h3>
 			<Carousel
 				opts={{
 					loop: 'true',
@@ -38,7 +46,7 @@ function ProjectCard({ project, children, className }: ProjectCardProps) {
 				className='w-32'
 			>
 				<CarouselContent>
-					{project.slidesUrl.map((slide, index) => (
+					{slidesUrl.map((slide, index) => (
 						<CarouselItem
 							key={slide}
 							className='flex justify-center'
@@ -61,23 +69,17 @@ function ProjectCard({ project, children, className }: ProjectCardProps) {
 				<CarouselPrevious />
 				<CarouselNext />
 			</Carousel>
-			<h3 className='p-4 text-xl font-bold leading-none text-center'>
-				{project.title}
-			</h3>
-			<div className='flex flex-wrap justify-center gap-2 mb-3'>
-				{Object.entries(project.badges).map(([key, value]) => (
+
+			<div className='flex flex-wrap justify-center gap-2 my-4'>
+				{Object.entries(badges).map(([key, value]) => (
 					<Badge variant={value} key={key}>
 						{key}
 					</Badge>
 				))}
 			</div>
-			<div className='font-bold text-center'>
-				{project.description.title}
-			</div>
-			<div className='text-center'>{project.description.content}</div>
-			<div className='flex items-end h-full gap-5 mt-4'>{children}</div>
+			<div className='font-bold text-center'>{description.title}</div>
+			<div className='text-center'>{description.content}</div>
+			<div className='flex items-end h-full gap-6 mt-4'>{children}</div>
 		</div>
 	);
 }
-
-export default ProjectCard;

@@ -6,12 +6,11 @@ import CssLogo from '@assets/css-logo.svg';
 import SqlLogo from '@assets/sql-logo.svg';
 import JavaScriptLogo from '@assets/javascript-logo.svg';
 
-function Languages() {
+export default function Languages() {
 	return (
 		<SkillsCard
 			title='Languages'
-			containerClassName='md:animate-slide-from-left animate-slide-from-top'
-			delay={1}
+			className='md:animate-slide-from-left animate-slide-from-top'
 		>
 			<SkillElement
 				title='JavaScript'
@@ -29,5 +28,3 @@ function Languages() {
 		</SkillsCard>
 	);
 }
-
-export default Languages;

@@ -5,13 +5,9 @@ import PostgresLogo from '@assets/postgresql-logo.svg';
 import ExpressLogo from '@assets/express-logo.png';
 import SequelizeLogo from '@assets/sequelize-logo.svg';
 
-function BackEnd() {
+export default function BackEnd() {
 	return (
-		<SkillsCard
-			title='Back-end'
-			containerClassName='animate-slide-from-right'
-			delay={5}
-		>
+		<SkillsCard title='Back-end' className='animate-slide-from-right'>
 			<SkillElement
 				title='Node.js'
 				logo={NodeJsLogo}
@@ -35,5 +31,3 @@ function BackEnd() {
 		</SkillsCard>
 	);
 }
-
-export default BackEnd;
