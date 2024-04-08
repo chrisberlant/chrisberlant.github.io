@@ -64,8 +64,41 @@ export default {
 				'slide-from-top': 'slideFromTop 1s ease-in-out',
 				'slide-from-bottom': 'slideFromBottom 1s ease-in-out',
 				'meteor-effect': 'meteor 5s linear infinite',
+				shift: 'shift 3s infinite',
 			},
 			keyframes: {
+				shift: {
+					'0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100%': {
+						transform: 'skewX(0deg)',
+					},
+					'41%': {
+						transform: 'skewX(10deg)',
+					},
+
+					'42%': {
+						transform: 'skewX(-10deg)',
+					},
+
+					'59%': {
+						transform: 'skewX(40deg) skewY(10deg)',
+					},
+
+					'60%': {
+						transform: 'skewX(-40deg) skewY(-10deg)',
+					},
+
+					'63%': {
+						transform: 'skewX(10deg) skewY(-5deg)',
+					},
+
+					'70%': {
+						transform: 'skewX(-50deg) skewY(-20deg)',
+					},
+
+					'71%': {
+						transform: 'skewX(10deg) skewY(-10deg)',
+					},
+				},
 				fadeIn: {
 					'0%': {
 						opacity: 0,

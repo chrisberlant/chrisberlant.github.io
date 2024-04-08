@@ -5,22 +5,19 @@ import HtmlLogo from '@assets/html-logo.svg';
 import CssLogo from '@assets/css-logo.svg';
 import SqlLogo from '@assets/sql-logo.svg';
 import JavaScriptLogo from '@assets/javascript-logo.svg';
+import { useState } from 'react';
 
 export default function Languages() {
+	const [lang, setLang] = useState(true);
+
 	return (
-		<SkillsCard
-			title='Languages'
-			className='md:animate-slide-from-left animate-slide-from-top'
-		>
+		<SkillsCard title='Languages' className='animate-slide-from-left'>
 			<SkillElement
-				title='JavaScript'
-				logo={JavaScriptLogo}
-				alt='Logo TypeScript'
-			/>
-			<SkillElement
-				title='TypeScript'
-				logo={TypeScriptLogo}
-				alt='Logo TypeScript'
+				className='animate-shift'
+				onAnimation={() => setLang((prev) => !prev)}
+				title={lang ? 'JavaScript' : 'TypeScript'}
+				logo={lang ? JavaScriptLogo : TypeScriptLogo}
+				alt='Logo JavaScript/TypeScript'
 			/>
 			<SkillElement title='SQL' logo={SqlLogo} alt='Logo SQL' />
 			<SkillElement title='HTML' logo={HtmlLogo} alt='Logo HTML' />

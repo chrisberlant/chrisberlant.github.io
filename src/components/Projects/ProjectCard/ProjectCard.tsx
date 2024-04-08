@@ -36,7 +36,7 @@ export default function ProjectCard({
 	return (
 		<div
 			className={cn(
-				'bg-card flex flex-col items-center rounded-xl shadow-lg px-5 md:px-12 pt-4 pb-5 w-96 border-2 border-border',
+				'bg-card flex flex-col items-center rounded-xl shadow-lg px-5 md:px-12 py-5 w-96 border-2 border-border',
 				className
 			)}
 		>

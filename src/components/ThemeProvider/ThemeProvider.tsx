@@ -16,7 +16,11 @@ const initialState: ThemeProviderState = {
 
 export const ThemeProviderContext = createContext(initialState);
 
-function ThemeProvider({ children }: { children: React.ReactNode }) {
+export default function ThemeProvider({
+	children,
+}: {
+	children: React.ReactNode;
+}) {
 	const [theme, setTheme] = useState<Theme>(initialState.theme);
 
 	const toggleTheme = () => {
@@ -34,5 +38,3 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
 		</ThemeProviderContext.Provider>
 	);
 }
-
-export default ThemeProvider;

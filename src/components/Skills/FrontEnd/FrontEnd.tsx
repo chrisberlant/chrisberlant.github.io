@@ -9,7 +9,7 @@ export default function FrontEnd() {
 	return (
 		<SkillsCard
 			title='Front-end'
-			className='md:animate-slide-from-top animate-slide-from-left'
+			className='animate-slide-from-right md:animate-slide-from-top'
 		>
 			<SkillElement title='React' logo={ReactLogo} alt='React logo' />
 			<SkillElement

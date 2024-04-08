@@ -7,7 +7,10 @@ import SequelizeLogo from '@assets/sequelize-logo.svg';
 
 export default function BackEnd() {
 	return (
-		<SkillsCard title='Back-end' className='animate-slide-from-right'>
+		<SkillsCard
+			title='Back-end'
+			className='md:animate-slide-from-right animate-slide-from-left'
+		>
 			<SkillElement
 				title='Node.js'
 				logo={NodeJsLogo}

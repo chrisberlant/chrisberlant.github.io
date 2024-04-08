@@ -47,11 +47,11 @@ const jobMemo: ProjectCardProps['project'] = {
 
 export default function Projects() {
 	return (
-		<div className='flex flex-col gap-10 mt-20'>
-			<h2 className='text-4xl font-bold text-center animate-fade-in font-montserrat'>
+		<div className='flex flex-col mt-20'>
+			<h2 className='mb-10 text-4xl font-bold text-center animate-fade-in font-montserrat'>
 				My Projects
 			</h2>
-			<div className='flex flex-col flex-wrap items-center justify-center gap-10'>
+			<div className='flex flex-col flex-wrap items-center justify-center gap-10 sm:gap-14'>
 				<MainProjectCard
 					project={gestionSmac}
 					className='animate-slide-from-left'
@@ -98,7 +98,7 @@ export default function Projects() {
 						</div>
 					</div>
 				</MainProjectCard>
-				<div className='flex flex-wrap justify-center gap-10'>
+				<div className='flex flex-wrap justify-center gap-10 sm:gap-14'>
 					<ProjectCard
 						project={jobMemo}
 						className='animate-slide-from-right'
