@@ -21,11 +21,20 @@ export default function MainProjectCard({
 			</h3>
 			<h4 className='mb-4 font-bold text-center'>{description.title}</h4>
 			<div className='flex flex-wrap justify-center gap-2 mb-3'>
-				{Object.entries(badges).map(([key, value]) => (
-					<Badge variant={value} key={key}>
-						{key}
-					</Badge>
-				))}
+				{Object.keys(badges).map((spec) =>
+					badges[
+						spec as keyof ProjectCardProps['project']['badges']
+					].map((tech) => (
+						<Badge
+							variant={
+								spec as keyof ProjectCardProps['project']['badges']
+							}
+							key={tech}
+						>
+							{tech}
+						</Badge>
+					))
+				)}
 			</div>
 
 			<h4 className='mb-2 font-bold text-center'>Example screenshots</h4>

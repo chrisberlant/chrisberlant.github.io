@@ -13,7 +13,11 @@ export interface ProjectCardProps {
 	project: {
 		title: string;
 		slidesUrl: string[];
-		badges: Record<string, 'default' | 'front' | 'back' | 'both'>;
+		badges: {
+			front: string[];
+			back: string[];
+			both: string[];
+		};
 		description: {
 			title: string;
 			content: string;
@@ -71,11 +75,20 @@ export default function ProjectCard({
 			</Carousel>
 
 			<div className='flex flex-wrap justify-center gap-2 my-4'>
-				{Object.entries(badges).map(([key, value]) => (
-					<Badge variant={value} key={key}>
-						{key}
-					</Badge>
-				))}
+				{Object.keys(badges).map((spec) =>
+					badges[
+						spec as keyof ProjectCardProps['project']['badges']
+					].map((tech) => (
+						<Badge
+							variant={
+								spec as keyof ProjectCardProps['project']['badges']
+							}
+							key={tech}
+						>
+							{tech}
+						</Badge>
+					))
+				)}
 			</div>
 			<div className='font-bold text-center'>{description.title}</div>
 			<div className='text-center'>{description.content}</div>

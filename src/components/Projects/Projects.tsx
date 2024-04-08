@@ -12,14 +12,9 @@ const gestionSmac: ProjectCardProps['project'] = {
 		'/img/gestion-smac3.png',
 	],
 	badges: {
-		React: 'front',
-		Mantine: 'front',
-		'Tanstack Table': 'front',
-		'Tanstack Query': 'front',
-		Express: 'back',
-		PostgreSQL: 'back',
-		JWT: 'back',
-		Zod: 'both',
+		front: ['React', 'Mantine', 'Tanstack Table', 'Tanstack Query'],
+		back: ['Express', 'PostgreSQL', 'JWT'],
+		both: ['Zod'],
 	},
 	description: {
 		title: 'A mobile devices management application',
@@ -39,13 +34,9 @@ const jobMemo: ProjectCardProps['project'] = {
 		'/img/jobmemo6.png',
 	],
 	badges: {
-		React: 'front',
-		Redux: 'front',
-		'React Beautiful DnD': 'front',
-		Express: 'back',
-		PostgreSQL: 'back',
-		JWT: 'back',
-		Joi: 'both',
+		front: ['React', 'Redux', 'React Beautiful DnD'],
+		back: ['Express', 'PostgreSQL', 'JWT'],
+		both: ['Joi'],
 	},
 	description: {
 		title: 'Job finding helper',
@@ -54,7 +45,7 @@ const jobMemo: ProjectCardProps['project'] = {
 	},
 };
 
-function Projects() {
+export default function Projects() {
 	return (
 		<div className='flex flex-col gap-10 mt-20'>
 			<h2 className='text-4xl font-bold text-center animate-fade-in font-montserrat'>
@@ -155,5 +146,3 @@ function Projects() {
 		</div>
 	);
 }
-
-export default Projects;
