@@ -45,7 +45,7 @@ export default function ProjectCard({
 			</h3>
 			<Carousel
 				opts={{
-					loop: 'true',
+					loop: true,
 				}}
 				className='w-32'
 			>
@@ -55,13 +55,13 @@ export default function ProjectCard({
 							key={slide}
 							className='flex justify-center'
 						>
-							<a href={slide} target='blank'>
+							<a href={slide} target='_blank'>
 								<img
 									src={slide}
 									className='h-20'
 									alt={
 										'Screenshot ' +
-										`${project.title}` +
+										`${title}` +
 										' ' +
 										`${index + 1}`
 									}

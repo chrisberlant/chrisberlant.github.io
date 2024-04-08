@@ -39,9 +39,18 @@ export default function MainProjectCard({
 
 			<h4 className='mb-2 font-bold text-center'>Example screenshots</h4>
 			<div className='flex flex-wrap justify-center gap-2'>
-				{slidesUrl.map((slide) => (
+				{slidesUrl.map((slide, index) => (
 					<a href={slide} key={slide} target='_blank'>
-						<img src={slide} className='h-40 ' />
+						<img
+							src={slide}
+							className='h-40'
+							alt={
+								'Screenshot ' +
+								`${title}` +
+								' ' +
+								`${index + 1}`
+							}
+						/>
 					</a>
 				))}
 			</div>
