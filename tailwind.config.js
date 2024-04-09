@@ -64,7 +64,7 @@ export default {
 				'slide-from-top': 'slideFromTop 1s ease-in-out',
 				'slide-from-bottom': 'slideFromBottom 1s ease-in-out',
 				'meteor-effect': 'meteor 5s linear infinite',
-				shift: 'shift 3s infinite',
+				shift: 'shift 5s infinite',
 			},
 			keyframes: {
 				shift: {
@@ -72,31 +72,31 @@ export default {
 						transform: 'skewX(0deg)',
 					},
 					'41%': {
-						transform: 'skewX(10deg)',
+						transform: 'skewX(20deg)',
 					},
 
 					'42%': {
-						transform: 'skewX(-10deg)',
+						transform: 'skewX(-20deg)',
 					},
 
 					'59%': {
-						transform: 'skewX(40deg) skewY(10deg)',
+						transform: 'skewX(40deg)',
 					},
 
 					'60%': {
-						transform: 'skewX(-40deg) skewY(-10deg)',
+						transform: 'skewX(-40deg)',
 					},
 
 					'63%': {
-						transform: 'skewX(10deg) skewY(-5deg)',
+						transform: 'skewX(30deg)',
 					},
 
 					'70%': {
-						transform: 'skewX(-50deg) skewY(-20deg)',
+						transform: 'skewX(-30deg) ',
 					},
 
 					'71%': {
-						transform: 'skewX(10deg) skewY(-10deg)',
+						transform: 'skewX(20deg) ',
 					},
 				},
 				fadeIn: {
