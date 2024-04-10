@@ -74,6 +74,9 @@ export default function ProjectCard({
 				<CarouselNext />
 			</Carousel>
 
+			<div className='mt-2 font-bold text-center'>
+				{description.title}
+			</div>
 			<div className='flex flex-wrap justify-center gap-2 my-4'>
 				{Object.keys(badges).map((spec) =>
 					badges[
@@ -90,7 +93,6 @@ export default function ProjectCard({
 					))
 				)}
 			</div>
-			<div className='font-bold text-center'>{description.title}</div>
 			<div className='text-center'>{description.content}</div>
 			<div className='flex items-end h-full gap-6 mt-4'>{children}</div>
 		</div>

@@ -54,6 +54,6 @@
 @layer base {
 	.app {
 		@apply bg-background min-h-screen min-w-min text-foreground;
-		padding: 2rem 5% 2rem;
+		padding: 2rem 5% 1.5rem;
 	}
 }
