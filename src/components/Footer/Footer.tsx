@@ -24,17 +24,15 @@ export default function Footer({ refs, currentPosition }: FooterProps) {
 		<footer className='mt-8'>
 			<Breadcrumb>
 				<BreadcrumbList>
-					<BreadcrumbItem>
-						<BreadcrumbLink
-							style={{ cursor: 'pointer' }}
-							onClick={() => {
-								refs[0].current?.scrollIntoView({
-									behavior: 'smooth',
-								});
-							}}
-						>
-							Home
-						</BreadcrumbLink>
+					<BreadcrumbItem
+						className='cursor-pointer'
+						onClick={() => {
+							refs[0].current?.scrollIntoView({
+								behavior: 'smooth',
+							});
+						}}
+					>
+						Home
 					</BreadcrumbItem>
 					<BreadcrumbSeparator>
 						<Slash />
