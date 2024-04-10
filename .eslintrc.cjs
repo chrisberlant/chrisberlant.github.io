@@ -10,7 +10,11 @@ module.exports = {
 	settings: {
 		'import/resolver': {
 			alias: {
-				map: [['@assets', './src/assets']],
+				map: [
+					['@', './src'],
+					['@assets', './src/assets'],
+					['@lib', './src/lib'],
+				],
 			},
 			node: {
 				paths: ['src'],

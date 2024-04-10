@@ -21,10 +21,19 @@ interface FooterProps {
 
 export default function Footer({ refs, currentPosition }: FooterProps) {
 	return (
-		<Breadcrumb className='mt-8'>
+		<Breadcrumb>
 			<BreadcrumbList>
 				<BreadcrumbItem>
-					<BreadcrumbLink href='/'>Home</BreadcrumbLink>
+					<BreadcrumbLink
+						style={{ cursor: 'pointer' }}
+						onClick={() => {
+							refs[0].current?.scrollIntoView({
+								behavior: 'smooth',
+							});
+						}}
+					>
+						Home
+					</BreadcrumbLink>
 				</BreadcrumbItem>
 				<BreadcrumbSeparator>
 					<Slash />
@@ -35,8 +44,12 @@ export default function Footer({ refs, currentPosition }: FooterProps) {
 							Sections
 							<ChevronDownIcon />
 						</DropdownMenuTrigger>
-						<DropdownMenuContent align='start'>
+						<DropdownMenuContent
+							align='start'
+							className='border rounded bg-background border-border'
+						>
 							<DropdownMenuItem
+								className='p-1 m-0.5 rounded hover:bg-accent cursor-pointer'
 								onClick={() => {
 									refs[0].current?.scrollIntoView({
 										behavior: 'smooth',
@@ -46,6 +59,8 @@ export default function Footer({ refs, currentPosition }: FooterProps) {
 								<BreadcrumbLink>Top</BreadcrumbLink>
 							</DropdownMenuItem>
 							<DropdownMenuItem
+								className='p-1 m-0.5 rounded hover:bg-accent cursor-pointer'
+								style={{ cursor: 'pointer' }}
 								onClick={() => {
 									refs[1].current?.scrollIntoView({
 										behavior: 'smooth',
@@ -55,6 +70,8 @@ export default function Footer({ refs, currentPosition }: FooterProps) {
 								<BreadcrumbLink>Skills</BreadcrumbLink>
 							</DropdownMenuItem>
 							<DropdownMenuItem
+								className='p-1 m-0.5 rounded hover:bg-accent cursor-pointer'
+								style={{ cursor: 'pointer' }}
 								onClick={() => {
 									refs[2].current?.scrollIntoView({
 										behavior: 'smooth',

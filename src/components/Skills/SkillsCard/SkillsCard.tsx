@@ -15,7 +15,7 @@ export default function SkillsCard({
 	return (
 		<div
 			className={cn(
-				'font-robotoMono bg-card flex flex-col items-center rounded-xl shadow-lg px-8 py-5 border-2 border-border',
+				'font-robotoMono bg-card flex flex-col items-center rounded-xl shadow-md px-8 py-5 border-2 border-border',
 				className
 			)}
 		>

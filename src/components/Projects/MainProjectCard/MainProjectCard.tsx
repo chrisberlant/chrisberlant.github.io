@@ -12,7 +12,7 @@ export default function MainProjectCard({
 	return (
 		<div
 			className={cn(
-				'bg-card flex flex-col items-center rounded-xl shadow-lg px-5 md:px-12 py-5 w-auto h-auto border-2 border-border',
+				'bg-card flex flex-col items-center rounded-xl shadow-md px-5 md:px-12 py-5 border-2 border-border',
 				className
 			)}
 		>
