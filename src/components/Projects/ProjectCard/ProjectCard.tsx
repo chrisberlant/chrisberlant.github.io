@@ -6,7 +6,7 @@ import {
 	CarouselPrevious,
 } from '../Carousel/Carousel';
 import Badge from '../../Badge/Badge';
-import { cn } from '../../../lib/utils';
+import { cn } from '@lib/utils';
 import { ReactNode } from 'react';
 
 export interface ProjectCardProps {
@@ -58,7 +58,7 @@ export default function ProjectCard({
 							<a href={slide} target='_blank'>
 								<img
 									src={slide}
-									className='h-20'
+									className='h-20 rounded-md'
 									alt={
 										'Screenshot ' +
 										`${title}` +

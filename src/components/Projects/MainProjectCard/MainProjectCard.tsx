@@ -1,5 +1,5 @@
 import Badge from '../../Badge/Badge';
-import { cn } from '../../../lib/utils';
+import { cn } from '@lib/utils';
 import { ProjectCardProps } from '../ProjectCard/ProjectCard';
 
 // Card used for the biggest project
@@ -43,7 +43,7 @@ export default function MainProjectCard({
 					<a href={slide} key={slide} target='_blank'>
 						<img
 							src={slide}
-							className='h-40'
+							className='h-40 rounded-md'
 							alt={
 								'Screenshot ' +
 								`${title}` +

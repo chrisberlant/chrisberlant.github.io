@@ -68,35 +68,38 @@ export default {
 			},
 			keyframes: {
 				shift: {
-					'0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100%': {
+					'0%, 48%, 55%, 85%': {
 						transform: 'skewX(0deg)',
 					},
-					'41%': {
+					'50%': {
 						transform: 'skewX(20deg)',
 					},
-
-					'42%': {
+					'51%': {
 						transform: 'skewX(-20deg)',
 					},
-
-					'59%': {
-						transform: 'skewX(40deg)',
+					'53%': {
+						transform: 'skewX(20deg)',
 					},
-
-					'60%': {
-						transform: 'skewX(-40deg)',
+					'87%': {
+						transform: 'skewX(-40deg) ',
 					},
-
-					'63%': {
-						transform: 'skewX(30deg)',
+					'90%': {
+						transform: 'skewX(40deg) ',
 					},
-
-					'70%': {
-						transform: 'skewX(-30deg) ',
+					'92%': {
+						transform: 'skewX(-40deg) ',
 					},
-
-					'71%': {
-						transform: 'skewX(20deg) ',
+					'94%': {
+						transform: 'skewX(65deg) ',
+					},
+					'96%': {
+						transform: 'skewX(-65deg) ',
+					},
+					'97%': {
+						transform: 'skewX(65deg) ',
+					},
+					'100%': {
+						transform: 'skewX(-65deg) ',
 					},
 				},
 				fadeIn: {
