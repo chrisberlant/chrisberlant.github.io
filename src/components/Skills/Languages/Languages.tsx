@@ -13,7 +13,7 @@ export default function Languages() {
 	return (
 		<SkillsCard title='Languages' className='animate-slide-from-left'>
 			<SkillElement
-				className='animate-shift'
+				className='animate-glitch'
 				onAnimation={() => setLang((prev) => !prev)}
 				title={lang ? 'JavaScript' : 'TypeScript'}
 				logo={lang ? JavaScriptLogo : TypeScriptLogo}
