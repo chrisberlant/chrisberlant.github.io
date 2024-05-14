@@ -1,6 +1,7 @@
 import Badge from '../../Badge/Badge';
 import { cn } from '@lib/utils';
 import { ProjectCardProps } from '../ProjectCard/ProjectCard';
+import { PropsWithChildren } from 'react';
 
 // Card used for the biggest project
 export default function MainProjectCard({
@@ -19,6 +20,7 @@ export default function MainProjectCard({
 			<h3 className='mb-2 text-xl font-bold leading-none text-center'>
 				Main Project : {title}
 			</h3>
+
 			<h4 className='mb-4 font-bold text-center'>{description.title}</h4>
 			<div className='flex flex-wrap justify-center gap-2 mb-3'>
 				{Object.keys(badges).map((spec) =>
@@ -37,7 +39,7 @@ export default function MainProjectCard({
 				)}
 			</div>
 
-			<h4 className='mb-2 font-bold text-center'>Example screenshots</h4>
+			<h4 className='mb-2 font-bold text-center'>Screenshots</h4>
 			<div className='flex flex-wrap justify-center gap-2'>
 				{slidesUrl.map((slide, index) => (
 					<a href={slide} key={slide} target='_blank'>

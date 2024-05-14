@@ -7,7 +7,7 @@ import {
 } from '../Carousel/Carousel';
 import Badge from '../../Badge/Badge';
 import { cn } from '@lib/utils';
-import { ReactNode } from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 
 export interface ProjectCardProps {
 	project: {
@@ -20,7 +20,7 @@ export interface ProjectCardProps {
 		};
 		description: {
 			title: string;
-			content: string;
+			content: ReactNode;
 		};
 	};
 	children: ReactNode;
@@ -36,7 +36,7 @@ export default function ProjectCard({
 	return (
 		<div
 			className={cn(
-				'bg-card flex flex-col items-center rounded-xl shadow-md px-5 md:px-12 py-5 max-w-96 border-2 border-border',
+				'bg-card flex flex-col items-center rounded-xl shadow-md px-5 md:px-12 py-5 max-w-none border-2 border-border',
 				className
 			)}
 		>

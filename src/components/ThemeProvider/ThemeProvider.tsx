@@ -8,9 +8,7 @@ type ThemeProviderState = {
 };
 
 const initialState: ThemeProviderState = {
-	theme: window.matchMedia('(prefers-color-scheme: dark)').matches
-		? 'dark'
-		: 'light',
+	theme: 'dark',
 	toggleTheme: () => null,
 };
 
@@ -21,7 +19,7 @@ export default function ThemeProvider({
 }: {
 	children: React.ReactNode;
 }) {
-	const [theme, setTheme] = useState<Theme>(initialState.theme);
+	const [theme, setTheme] = useState<Theme>('dark');
 
 	const toggleTheme = () => {
 		theme === 'dark' ? setTheme('light') : setTheme('dark');

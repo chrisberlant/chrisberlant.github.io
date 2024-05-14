@@ -10,7 +10,7 @@ import Tools from './Tools/Tools';
 const Skills = forwardRef(
 	(_, ref: React.ForwardedRef<HTMLDivElement | null>) => {
 		return (
-			<div ref={ref} className='flex flex-col items-center mt-16'>
+			<section ref={ref} className='flex flex-col items-center mt-16'>
 				<h2 className='mb-10 text-4xl font-bold text-center font-montserrat animate-fade-in'>
 					My Skills
 				</h2>
@@ -23,7 +23,7 @@ const Skills = forwardRef(
 					<ISpeak />
 					<Others />
 				</div>
-			</div>
+			</section>
 		);
 	}
 );

@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import GithubLogo from '../../assets/github-logo.svg';
-import YoutubeLogo from '../../assets/youtube-logo.svg';
+import GithubLogo from '@assets/github-logo.svg';
+import YoutubeLogo from '@assets/youtube-logo.svg';
 import LinkButton from '../LinkButton/LinkButton';
 import MainProjectCard from './MainProjectCard/MainProjectCard';
 import ProjectCard, { ProjectCardProps } from './ProjectCard/ProjectCard';
@@ -8,9 +8,12 @@ import ProjectCard, { ProjectCardProps } from './ProjectCard/ProjectCard';
 const gestionSmac: ProjectCardProps['project'] = {
 	title: 'Gestion SMAC',
 	slidesUrl: [
+		'/img/gestion-smac0.png',
 		'/img/gestion-smac1.png',
 		'/img/gestion-smac2.png',
 		'/img/gestion-smac3.png',
+		'/img/gestion-smac4.png',
+		'/img/gestion-smac5.png',
 	],
 	badges: {
 		front: ['React', 'Mantine', 'Tanstack Table', 'Tanstack Query'],
@@ -19,7 +22,27 @@ const gestionSmac: ProjectCardProps['project'] = {
 	},
 	description: {
 		title: 'A mobile devices management application',
-		content: '',
+		content: (
+			<div>
+				<p>
+					This webapp allows a team to manage a stock of various
+					mobile devices (basic phones, smartphones, 4G modems).
+				</p>
+				<p>
+					It includes authentication,
+					creating/reading/updating/deleting multiple elements
+					including other users, and CSV files import/export.
+				</p>
+				<p>You can find more details on the repositories.</p>
+				{/* Main features :
+		<ul>
+			<li>A</li>
+			<li>B</li>
+			<li>C</li>
+			<li>D</li>
+		</ul> */}
+			</div>
+		),
 	},
 };
 
@@ -40,15 +63,22 @@ const jobMemo: ProjectCardProps['project'] = {
 	},
 	description: {
 		title: 'Job finding helper',
-		content:
-			'The goal of the app is to help users track their various job applications and their associated contacts',
+		content: (
+			<div>
+				<p>
+					The goal of the app is to help users track their various job
+					applications and their associated contacts.
+				</p>
+				<p> The main feature is the cards drag and drop.</p>
+			</div>
+		),
 	},
 };
 
 const Projects = forwardRef(
 	(_, ref: React.ForwardedRef<HTMLDivElement | null>) => {
 		return (
-			<div ref={ref} className='flex flex-col mt-20'>
+			<section ref={ref} className='flex flex-col mt-20'>
 				<h2 className='mb-10 text-4xl font-bold text-center animate-fade-in font-montserrat'>
 					My Projects
 				</h2>
@@ -58,24 +88,8 @@ const Projects = forwardRef(
 						className='animate-slide-from-left'
 					>
 						<div className='flex flex-col items-center justify-between flex-1'>
-							<div>
-								<p>
-									This webapp allows a team to manage a stock
-									of various mobile devices (basic phones,
-									smartphones, 4G modems).
-								</p>
-								<p>
-									You can find more details on the
-									repositories.
-								</p>
-								{/* Main features :
-							<ul>
-								<li>A</li>
-								<li>B</li>
-								<li>C</li>
-								<li>D</li>
-							</ul> */}
-							</div>
+							{' '}
+							{gestionSmac.description.content}
 							<div className='flex flex-row flex-wrap justify-around gap-6 mt-4'>
 								<LinkButton
 									size='sm'
@@ -148,7 +162,7 @@ const Projects = forwardRef(
 					</ProjectCard> */}
 					</div>
 				</div>
-			</div>
+			</section>
 		);
 	}
 );
