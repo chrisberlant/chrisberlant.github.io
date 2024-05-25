@@ -15,18 +15,17 @@ export default {
 				'2xl': '1400px',
 			},
 		},
-		maxWidth: {
-			'25%': '25%',
-			'50%': '50%',
-			'60%': '60%',
-			'75%': '75%',
-		},
 		extend: {
 			fontFamily: {
 				robotoMono: ['Roboto Mono', 'monospace'],
 				montserrat: ['Montserrat', 'sans-serif'],
 			},
-
+			maxWidth: {
+				'25%': '25%',
+				'50%': '50%',
+				'60%': '60%',
+				'75%': '75%',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
