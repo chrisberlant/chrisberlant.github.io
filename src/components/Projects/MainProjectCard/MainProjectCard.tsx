@@ -1,7 +1,6 @@
 import Badge from '../../Badge/Badge';
 import { cn } from '@lib/utils';
-import { ProjectCardProps } from '../ProjectCard/ProjectCard';
-import { PropsWithChildren } from 'react';
+import { BadgesType, ProjectCardProps } from '../ProjectCard/ProjectCard';
 
 // Card used for the biggest project
 export default function MainProjectCard({
@@ -17,22 +16,15 @@ export default function MainProjectCard({
 				className
 			)}
 		>
-			<h3 className='mb-2 text-xl font-bold leading-none text-center'>
+			<h3 className='mb-2 text-2xl font-bold leading-none text-center'>
 				Main Project : {title}
 			</h3>
 
 			<h4 className='mb-4 font-bold text-center'>{description.title}</h4>
 			<div className='flex flex-wrap justify-center gap-2 mb-3'>
 				{Object.keys(badges).map((spec) =>
-					badges[
-						spec as keyof ProjectCardProps['project']['badges']
-					].map((tech) => (
-						<Badge
-							variant={
-								spec as keyof ProjectCardProps['project']['badges']
-							}
-							key={tech}
-						>
+					badges[spec as keyof BadgesType].map((tech) => (
+						<Badge variant={spec as keyof BadgesType} key={tech}>
 							{tech}
 						</Badge>
 					))
@@ -40,7 +32,7 @@ export default function MainProjectCard({
 			</div>
 
 			<h4 className='mb-2 font-bold text-center'>Screenshots</h4>
-			<div className='flex flex-wrap justify-center gap-2'>
+			<div className='flex flex-wrap justify-center gap-2 xl:max-w-60%'>
 				{slidesUrl.map((slide, index) => (
 					<a href={slide} key={slide} target='_blank'>
 						<img

@@ -7,17 +7,15 @@ import {
 } from '../Carousel/Carousel';
 import Badge from '../../Badge/Badge';
 import { cn } from '@lib/utils';
-import { PropsWithChildren, ReactNode } from 'react';
+import { ReactNode } from 'react';
+
+export type BadgesType = { front: string[]; back: string[]; both: string[] };
 
 export interface ProjectCardProps {
 	project: {
 		title: string;
 		slidesUrl: string[];
-		badges: {
-			front: string[];
-			back: string[];
-			both: string[];
-		};
+		badges: BadgesType;
 		description: {
 			title: string;
 			content: ReactNode;
@@ -79,15 +77,8 @@ export default function ProjectCard({
 			</div>
 			<div className='flex flex-wrap justify-center gap-2 my-4'>
 				{Object.keys(badges).map((spec) =>
-					badges[
-						spec as keyof ProjectCardProps['project']['badges']
-					].map((tech) => (
-						<Badge
-							variant={
-								spec as keyof ProjectCardProps['project']['badges']
-							}
-							key={tech}
-						>
+					badges[spec as keyof BadgesType].map((tech) => (
+						<Badge variant={spec as keyof BadgesType} key={tech}>
 							{tech}
 						</Badge>
 					))
