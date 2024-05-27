@@ -7,17 +7,16 @@ const buttonVariants = cva(
 	{
 		variants: {
 			variant: {
-				default:
-					'bg-primary text-primary-foreground hover:bg-primary/80',
+				default: 'light-mode-link-button dark:dark-mode-link-button',
 				outline:
 					'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
 				secondary:
 					'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-				link: 'text-primary underline-offset-4 hover:underline',
-				github: 'text-white bg-gray-500 hover:bg-gray-600',
+				link: 'text-primary-foreground underline-offset-4 hover:underline',
+				github: 'light-mode-link-button dark:dark-mode-link-button',
 				githubProject: 'text-white bg-gray-500 hover:bg-gray-600',
-				linkedin: 'text-white bg-blue-600 hover:bg-blue-700',
-				youtube: 'text-white bg-red-600 hover:bg-red-700',
+				linkedin: 'light-mode-link-button dark:dark-mode-link-button',
+				youtube: 'text-primary-foreground bg-red-600 hover:bg-red-700',
 			},
 			size: {
 				default: 'h-10 px-4 py-2',
@@ -36,12 +35,12 @@ const logoVariants = cva('', {
 	variants: {
 		variant: {
 			default: 'mr-2 size-4',
-			outline: '',
-			secondary: '',
-			link: '',
+			outline: 'mr-2 size-4',
+			secondary: 'mr-2 size-4',
+			link: 'mr-2 size-4',
 			github: 'mr-2 size-5',
 			githubProject: 'mr-2 size-4',
-			linkedin: 'mr-1 size-7',
+			linkedin: 'mr-2 size-5',
 			youtube: 'mr-2 size-7',
 		},
 	},

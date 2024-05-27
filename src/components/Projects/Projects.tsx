@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import GithubLogo from '@assets/github-logo.svg';
+import GithubLogo from '@assets/github-logo-light.svg';
 import YoutubeLogo from '@assets/youtube-logo.svg';
 import LinkButton from '../LinkButton/LinkButton';
 import MainProjectCard from './MainProjectCard/MainProjectCard';
@@ -66,10 +66,10 @@ const jobMemo: ProjectCardProps['project'] = {
 		content: (
 			<div>
 				<p>
-					The goal of the app is to help users track their various job
-					applications and their associated contacts.
+					Help users track their various job applications and their
+					associated contacts.
 				</p>
-				<p> The main feature is the cards drag and drop.</p>
+				<p> The main feature is the job cards drag and drop.</p>
 			</div>
 		),
 	},

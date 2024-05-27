@@ -1,17 +1,24 @@
 import LinkButton from '../../LinkButton/LinkButton';
-import GithubLogo from '@assets/github-logo.svg';
+import GithubLogoLight from '@assets/github-logo-light.svg';
+import GithubLogoDark from '@assets/github-logo-dark.svg';
 import LinkedinLogo from '@assets/linkedin-logo.svg';
 import EmailLogo from '@assets/email-logo.svg';
 import PdfLogo from '@assets/pdf-logo.svg';
 import CV from '@assets/cv/CV_ChrisBerlant_ReactDev.pdf';
+import { useContext } from 'react';
+import { ThemeProviderContext } from '../../ThemeProvider/ThemeProvider';
 
-function ProfileLinks() {
+export default function ProfileLinks() {
+	const { theme } = useContext(ThemeProviderContext);
+
+	const gitHubLogo = theme == 'light' ? GithubLogoDark : GithubLogoLight;
+
 	return (
-		<div className='flex flex-wrap justify-center gap-4'>
+		<div className='flex flex-wrap justify-center gap-4 md:gap-6'>
 			<LinkButton
 				variant='github'
 				text='GitHub'
-				logo={GithubLogo}
+				logo={gitHubLogo}
 				link='https://github.com/chrisberlant'
 			/>
 			<LinkButton
@@ -39,5 +46,3 @@ function ProfileLinks() {
 		</div>
 	);
 }
-
-export default ProfileLinks;

@@ -20,12 +20,13 @@
 		--primary-foreground: 0 0% 100%;
 		--secondary: 266 30% 75%;
 		--secondary-foreground: 266 30% 15%;
-		--accent: 220 23% 80%;
-		--accent-foreground: 220 23% 20%;
+		--accent: 0 0% 85%;
+		--accent-foreground: 0 0% 25%;
 		--destructive: 3 87% 37%;
 		--destructive-foreground: 3 87% 97%;
 		--ring: 266 85% 58%;
 		--radius: 0.5rem;
+		--button-background: 210 3% 80%;
 	}
 
 	.dark {
@@ -49,11 +50,18 @@
 		--destructive-foreground: 0 0% 100%;
 		--ring: 267 84% 81%;
 	}
-}
 
-@layer base {
 	.app {
 		@apply bg-background min-h-screen min-w-min text-foreground;
 		padding: 2rem 5% 1.5rem;
+	}
+}
+
+@layer components {
+	.light-mode-link-button {
+		@apply text-primary bg-button hover:bg-accent border;
+	}
+	.dark-mode-link-button {
+		@apply text-primary bg-background border border-input hover:bg-accent;
 	}
 }
