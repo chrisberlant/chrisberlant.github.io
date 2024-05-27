@@ -3,9 +3,9 @@ import GithubLogo from '@assets/github-logo-light.svg';
 import YoutubeLogo from '@assets/youtube-logo.svg';
 import LinkButton from '../LinkButton/LinkButton';
 import MainProjectCard from './MainProjectCard/MainProjectCard';
-import ProjectCard, { ProjectCardProps } from './ProjectCard/ProjectCard';
+import ProjectCard, { ProjectType } from './ProjectCard/ProjectCard';
 
-const gestionSmac: ProjectCardProps['project'] = {
+const gestionSmac: ProjectType = {
 	title: 'Gestion SMAC',
 	slidesUrl: [
 		'/img/gestion-smac0.png',
@@ -46,7 +46,7 @@ const gestionSmac: ProjectCardProps['project'] = {
 	},
 };
 
-const jobMemo: ProjectCardProps['project'] = {
+const jobMemo: ProjectType = {
 	title: 'Jobmémo',
 	slidesUrl: [
 		'/img/jobmemo1.png',
@@ -78,15 +78,12 @@ const jobMemo: ProjectCardProps['project'] = {
 const Projects = forwardRef(
 	(_, ref: React.ForwardedRef<HTMLDivElement | null>) => {
 		return (
-			<section ref={ref} className='flex flex-col mt-20'>
+			<section ref={ref} className='flex flex-col mt-20 2xl:px-28'>
 				<h2 className='mb-10 text-4xl font-bold text-center animate-fade-in font-montserrat'>
 					My Projects
 				</h2>
 				<div className='flex flex-col flex-wrap items-center justify-center gap-10 sm:gap-14'>
-					<MainProjectCard
-						project={gestionSmac}
-						className='animate-slide-from-left'
-					>
+					<MainProjectCard project={gestionSmac}>
 						<div className='flex flex-col items-center justify-between flex-1'>
 							{' '}
 							{gestionSmac.description.content}
@@ -118,10 +115,7 @@ const Projects = forwardRef(
 						</div>
 					</MainProjectCard>
 					<div className='flex flex-wrap justify-center gap-10 sm:gap-14'>
-						<ProjectCard
-							project={jobMemo}
-							className='animate-slide-from-right'
-						>
+						<ProjectCard project={jobMemo}>
 							<LinkButton
 								size='sm'
 								variant='githubProject'

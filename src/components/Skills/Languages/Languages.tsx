@@ -11,7 +11,7 @@ export default function Languages() {
 	const [lang, setLang] = useState(true);
 
 	return (
-		<SkillsCard title='Languages' className='animate-slide-from-left'>
+		<SkillsCard title='Languages'>
 			<SkillElement
 				className='animate-glitch'
 				onAnimation={() => setLang((prev) => !prev)}

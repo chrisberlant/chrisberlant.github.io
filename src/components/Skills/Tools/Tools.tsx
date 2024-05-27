@@ -6,10 +6,7 @@ import DockerLogo from '@assets/docker-logo.svg';
 
 export default function Tools() {
 	return (
-		<SkillsCard
-			title='Tools'
-			className='md:animate-slide-from-left animate-slide-from-right'
-		>
+		<SkillsCard title='Tools'>
 			<SkillElement
 				title='Visual Studio Code'
 				logo={VSCodeLogo}

@@ -5,7 +5,7 @@ import UKFlag from '@assets/uk-flag.svg';
 
 export default function ISpeak() {
 	return (
-		<SkillsCard title='I speak' className='animate-slide-from-right'>
+		<SkillsCard title='I speak'>
 			<SkillElement title='French' logo={FrenchFlag} alt='French flag' />
 			<SkillElement
 				title='English'

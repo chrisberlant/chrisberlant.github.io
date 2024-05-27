@@ -7,7 +7,7 @@ import AccessibilityLogo from '@assets/accessibility-logo.svg';
 
 export default function Others() {
 	return (
-		<SkillsCard title='Others' className='animate-slide-from-bottom'>
+		<SkillsCard title='Others'>
 			<SkillElement title='Git' logo={GitLogo} alt='Git logo' />
 			<SkillElement
 				title='Wireframes conception'

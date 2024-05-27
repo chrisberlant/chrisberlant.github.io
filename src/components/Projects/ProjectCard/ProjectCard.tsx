@@ -10,17 +10,18 @@ import { cn } from '@lib/utils';
 import { ReactNode } from 'react';
 
 export type BadgesType = { front: string[]; back: string[]; both: string[] };
+export type ProjectType = {
+	title: string;
+	slidesUrl: string[];
+	badges: BadgesType;
+	description: {
+		title: string;
+		content: ReactNode;
+	};
+};
 
 export interface ProjectCardProps {
-	project: {
-		title: string;
-		slidesUrl: string[];
-		badges: BadgesType;
-		description: {
-			title: string;
-			content: ReactNode;
-		};
-	};
+	project: ProjectType;
 	children: ReactNode;
 	className?: string;
 }
@@ -34,7 +35,7 @@ export default function ProjectCard({
 	return (
 		<div
 			className={cn(
-				'bg-card flex flex-col items-center rounded-xl shadow-md px-5 md:px-12 py-5 max-w-none border-2 border-border',
+				'bg-card flex flex-col items-center rounded-xl shadow-md px-5 md:px-12 py-5 max-w-none border-2 border-border animate-pop',
 				className
 			)}
 		>

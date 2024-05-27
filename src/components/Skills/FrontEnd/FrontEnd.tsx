@@ -7,10 +7,7 @@ import SassLogo from '@assets/sass-logo.svg';
 
 export default function FrontEnd() {
 	return (
-		<SkillsCard
-			title='Front-end'
-			className='animate-slide-from-right md:animate-slide-from-top'
-		>
+		<SkillsCard title='Front-end'>
 			<SkillElement title='React' logo={ReactLogo} alt='React logo' />
 			<SkillElement
 				title='Redux Toolkit'

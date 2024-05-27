@@ -12,7 +12,7 @@ export default function MainProjectCard({
 	return (
 		<div
 			className={cn(
-				'bg-card flex flex-col items-center rounded-xl shadow-md px-5 md:px-12 py-5 border-2 border-border',
+				'bg-card flex flex-col items-center rounded-xl shadow-md px-5 md:px-12 py-5 border-2 border-border animate-pop',
 				className
 			)}
 		>
@@ -32,7 +32,7 @@ export default function MainProjectCard({
 			</div>
 
 			<h4 className='mb-2 font-bold text-center'>Screenshots</h4>
-			<div className='flex flex-wrap justify-center gap-2 xl:max-w-60%'>
+			<div className='flex flex-wrap justify-center gap-2 xl:max-w-80%'>
 				{slidesUrl.map((slide, index) => (
 					<a href={slide} key={slide} target='_blank'>
 						<img

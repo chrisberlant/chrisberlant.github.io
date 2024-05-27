@@ -24,7 +24,10 @@ export default {
 				'25%': '25%',
 				'50%': '50%',
 				'60%': '60%',
+				'70%': '70%',
 				'75%': '75%',
+				'80%': '80%',
+				'85%': '85%',
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -75,8 +78,19 @@ export default {
 				'slide-from-bottom': 'slideFromBottom 1s ease-in-out',
 				'meteor-effect': 'meteor 5s linear infinite',
 				glitch: 'glitch 5s infinite',
+				pop: 'pop 1s cubic-bezier(0.27,0.53,0.28,1.58) forwards',
 			},
 			keyframes: {
+				pop: {
+					'0%': {
+						transform: 'translateY(50px) scale(0)',
+						opacity: '0',
+					},
+					'100%': {
+						transform: 'translateY(0) scale(1)',
+						opacity: '1',
+					},
+				},
 				glitch: {
 					'5%, 49%, 55%, 85%': {
 						transform: 'skewX(0deg)',

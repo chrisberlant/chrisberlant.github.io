@@ -59,9 +59,9 @@
 
 @layer components {
 	.light-mode-link-button {
-		@apply text-primary bg-button hover:bg-accent border;
+		@apply bg-button hover:bg-accent shadow-md;
 	}
 	.dark-mode-link-button {
-		@apply text-primary bg-background border border-input hover:bg-accent;
+		@apply bg-background border border-input hover:bg-accent;
 	}
 }

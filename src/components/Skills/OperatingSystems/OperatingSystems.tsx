@@ -5,10 +5,7 @@ import LinuxLogo from '@assets/linux-logo.svg';
 
 export default function OperatingSystems() {
 	return (
-		<SkillsCard
-			title='OS'
-			className='md:animate-slide-from-bottom animate-slide-from-left'
-		>
+		<SkillsCard title='OS'>
 			<SkillElement
 				title='Windows'
 				logo={WindowsLogo}
