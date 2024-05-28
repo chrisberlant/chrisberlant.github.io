@@ -20,7 +20,7 @@ const gestionSmac: ProjectType = {
 	badges: {
 		front: ['React', 'Mantine', 'Tanstack Table', 'Tanstack Query'],
 		back: ['Express', 'PostgreSQL', 'JWT'],
-		both: ['Zod'],
+		fullStack: ['Zod'],
 	},
 	description: {
 		title: 'A mobile devices management application',
@@ -61,7 +61,7 @@ const jobMemo: ProjectType = {
 	badges: {
 		front: ['React', 'Redux', 'React Beautiful DnD'],
 		back: ['Express', 'PostgreSQL', 'JWT'],
-		both: ['Joi'],
+		fullStack: ['Joi'],
 	},
 	description: {
 		title: 'Job finding helper',

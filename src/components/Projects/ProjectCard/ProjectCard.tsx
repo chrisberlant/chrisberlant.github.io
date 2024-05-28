@@ -9,7 +9,11 @@ import Badge from '../../Badge/Badge';
 import { cn } from '@lib/utils';
 import { ReactNode } from 'react';
 
-export type BadgesType = { front: string[]; back: string[]; both: string[] };
+export type BadgesType = {
+	front: string[];
+	back: string[];
+	fullStack: string[];
+};
 export type ProjectType = {
 	title: string;
 	slidesUrl: string[];

@@ -27,6 +27,9 @@
 		--ring: 266 85% 58%;
 		--radius: 0.5rem;
 		--button-background: 210 3% 80%;
+		--full-stack: 266 85% 58%;
+		--front-end: 220 91% 54%;
+		--back-end: 347 87% 44%;
 	}
 
 	.dark {
@@ -59,12 +62,12 @@
 
 @layer components {
 	.light-mode-link-button {
-		@apply bg-card hover:bg-accent shadow-md border border-input;
+		@apply bg-card hover:bg-accent border border-input shadow-md;
 	}
 	.dark-mode-link-button {
-		@apply bg-background border border-input hover:bg-accent;
+		@apply bg-background hover:bg-accent border border-input;
 	}
 	.light-mode-project-button {
-		@apply bg-background hover:bg-accent shadow-md border border-input;
+		@apply bg-background hover:bg-accent border border-input shadow-md;
 	}
 }

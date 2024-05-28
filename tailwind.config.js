@@ -30,6 +30,9 @@ export default {
 				'85%': '85%',
 			},
 			colors: {
+				'full-stack': 'hsl(var(--full-stack))',
+				'front-end': 'hsl(var(--front-end))',
+				'back-end': 'hsl(var(--back-end))',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
