@@ -1,6 +1,6 @@
 import LinkButton from '../../LinkButton/LinkButton';
-import GithubLogoLight from '@assets/github-logo-light.svg';
-import GithubLogoDark from '@assets/github-logo-dark.svg';
+import GithubLogoBlack from '@assets/github-logo-black.svg';
+import GithubLogoWhite from '@assets/github-logo-white.svg';
 import LinkedinLogo from '@assets/linkedin-logo.svg';
 import EmailLogo from '@assets/email-logo.svg';
 import PdfLogo from '@assets/pdf-logo.svg';
@@ -10,8 +10,7 @@ import { ThemeProviderContext } from '../../ThemeProvider/ThemeProvider';
 
 export default function ProfileLinks() {
 	const { theme } = useContext(ThemeProviderContext);
-
-	const gitHubLogo = theme == 'light' ? GithubLogoDark : GithubLogoLight;
+	const gitHubLogo = theme == 'light' ? GithubLogoBlack : GithubLogoWhite;
 
 	return (
 		<div className='flex flex-wrap justify-center gap-4 md:gap-6'>

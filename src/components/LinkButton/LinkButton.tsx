@@ -14,7 +14,8 @@ const buttonVariants = cva(
 					'bg-secondary text-secondary-foreground hover:bg-secondary/80',
 				link: 'text-primary-foreground underline-offset-4 hover:underline',
 				github: 'light-mode-link-button dark:dark-mode-link-button',
-				githubProject: 'text-white bg-gray-500 hover:bg-gray-600',
+				githubProject:
+					'light-mode-project-button dark:dark-mode-link-button',
 				linkedin: 'light-mode-link-button dark:dark-mode-link-button',
 				youtube: 'text-primary-foreground bg-red-600 hover:bg-red-700',
 			},

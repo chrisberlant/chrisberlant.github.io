@@ -1,9 +1,11 @@
-import { forwardRef } from 'react';
-import GithubLogo from '@assets/github-logo-light.svg';
+import { forwardRef, useContext } from 'react';
 import YoutubeLogo from '@assets/youtube-logo.svg';
 import LinkButton from '../LinkButton/LinkButton';
+import GithubLogoWhite from '@assets/github-logo-white.svg';
+import GithubLogoBlack from '@assets/github-logo-black.svg';
 import MainProjectCard from './MainProjectCard/MainProjectCard';
 import ProjectCard, { ProjectType } from './ProjectCard/ProjectCard';
+import { ThemeProviderContext } from '../ThemeProvider/ThemeProvider';
 
 const gestionSmac: ProjectType = {
 	title: 'Gestion SMAC',
@@ -77,6 +79,9 @@ const jobMemo: ProjectType = {
 
 const Projects = forwardRef(
 	(_, ref: React.ForwardedRef<HTMLDivElement | null>) => {
+		const { theme } = useContext(ThemeProviderContext);
+		const gitHubLogo = theme == 'light' ? GithubLogoBlack : GithubLogoWhite;
+
 		return (
 			<section ref={ref} className='flex flex-col mt-20 2xl:px-28'>
 				<h2 className='mb-10 text-4xl font-bold text-center animate-fade-in font-montserrat'>
@@ -92,7 +97,7 @@ const Projects = forwardRef(
 									size='sm'
 									variant='githubProject'
 									text='Front-end repository'
-									logo={GithubLogo}
+									logo={gitHubLogo}
 									aria-label='Open the Gestion SMAC front-end repository'
 									link='https://github.com/chrisberlant/gestion-SMAC-front'
 								/>
@@ -100,7 +105,7 @@ const Projects = forwardRef(
 									size='sm'
 									variant='githubProject'
 									text='Back-end repository'
-									logo={GithubLogo}
+									logo={gitHubLogo}
 									aria-label='Open the Gestion SMAC back-end repository'
 									link='https://github.com/chrisberlant/gestion-SMAC-back'
 								/>
@@ -120,7 +125,7 @@ const Projects = forwardRef(
 								size='sm'
 								variant='githubProject'
 								text='Front-end'
-								logo={GithubLogo}
+								logo={gitHubLogo}
 								aria-label='Open the JobMemo front-end repository'
 								link='https://github.com/chrisberlant/jobmemo-front'
 							/>
@@ -128,7 +133,7 @@ const Projects = forwardRef(
 								size='sm'
 								variant='githubProject'
 								text='Back-end'
-								logo={GithubLogo}
+								logo={gitHubLogo}
 								aria-label='Open the JobMemo back-end repository'
 								link='https://github.com/chrisberlant/jobmemo-back'
 							/>
