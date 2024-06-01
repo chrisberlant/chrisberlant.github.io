@@ -1,5 +1,5 @@
-import SkillsCard from '../SkillsCard/SkillsCard';
-import SkillElement from '../SkillsCard/SkillElement/SkillElement';
+import SkillsCard from '@/components/SkillsCard/SkillsCard';
+import SkillElement from '@/components/SkillsCard/SkillElement/SkillElement';
 import FrenchFlag from '@assets/french-flag.svg';
 import UKFlag from '@assets/uk-flag.svg';
 

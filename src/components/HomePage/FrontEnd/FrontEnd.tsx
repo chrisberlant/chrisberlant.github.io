@@ -1,5 +1,5 @@
-import SkillsCard from '../SkillsCard/SkillsCard';
-import SkillElement from '../SkillsCard/SkillElement/SkillElement';
+import SkillsCard from '@/components/SkillsCard/SkillsCard';
+import SkillElement from '@/components/SkillsCard/SkillElement/SkillElement';
 import ReactLogo from '@assets/react-logo.svg';
 import ReduxLogo from '@assets/redux-logo.svg';
 import TailwindLogo from '@assets/tailwind-logo.svg';

@@ -1,5 +1,5 @@
-import SkillsCard from '../SkillsCard/SkillsCard';
-import SkillElement from '../SkillsCard/SkillElement/SkillElement';
+import SkillsCard from '@/components/SkillsCard/SkillsCard';
+import SkillElement from '@/components/SkillsCard/SkillElement/SkillElement';
 import WireframeLogo from '@assets/wireframe-logo.svg';
 import GitLogo from '@assets/git-logo.svg';
 import AgileLogo from '@assets/agile-logo.png';

@@ -74,6 +74,7 @@ export default {
 				sm: 'calc(var(--radius) - 4px)',
 			},
 			animation: {
+				orbit: 'orbit calc(var(--duration)*1s) linear infinite',
 				'fade-in': 'fadeIn 2s ease-in-out',
 				'slide-from-left': 'slideFromLeft 1s ease-in-out',
 				'slide-from-right': 'slideFromRight 1s ease-in-out',
@@ -81,9 +82,19 @@ export default {
 				'slide-from-bottom': 'slideFromBottom 1s ease-in-out',
 				'meteor-effect': 'meteor 5s linear infinite',
 				glitch: 'glitch 5s infinite',
-				pop: 'pop 1s cubic-bezier(0.27,0.53,0.28,1.58) forwards',
+				pop: 'pop 0.7s cubic-bezier(0.27,0.53,0.28,1.30) forwards',
 			},
 			keyframes: {
+				orbit: {
+					'0%': {
+						transform:
+							'rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)',
+					},
+					'100%': {
+						transform:
+							'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)',
+					},
+				},
 				pop: {
 					'0%': {
 						transform: 'translateY(50px) scale(0)',

@@ -77,68 +77,67 @@ const jobMemo: ProjectType = {
 	},
 };
 
-const Projects = forwardRef(
-	(_, ref: React.ForwardedRef<HTMLDivElement | null>) => {
-		const { theme } = useContext(ThemeProviderContext);
-		const gitHubLogo = theme == 'light' ? GithubLogoBlack : GithubLogoWhite;
+export default function Projects() {
+	const { theme } = useContext(ThemeProviderContext);
+	const gitHubLogo = theme == 'light' ? GithubLogoBlack : GithubLogoWhite;
 
-		return (
-			<section ref={ref} className='flex flex-col mt-20 2xl:px-28'>
-				<h2 className='mb-10 text-4xl font-bold text-center animate-fade-in font-montserrat'>
-					My Projects
-				</h2>
-				<div className='flex flex-col flex-wrap items-center justify-center gap-10 sm:gap-14'>
-					<MainProjectCard project={gestionSmac}>
-						<div className='flex flex-col items-center justify-between flex-1'>
-							{' '}
-							{gestionSmac.description.content}
-							<div className='flex flex-row flex-wrap justify-around gap-6 mt-4'>
-								<LinkButton
-									size='sm'
-									variant='githubProject'
-									text='Front-end repository'
-									logo={gitHubLogo}
-									aria-label='Open the Gestion SMAC front-end repository'
-									link='https://github.com/chrisberlant/gestion-SMAC-front'
-								/>
-								<LinkButton
-									size='sm'
-									variant='githubProject'
-									text='Back-end repository'
-									logo={gitHubLogo}
-									aria-label='Open the Gestion SMAC back-end repository'
-									link='https://github.com/chrisberlant/gestion-SMAC-back'
-								/>
-								{/* <LinkButton
+	return (
+		<section className='flex flex-col mb-4 2xl:px-28'>
+			<h2 className='mb-10 text-4xl font-bold text-center animate-fade-in font-montserrat'>
+				My Projects
+			</h2>
+			<div className='flex flex-col flex-wrap items-center justify-center gap-10 sm:gap-14'>
+				<MainProjectCard project={gestionSmac}>
+					<div className='flex flex-col items-center justify-between flex-1'>
+						{' '}
+						{gestionSmac.description.content}
+						<div className='flex flex-row flex-wrap justify-around gap-6 mt-4'>
+							<LinkButton
+								size='sm'
+								variant='githubProject'
+								text='Front-end repository'
+								logo={gitHubLogo}
+								aria-label='Open the Gestion SMAC front-end repository'
+								link='https://github.com/chrisberlant/gestion-SMAC-front'
+							/>
+							<LinkButton
+								size='sm'
+								variant='githubProject'
+								text='Back-end repository'
+								logo={gitHubLogo}
+								aria-label='Open the Gestion SMAC back-end repository'
+								link='https://github.com/chrisberlant/gestion-SMAC-back'
+							/>
+							{/* <LinkButton
 								size='sm'
 								variant='youtube'
 								text='YouTube Demo'
 								logo={YoutubeLogo}
 								link='https://github.com/chrisberlant/gestion-SMAC-front'
 							/> */}
-							</div>
 						</div>
-					</MainProjectCard>
-					<div className='flex flex-wrap justify-center gap-10 sm:gap-14'>
-						<ProjectCard project={jobMemo}>
-							<LinkButton
-								size='sm'
-								variant='githubProject'
-								text='Front-end'
-								logo={gitHubLogo}
-								aria-label='Open the JobMemo front-end repository'
-								link='https://github.com/chrisberlant/jobmemo-front'
-							/>
-							<LinkButton
-								size='sm'
-								variant='githubProject'
-								text='Back-end'
-								logo={gitHubLogo}
-								aria-label='Open the JobMemo back-end repository'
-								link='https://github.com/chrisberlant/jobmemo-back'
-							/>
-						</ProjectCard>
-						{/* <ProjectCard
+					</div>
+				</MainProjectCard>
+				<div className='flex flex-wrap justify-center gap-10 sm:gap-14'>
+					<ProjectCard project={jobMemo}>
+						<LinkButton
+							size='sm'
+							variant='githubProject'
+							text='Front-end'
+							logo={gitHubLogo}
+							aria-label='Open the JobMemo front-end repository'
+							link='https://github.com/chrisberlant/jobmemo-front'
+						/>
+						<LinkButton
+							size='sm'
+							variant='githubProject'
+							text='Back-end'
+							logo={gitHubLogo}
+							aria-label='Open the JobMemo back-end repository'
+							link='https://github.com/chrisberlant/jobmemo-back'
+						/>
+					</ProjectCard>
+					{/* <ProjectCard
 						project={jobMemo}
 						className='animate-slide-from-right'
 					>
@@ -159,11 +158,8 @@ const Projects = forwardRef(
 							link='https://github.com/chrisberlant/jobmemo-back'
 						/>
 					</ProjectCard> */}
-					</div>
 				</div>
-			</section>
-		);
-	}
-);
-
-export default Projects;
+			</div>
+		</section>
+	);
+}

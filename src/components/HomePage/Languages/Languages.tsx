@@ -1,5 +1,5 @@
-import SkillsCard from '../SkillsCard/SkillsCard';
-import SkillElement from '../SkillsCard/SkillElement/SkillElement';
+import SkillsCard from '@/components/SkillsCard/SkillsCard';
+import SkillElement from '@/components/SkillsCard/SkillElement/SkillElement';
 import TypeScriptLogo from '@assets/typescript-logo.svg';
 import HtmlLogo from '@assets/html-logo.svg';
 import CssLogo from '@assets/css-logo.svg';

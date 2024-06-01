@@ -1,5 +1,5 @@
-import SkillsCard from '../SkillsCard/SkillsCard';
-import SkillElement from '../SkillsCard/SkillElement/SkillElement';
+import SkillsCard from '@/components/SkillsCard/SkillsCard';
+import SkillElement from '@/components/SkillsCard/SkillElement/SkillElement';
 import NodeJsLogo from '@assets/nodejs-logo.svg';
 import PostgresLogo from '@assets/postgresql-logo.svg';
 import ExpressLogo from '@assets/express-logo.png';

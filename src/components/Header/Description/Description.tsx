@@ -5,13 +5,18 @@ const descriptionString =
 
 export default function Description() {
 	return (
-		<Typewriter
-			options={{
-				delay: 50,
-			}}
-			onInit={(typewriter) => {
-				typewriter.typeString(descriptionString).start();
-			}}
-		/>
+		<div className='font-robotoMono flex flex-col h-48 min-[482px]:h-40 sm:h-44 min-[1183px]:h-36 text-2xl sm:text-3xl font-bold text-center'>
+			<div className='flex justify-center'>
+				<h1 className='mb-4'>Hi I'm Chris!</h1>
+			</div>
+			<Typewriter
+				options={{
+					delay: 50,
+				}}
+				onInit={(typewriter) => {
+					typewriter.typeString(descriptionString).start();
+				}}
+			/>
+		</div>
 	);
 }

@@ -13,7 +13,7 @@ export default function ProfileLinks() {
 	const gitHubLogo = theme == 'light' ? GithubLogoBlack : GithubLogoWhite;
 
 	return (
-		<div className='flex flex-wrap justify-center gap-4 md:gap-6'>
+		<div className='flex flex-wrap justify-center gap-4 mt-4 mb-12 md:gap-6'>
 			<LinkButton
 				variant='github'
 				text='GitHub'
@@ -27,7 +27,7 @@ export default function ProfileLinks() {
 				link='https://www.linkedin.com/in/chris-berlant/'
 			/>
 			<LinkButton
-				text='chris.berlant@gmail.com'
+				text='Email me'
 				logo={EmailLogo}
 				variant='default'
 				onClick={() =>
@@ -36,7 +36,7 @@ export default function ProfileLinks() {
 			/>
 			<a href={CV} download='CV_ChrisBerlant_ReactDev' target='_blank'>
 				<LinkButton
-					text='Download CV'
+					text='My CV'
 					logo={PdfLogo}
 					variant='default'
 					logoAlt='PDF logo'
