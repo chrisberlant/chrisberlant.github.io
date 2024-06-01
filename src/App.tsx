@@ -4,6 +4,7 @@ import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import { ThemeProviderContext } from './components/ThemeProvider/ThemeProvider';
 import Footer from './components/Footer/Footer';
+import MobileMenu from './components/MobileMenu/MobileMenu';
 
 export default function App() {
 	const { theme } = useContext(ThemeProviderContext);
@@ -21,6 +22,7 @@ export default function App() {
 					currentPosition='Footer'
 					refs={[headerRef, skillsRef, projectsRef]}
 				/>
+				{/* <MobileMenu /> */}
 			</main>
 		</div>
 	);
