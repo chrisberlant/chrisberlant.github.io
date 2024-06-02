@@ -13,7 +13,7 @@ export default function HomePage() {
 				<h2 className='mt-4 mb-10 text-4xl font-bold text-center font-montserrat animate-fade-in'>
 					My Skills
 				</h2>
-				<div className='flex flex-wrap items-start justify-center max-w-4xl gap-10 sm:gap-14'>
+				<div className='flex flex-wrap items-start justify-around max-w-4xl gap-10 sm:gap-14'>
 					<Languages />
 					<FrontEnd />
 					<BackEnd />
