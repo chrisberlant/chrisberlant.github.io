@@ -4,7 +4,7 @@ import {
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuGroup,
-} from '@/components/ui/dropdown-menu';
+} from '@/components/ui/DropDownMenu';
 import { User, Settings, MenuIcon, TowerControl } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
@@ -14,11 +14,11 @@ export default function MobileMenu() {
 		<nav className='flex justify-end mt-4 mr-8'>
 			<DropdownMenu>
 				<DropdownMenuTrigger asChild>
-					<Button variant='outline' size='sm'>
+					<Button variant='outline' size='sm' className='bg-card'>
 						<MenuIcon />
 					</Button>
 				</DropdownMenuTrigger>
-				<DropdownMenuContent className='bg-background w-28'>
+				<DropdownMenuContent>
 					<DropdownMenuGroup>
 						<Link to='/'>
 							<DropdownMenuItem className='cursor-pointer hover:bg-accent'>

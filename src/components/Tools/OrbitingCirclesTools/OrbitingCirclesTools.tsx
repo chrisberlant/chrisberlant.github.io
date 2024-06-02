@@ -16,17 +16,15 @@ export default function OrbitingCirclesTools({
 	setHoveredSoft,
 }: OrbitingCirclesToolsProps) {
 	return (
-		<div className='flex flex-1 h-[500px] w-full max-w-[32rem] items-center justify-center overflow-hidden'>
+		<div className='flex min-w-fit flex-1 h-[500px] w-full max-w-[32rem] items-center justify-center overflow-hidden'>
 			<span className='font-semibold leading-none text-center text-transparent whitespace-pre-wrap pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-8xl dark:from-white dark:to-slate-900/10'>
 				Softwares
 			</span>
 
 			{/* Inner Circles */}
 			<OrbitingCircles
-				className={`h-[34px] w-[34px] bg-transparent ${
-					hoveredSoft?.docker
-						? 'border-red-500 scale-150'
-						: 'border-none'
+				className={`h-[34px] w-[34px] bg-transparent border-none ${
+					hoveredSoft?.docker ? ' scale-150' : ''
 				}`}
 				duration={20}
 				delay={20}
