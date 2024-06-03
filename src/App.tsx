@@ -20,7 +20,9 @@ export default function App() {
 
 	return (
 		<Router>
-			<div className={`app ${theme}`}>
+			<div
+				className={`app ${theme} py-8 bg-background text-foreground lg:px-8 px-4`}
+			>
 				<Header />
 				<main>
 					<AppRoutes />

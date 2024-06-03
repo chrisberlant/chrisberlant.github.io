@@ -6,7 +6,7 @@ function ThemeToggler() {
 	const { theme, toggleTheme } = useContext(ThemeProviderContext);
 
 	return (
-		<div className='absolute top-6 right-6 md:top-8 md:right-8 xl:top-10 xl:right-24'>
+		<div className='absolute right-4 top-5 md:top-8 md:right-8 lg:top-8 lg:right-20'>
 			<button
 				onClick={toggleTheme}
 				className='cursor-pointer animate-slide-from-top hover:scale-110'

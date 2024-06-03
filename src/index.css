@@ -53,11 +53,6 @@
 		--destructive-foreground: 0 0% 100%;
 		--ring: 267 84% 81%;
 	}
-
-	.app {
-		@apply bg-background min-h-screen min-w-min text-foreground;
-		padding: 2rem 5% 1.5rem;
-	}
 }
 
 @layer components {

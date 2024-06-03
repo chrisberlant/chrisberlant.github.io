@@ -7,9 +7,9 @@ import ThemeToggler from '../ThemeToggler/ThemeToggler';
 const Header = forwardRef(
 	(_, ref: React.ForwardedRef<HTMLDivElement | null>) => {
 		return (
-			<header ref={ref} className='flex flex-col text-center'>
+			<header ref={ref}>
 				<ThemeToggler />
-				<nav className='flex gap-8 mt-8 ml-auto mr-20 animate-slide-from-top'>
+				<nav className='flex justify-end gap-4 mt-8 ml-auto mr-5 lg:gap-8 lg:mr-20 animate-slide-from-top'>
 					<NavLink
 						to='/'
 						className={({ isActive }) =>

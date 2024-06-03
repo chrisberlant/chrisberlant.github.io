@@ -16,14 +16,14 @@ export default function OrbitingCirclesTools({
 	setHoveredSoft,
 }: OrbitingCirclesToolsProps) {
 	return (
-		<div className='flex min-w-fit h-[450px]  max-w-[32rem] items-center justify-center overflow-hidden'>
-			<span className='font-semibold leading-none text-center text-transparent whitespace-pre-wrap pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-8xl dark:from-white dark:to-slate-900/10'>
+		<div className='flex min-w-fit h-[450px] max-w-[32rem] items-center justify-center overflow-hidden'>
+			<span className='text-6xl font-semibold leading-none text-center text-transparent whitespace-pre-wrap pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text lg:text-8xl dark:from-white dark:to-slate-900/10'>
 				Softwares
 			</span>
 
 			{/* Inner Circles */}
 			<OrbitingCircles
-				className={`h-[34px] w-[34px] bg-transparent border-none ${
+				className={`h-6 w-6 lg:h-[34px] lg:w-[34px] bg-transparent border-none ${
 					hoveredSoft?.docker ? ' scale-150' : ''
 				}`}
 				duration={20}
@@ -33,7 +33,7 @@ export default function OrbitingCirclesTools({
 				<img src={DockerLogo} />
 			</OrbitingCircles>
 			<OrbitingCircles
-				className='h-[34px] w-[34px] border-none bg-transparent'
+				className='h-6 w-6 lg:h-[34px] lg:w-[34px] border-none bg-transparent'
 				duration={20}
 				delay={10}
 				radius={80}
@@ -41,7 +41,7 @@ export default function OrbitingCirclesTools({
 				<img src={InsomniaLogo} />
 			</OrbitingCircles>
 			<OrbitingCircles
-				className='h-[34px] w-[34px] border-none bg-transparent'
+				className='h-6 w-6 lg:h-[34px] lg:w-[34px] border-none bg-transparent'
 				duration={20}
 				delay={55}
 				radius={80}
@@ -51,17 +51,17 @@ export default function OrbitingCirclesTools({
 
 			{/* Outer Circles (reverse) */}
 			<OrbitingCircles
-				className='h-[50px] w-[50px] border-none bg-transparent'
+				className='h-9 w-9 lg:h-[50px] lg:w-[50px] border-none bg-transparent'
 				reverse
-				radius={190}
+				radius={170}
 				duration={20}
 			>
 				<img src={VSCodeLogo} />
 			</OrbitingCircles>
 			<OrbitingCircles
-				className='h-[50px] w-[50px] border-none bg-transparent'
+				className='h-9 w-9 lg:h-[50px] lg:w-[50px] border-none bg-transparent'
 				reverse
-				radius={190}
+				radius={170}
 				duration={20}
 				delay={20}
 			>
