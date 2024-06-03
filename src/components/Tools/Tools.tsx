@@ -1,13 +1,15 @@
 import { useContext, useState } from 'react';
 import { ThemeProviderContext } from '../ThemeProvider/ThemeProvider';
 import OrbitingCirclesTools from './OrbitingCirclesTools/OrbitingCirclesTools';
-import Animation from '@assets/operating-system-animate.svg';
+import OperatingSystemAnimate from '@assets/operating-system-animate.svg';
+import BuildingAnimate from '@assets/building-animate.svg';
 import NotionLogo from '@assets/notion-logo.svg';
 import VercelLogoWhite from '@assets/vercel-logo-white.svg';
 import VercelLogoBlack from '@assets/vercel-logo-black.svg';
 import NetlifyLogo from '@assets/netlify-logo.svg';
 import GithubLogoBlack from '@assets/github-logo-black.svg';
 import GithubLogoWhite from '@assets/github-logo-white.svg';
+import ExcalidrawLogo from '@assets/excalidraw-logo.svg';
 
 export type SoftType = {
 	vscode?: boolean;
@@ -21,13 +23,15 @@ export default function Tools() {
 	const { theme } = useContext(ThemeProviderContext);
 	const [hoveredSoft, setHoveredSoft] = useState<SoftType | null>(null);
 	return (
-		<section className='flex flex-col items-stretch lg:gap-4 gap-14 '>
-			<div className='flex flex-wrap justify-center gap-4'>
-				<OrbitingCirclesTools
-					hoveredSoft={hoveredSoft}
-					setHoveredSoft={setHoveredSoft}
-				/>
-				<ul className='content-center flex-1 px-4 text-center min-w-80'>
+		<section className='flex flex-col gap-8 lg:gap-2'>
+			<div className='flex flex-col gap-4 justify-evenly lg:flex-row'>
+				<div className='flex justify-center'>
+					<OrbitingCirclesTools
+						hoveredSoft={hoveredSoft}
+						setHoveredSoft={setHoveredSoft}
+					/>
+				</div>
+				<ul className='content-center px-4 text-center'>
 					<li>
 						<span
 							className='font-bold'
@@ -109,62 +113,156 @@ export default function Tools() {
 					</li>
 				</ul>
 			</div>
-			<div className='flex flex-wrap items-center justify-center flex-1 gap-4 max-[835px]:flex-col-reverse'>
-				<ul className='content-center flex-1 px-4 text-center min-w-72'>
-					<li className='align-middle'>
-						<span>
-							I use
+			<div className='flex flex-col items-center gap-4 justify-evenly lg:flex-row-reverse'>
+				<img src={OperatingSystemAnimate} className='max-w-md' />
+				<ul className='px-4 text-center '>
+					<li>
+						I use
+						<a
+							className='font-bold'
+							href='https://vercel.com'
+							target='_blank'
+						>
 							<img
 								src={`${
 									theme === 'dark'
 										? VercelLogoWhite
 										: VercelLogoBlack
 								}`}
-								className='inline-block mx-2 size-6'
+								className='inline-block ml-2 mr-1 size-6'
 								alt={'Vercel logo'}
 							/>
-							<span className='font-bold'>Vercel</span> and{' '}
+							Vercel
+						</a>{' '}
+						and{' '}
+						<a
+							className='font-bold'
+							href='https://www.netlify.com'
+							target='_blank'
+						>
 							<img
 								src={NetlifyLogo}
-								className='inline-block ml-1 mr-2 size-6'
+								className='inline-block mx-2 size-6'
 								alt={'Netlify logo'}
 							/>
-							<span className='font-bold'>Netlify</span> to host
-							my projects using Continuous Integration and
-							Continuous Deployments (CI/CD)
-						</span>
+							Netlify
+						</a>{' '}
+						to host my projects using Continuous Integration and
+						Continuous Deployments (CI/CD)
 					</li>
 					<li className='mt-2'>
-						<span>
-							I use
+						<a
+							className='font-bold'
+							href='https://www.notion.so'
+							target='_blank'
+						>
 							<img
 								src={NotionLogo}
-								className='inline-block mx-2 size-6'
+								className='inline-block ml-2 mr-1 size-6'
 								alt={'Notion logo'}
 							/>
-							<span className='font-bold'>Notion</span> to keep
-							tracks of my discoveries and notes, and create my
-							own documentations
-						</span>
+							Notion
+						</a>{' '}
+						allows me to keep tracks of my discoveries and notes,
+						and create my own documentations
 					</li>
 					<li className='mt-2'>
-						<span>
-							I use
+						<a
+							className='font-bold'
+							href='https://www.notion.so'
+							target='_blank'
+						>
+							<img
+								src={ExcalidrawLogo}
+								className='inline-block ml-2 mr-1 size-6'
+								alt={'Excalidraw logo'}
+							/>
+							Excalidraw
+						</a>{' '}
+						is the place where I can draw diagrams to organize my
+						ideas when building an app
+					</li>
+					<li className='mt-2'>
+						I use
+						<a
+							className='font-bold'
+							href='https://www.github.com/'
+							target='_blank'
+						>
 							<img
 								src={`${
 									theme === 'dark'
 										? GithubLogoWhite
 										: GithubLogoBlack
 								}`}
-								className='inline-block mx-2 size-6'
+								className='inline-block ml-2 mr-1 size-5'
 								alt={'GitHub logo'}
 							/>
-							<span className='font-bold'>GitHub</span> to host
-							the source code of my projects
-						</span>
+							GitHub
+						</a>{' '}
+						to host the source code of my projects
+					</li>
+					Mocodo..
+				</ul>
+			</div>
+			<div className='flex flex-col items-center gap-4 lg:mx-8 justify-evenly lg:flex-row'>
+				<img src={BuildingAnimate} className='max-w-md mb-8 lg:mb-0' />
+				<ul className='px-4 text-center'>
+					<li className='mt-2'>
+						<a
+							className='font-bold'
+							href='https://vitejs.dev'
+							target='_blank'
+						>
+							Vite
+						</a>{' '}
+						is my go-to{' '}
+						<a
+							className='font-bold'
+							href='https://react.dev'
+							target='_blank'
+						>
+							React
+						</a>{' '}
+						tool to build applications quickly
+					</li>
+					<li className='mt-2'>
+						Using{' '}
+						<a
+							className='font-bold'
+							href='https://npmjs.com'
+							target='_blank'
+						>
+							Node Package Manager
+						</a>
+						, I can install my favorite libraries
+					</li>
+					<li className='mt-2'>
+						My favorite queries library is{' '}
+						<a
+							className='font-bold'
+							href='https://tanstack.com/query/latest'
+							target='_blank'
+						>
+							TanStack Query
+						</a>
+						, it allows me to fetch data using custom React hooks,
+						and to use a local server cache to avoid unnecessary
+						requests to the API endpoints when I already received
+						the needed data
+					</li>
+					<li className='mt-2'>
+						If I need an additional state manager to handle some
+						data not being server-dependent, I use{' '}
+						<a
+							className='font-bold'
+							href='https://redux-toolkit.js.org/'
+							target='_blank'
+						>
+							Redux Toolkit
+						</a>
 					</li>
 				</ul>
-				<img src={Animation} className='flex-1 max-w-md' />
 			</div>
 		</section>
 	);

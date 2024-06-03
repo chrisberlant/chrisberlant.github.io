@@ -16,7 +16,7 @@ export default function OrbitingCirclesTools({
 	setHoveredSoft,
 }: OrbitingCirclesToolsProps) {
 	return (
-		<div className='flex min-w-fit flex-1 h-[500px] w-full max-w-[32rem] items-center justify-center overflow-hidden'>
+		<div className='flex min-w-fit h-[450px]  max-w-[32rem] items-center justify-center overflow-hidden'>
 			<span className='font-semibold leading-none text-center text-transparent whitespace-pre-wrap pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-8xl dark:from-white dark:to-slate-900/10'>
 				Softwares
 			</span>

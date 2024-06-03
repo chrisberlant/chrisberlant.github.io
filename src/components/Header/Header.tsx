@@ -26,21 +26,6 @@ const Header = forwardRef(
 						)}
 					</NavLink>
 					<NavLink
-						to='/projects'
-						className={({ isActive }) =>
-							isActive ? 'font-bold' : ''
-						}
-					>
-						{({ isActive }) => (
-							<Button
-								variant='link'
-								className={isActive ? 'font-bold' : ''}
-							>
-								My projects
-							</Button>
-						)}
-					</NavLink>
-					<NavLink
 						to='/tools'
 						className={({ isActive }) =>
 							isActive ? 'font-bold' : ''
@@ -52,6 +37,21 @@ const Header = forwardRef(
 								className={isActive ? 'font-bold' : ''}
 							>
 								My tools
+							</Button>
+						)}
+					</NavLink>
+					<NavLink
+						to='/projects'
+						className={({ isActive }) =>
+							isActive ? 'font-bold' : ''
+						}
+					>
+						{({ isActive }) => (
+							<Button
+								variant='link'
+								className={isActive ? 'font-bold' : ''}
+							>
+								My projects
 							</Button>
 						)}
 					</NavLink>
