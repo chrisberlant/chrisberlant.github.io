@@ -10,6 +10,7 @@ import NetlifyLogo from '@assets/netlify-logo.svg';
 import GithubLogoBlack from '@assets/github-logo-black.svg';
 import GithubLogoWhite from '@assets/github-logo-white.svg';
 import ExcalidrawLogo from '@assets/excalidraw-logo.svg';
+import Whimsical from '@assets/whimsical-logo.svg';
 
 export type SoftType = {
 	vscode?: boolean;
@@ -93,7 +94,8 @@ export default function Tools() {
 						>
 							Linux
 						</span>{' '}
-						(Arch & Debian based distributions) and WSL
+						(Arch & Debian based distributions) and{' '}
+						<span className='font-bold'>WSL</span>
 					</li>
 					<li className='mt-2'>
 						<span
@@ -108,7 +110,7 @@ export default function Tools() {
 						>
 							Docker
 						</span>{' '}
-						allows me to try my apps in a containerized environment,
+						allows me to run my apps in a containerized environment,
 						therefore not depending on my own system specs
 					</li>
 				</ul>
@@ -117,40 +119,6 @@ export default function Tools() {
 				<img src={OperatingSystemAnimate} className='max-w-md' />
 				<ul className='px-4 text-center '>
 					<li>
-						I use
-						<a
-							className='font-bold'
-							href='https://vercel.com'
-							target='_blank'
-						>
-							<img
-								src={`${
-									theme === 'dark'
-										? VercelLogoWhite
-										: VercelLogoBlack
-								}`}
-								className='inline-block ml-2 mr-1 size-6'
-								alt={'Vercel logo'}
-							/>
-							Vercel
-						</a>{' '}
-						and{' '}
-						<a
-							className='font-bold'
-							href='https://www.netlify.com'
-							target='_blank'
-						>
-							<img
-								src={NetlifyLogo}
-								className='inline-block mx-2 size-6'
-								alt={'Netlify logo'}
-							/>
-							Netlify
-						</a>{' '}
-						to host my projects using Continuous Integration and
-						Continuous Deployments (CI/CD)
-					</li>
-					<li className='mt-2'>
 						<a
 							className='font-bold'
 							href='https://www.notion.so'
@@ -158,7 +126,7 @@ export default function Tools() {
 						>
 							<img
 								src={NotionLogo}
-								className='inline-block ml-2 mr-1 size-6'
+								className='inline-block mr-1 size-6'
 								alt={'Notion logo'}
 							/>
 							Notion
@@ -169,18 +137,33 @@ export default function Tools() {
 					<li className='mt-2'>
 						<a
 							className='font-bold'
-							href='https://www.notion.so'
+							href='https://excalidraw.com/'
 							target='_blank'
 						>
 							<img
 								src={ExcalidrawLogo}
-								className='inline-block ml-2 mr-1 size-6'
+								className='inline-block mr-1 size-5'
 								alt={'Excalidraw logo'}
 							/>
 							Excalidraw
 						</a>{' '}
 						is the place where I can draw diagrams to organize my
-						ideas when building an app
+						ideas
+					</li>
+					<li className='mt-2'>
+						<a
+							className='font-bold'
+							href='https://excalidraw.com/'
+							target='_blank'
+						>
+							<img
+								src={Whimsical}
+								className='inline-block size-5'
+								alt={'Whimsical logo'}
+							/>
+							Whimsical
+						</a>{' '}
+						is the perfect tool to build my responsive wireframes
 					</li>
 					<li className='mt-2'>
 						I use
@@ -202,7 +185,40 @@ export default function Tools() {
 						</a>{' '}
 						to host the source code of my projects
 					</li>
-					Mocodo..
+					<li className='mt-2'>
+						I use
+						<a
+							className='font-bold'
+							href='https://vercel.com'
+							target='_blank'
+						>
+							<img
+								src={`${
+									theme === 'dark'
+										? VercelLogoWhite
+										: VercelLogoBlack
+								}`}
+								className='inline-block ml-2 mr-1 size-5'
+								alt={'Vercel logo'}
+							/>
+							Vercel
+						</a>{' '}
+						and{' '}
+						<a
+							className='font-bold'
+							href='https://www.netlify.com'
+							target='_blank'
+						>
+							<img
+								src={NetlifyLogo}
+								className='inline-block mx-2 size-5'
+								alt={'Netlify logo'}
+							/>
+							Netlify
+						</a>{' '}
+						to host my projects using Continuous Integration and
+						Continuous Deployments (CI/CD)
+					</li>
 				</ul>
 			</div>
 			<div className='flex flex-col items-center gap-4 lg:mx-8 justify-evenly lg:flex-row'>
@@ -261,6 +277,41 @@ export default function Tools() {
 						>
 							Redux Toolkit
 						</a>
+					</li>
+					<li className='mt-2'>
+						To build user interfaces, I like{' '}
+						<a
+							className='font-bold'
+							href='https://tailwindcss.com/'
+							target='_blank'
+						>
+							Tailwind
+						</a>{' '}
+						for its simplicity, allowing to write styles directly in
+						the JSX components, this is what I used to build this
+						portfolio
+					</li>
+					<li className='mt-2'>
+						I sometimes also use{' '}
+						<a
+							className='font-bold'
+							href='https://mantine.dev/'
+							target='_blank'
+						>
+							Mantine
+						</a>{' '}
+						for its prebuilt designed and tested components
+					</li>
+					<li className='mt-2'>
+						If I need to build a back-end server, I'm going for{' '}
+						<a
+							className='font-bold'
+							href='https://expressjs.com/'
+							target='_blank'
+						>
+							Express
+						</a>
+						, the most used Node.js framework to build APIs
 					</li>
 				</ul>
 			</div>

@@ -2,7 +2,6 @@
 export default {
 	darkMode: ['class'],
 	content: ['**/*.{ts,tsx}'],
-	safelist: ['dark'],
 	theme: {
 		container: {
 			center: true,
