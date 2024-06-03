@@ -11,7 +11,7 @@ import Button from '../Button/Button';
 
 export default function MobileMenu() {
 	return (
-		<nav className='flex justify-end mt-4 mr-8'>
+		<nav className='flex justify-end mt-5 mr-2 md:hidden'>
 			<DropdownMenu>
 				<DropdownMenuTrigger asChild>
 					<Button variant='outline' size='sm' className='bg-card'>

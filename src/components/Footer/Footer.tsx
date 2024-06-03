@@ -1,93 +1,29 @@
-import { ChevronDownIcon, Slash } from 'lucide-react';
-import {
-	Breadcrumb,
-	BreadcrumbList,
-	BreadcrumbItem,
-	BreadcrumbLink,
-	BreadcrumbSeparator,
-	BreadcrumbPage,
-} from '../ui/Breadcrumb';
-import {
-	DropdownMenu,
-	DropdownMenuTrigger,
-	DropdownMenuContent,
-	DropdownMenuItem,
-} from '@radix-ui/react-dropdown-menu';
+import CatppuccinLogo from '@assets/catppuccin-logo.png';
 
-interface FooterProps {
-	refs: React.MutableRefObject<HTMLDivElement | null>[];
-	currentPosition: string;
-}
-
-export default function Footer({ refs, currentPosition }: FooterProps) {
+export default function Footer() {
 	return (
-		<footer className='mt-8'>
-			<Breadcrumb>
-				<BreadcrumbList>
-					<BreadcrumbItem
-						className='cursor-pointer'
-						onClick={() => {
-							refs[0].current?.scrollIntoView({
-								behavior: 'smooth',
-							});
-						}}
-					>
-						Home
-					</BreadcrumbItem>
-					<BreadcrumbSeparator>
-						<Slash />
-					</BreadcrumbSeparator>
-					<BreadcrumbItem>
-						<DropdownMenu>
-							<DropdownMenuTrigger className='flex items-center gap-1'>
-								Sections
-								<ChevronDownIcon />
-							</DropdownMenuTrigger>
-							<DropdownMenuContent
-								align='start'
-								className='border rounded bg-background border-border'
-							>
-								<DropdownMenuItem
-									className='p-1 m-0.5 rounded hover:bg-accent cursor-pointer'
-									onClick={() => {
-										refs[0].current?.scrollIntoView({
-											behavior: 'smooth',
-										});
-									}}
-								>
-									<BreadcrumbLink>Top</BreadcrumbLink>
-								</DropdownMenuItem>
-								<DropdownMenuItem
-									className='p-1 m-0.5 rounded hover:bg-accent cursor-pointer'
-									style={{ cursor: 'pointer' }}
-									onClick={() => {
-										refs[1].current?.scrollIntoView({
-											behavior: 'smooth',
-										});
-									}}
-								>
-									<BreadcrumbLink>Skills</BreadcrumbLink>
-								</DropdownMenuItem>
-								<DropdownMenuItem
-									className='p-1 m-0.5 rounded hover:bg-accent cursor-pointer'
-									style={{ cursor: 'pointer' }}
-									onClick={() => {
-										refs[2].current?.scrollIntoView({
-											behavior: 'smooth',
-										});
-									}}
-								>
-									<BreadcrumbLink>Projects</BreadcrumbLink>
-								</DropdownMenuItem>
-							</DropdownMenuContent>
-						</DropdownMenu>
-					</BreadcrumbItem>
-					<BreadcrumbSeparator />
-					<BreadcrumbItem>
-						<BreadcrumbPage>{currentPosition}</BreadcrumbPage>
-					</BreadcrumbItem>
-				</BreadcrumbList>
-			</Breadcrumb>
+		<footer className='flex flex-col items-center flex-1 mt-8 text-xs lg:mt-12'>
+			<span>
+				Web illustrations by{' '}
+				<a
+					href='https://storyset.com/web'
+					target='_blank'
+					className='text-xs'
+				>
+					Storyset
+				</a>
+			</span>
+			<div className='flex items-center mt-1'>
+				Theme by
+				<a
+					href='https://catppuccin.com/'
+					target='_blank'
+					className='flex items-center ml-1'
+				>
+					Catppuccin
+					<img src={CatppuccinLogo} alt='' className='ml-2 size-6' />
+				</a>
+			</div>
 		</footer>
 	);
 }

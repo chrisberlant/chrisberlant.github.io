@@ -6,6 +6,7 @@ import { ThemeProviderContext } from './components/ThemeProvider/ThemeProvider';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import MobileMenu from './components/MobileMenu/MobileMenu';
 import Tools from './components/Tools/Tools';
+import Footer from './components/Footer/Footer';
 
 const AppRoutes = () => (
 	<Routes>
@@ -21,7 +22,7 @@ export default function App() {
 	return (
 		<Router>
 			<div
-				className={`app ${theme} py-8 bg-background text-foreground lg:px-8 px-4`}
+				className={`app ${theme} pt-8 pb-4 bg-background text-foreground lg:px-8 px-4`}
 			>
 				<Header />
 				<main>
@@ -32,6 +33,7 @@ export default function App() {
 				/> */}
 				</main>
 				<MobileMenu />
+				<Footer />
 			</div>
 		</Router>
 	);
