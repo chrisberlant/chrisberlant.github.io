@@ -5,7 +5,7 @@ import {
 	DropdownMenuItem,
 	DropdownMenuGroup,
 } from '@/components/ui/DropDownMenu';
-import { User, Settings, MenuIcon, TowerControl } from 'lucide-react';
+import { MenuIcon, WrenchIcon, FolderIcon, UserIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 
@@ -22,19 +22,19 @@ export default function MobileMenu() {
 					<DropdownMenuGroup>
 						<Link to='/'>
 							<DropdownMenuItem className='cursor-pointer hover:bg-accent'>
-								<User className='mr-2 size-4' />
+								<UserIcon className='mr-2 size-4' />
 								<span>About me</span>
 							</DropdownMenuItem>
 						</Link>
 						<Link to='/projects'>
 							<DropdownMenuItem className='cursor-pointer hover:bg-accent'>
-								<Settings className='mr-2 size-4' />
+								<FolderIcon className='mr-2 size-4' />
 								My projects
 							</DropdownMenuItem>
 						</Link>
 						<Link to='/tools'>
 							<DropdownMenuItem className='cursor-pointer hover:bg-accent'>
-								<TowerControl className='mr-2 size-4' />
+								<WrenchIcon className='mr-2 size-4' />
 								<span>My tools</span>
 							</DropdownMenuItem>
 						</Link>
