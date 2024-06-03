@@ -11,7 +11,7 @@ import Button from '../Button/Button';
 
 export default function MobileMenu() {
 	return (
-		<nav className='flex justify-end mt-5 mr-2 md:hidden'>
+		<nav className='absolute lg:hidden right-8'>
 			<DropdownMenu>
 				<DropdownMenuTrigger asChild>
 					<Button variant='outline' size='sm' className='bg-card'>
@@ -22,19 +22,19 @@ export default function MobileMenu() {
 					<DropdownMenuGroup>
 						<Link to='/'>
 							<DropdownMenuItem className='cursor-pointer hover:bg-accent'>
-								<User className='w-4 h-4 mr-2' />
+								<User className='mr-2 size-4' />
 								<span>About me</span>
 							</DropdownMenuItem>
 						</Link>
 						<Link to='/projects'>
 							<DropdownMenuItem className='cursor-pointer hover:bg-accent'>
-								<Settings className='w-4 h-4 mr-2' />
+								<Settings className='mr-2 size-4' />
 								My projects
 							</DropdownMenuItem>
 						</Link>
 						<Link to='/tools'>
 							<DropdownMenuItem className='cursor-pointer hover:bg-accent'>
-								<TowerControl className='w-4 h-4 mr-2' />
+								<TowerControl className='mr-2 size-4' />
 								<span>My tools</span>
 							</DropdownMenuItem>
 						</Link>

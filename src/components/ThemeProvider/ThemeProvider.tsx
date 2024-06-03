@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 type Theme = 'dark' | 'light';
 
@@ -20,10 +20,15 @@ export default function ThemeProvider({
 	children: React.ReactNode;
 }) {
 	const [theme, setTheme] = useState<Theme>('dark');
-
 	const toggleTheme = () => {
 		theme === 'dark' ? setTheme('light') : setTheme('dark');
 	};
+
+	useEffect(() => {
+		const root = window.document.documentElement;
+		root.classList.remove('light', 'dark');
+		root.classList.add(theme);
+	}, [theme]);
 
 	const value = {
 		theme,

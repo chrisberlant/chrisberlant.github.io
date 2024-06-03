@@ -1,8 +1,6 @@
-import { useContext } from 'react';
 import Header from './components/Header/Header';
 import Projects from './components/Projects/Projects';
 import HomePage from './components/HomePage/HomePage';
-import { ThemeProviderContext } from './components/ThemeProvider/ThemeProvider';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import MobileMenu from './components/MobileMenu/MobileMenu';
 import Tools from './components/Tools/Tools';
@@ -17,12 +15,10 @@ const AppRoutes = () => (
 );
 
 export default function App() {
-	const { theme } = useContext(ThemeProviderContext);
-
 	return (
 		<Router>
 			<div
-				className={`app ${theme} pt-8 pb-4 bg-background text-foreground lg:px-8 px-4`}
+				className={`app pt-8 pb-4 bg-background text-foreground lg:px-8 px-4`}
 			>
 				<Header />
 				<main>
@@ -32,7 +28,6 @@ export default function App() {
 					refs={[headerRef, skillsRef, projectsRef]}
 				/> */}
 				</main>
-				<MobileMenu />
 				<Footer />
 			</div>
 		</Router>
