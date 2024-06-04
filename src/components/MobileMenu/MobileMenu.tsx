@@ -26,16 +26,16 @@ export default function MobileMenu() {
 								<span>About me</span>
 							</DropdownMenuItem>
 						</Link>
-						<Link to='/projects'>
-							<DropdownMenuItem className='cursor-pointer hover:bg-accent'>
-								<FolderIcon className='mr-2 size-4' />
-								My projects
-							</DropdownMenuItem>
-						</Link>
 						<Link to='/tools'>
 							<DropdownMenuItem className='cursor-pointer hover:bg-accent'>
 								<WrenchIcon className='mr-2 size-4' />
 								<span>My tools</span>
+							</DropdownMenuItem>
+						</Link>
+						<Link to='/projects'>
+							<DropdownMenuItem className='cursor-pointer hover:bg-accent'>
+								<FolderIcon className='mr-2 size-4' />
+								My projects
 							</DropdownMenuItem>
 						</Link>
 					</DropdownMenuGroup>

@@ -7,20 +7,18 @@ import Description from '../Header/Description/Description';
 
 export default function HomePage() {
 	return (
-		<>
-			<section className='flex flex-col items-center'>
-				<Description />
-				<h2 className='mt-4 mb-10 text-4xl font-bold text-center font-montserrat animate-fade-in'>
-					My Skills
-				</h2>
-				<div className='flex flex-wrap items-start justify-around max-w-4xl gap-10 sm:gap-14'>
-					<Languages />
-					<FrontEnd />
-					<BackEnd />
-					<ISpeak />
-					<Others />
-				</div>
-			</section>
-		</>
+		<section className='flex flex-col items-center'>
+			<Description />
+			<h2 className='mt-4 mb-10 text-4xl font-bold text-center font-montserrat animate-fade-in'>
+				My Skills
+			</h2>
+			<div className='flex flex-wrap items-start justify-around max-w-4xl gap-10 sm:gap-14'>
+				<Languages />
+				<FrontEnd />
+				<BackEnd />
+				<ISpeak />
+				<Others />
+			</div>
+		</section>
 	);
 }
