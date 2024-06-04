@@ -23,13 +23,13 @@ export default function MobileMenu() {
 						<Link to='/'>
 							<DropdownMenuItem className='cursor-pointer hover:bg-accent'>
 								<UserIcon className='mr-2 size-4' />
-								<span>About me</span>
+								About me
 							</DropdownMenuItem>
 						</Link>
 						<Link to='/tools'>
 							<DropdownMenuItem className='cursor-pointer hover:bg-accent'>
 								<WrenchIcon className='mr-2 size-4' />
-								<span>My tools</span>
+								My tools
 							</DropdownMenuItem>
 						</Link>
 						<Link to='/projects'>

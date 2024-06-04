@@ -24,15 +24,15 @@ export default function Tools() {
 	const { theme } = useContext(ThemeProviderContext);
 	const [hoveredSoft, setHoveredSoft] = useState<SoftType | null>(null);
 	return (
-		<section className='flex flex-col gap-8 lg:gap-5'>
-			<div className='flex flex-col items-center gap-4 pb-6 border shadow-md lg:pb-0 rounded-3xl border-border dark:shadow-none justify-evenly lg:flex-row bg-card'>
+		<section className='flex flex-col gap-8 2xl:gap-10 xl:px-20 2xl:px-44'>
+			<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:px-4 lg:pb-0 rounded-3xl border-border dark:shadow-none justify-evenly lg:flex-row bg-card'>
 				<div className='flex justify-center'>
 					<OrbitingCirclesTools
 						hoveredSoft={hoveredSoft}
 						setHoveredSoft={setHoveredSoft}
 					/>
 				</div>
-				<ul className='content-center px-6 text-center lg:px-0'>
+				<ul className='content-center text-center'>
 					<li>
 						<span
 							className='font-bold'
@@ -115,9 +115,9 @@ export default function Tools() {
 					</li>
 				</ul>
 			</div>
-			<div className='flex flex-col items-center gap-4 pb-6 border shadow-md lg:pb-0 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
+			<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:px-4 lg:pb-0 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
 				<img src={OperatingSystemAnimate} className='max-w-md' />
-				<ul className='px-6 text-center lg:px-0'>
+				<ul className='text-center'>
 					<li>
 						<a
 							className='font-bold'
@@ -221,9 +221,9 @@ export default function Tools() {
 					</li>
 				</ul>
 			</div>
-			<div className='flex flex-col items-center gap-4 pb-6 border shadow-md lg:px-4 justify-evenly lg:flex-row bg-card rounded-3xl border-border dark:shadow-none'>
+			<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:px-4 justify-evenly lg:flex-row bg-card rounded-3xl border-border dark:shadow-none'>
 				<img src={BuildingAnimate} className='max-w-md mb-8 lg:mb-0' />
-				<ul className='px-6 text-center lg:px-0'>
+				<ul className='text-center'>
 					<li className='mt-2'>
 						<a
 							className='font-bold'
