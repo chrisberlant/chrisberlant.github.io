@@ -1,7 +1,7 @@
 import {
 	Route,
 	RouterProvider,
-	createBrowserRouter,
+	createHashRouter,
 	createRoutesFromElements,
 } from 'react-router-dom';
 import Projects from './components/Projects/Projects';
@@ -9,7 +9,7 @@ import HomePage from './components/HomePage/HomePage';
 import Tools from './components/Tools/Tools';
 import RootLayout from './components/RootLayout/RootLayout';
 
-const router = createBrowserRouter(
+const router = createHashRouter(
 	createRoutesFromElements(
 		<Route element={<RootLayout />} path='/'>
 			<Route index element={<HomePage />} />

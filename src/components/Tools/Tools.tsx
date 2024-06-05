@@ -24,15 +24,13 @@ export default function Tools() {
 	const { theme } = useContext(ThemeProviderContext);
 	const [hoveredSoft, setHoveredSoft] = useState<SoftType | null>(null);
 	return (
-		<section className='flex flex-col gap-8 2xl:gap-10 xl:px-20 2xl:px-44'>
+		<section className='flex flex-col gap-8 2xl:gap-10 xl:mx-20 2xl:mx-44'>
 			<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:px-4 lg:pb-0 rounded-3xl border-border dark:shadow-none justify-evenly lg:flex-row bg-card'>
-				<div className='flex justify-center'>
-					<OrbitingCirclesTools
-						hoveredSoft={hoveredSoft}
-						setHoveredSoft={setHoveredSoft}
-					/>
-				</div>
-				<ul className='content-center text-center'>
+				<OrbitingCirclesTools
+					hoveredSoft={hoveredSoft}
+					setHoveredSoft={setHoveredSoft}
+				/>
+				<ul className='flex-1 text-center'>
 					<li>
 						<span
 							className='font-bold'

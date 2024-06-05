@@ -9,7 +9,7 @@ const Header = forwardRef(
 		return (
 			<header ref={ref}>
 				<ThemeToggler />
-				<nav className='flex justify-end gap-4 mt-8 ml-auto mr-5 lg:gap-8 lg:mr-20 animate-slide-from-top'>
+				<nav className='flex justify-end gap-4 mt-8 ml-auto mr-2 md:mr-10 lg:gap-8 lg:mr-20 animate-slide-from-top'>
 					<NavLink
 						to='/'
 						className={({ isActive }) =>
