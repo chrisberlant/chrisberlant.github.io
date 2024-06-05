@@ -73,7 +73,7 @@ export default {
 				'fade-in': 'fadeIn 2s ease-in-out',
 				'slide-from-left': 'slideFromLeft 1s ease-in-out',
 				'slide-from-right': 'slideFromRight 1s ease-in-out',
-				'slide-from-top': 'slideFromTop 1s ease-in-out',
+				'slide-from-top': 'slideFromTop 1s ease-out',
 				'slide-from-bottom': 'slideFromBottom 1s ease-in-out',
 				'meteor-effect': 'meteor 5s linear infinite',
 				glitch: 'glitch 5s infinite',

@@ -6,15 +6,13 @@ function ThemeToggler() {
 	const { theme, toggleTheme } = useContext(ThemeProviderContext);
 
 	return (
-		<div className='absolute right-4 top-5 md:top-8 md:right-8 lg:top-8 lg:right-20'>
-			<button
-				onClick={toggleTheme}
-				className='cursor-pointer animate-slide-from-top hover:scale-110'
-				aria-label='Toggle color theme'
-			>
-				{theme === 'light' ? <Sun /> : <Moon />}
-			</button>
-		</div>
+		<button
+			onClick={toggleTheme}
+			className='absolute inline-block ml-auto cursor-pointer top-3 min-[450px]:top-8 right-4 animate-slide-from-top hover:scale-110 md:right-8 lg:right-20'
+			aria-label='Toggle color theme'
+		>
+			{theme === 'light' ? <Sun /> : <Moon />}
+		</button>
 	);
 }
 
