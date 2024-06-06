@@ -13,7 +13,7 @@ export default function ProfileLinks() {
 	const gitHubLogo = theme == 'light' ? GithubLogoBlack : GithubLogoWhite;
 
 	return (
-		<div className='flex flex-wrap justify-center gap-4 mt-4 mb-12 md:gap-6'>
+		<div className='flex flex-wrap justify-center gap-4 mt-4 mb-12 md:gap-6 animate-fade-in'>
 			<LinkButton
 				variant='github'
 				text='GitHub'

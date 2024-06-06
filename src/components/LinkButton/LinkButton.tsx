@@ -1,6 +1,7 @@
-import * as React from 'react';
+import react, * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@lib/utils';
+import { LucideProps } from 'lucide-react';
 
 const buttonVariants = cva(
 	'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
@@ -55,6 +56,7 @@ interface LinkButtonProps
 		VariantProps<typeof buttonVariants> {
 	text: string;
 	logo?: string;
+	icon?: React.ReactNode;
 	logoAlt?: string;
 	link?: string;
 }
@@ -66,6 +68,7 @@ export default function LinkButton({
 	text,
 	logo,
 	logoAlt = '',
+	icon,
 	link,
 	...props
 }: LinkButtonProps) {
@@ -77,13 +80,11 @@ export default function LinkButton({
 	};
 	return (
 		<button
-			className={cn(
-				'animate-fade-in',
-				buttonVariants({ variant, size, className })
-			)}
+			className={cn(buttonVariants({ variant, size, className }))}
 			onClick={handleClick}
 			{...props}
 		>
+			{icon}
 			{logo && (
 				<img
 					src={logo}

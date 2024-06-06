@@ -1,11 +1,12 @@
-import { forwardRef, useContext } from 'react';
-import YoutubeLogo from '@assets/youtube-logo.svg';
+import { useContext } from 'react';
+
 import LinkButton from '../LinkButton/LinkButton';
 import GithubLogoWhite from '@assets/github-logo-white.svg';
 import GithubLogoBlack from '@assets/github-logo-black.svg';
 import MainProjectCard from './MainProjectCard/MainProjectCard';
 import ProjectCard, { ProjectType } from './ProjectCard/ProjectCard';
 import { ThemeProviderContext } from '../ThemeProvider/ThemeProvider';
+import { Globe, Play } from 'lucide-react';
 
 const gestionSmac: ProjectType = {
 	title: 'Gestion SMAC',
@@ -80,6 +81,7 @@ const jobMemo: ProjectType = {
 export default function Projects() {
 	const { theme } = useContext(ThemeProviderContext);
 	const gitHubLogo = theme == 'light' ? GithubLogoBlack : GithubLogoWhite;
+	const playLogo = Play;
 
 	return (
 		<section className='flex flex-col mb-4 2xl:px-28'>
@@ -95,7 +97,7 @@ export default function Projects() {
 							<LinkButton
 								size='sm'
 								variant='githubProject'
-								text='Front-end repository'
+								text='Front-end'
 								logo={gitHubLogo}
 								aria-label='Open the Gestion SMAC front-end repository'
 								link='https://github.com/chrisberlant/gestion-SMAC-front'
@@ -103,18 +105,18 @@ export default function Projects() {
 							<LinkButton
 								size='sm'
 								variant='githubProject'
-								text='Back-end repository'
+								text='Back-end'
 								logo={gitHubLogo}
 								aria-label='Open the Gestion SMAC back-end repository'
 								link='https://github.com/chrisberlant/gestion-SMAC-back'
 							/>
-							{/* <LinkButton
+							<LinkButton
 								size='sm'
-								variant='youtube'
-								text='YouTube Demo'
-								logo={YoutubeLogo}
-								link='https://github.com/chrisberlant/gestion-SMAC-front'
-							/> */}
+								icon={<Globe className='mr-2' size={18} />}
+								text='Try me live !'
+								aria-label='Try the demo app'
+								link='https://demo--gestion-smac.netlify.app'
+							/>
 						</div>
 					</div>
 				</MainProjectCard>
