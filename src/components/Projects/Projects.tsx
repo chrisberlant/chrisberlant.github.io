@@ -1,12 +1,11 @@
 import { useContext } from 'react';
-
 import LinkButton from '../LinkButton/LinkButton';
 import GithubLogoWhite from '@assets/github-logo-white.svg';
 import GithubLogoBlack from '@assets/github-logo-black.svg';
 import MainProjectCard from './MainProjectCard/MainProjectCard';
 import ProjectCard, { ProjectType } from './ProjectCard/ProjectCard';
 import { ThemeProviderContext } from '../ThemeProvider/ThemeProvider';
-import { Globe, Play } from 'lucide-react';
+import { Globe } from 'lucide-react';
 
 const gestionSmac: ProjectType = {
 	title: 'Gestion SMAC',
@@ -22,6 +21,7 @@ const gestionSmac: ProjectType = {
 		front: ['React', 'Mantine', 'Tanstack Table', 'Tanstack Query'],
 		back: ['Express', 'PostgreSQL', 'JWT'],
 		fullStack: ['Zod'],
+		appType: ['Desktop only'],
 	},
 	description: {
 		title: 'A mobile devices management application',
@@ -63,6 +63,7 @@ const jobMemo: ProjectType = {
 		front: ['React', 'Redux', 'React Beautiful DnD'],
 		back: ['Express', 'PostgreSQL', 'JWT'],
 		fullStack: ['Joi'],
+		appType: ['Responsive'],
 	},
 	description: {
 		title: 'Job finding helper',
@@ -81,7 +82,6 @@ const jobMemo: ProjectType = {
 export default function Projects() {
 	const { theme } = useContext(ThemeProviderContext);
 	const gitHubLogo = theme == 'light' ? GithubLogoBlack : GithubLogoWhite;
-	const playLogo = Play;
 
 	return (
 		<section className='flex flex-col mb-4 2xl:px-28'>
@@ -91,7 +91,6 @@ export default function Projects() {
 			<div className='flex flex-col flex-wrap items-center justify-center gap-10 sm:gap-14'>
 				<MainProjectCard project={gestionSmac}>
 					<div className='flex flex-col items-center justify-between flex-1'>
-						{' '}
 						{gestionSmac.description.content}
 						<div className='flex flex-row flex-wrap justify-around gap-6 mt-4'>
 							<LinkButton
@@ -113,7 +112,7 @@ export default function Projects() {
 							<LinkButton
 								size='sm'
 								icon={<Globe className='mr-2' size={18} />}
-								text='Try me live !'
+								text='Try the demo version !'
 								aria-label='Try the demo app'
 								link='https://demo--gestion-smac.netlify.app'
 							/>
@@ -139,27 +138,6 @@ export default function Projects() {
 							link='https://github.com/chrisberlant/jobmemo-back'
 						/>
 					</ProjectCard>
-					{/* <ProjectCard
-						project={jobMemo}
-						className='animate-slide-from-right'
-					>
-						<LinkButton
-							size='sm'
-							variant='githubProject'
-							text='Front-end'
-							logo={GithubLogo}
-							aria-label='Open the JobMemo front-end repository'
-							link='https://github.com/chrisberlant/jobmemo-front'
-						/>
-						<LinkButton
-							size='sm'
-							variant='githubProject'
-							text='Back-end'
-							logo={GithubLogo}
-							aria-label='Open the JobMemo back-end repository'
-							link='https://github.com/chrisberlant/jobmemo-back'
-						/>
-					</ProjectCard> */}
 				</div>
 			</div>
 		</section>

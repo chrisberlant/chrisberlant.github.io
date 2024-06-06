@@ -13,6 +13,8 @@ const badgeVariants = cva(
 				back: 'border-transparent bg-back-end text-white hover:bg-back-end/80',
 				fullStack:
 					'border-transparent bg-full-stack text-white hover:bg-full-stack/80',
+				appType:
+					'border-transparent bg-primary text-primary-foreground hover:bg-primary/80',
 			},
 		},
 		defaultVariants: {

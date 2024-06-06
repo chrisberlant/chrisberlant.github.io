@@ -12,11 +12,11 @@ export default function MainProjectCard({
 	return (
 		<div
 			className={cn(
-				'bg-card flex flex-col items-center rounded-xl shadow-md dark:shadow-none px-5 md:px-12 py-5 border-2 border-border animate-pop',
+				'bg-card flex flex-col items-center text-center rounded-xl shadow-md dark:shadow-none px-5 md:px-12 py-5 border-2 border-border animate-pop',
 				className
 			)}
 		>
-			<h3 className='mb-2 text-2xl font-bold leading-none text-center'>
+			<h3 className='mb-2 text-2xl font-bold leading-none'>
 				Main Project : {title}
 			</h3>
 

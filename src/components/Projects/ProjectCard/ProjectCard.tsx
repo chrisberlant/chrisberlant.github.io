@@ -13,6 +13,7 @@ export type BadgesType = {
 	front: string[];
 	back: string[];
 	fullStack: string[];
+	appType: string[];
 };
 export type ProjectType = {
 	title: string;
