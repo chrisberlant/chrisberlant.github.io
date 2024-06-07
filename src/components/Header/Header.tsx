@@ -6,13 +6,13 @@ import ThemeToggler from '../ThemeToggler/ThemeToggler';
 export default function Header() {
 	return (
 		<header>
-			<div className='flex items-center justify-center text-2xl'>
-				<span className='font-bold text-center animate-slide-from-top'>
+			<div className='flex justify-center font-montserrat'>
+				<h1 className='text-4xl font-bold text-center animate-slide-from-top'>
 					Chris Berlant's Webpage
-				</span>
+				</h1>
 				<ThemeToggler />
 			</div>
-			<nav className='flex justify-end gap-4 mt-8 mr-2 md:mr-10 lg:gap-8 xl:mr-32 animate-slide-from-top'>
+			<nav className='flex justify-end gap-4 mt-6 mr-2 md:mr-10 lg:gap-8 xl:mr-32 animate-slide-from-top'>
 				<NavLink
 					to='/'
 					className={({ isActive }) => (isActive ? 'font-bold' : '')}

@@ -85,7 +85,7 @@ export default function Projects() {
 
 	return (
 		<section className='flex flex-col mb-4 2xl:px-28'>
-			<h2 className='mb-10 text-4xl font-bold text-center animate-fade-in font-montserrat'>
+			<h2 className='mb-10 text-3xl font-bold text-center animate-fade-in font-montserrat'>
 				My Projects
 			</h2>
 			<div className='flex flex-col flex-wrap items-center justify-center gap-10 sm:gap-14'>
