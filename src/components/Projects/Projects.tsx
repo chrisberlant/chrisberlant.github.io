@@ -77,7 +77,7 @@ export default function Projects() {
 	const gitHubLogo = theme == 'light' ? GithubLogoBlack : GithubLogoWhite;
 
 	return (
-		<section className='flex flex-col mb-4 2xl:px-28'>
+		<section className='flex flex-col mb-4 xl:mx-20 2xl:mx-44'>
 			<h2 className='mb-10 text-3xl font-bold text-center animate-fade-in font-montserrat'>
 				My Projects
 			</h2>
