@@ -270,7 +270,7 @@ export default function Tools() {
 						data not being server-dependent, I use{' '}
 						<a
 							className='font-bold'
-							href='https://redux-toolkit.js.org/'
+							href='https://redux-toolkit.js.org'
 							target='_blank'
 						>
 							Redux Toolkit
@@ -280,20 +280,27 @@ export default function Tools() {
 						To build user interfaces, I like{' '}
 						<a
 							className='font-bold'
-							href='https://tailwindcss.com/'
+							href='https://tailwindcss.com'
 							target='_blank'
 						>
 							Tailwind
 						</a>{' '}
 						for its simplicity, allowing to write styles directly in
 						the JSX components, this is what I used to build this
-						portfolio
+						portfolio, with the help of{' '}
+						<a
+							className='font-bold'
+							href='https://ui.shadcn.com'
+							target='_blank'
+						>
+							shadcn/ui
+						</a>
 					</li>
 					<li className='mt-2'>
 						I sometimes also use{' '}
 						<a
 							className='font-bold'
-							href='https://mantine.dev/'
+							href='https://mantine.dev'
 							target='_blank'
 						>
 							Mantine
@@ -304,7 +311,7 @@ export default function Tools() {
 						If I need to build a back-end server, I'm going for{' '}
 						<a
 							className='font-bold'
-							href='https://expressjs.com/'
+							href='https://expressjs.com'
 							target='_blank'
 						>
 							Express

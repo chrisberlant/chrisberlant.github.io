@@ -37,13 +37,6 @@ const gestionSmac: ProjectType = {
 					including other users, and CSV files import/export.
 				</p>
 				<p>You can find more details on the repositories.</p>
-				{/* Main features :
-		<ul>
-			<li>A</li>
-			<li>B</li>
-			<li>C</li>
-			<li>D</li>
-		</ul> */}
 			</div>
 		),
 	},
@@ -112,8 +105,8 @@ export default function Projects() {
 							<LinkButton
 								size='sm'
 								icon={<Globe className='mr-2' size={18} />}
-								text='Try the demo version !'
-								aria-label='Try the demo app'
+								text='Try the demo version'
+								aria-label='Try the demo version'
 								link='https://demo--gestion-smac.netlify.app'
 							/>
 						</div>

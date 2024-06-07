@@ -6,7 +6,7 @@ import ThemeToggler from '../ThemeToggler/ThemeToggler';
 export default function Header() {
 	return (
 		<header>
-			<div className='flex justify-center font-montserrat'>
+			<div className='flex justify-center font-montserrat md:mt-4'>
 				<h1 className='text-4xl font-bold text-center animate-slide-from-top'>
 					Chris Berlant's Webpage
 				</h1>
