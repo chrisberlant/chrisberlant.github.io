@@ -1,6 +1,7 @@
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-import { Outlet, ScrollRestoration } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import MobileMenu from '../MobileMenu/MobileMenu';
 
 export default function RootLayout() {
 	return (
@@ -11,8 +12,8 @@ export default function RootLayout() {
 			<main>
 				<Outlet />
 			</main>
+			<MobileMenu />
 			<Footer />
-			<ScrollRestoration />
 		</div>
 	);
 }

@@ -11,10 +11,10 @@ import Button from '../Button/Button';
 
 export default function MobileMenu() {
 	return (
-		<nav className='absolute lg:hidden right-8'>
+		<nav className='fixed right-6 bottom-4 lg:hidden'>
 			<DropdownMenu>
 				<DropdownMenuTrigger asChild>
-					<Button variant='outline' size='sm' className='bg-card'>
+					<Button variant='outline' size='sm' className='bg-popover'>
 						<MenuIcon />
 					</Button>
 				</DropdownMenuTrigger>

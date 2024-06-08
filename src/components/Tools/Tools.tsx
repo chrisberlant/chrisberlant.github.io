@@ -148,22 +148,22 @@ export default function Tools() {
 						is the place where I can draw diagrams to organize my
 						ideas
 					</li>
-					<li className='mt-2'>
+					<li className='mt-2.5'>
 						<a
 							className='font-bold'
-							href='https://excalidraw.com/'
+							href='https://whimsical.com/'
 							target='_blank'
 						>
 							<img
 								src={Whimsical}
-								className='inline-block size-5'
+								className='inline-block size-8'
 								alt={'Whimsical logo'}
 							/>
 							Whimsical
 						</a>{' '}
 						is the perfect tool to build my responsive wireframes
 					</li>
-					<li className='mt-2'>
+					<li className='mt-1'>
 						I use
 						<a
 							className='font-bold'
@@ -176,14 +176,14 @@ export default function Tools() {
 										? GithubLogoWhite
 										: GithubLogoBlack
 								}`}
-								className='inline-block ml-2 mr-1 size-5'
+								className='inline-block ml-2 mr-1.5 size-5'
 								alt={'GitHub logo'}
 							/>
 							GitHub
 						</a>{' '}
 						to host the source code of my projects
 					</li>
-					<li className='mt-2'>
+					<li className='mt-2.5'>
 						I use
 						<a
 							className='font-bold'
