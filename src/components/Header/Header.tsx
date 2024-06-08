@@ -1,58 +1,15 @@
 import ProfileLinks from './ProfileLinks/ProfileLinks';
-import Button from '../Button/Button';
-import { NavLink } from 'react-router-dom';
 import ThemeToggler from '../ThemeToggler/ThemeToggler';
+import NavBar from '../NavBar/NavBar';
 
 export default function Header() {
 	return (
 		<header>
-			<div className='flex justify-center font-montserrat md:mt-4'>
-				<h1 className='text-4xl font-bold text-center animate-slide-from-top'>
-					Chris Berlant's Webpage
-				</h1>
-				<ThemeToggler />
-			</div>
-			<nav className='flex justify-end gap-4 mt-6 mr-2 md:mr-10 lg:gap-8 xl:mr-32 animate-slide-from-top'>
-				<NavLink
-					to='/'
-					className={({ isActive }) => (isActive ? 'font-bold' : '')}
-				>
-					{({ isActive }) => (
-						<Button
-							variant='link'
-							className={isActive ? 'font-bold' : ''}
-						>
-							About me
-						</Button>
-					)}
-				</NavLink>
-				<NavLink
-					to='/tools'
-					className={({ isActive }) => (isActive ? 'font-bold' : '')}
-				>
-					{({ isActive }) => (
-						<Button
-							variant='link'
-							className={isActive ? 'font-bold' : ''}
-						>
-							My tools
-						</Button>
-					)}
-				</NavLink>
-				<NavLink
-					to='/projects'
-					className={({ isActive }) => (isActive ? 'font-bold' : '')}
-				>
-					{({ isActive }) => (
-						<Button
-							variant='link'
-							className={isActive ? 'font-bold' : ''}
-						>
-							My projects
-						</Button>
-					)}
-				</NavLink>
-			</nav>
+			<ThemeToggler />
+			<NavBar />
+			<h1 className='pt-4 pb-2 text-4xl font-bold text-center lg:pt-2 animate-slide-from-top font-montserrat'>
+				Chris Berlant's Webpage
+			</h1>
 			<ProfileLinks />
 		</header>
 	);
