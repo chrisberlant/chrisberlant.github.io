@@ -37,7 +37,7 @@ export default function OrbitingCirclesTools({
 	const outerCircleRadius = isSmallScreen ? 140 : 170;
 
 	return (
-		<div className='flex flex-1 min-w-fit max-[433px]:min-h-[22rem] min-h-[26rem] items-center justify-center overflow-hidden'>
+		<div className='flex flex-1 max-[433px]:min-h-[22rem] min-h-[28rem] items-center justify-center overflow-hidden'>
 			<span className='text-6xl font-semibold leading-none text-center text-transparent whitespace-pre-wrap pointer-events-none md:text-6xl bg-gradient-to-b from-black to-gray-300/80 bg-clip-text dark:from-white dark:to-slate-900/10'>
 				Apps
 			</span>
@@ -88,15 +88,6 @@ export default function OrbitingCirclesTools({
 			>
 				<img src={WindowsLogo} />
 			</OrbitingCircles>
-			{/* <OrbitingCircles
-					className='h-[50px] w-[50px] border-none bg-transparent'
-					reverse
-					radius={190}
-					duration={20}
-					delay={75}
-				>
-					<img src={LinuxLogo} />
-				</OrbitingCircles> */}
 		</div>
 	);
 }

@@ -113,6 +113,7 @@ export default function Tools() {
 					</li>
 				</ul>
 			</div>
+
 			<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:px-4 lg:pb-0 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
 				<img src={OperatingSystemAnimate} className='max-w-md' />
 				<ul className='text-center'>
@@ -219,6 +220,7 @@ export default function Tools() {
 					</li>
 				</ul>
 			</div>
+
 			<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:px-4 justify-evenly lg:flex-row bg-card rounded-3xl border-border dark:shadow-none'>
 				<img src={BuildingAnimate} className='max-w-md mb-8 lg:mb-0' />
 				<ul className='text-center'>
