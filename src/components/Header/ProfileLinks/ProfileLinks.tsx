@@ -30,18 +30,16 @@ export default function ProfileLinks() {
 				text='Email me'
 				logo={EmailLogo}
 				variant='default'
-				onClick={() =>
-					(window.location.href = 'mailto:chris.berlant@gmail.com')
-				}
+				link='mailto:chris.berlant@gmail.com'
 			/>
-			<a href={CV} download='CV_ChrisBerlant_ReactDev' target='_blank'>
-				<LinkButton
-					text='My CV'
-					logo={PdfLogo}
-					variant='default'
-					logoAlt='PDF logo'
-				/>
-			</a>
+			<LinkButton
+				text='My CV'
+				logo={PdfLogo}
+				variant='default'
+				link={CV}
+				logoAlt='PDF logo'
+				download='CV_ChrisBerlant_ReactDev.pdf'
+			/>
 		</div>
 	);
 }

@@ -53,11 +53,12 @@ const logoVariants = cva('', {
 interface LinkButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
 		VariantProps<typeof buttonVariants> {
-	text: string;
+	text?: string;
 	logo?: string;
 	icon?: React.ReactNode;
 	logoAlt?: string;
-	link?: string;
+	link: string;
+	download?: string;
 }
 
 export default function LinkButton({
@@ -69,29 +70,25 @@ export default function LinkButton({
 	logoAlt = '',
 	icon,
 	link,
+	download,
 	...props
 }: LinkButtonProps) {
-	const handleClick = () => {
-		if (link) {
-			const linkUrl = new URL(link);
-			window.open(linkUrl);
-		}
-	};
 	return (
-		<button
-			className={cn(buttonVariants({ variant, size, className }))}
-			onClick={handleClick}
-			{...props}
-		>
-			{icon}
-			{logo && (
-				<img
-					src={logo}
-					className={cn(logoVariants({ variant }))}
-					alt={logoAlt}
-				/>
-			)}
-			{text}
-		</button>
+		<a href={link} target='_blank' download={download}>
+			<button
+				className={cn(buttonVariants({ variant, size, className }))}
+				{...props}
+			>
+				{icon}
+				{logo && (
+					<img
+						src={logo}
+						className={cn(logoVariants({ variant }))}
+						alt={logoAlt}
+					/>
+				)}
+				{text}
+			</button>
+		</a>
 	);
 }
