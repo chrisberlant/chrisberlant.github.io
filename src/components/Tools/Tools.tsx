@@ -25,6 +25,9 @@ export default function Tools() {
 	const [hoveredSoft, setHoveredSoft] = useState<SoftType | null>(null);
 	return (
 		<section className='flex flex-col gap-8 2xl:gap-10 xl:mx-20 2xl:mx-44'>
+			<h2 className='mb-2 text-3xl font-bold text-center font-montserrat'>
+				My Tools
+			</h2>
 			<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:px-4 lg:pb-0 rounded-3xl border-border dark:shadow-none justify-evenly lg:flex-row bg-card'>
 				<OrbitingCirclesTools
 					hoveredSoft={hoveredSoft}

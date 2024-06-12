@@ -10,34 +10,32 @@ import { ThemeProviderContext } from '../../ThemeProvider/ThemeProvider';
 
 export default function ProfileLinks() {
 	const { theme } = useContext(ThemeProviderContext);
-	const gitHubLogo = theme == 'light' ? GithubLogoBlack : GithubLogoWhite;
 
 	return (
-		<div className='flex flex-wrap justify-center gap-4 mt-4 mb-12 md:gap-6 animate-fade-in'>
+		<div className='flex flex-wrap gap-2 sm:justify-center sm:ml-8 lg:ml-12 sm:gap-4 animate-fade-in'>
 			<LinkButton
 				variant='github'
-				text='GitHub'
-				logo={gitHubLogo}
+				title='My GitHub profile'
+				logo={theme == 'light' ? GithubLogoBlack : GithubLogoWhite}
 				link='https://github.com/chrisberlant'
 			/>
 			<LinkButton
 				variant='linkedin'
-				text='LinkedIn'
+				title='My LinkedIn profile'
 				logo={LinkedinLogo}
 				link='https://www.linkedin.com/in/chris-berlant/'
 			/>
 			<LinkButton
-				text='Email me'
-				logo={EmailLogo}
 				variant='default'
+				title='Send me an email'
+				logo={EmailLogo}
 				link='mailto:chris.berlant@gmail.com'
 			/>
 			<LinkButton
-				text='My CV'
-				logo={PdfLogo}
 				variant='default'
+				title='Download my CV'
+				logo={PdfLogo}
 				link={CV}
-				logoAlt='PDF logo'
 				download='CV_ChrisBerlant_ReactDev.pdf'
 			/>
 		</div>

@@ -20,7 +20,7 @@ const buttonVariants = cva(
 				youtube: 'text-primary-foreground bg-red-600 hover:bg-red-700',
 			},
 			size: {
-				default: 'h-10 px-4 py-2',
+				default: 'h-9 px-3 sm:h-10 sm:px-4 sm:py-2',
 				sm: 'h-9 px-3',
 				lg: 'h-11 px-8',
 			},
@@ -35,13 +35,13 @@ const buttonVariants = cva(
 const logoVariants = cva('', {
 	variants: {
 		variant: {
-			default: 'mr-2 size-4',
+			default: 'size-4',
 			outline: 'mr-2 size-4',
 			secondary: 'mr-2 size-4',
 			link: 'mr-2 size-4',
-			github: 'mr-2 size-5',
+			github: 'size-5',
 			githubProject: 'mr-2 size-4',
-			linkedin: 'mr-2 size-5',
+			linkedin: 'size-5',
 			youtube: 'mr-2 size-7',
 		},
 	},
@@ -58,6 +58,7 @@ interface LinkButtonProps
 	icon?: React.ReactNode;
 	logoAlt?: string;
 	link: string;
+	title?: string;
 	download?: string;
 }
 
@@ -70,11 +71,12 @@ export default function LinkButton({
 	logoAlt = '',
 	icon,
 	link,
+	title,
 	download,
 	...props
 }: LinkButtonProps) {
 	return (
-		<a href={link} target='_blank' download={download}>
+		<a href={link} target='_blank' download={download} title={title}>
 			<button
 				className={cn(buttonVariants({ variant, size, className }))}
 				{...props}

@@ -26,7 +26,7 @@ export default function Footer() {
 						<img
 							src={CatppuccinLogo}
 							alt=''
-							className='ml-2 size-6'
+							className='ml-2 size-5'
 						/>
 					</a>
 				</div>
