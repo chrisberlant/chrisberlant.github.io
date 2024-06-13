@@ -58,213 +58,224 @@ export default function Tools() {
 				</ul>
 			</div>
 
-			<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:px-4 lg:pb-0 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
+			<div className='flex flex-col items-center px-4 pb-6 border shadow-md md:gap-4 lg:px-4 lg:pb-0 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
 				<img src={OperatingSystemAnimate} className='max-w-md' />
-				<ul className='text-center'>
-					<li>
-						<a
-							className='font-bold'
-							href='https://www.notion.so'
-							target='_blank'
-						>
-							<img
-								src={NotionLogo}
-								className='inline-block mr-1 size-6'
-								alt={'Notion logo'}
-							/>
-							Notion
-						</a>{' '}
-						allows me to keep tracks of my discoveries and notes,
-						and create my own documentations
-					</li>
-					<li className='mt-2'>
-						<a
-							className='font-bold'
-							href='https://excalidraw.com/'
-							target='_blank'
-						>
-							<img
-								src={ExcalidrawLogo}
-								className='inline-block mr-1 size-5'
-								alt={'Excalidraw logo'}
-							/>
-							Excalidraw
-						</a>{' '}
-						is the place where I can draw diagrams to organize my
-						ideas
-					</li>
-					<li className='mt-2.5'>
-						<a
-							className='font-bold'
-							href='https://whimsical.com/'
-							target='_blank'
-						>
-							<img
-								src={Whimsical}
-								className='inline-block size-8'
-								alt={'Whimsical logo'}
-							/>
-							Whimsical
-						</a>{' '}
-						is the perfect tool to build my responsive wireframes
-					</li>
-					<li className='mt-1'>
-						I use
-						<a
-							className='font-bold'
-							href='https://www.github.com/'
-							target='_blank'
-						>
-							<img
-								src={`${
-									theme === 'dark'
-										? GithubLogoWhite
-										: GithubLogoBlack
-								}`}
-								className='inline-block ml-2 mr-1.5 size-5'
-								alt={'GitHub logo'}
-							/>
-							GitHub
-						</a>{' '}
-						to host the source code of my projects
-					</li>
-					<li className='mt-2.5'>
-						I use
-						<a
-							className='font-bold'
-							href='https://vercel.com'
-							target='_blank'
-						>
-							<img
-								src={`${
-									theme === 'dark'
-										? VercelLogoWhite
-										: VercelLogoBlack
-								}`}
-								className='inline-block ml-2 mr-1 size-5'
-								alt={'Vercel logo'}
-							/>
-							Vercel
-						</a>{' '}
-						and{' '}
-						<a
-							className='font-bold'
-							href='https://www.netlify.com'
-							target='_blank'
-						>
-							<img
-								src={NetlifyLogo}
-								className='inline-block mx-2 size-5'
-								alt={'Netlify logo'}
-							/>
-							Netlify
-						</a>{' '}
-						to host my projects using Continuous Integration and
-						Continuous Deployments (CI/CD)
-					</li>
-				</ul>
+				<div className='text-center'>
+					<h3 className='mb-12 text-3xl font-bold font-montserrat'>
+						Online tools
+					</h3>
+					<ul>
+						<li>
+							<a
+								className='font-bold'
+								href='https://www.notion.so'
+								target='_blank'
+							>
+								<img
+									src={NotionLogo}
+									className='inline-block mr-1 size-6'
+									alt={'Notion logo'}
+								/>
+								Notion
+							</a>{' '}
+							allows me to keep tracks of my discoveries and
+							notes, and create my own documentations
+						</li>
+						<li className='mt-2'>
+							<a
+								className='font-bold'
+								href='https://excalidraw.com/'
+								target='_blank'
+							>
+								<img
+									src={ExcalidrawLogo}
+									className='inline-block mr-1 size-5'
+									alt={'Excalidraw logo'}
+								/>
+								Excalidraw
+							</a>{' '}
+							is the place where I can draw diagrams to organize
+							my ideas
+						</li>
+						<li className='mt-2.5'>
+							<a
+								className='font-bold'
+								href='https://whimsical.com/'
+								target='_blank'
+							>
+								<img
+									src={Whimsical}
+									className='inline-block size-8'
+									alt={'Whimsical logo'}
+								/>
+								Whimsical
+							</a>{' '}
+							is the perfect tool to build my responsive
+							wireframes
+						</li>
+						<li className='mt-1'>
+							I use
+							<a
+								className='font-bold'
+								href='https://www.github.com/'
+								target='_blank'
+							>
+								<img
+									src={`${
+										theme === 'dark'
+											? GithubLogoWhite
+											: GithubLogoBlack
+									}`}
+									className='inline-block ml-2 mr-1.5 size-5'
+									alt={'GitHub logo'}
+								/>
+								GitHub
+							</a>{' '}
+							to host the source code of my projects
+						</li>
+						<li className='mt-2.5'>
+							I use
+							<a
+								className='font-bold'
+								href='https://vercel.com'
+								target='_blank'
+							>
+								<img
+									src={`${
+										theme === 'dark'
+											? VercelLogoWhite
+											: VercelLogoBlack
+									}`}
+									className='inline-block ml-2 mr-1 size-5'
+									alt={'Vercel logo'}
+								/>
+								Vercel
+							</a>{' '}
+							and{' '}
+							<a
+								className='font-bold'
+								href='https://www.netlify.com'
+								target='_blank'
+							>
+								<img
+									src={NetlifyLogo}
+									className='inline-block mx-2 size-5'
+									alt={'Netlify logo'}
+								/>
+								Netlify
+							</a>{' '}
+							to host my projects using Continuous Integration and
+							Continuous Deployments (CI/CD)
+						</li>
+					</ul>
+				</div>
 			</div>
 
-			<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:px-4 justify-evenly lg:flex-row bg-card rounded-3xl border-border dark:shadow-none'>
-				<img src={BuildingAnimate} className='max-w-md mb-8 lg:mb-0' />
-				<ul className='text-center'>
-					<li className='mt-2'>
-						<a
-							className='font-bold'
-							href='https://vitejs.dev'
-							target='_blank'
-						>
-							Vite
-						</a>{' '}
-						is my go-to{' '}
-						<a
-							className='font-bold'
-							href='https://react.dev'
-							target='_blank'
-						>
-							React
-						</a>{' '}
-						tool to build applications quickly
-					</li>
-					<li className='mt-2'>
-						Using{' '}
-						<a
-							className='font-bold'
-							href='https://npmjs.com'
-							target='_blank'
-						>
-							Node Package Manager
-						</a>
-						, I can install my favorite libraries
-					</li>
-					<li className='mt-2'>
-						My favorite queries library is{' '}
-						<a
-							className='font-bold'
-							href='https://tanstack.com/query/latest'
-							target='_blank'
-						>
-							TanStack Query
-						</a>
-						, it allows me to fetch data using custom React hooks,
-						and to use a local server cache to avoid unnecessary
-						requests to the API endpoints when I already received
-						the needed data
-					</li>
-					<li className='mt-2'>
-						If I need an additional state manager to handle some
-						data not being server-dependent, I use{' '}
-						<a
-							className='font-bold'
-							href='https://redux-toolkit.js.org'
-							target='_blank'
-						>
-							Redux Toolkit
-						</a>
-					</li>
-					<li className='mt-2'>
-						To build user interfaces, I like{' '}
-						<a
-							className='font-bold'
-							href='https://tailwindcss.com'
-							target='_blank'
-						>
-							Tailwind
-						</a>{' '}
-						for its simplicity, allowing to write styles directly in
-						the JSX components, this is what I used to build this
-						portfolio, with the help of{' '}
-						<a
-							className='font-bold'
-							href='https://ui.shadcn.com'
-							target='_blank'
-						>
-							shadcn/ui
-						</a>
-					</li>
-					<li className='mt-2'>
-						I sometimes also use{' '}
-						<a
-							className='font-bold'
-							href='https://mantine.dev'
-							target='_blank'
-						>
-							Mantine
-						</a>{' '}
-						for its prebuilt designed and tested components
-					</li>
-					<li className='mt-2'>
-						If I need to build a back-end server, I'm going for{' '}
-						<a
-							className='font-bold'
-							href='https://expressjs.com'
-							target='_blank'
-						>
-							Express
-						</a>
-						, the most used Node.js framework to build APIs
-					</li>
-				</ul>
+			<div className='flex flex-col items-center px-4 pb-6 border shadow-md md:gap-4 lg:px-4 justify-evenly lg:flex-row bg-card rounded-3xl border-border dark:shadow-none'>
+				<img src={BuildingAnimate} className='max-w-md mb-2 lg:mb-0' />
+				<div className='text-center'>
+					<h3 className='mt-8 mb-12 text-3xl font-bold font-montserrat'>
+						Libraries
+					</h3>
+					<ul>
+						<li className='mt-2'>
+							<a
+								className='font-bold'
+								href='https://vitejs.dev'
+								target='_blank'
+							>
+								Vite
+							</a>{' '}
+							is my go-to{' '}
+							<a
+								className='font-bold'
+								href='https://react.dev'
+								target='_blank'
+							>
+								React
+							</a>{' '}
+							tool to build applications quickly
+						</li>
+						<li className='mt-2'>
+							Using{' '}
+							<a
+								className='font-bold'
+								href='https://npmjs.com'
+								target='_blank'
+							>
+								Node Package Manager
+							</a>
+							, I can install my favorite libraries
+						</li>
+						<li className='mt-2'>
+							My favorite queries library is{' '}
+							<a
+								className='font-bold'
+								href='https://tanstack.com/query/latest'
+								target='_blank'
+							>
+								TanStack Query
+							</a>
+							, it allows me to fetch data using custom React
+							hooks, and to use a local server cache to avoid
+							unnecessary requests to the API endpoints when I
+							already received the needed data
+						</li>
+						<li className='mt-2'>
+							If I need an additional state manager to handle some
+							data not being server-dependent, I use{' '}
+							<a
+								className='font-bold'
+								href='https://redux-toolkit.js.org'
+								target='_blank'
+							>
+								Redux Toolkit
+							</a>
+						</li>
+						<li className='mt-2'>
+							To build user interfaces, I like{' '}
+							<a
+								className='font-bold'
+								href='https://tailwindcss.com'
+								target='_blank'
+							>
+								Tailwind
+							</a>{' '}
+							for its simplicity, allowing to write styles
+							directly in the JSX components, this is what I used
+							to build this portfolio, with the help of{' '}
+							<a
+								className='font-bold'
+								href='https://ui.shadcn.com'
+								target='_blank'
+							>
+								shadcn/ui
+							</a>
+						</li>
+						<li className='mt-2'>
+							I sometimes also use{' '}
+							<a
+								className='font-bold'
+								href='https://mantine.dev'
+								target='_blank'
+							>
+								Mantine
+							</a>{' '}
+							for its prebuilt designed and tested components
+						</li>
+						<li className='mt-2'>
+							If I need to create a back-end server, I'm going for{' '}
+							<a
+								className='font-bold'
+								href='https://expressjs.com'
+								target='_blank'
+							>
+								Express
+							</a>
+							, the most used Node.js framework to build APIs
+						</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 	);
