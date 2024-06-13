@@ -4,18 +4,9 @@ import InsomniaLogo from '@assets/insomnia-logo.svg';
 import DockerLogo from '@assets/docker-logo.svg';
 import WindowsLogo from '@assets/windows-logo.svg';
 import LinuxLogo from '@assets/linux-logo.svg';
-import { SoftType } from '../Tools';
 import { useState, useEffect, useRef } from 'react';
 
-interface OrbitingCirclesToolsProps {
-	hoveredSoft: SoftType | null;
-	setHoveredSoft: React.Dispatch<React.SetStateAction<SoftType | null>>;
-}
-
-export default function OrbitingCirclesTools({
-	hoveredSoft,
-	setHoveredSoft,
-}: OrbitingCirclesToolsProps) {
+export default function OrbitingCirclesTools() {
 	const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 434);
 	const prevWidth = useRef(window.innerWidth);
 
@@ -39,14 +30,12 @@ export default function OrbitingCirclesTools({
 	return (
 		<div className='flex flex-1 max-[433px]:min-h-[22rem] min-h-[28rem] items-center justify-center overflow-hidden'>
 			<span className='text-6xl font-semibold leading-none text-center text-transparent whitespace-pre-wrap pointer-events-none md:text-6xl bg-gradient-to-b from-black to-gray-300/80 bg-clip-text dark:from-white dark:to-slate-900/10'>
-				Apps
+				Dev environment
 			</span>
 
 			{/* Inner Circles */}
 			<OrbitingCircles
-				className={`sm:size-8 size-6 bg-transparent border-none ${
-					hoveredSoft?.docker ? ' scale-150' : ''
-				}`}
+				className='bg-transparent border-none sm:size-8 size-6'
 				duration={20}
 				delay={20}
 				radius={innerCircleRadius}
