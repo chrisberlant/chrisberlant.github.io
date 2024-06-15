@@ -61,7 +61,6 @@ export default {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))',
 				},
-				button: 'hsl(var(--button-background))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
