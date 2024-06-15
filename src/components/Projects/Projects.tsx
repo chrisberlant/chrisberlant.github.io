@@ -28,15 +28,21 @@ const gestionSmac: ProjectType = {
 		content: (
 			<div>
 				<p>
-					This webapp allows a team to manage a stock of various
-					mobile devices (basic phones, smartphones, 4G modems).
+					This internal webapp allows a team to manage a stock of
+					various mobile devices (basic phones, smartphones, 4G
+					modems).
 				</p>
 				<p>
 					It includes authentication,
-					creating/reading/updating/deleting multiple elements
-					including other users, and CSV files import/export.
+					creating/reading/updating/deleting multiple elements, and
+					CSV files import/export.
 				</p>
-				<p>You can find more details on the repositories.</p>
+				<p>
+					An admin dashboard allows users with the required role to do
+					things like see the actions history and create new users
+					allowed to access the app.
+				</p>
+				<p>You can find the full documentation on the repositories.</p>
 			</div>
 		),
 	},
@@ -85,10 +91,10 @@ export default function Projects() {
 				<MainProjectCard project={gestionSmac}>
 					<div className='flex flex-col items-center justify-between flex-1'>
 						{gestionSmac.description.content}
-						<div className='flex flex-row flex-wrap justify-around gap-6 mt-4'>
+						<div className='flex flex-row flex-wrap justify-center gap-6 mt-4'>
 							<LinkButton
 								size='sm'
-								variant='githubProject'
+								variant='project'
 								text='Front-end'
 								logo={gitHubLogo}
 								aria-label='Open the Gestion SMAC front-end repository'
@@ -96,7 +102,7 @@ export default function Projects() {
 							/>
 							<LinkButton
 								size='sm'
-								variant='githubProject'
+								variant='project'
 								text='Back-end'
 								logo={gitHubLogo}
 								aria-label='Open the Gestion SMAC back-end repository'
@@ -104,6 +110,7 @@ export default function Projects() {
 							/>
 							<LinkButton
 								size='sm'
+								variant='project'
 								icon={<Globe className='mr-2' size={18} />}
 								text='Try the demo version'
 								aria-label='Try the demo version'
@@ -116,7 +123,7 @@ export default function Projects() {
 					<ProjectCard project={jobMemo}>
 						<LinkButton
 							size='sm'
-							variant='githubProject'
+							variant='project'
 							text='Front-end'
 							logo={gitHubLogo}
 							aria-label='Open the JobMemo front-end repository'
@@ -124,7 +131,7 @@ export default function Projects() {
 						/>
 						<LinkButton
 							size='sm'
-							variant='githubProject'
+							variant='project'
 							text='Back-end'
 							logo={gitHubLogo}
 							aria-label='Open the JobMemo back-end repository'

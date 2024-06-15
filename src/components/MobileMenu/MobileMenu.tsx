@@ -11,7 +11,7 @@ import Button from '../Button/Button';
 
 export default function MobileMenu() {
 	return (
-		<nav className='fixed right-6 bottom-4 lg:hidden'>
+		<nav className='fixed right-6 bottom-4 sm:hidden'>
 			<DropdownMenu>
 				<DropdownMenuTrigger asChild>
 					<Button variant='outline' size='sm' className='bg-popover'>

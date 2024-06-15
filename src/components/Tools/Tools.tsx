@@ -179,6 +179,17 @@ export default function Tools() {
 					</h3>
 					<ul>
 						<li className='mt-2'>
+							Using{' '}
+							<a
+								className='font-bold'
+								href='https://npmjs.com'
+								target='_blank'
+							>
+								Node Package Manager
+							</a>
+							, I can install my favorite libraries
+						</li>
+						<li className='mt-2'>
 							<a
 								className='font-bold'
 								href='https://vitejs.dev'
@@ -195,17 +206,6 @@ export default function Tools() {
 								React
 							</a>{' '}
 							tool to build applications quickly
-						</li>
-						<li className='mt-2'>
-							Using{' '}
-							<a
-								className='font-bold'
-								href='https://npmjs.com'
-								target='_blank'
-							>
-								Node Package Manager
-							</a>
-							, I can install my favorite libraries
 						</li>
 						<li className='mt-2'>
 							My favorite queries library is{' '}

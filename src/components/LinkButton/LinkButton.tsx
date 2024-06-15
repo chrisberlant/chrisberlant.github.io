@@ -16,7 +16,7 @@ const buttonVariants = cva(
 				link: 'text-primary-foreground underline-offset-4 hover:underline',
 				profile:
 					'bg-card hover:bg-accent border border-input shadow-md dark:bg-background dark:shadow-none dark:hover:bg-accent',
-				githubProject:
+				project:
 					'bg-background hover:bg-accent border border-input shadow-md dark:shadow-none',
 				youtube: 'text-primary-foreground bg-red-600 hover:bg-red-700',
 			},
@@ -41,7 +41,7 @@ const logoVariants = cva('', {
 			secondary: 'mr-2 size-4',
 			link: 'mr-2 size-4',
 			profile: 'size-5',
-			githubProject: 'mr-2 size-4',
+			project: 'mr-2 size-4',
 			youtube: 'mr-2 size-7',
 		},
 	},
