@@ -5,9 +5,7 @@ import MobileMenu from '../MobileMenu/MobileMenu';
 
 export default function RootLayout() {
 	return (
-		<div
-			className={`app pt-8 pb-4 bg-background text-foreground lg:px-8 px-4 min-h-screen`}
-		>
+		<div className='min-h-screen px-2 pt-8 pb-4 app bg-background text-foreground lg:px-8 sm:px-4'>
 			<Header />
 			<main>
 				<Outlet />
