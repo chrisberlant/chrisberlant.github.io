@@ -14,19 +14,18 @@ export default function ProfileLinks() {
 	return (
 		<div className='flex flex-wrap gap-2 sm:justify-center sm:ml-8 lg:ml-12 sm:gap-4 animate-fade-in'>
 			<LinkButton
-				variant='github'
+				variant='profile'
 				title='My GitHub profile'
 				logo={theme == 'light' ? GithubLogoBlack : GithubLogoWhite}
 				link='https://github.com/chrisberlant'
 			/>
 			<LinkButton
-				variant='linkedin'
+				variant='profile'
 				title='My LinkedIn profile'
 				logo={LinkedinLogo}
 				link='https://www.linkedin.com/in/chris-berlant/'
 			/>
 			<LinkButton
-				variant='default'
 				title='Send me an email'
 				logo={EmailLogo}
 				link='mailto:chris.berlant@gmail.com'

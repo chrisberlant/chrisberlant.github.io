@@ -54,15 +54,3 @@
 		--ring: 267 84% 81%;
 	}
 }
-
-@layer components {
-	.light-mode-link-button {
-		@apply bg-card hover:bg-accent border border-input shadow-md;
-	}
-	.dark-mode-link-button {
-		@apply bg-background hover:bg-accent border border-input shadow-none;
-	}
-	.light-mode-project-button {
-		@apply bg-background hover:bg-accent border border-input shadow-md;
-	}
-}

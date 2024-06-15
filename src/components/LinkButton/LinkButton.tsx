@@ -7,16 +7,17 @@ const buttonVariants = cva(
 	{
 		variants: {
 			variant: {
-				default: 'light-mode-link-button dark:dark-mode-link-button',
+				default:
+					'bg-card hover:bg-accent border border-input shadow-md dark:bg-background dark:shadow-none dark:hover:bg-accent',
 				outline:
 					'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
 				secondary:
 					'bg-secondary text-secondary-foreground hover:bg-secondary/80',
 				link: 'text-primary-foreground underline-offset-4 hover:underline',
-				github: 'light-mode-link-button dark:dark-mode-link-button',
+				profile:
+					'bg-card hover:bg-accent border border-input shadow-md dark:bg-background dark:shadow-none dark:hover:bg-accent',
 				githubProject:
-					'light-mode-project-button dark:dark-mode-link-button',
-				linkedin: 'light-mode-link-button dark:dark-mode-link-button',
+					'bg-background hover:bg-accent border border-input shadow-md dark:shadow-none',
 				youtube: 'text-primary-foreground bg-red-600 hover:bg-red-700',
 			},
 			size: {
@@ -39,9 +40,8 @@ const logoVariants = cva('', {
 			outline: 'mr-2 size-4',
 			secondary: 'mr-2 size-4',
 			link: 'mr-2 size-4',
-			github: 'size-5',
+			profile: 'size-5',
 			githubProject: 'mr-2 size-4',
-			linkedin: 'size-5',
 			youtube: 'mr-2 size-7',
 		},
 	},
