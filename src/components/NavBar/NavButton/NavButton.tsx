@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import Button from '../../Button/Button';
+import { buttonVariants } from '../../Button/Button';
 
 interface NavButtonProps {
 	link: string;
@@ -8,14 +8,9 @@ interface NavButtonProps {
 
 export default function NavButton({ link, text }: NavButtonProps) {
 	return (
-		<NavLink
-			to={link}
-			className={({ isActive }) => (isActive ? 'font-bold' : '')}
-		>
+		<NavLink to={link} className={buttonVariants({ variant: 'link' })}>
 			{({ isActive }) => (
-				<Button variant='link' className={isActive ? 'font-bold' : ''}>
-					{text}
-				</Button>
+				<span className={isActive ? 'font-bold' : ''}>{text}</span>
 			)}
 		</NavLink>
 	);

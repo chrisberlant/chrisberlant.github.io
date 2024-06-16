@@ -1,4 +1,4 @@
-import LinkButton from '../../LinkButton/LinkButton';
+import ExternalLink from '../../ExternalLink/ExternalLink';
 import GithubLogoBlack from '@assets/github-logo-black.svg';
 import GithubLogoWhite from '@assets/github-logo-white.svg';
 import LinkedinLogo from '@assets/linkedin-logo.svg';
@@ -13,25 +13,24 @@ export default function ProfileLinks() {
 
 	return (
 		<div className='flex flex-wrap gap-2 sm:justify-center sm:ml-8 lg:ml-12 animate-fade-in sm:gap-4'>
-			<LinkButton
+			<ExternalLink
 				variant='profile'
 				title='My GitHub profile'
 				logo={theme == 'light' ? GithubLogoBlack : GithubLogoWhite}
 				link='https://github.com/chrisberlant'
 			/>
-			<LinkButton
+			<ExternalLink
 				variant='profile'
 				title='My LinkedIn profile'
 				logo={LinkedinLogo}
 				link='https://www.linkedin.com/in/chris-berlant/'
 			/>
-			<LinkButton
+			<ExternalLink
 				title='Send me an email'
 				logo={EmailLogo}
 				link='mailto:chris.berlant@gmail.com'
 			/>
-			<LinkButton
-				variant='default'
+			<ExternalLink
 				title='Download my CV'
 				logo={PdfLogo}
 				link={CV}

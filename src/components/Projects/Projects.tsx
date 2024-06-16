@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import LinkButton from '../LinkButton/LinkButton';
+import LinkButton from '../ExternalLink/ExternalLink';
 import GithubLogoWhite from '@assets/github-logo-white.svg';
 import GithubLogoBlack from '@assets/github-logo-black.svg';
 import MainProjectCard from './MainProjectCard/MainProjectCard';

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@lib/utils';
 
-const buttonVariants = cva(
+export const buttonVariants = cva(
 	'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
 	{
 		variants: {
@@ -13,7 +13,6 @@ const buttonVariants = cva(
 					'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
 				secondary:
 					'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-				link: 'text-primary-foreground underline-offset-4 hover:underline',
 				profile:
 					'bg-card hover:bg-accent border border-input shadow-md dark:bg-background dark:shadow-none dark:hover:bg-accent',
 				project:
@@ -39,7 +38,6 @@ const logoVariants = cva('', {
 			default: 'size-4',
 			outline: 'mr-2 size-4',
 			secondary: 'mr-2 size-4',
-			link: 'mr-2 size-4',
 			profile: 'size-5',
 			project: 'mr-2 size-4',
 			youtube: 'mr-2 size-7',
@@ -50,7 +48,7 @@ const logoVariants = cva('', {
 	},
 });
 
-interface LinkButtonProps
+interface ExternalLinkProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
 		VariantProps<typeof buttonVariants> {
 	text?: string;
@@ -62,7 +60,7 @@ interface LinkButtonProps
 	download?: string;
 }
 
-export default function LinkButton({
+export default function ExternalLink({
 	className,
 	variant,
 	size,
@@ -73,24 +71,24 @@ export default function LinkButton({
 	link,
 	title,
 	download,
-	...props
-}: LinkButtonProps) {
+}: ExternalLinkProps) {
 	return (
-		<a href={link} target='_blank' download={download} title={title}>
-			<button
-				className={cn(buttonVariants({ variant, size, className }))}
-				{...props}
-			>
-				{icon}
-				{logo && (
-					<img
-						src={logo}
-						className={cn(logoVariants({ variant }))}
-						alt={logoAlt}
-					/>
-				)}
-				{text}
-			</button>
+		<a
+			href={link}
+			target='_blank'
+			download={download}
+			title={title}
+			className={cn(buttonVariants({ variant, size, className }))}
+		>
+			{icon}
+			{logo && (
+				<img
+					src={logo}
+					className={cn(logoVariants({ variant }))}
+					alt={logoAlt}
+				/>
+			)}
+			{text}
 		</a>
 	);
 }
