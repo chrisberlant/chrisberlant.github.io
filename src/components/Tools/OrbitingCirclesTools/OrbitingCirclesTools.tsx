@@ -40,7 +40,7 @@ export default function OrbitingCirclesTools() {
 				delay={20}
 				radius={innerCircleRadius}
 			>
-				<img src={DockerLogo} />
+				<img src={DockerLogo} alt='' />
 			</OrbitingCircles>
 			<OrbitingCircles
 				className='bg-transparent border-none size-6 sm:size-8'
@@ -48,7 +48,7 @@ export default function OrbitingCirclesTools() {
 				delay={10}
 				radius={innerCircleRadius}
 			>
-				<img src={InsomniaLogo} />
+				<img src={InsomniaLogo} alt='' />
 			</OrbitingCircles>
 			<OrbitingCircles
 				className='bg-transparent border-none size-6 sm:size-8'
@@ -56,7 +56,7 @@ export default function OrbitingCirclesTools() {
 				delay={55}
 				radius={innerCircleRadius}
 			>
-				<img src={LinuxLogo} />
+				<img src={LinuxLogo} alt='' />
 			</OrbitingCircles>
 
 			{/* Outer Circles (reverse) */}
@@ -66,7 +66,7 @@ export default function OrbitingCirclesTools() {
 				radius={outerCircleRadius}
 				duration={20}
 			>
-				<img src={VSCodeLogo} />
+				<img src={VSCodeLogo} alt='' />
 			</OrbitingCircles>
 			<OrbitingCircles
 				className='bg-transparent border-none size-9 sm:size-12'
@@ -75,7 +75,7 @@ export default function OrbitingCirclesTools() {
 				duration={20}
 				delay={20}
 			>
-				<img src={WindowsLogo} />
+				<img src={WindowsLogo} alt='' />
 			</OrbitingCircles>
 		</div>
 	);

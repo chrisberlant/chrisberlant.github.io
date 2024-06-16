@@ -59,7 +59,7 @@ export default function Tools() {
 			</div>
 
 			<div className='flex flex-col items-center px-4 pb-6 border shadow-md md:gap-4 lg:px-4 lg:pb-0 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
-				<img src={OperatingSystemAnimate} className='max-w-md' />
+				<img src={OperatingSystemAnimate} alt='' className='max-w-md' />
 				<div className='text-center'>
 					<h3 className='mb-12 text-3xl font-bold font-montserrat'>
 						Online tools
@@ -74,7 +74,7 @@ export default function Tools() {
 								<img
 									src={NotionLogo}
 									className='inline-block mr-1 size-6'
-									alt={'Notion logo'}
+									alt='Notion logo'
 								/>
 								Notion
 							</a>{' '}
@@ -90,7 +90,7 @@ export default function Tools() {
 								<img
 									src={ExcalidrawLogo}
 									className='inline-block mr-1 size-5'
-									alt={'Excalidraw logo'}
+									alt='Excalidraw logo'
 								/>
 								Excalidraw
 							</a>{' '}
@@ -106,7 +106,7 @@ export default function Tools() {
 								<img
 									src={Whimsical}
 									className='inline-block size-8'
-									alt={'Whimsical logo'}
+									alt='Whimsical logo'
 								/>
 								Whimsical
 							</a>{' '}
@@ -127,7 +127,7 @@ export default function Tools() {
 											: GithubLogoBlack
 									}`}
 									className='inline-block ml-2 mr-1.5 size-5'
-									alt={'GitHub logo'}
+									alt='GitHub logo'
 								/>
 								GitHub
 							</a>{' '}
@@ -147,7 +147,7 @@ export default function Tools() {
 											: VercelLogoBlack
 									}`}
 									className='inline-block ml-2 mr-1 size-5'
-									alt={'Vercel logo'}
+									alt='Vercel logo'
 								/>
 								Vercel
 							</a>{' '}
@@ -160,7 +160,7 @@ export default function Tools() {
 								<img
 									src={NetlifyLogo}
 									className='inline-block mx-2 size-5'
-									alt={'Netlify logo'}
+									alt='Netlify logo'
 								/>
 								Netlify
 							</a>{' '}
@@ -172,7 +172,11 @@ export default function Tools() {
 			</div>
 
 			<div className='flex flex-col items-center px-4 pb-6 border shadow-md md:gap-4 lg:px-4 justify-evenly lg:flex-row bg-card rounded-3xl border-border dark:shadow-none'>
-				<img src={BuildingAnimate} className='max-w-md mb-2 lg:mb-0' />
+				<img
+					src={BuildingAnimate}
+					alt=''
+					className='max-w-md mb-2 lg:mb-0'
+				/>
 				<div className='text-center'>
 					<h3 className='mt-8 mb-12 text-3xl font-bold font-montserrat'>
 						Libraries
