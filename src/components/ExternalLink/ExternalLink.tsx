@@ -13,8 +13,7 @@ export const buttonVariants = cva(
 					'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
 				secondary:
 					'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-				profile:
-					'bg-card hover:bg-accent border border-input shadow-md dark:bg-background dark:shadow-none dark:hover:bg-accent',
+				profile: 'bg-background hover:bg-accent dark:hover:bg-accent',
 				project:
 					'bg-background hover:bg-accent border border-input shadow-md dark:shadow-none',
 				youtube: 'text-primary-foreground bg-red-600 hover:bg-red-700',

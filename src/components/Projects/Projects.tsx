@@ -1,11 +1,11 @@
 import { useContext } from 'react';
-import LinkButton from '../ExternalLink/ExternalLink';
 import GithubLogoWhite from '@assets/github-logo-white.svg';
 import GithubLogoBlack from '@assets/github-logo-black.svg';
 import MainProjectCard from './MainProjectCard/MainProjectCard';
 import ProjectCard, { ProjectType } from './ProjectCard/ProjectCard';
 import { ThemeProviderContext } from '../ThemeProvider/ThemeProvider';
 import { Globe } from 'lucide-react';
+import ExternalLink from '../ExternalLink/ExternalLink';
 
 const gestionSmac: ProjectType = {
 	title: 'Gestion SMAC',
@@ -92,7 +92,7 @@ export default function Projects() {
 					<div className='flex flex-col items-center justify-between flex-1'>
 						{gestionSmac.description.content}
 						<div className='flex flex-row flex-wrap justify-center gap-6 mt-4'>
-							<LinkButton
+							<ExternalLink
 								size='sm'
 								variant='project'
 								text='Front-end'
@@ -100,7 +100,7 @@ export default function Projects() {
 								aria-label='Open the Gestion SMAC front-end repository'
 								link='https://github.com/chrisberlant/gestion-SMAC-front'
 							/>
-							<LinkButton
+							<ExternalLink
 								size='sm'
 								variant='project'
 								text='Back-end'
@@ -108,7 +108,7 @@ export default function Projects() {
 								aria-label='Open the Gestion SMAC back-end repository'
 								link='https://github.com/chrisberlant/gestion-SMAC-back'
 							/>
-							<LinkButton
+							<ExternalLink
 								size='sm'
 								variant='project'
 								icon={<Globe className='mr-2' size={18} />}
@@ -121,7 +121,7 @@ export default function Projects() {
 				</MainProjectCard>
 				<div className='flex flex-wrap justify-center gap-10 sm:gap-14'>
 					<ProjectCard project={jobMemo}>
-						<LinkButton
+						<ExternalLink
 							size='sm'
 							variant='project'
 							text='Front-end'
@@ -129,7 +129,7 @@ export default function Projects() {
 							aria-label='Open the JobMemo front-end repository'
 							link='https://github.com/chrisberlant/jobmemo-front'
 						/>
-						<LinkButton
+						<ExternalLink
 							size='sm'
 							variant='project'
 							text='Back-end'
