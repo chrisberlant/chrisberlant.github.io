@@ -61,7 +61,7 @@ export default function Tools() {
 			<div className='flex flex-col items-center px-4 pb-6 border shadow-md md:gap-4 lg:px-4 lg:pb-0 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
 				<img src={OperatingSystemAnimate} alt='' className='max-w-md' />
 				<div className='text-center'>
-					<h3 className='mb-12 text-3xl font-bold font-montserrat'>
+					<h3 className='mb-8 text-3xl font-bold font-montserrat'>
 						Online tools
 					</h3>
 					<ul>
@@ -177,42 +177,39 @@ export default function Tools() {
 					alt=''
 					className='max-w-md mb-2 lg:mb-0'
 				/>
-				<div className='text-center'>
-					<h3 className='mt-8 mb-12 text-3xl font-bold font-montserrat'>
+				<div>
+					<h3 className='mt-8 mb-8 text-3xl font-bold text-center font-montserrat'>
 						Libraries
 					</h3>
-					<ul>
-						<li className='mt-2'>
-							Using{' '}
-							<a
-								className='font-bold'
-								href='https://npmjs.com'
-								target='_blank'
-							>
-								Node Package Manager
-							</a>
-							, I can install my favorite libraries
-						</li>
-						<li className='mt-2'>
-							<a
-								className='font-bold'
-								href='https://vitejs.dev'
-								target='_blank'
-							>
-								Vite
-							</a>{' '}
-							is my go-to{' '}
+					Using{' '}
+					<a
+						className='font-bold'
+						href='https://npmjs.com'
+						target='_blank'
+					>
+						Node Package Manager
+					</a>
+					, I can install my favorite libraries :
+					<ul className='flex flex-col gap-2 mt-2 ml-4 list-disc'>
+						<li>
 							<a
 								className='font-bold'
 								href='https://react.dev'
 								target='_blank'
 							>
 								React
-							</a>{' '}
-							tool to build applications quickly
+							</a>
 						</li>
-						<li className='mt-2'>
-							My favorite queries library is{' '}
+						<li>
+							<a
+								className='font-bold'
+								href='https://vitejs.dev'
+								target='_blank'
+							>
+								Vite
+							</a>
+						</li>
+						<li>
 							<a
 								className='font-bold'
 								href='https://tanstack.com/query/latest'
@@ -220,14 +217,8 @@ export default function Tools() {
 							>
 								TanStack Query
 							</a>
-							, it allows me to fetch data using custom React
-							hooks, and to use a local server cache to avoid
-							unnecessary requests to the API endpoints when I
-							already received the needed data
 						</li>
-						<li className='mt-2'>
-							If I need an additional state manager to handle some
-							data not being server-dependent, I use{' '}
+						<li>
 							<a
 								className='font-bold'
 								href='https://redux-toolkit.js.org'
@@ -236,8 +227,7 @@ export default function Tools() {
 								Redux Toolkit
 							</a>
 						</li>
-						<li className='mt-2'>
-							To build user interfaces, I like{' '}
+						<li>
 							<a
 								className='font-bold'
 								href='https://tailwindcss.com'
@@ -245,19 +235,17 @@ export default function Tools() {
 							>
 								Tailwind
 							</a>{' '}
-							for its simplicity, allowing to write styles
-							directly in the JSX components, this is what I used
-							to build this portfolio, with the help of{' '}
+						</li>
+						<li>
 							<a
 								className='font-bold'
 								href='https://ui.shadcn.com'
 								target='_blank'
 							>
-								shadcn/ui
+								Shadcn/ui
 							</a>
 						</li>
-						<li className='mt-2'>
-							I sometimes also use{' '}
+						<li>
 							<a
 								className='font-bold'
 								href='https://mantine.dev'
@@ -265,10 +253,8 @@ export default function Tools() {
 							>
 								Mantine
 							</a>{' '}
-							for its prebuilt designed and tested components
 						</li>
-						<li className='mt-2'>
-							If I need to create a back-end server, I'm going for{' '}
+						<li>
 							<a
 								className='font-bold'
 								href='https://expressjs.com'
@@ -276,7 +262,15 @@ export default function Tools() {
 							>
 								Express
 							</a>
-							, the most used Node.js framework to build APIs
+						</li>
+						<li>
+							<a
+								className='font-bold'
+								href='https://zod.dev'
+								target='_blank'
+							>
+								Zod
+							</a>
 						</li>
 					</ul>
 				</div>

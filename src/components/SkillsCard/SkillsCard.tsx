@@ -22,7 +22,7 @@ export default function SkillsCard({
 			<h3 className='px-4 pb-5 text-2xl font-bold leading-none'>
 				{title}
 			</h3>
-			<div className='flex flex-col gap-5'>{children}</div>
+			<div className='flex gap-5'>{children}</div>
 		</div>
 	);
 }

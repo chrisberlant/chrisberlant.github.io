@@ -5,6 +5,7 @@ import DockerLogo from '@assets/docker-logo.svg';
 import WindowsLogo from '@assets/windows-logo.svg';
 import LinuxLogo from '@assets/linux-logo.svg';
 import { useState, useEffect, useRef } from 'react';
+import FlamesAnimate from '@assets/flames-animate.svg';
 
 export default function OrbitingCirclesTools() {
 	const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 434);
@@ -32,6 +33,7 @@ export default function OrbitingCirclesTools() {
 			<span className='text-6xl font-semibold leading-none text-center text-transparent whitespace-pre-wrap pointer-events-none md:text-6xl bg-gradient-to-b from-black to-gray-300/80 bg-clip-text dark:from-white dark:to-slate-900/10'>
 				Dev environment
 			</span>
+			{/* <img src={FlamesAnimate} alt='' className='max-w-md' /> */}
 
 			{/* Inner Circles */}
 			<OrbitingCircles

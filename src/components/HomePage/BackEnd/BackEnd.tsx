@@ -19,11 +19,6 @@ export default function BackEnd() {
 				alt='PostgreSQL logo'
 			/>
 			<SkillElement
-				title='Express'
-				logo={ExpressLogo}
-				alt='Express logo'
-			/>
-			<SkillElement
 				title='Sequelize'
 				logo={SequelizeLogo}
 				alt='Sequelize logo'
