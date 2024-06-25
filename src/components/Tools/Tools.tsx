@@ -186,7 +186,7 @@ export default function Tools() {
 					alt=''
 					className='max-w-md mb-2 lg:mb-0'
 				/>
-				<div className='px-8'>
+				<div className='pl-8 sm:pr-8'>
 					<h3 className='mb-8 text-3xl font-bold text-center sm:mb-12 mt-14 font-montserrat'>
 						Libraries
 					</h3>
@@ -199,7 +199,7 @@ export default function Tools() {
 						Node Package Manager
 					</a>
 					, I can install my favorite libraries :
-					<ul className='flex flex-col flex-wrap gap-2 mt-2 ml-4 list-disc'>
+					<ul className='flex flex-col flex-wrap gap-2 mt-2 list-disc sm:ml-4 max-h-48'>
 						<li>
 							<a
 								className='font-bold'
@@ -306,6 +306,15 @@ export default function Tools() {
 							</a>{' '}
 							💙
 						</li>
+						<li>
+							<a
+								className='font-bold'
+								href='https://vitest.dev'
+								target='_blank'
+							>
+								Vitest
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -387,7 +396,7 @@ export default function Tools() {
 								<img
 									src={YoutubeLogo}
 									alt=''
-									className='inline-block mr-1 size-6'
+									className='inline-block mr-1 size-5'
 								/>
 								Fireship
 							</a>
@@ -401,7 +410,7 @@ export default function Tools() {
 								<img
 									src={YoutubeLogo}
 									alt=''
-									className='inline-block mr-1 size-6'
+									className='inline-block mr-1 size-5'
 								/>
 								Melvynx
 							</a>

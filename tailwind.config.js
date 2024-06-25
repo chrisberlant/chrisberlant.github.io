@@ -75,6 +75,9 @@ export default {
 				'slide-from-top': 'slideFromTop 1s ease-out',
 				'slide-from-bottom': 'slideFromBottom 1s ease-in-out',
 				'meteor-effect': 'meteor 5s linear infinite',
+				marquee: 'marquee var(--duration) linear infinite',
+				'marquee-vertical':
+					'marquee-vertical var(--duration) linear infinite',
 				glitch: 'glitch 5s infinite',
 				pop: 'pop 0.7s cubic-bezier(0.27,0.53,0.28,1.30) forwards',
 			},
@@ -199,6 +202,14 @@ export default {
 						opacity: 1,
 						transform: 'translateY(0)',
 					},
+				},
+				marquee: {
+					from: { transform: 'translateX(0)' },
+					to: { transform: 'translateX(calc(-100% - var(--gap)))' },
+				},
+				'marquee-vertical': {
+					from: { transform: 'translateY(0)' },
+					to: { transform: 'translateY(calc(-100% - var(--gap)))' },
 				},
 				meteor: {
 					'0%': {

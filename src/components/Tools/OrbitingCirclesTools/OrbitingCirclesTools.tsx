@@ -30,9 +30,6 @@ export default function OrbitingCirclesTools() {
 
 	return (
 		<div className='flex flex-1 max-[433px]:min-h-[22rem] min-h-[28rem] items-center justify-center overflow-hidden'>
-			{/* <span className='text-6xl font-semibold leading-none text-center text-transparent whitespace-pre-wrap pointer-events-none md:text-6xl bg-gradient-to-b from-black to-gray-300/80 bg-clip-text dark:from-white dark:to-slate-900/10'>
-				Dev environment
-			</span> */}
 			<img src={LaptopAnimate} alt='' className='absolute max-w-40' />
 
 			{/* Inner Circles */}
