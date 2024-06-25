@@ -5,7 +5,7 @@ import DockerLogo from '@assets/docker-logo.svg';
 import WindowsLogo from '@assets/windows-logo.svg';
 import LinuxLogo from '@assets/linux-logo.svg';
 import { useState, useEffect, useRef } from 'react';
-import FlamesAnimate from '@assets/flames-animate.svg';
+import LaptopAnimate from '@assets/laptop-animate.svg';
 
 export default function OrbitingCirclesTools() {
 	const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 434);
@@ -14,30 +14,30 @@ export default function OrbitingCirclesTools() {
 	useEffect(() => {
 		const handleResize = () => {
 			const currWidth = window.innerWidth;
-			if (currWidth < 434 && prevWidth.current >= 434) {
+			if (currWidth < 434 && prevWidth.current >= 434)
 				setIsSmallScreen(true);
-			} else if (currWidth >= 434 && prevWidth.current < 434) {
+			else if (currWidth >= 434 && prevWidth.current < 434)
 				setIsSmallScreen(false);
-			}
+
 			prevWidth.current = currWidth;
 		};
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
 
-	const innerCircleRadius = isSmallScreen ? 60 : 80;
-	const outerCircleRadius = isSmallScreen ? 140 : 170;
+	const innerCircleRadius = isSmallScreen ? 70 : 85;
+	const outerCircleRadius = isSmallScreen ? 140 : 175;
 
 	return (
 		<div className='flex flex-1 max-[433px]:min-h-[22rem] min-h-[28rem] items-center justify-center overflow-hidden'>
-			<span className='text-6xl font-semibold leading-none text-center text-transparent whitespace-pre-wrap pointer-events-none md:text-6xl bg-gradient-to-b from-black to-gray-300/80 bg-clip-text dark:from-white dark:to-slate-900/10'>
+			{/* <span className='text-6xl font-semibold leading-none text-center text-transparent whitespace-pre-wrap pointer-events-none md:text-6xl bg-gradient-to-b from-black to-gray-300/80 bg-clip-text dark:from-white dark:to-slate-900/10'>
 				Dev environment
-			</span>
-			{/* <img src={FlamesAnimate} alt='' className='max-w-md' /> */}
+			</span> */}
+			<img src={LaptopAnimate} alt='' className='absolute max-w-40' />
 
 			{/* Inner Circles */}
 			<OrbitingCircles
-				className='bg-transparent border-none sm:size-8 size-6'
+				className='bg-transparent border-none size-8'
 				duration={20}
 				delay={20}
 				radius={innerCircleRadius}
@@ -45,7 +45,7 @@ export default function OrbitingCirclesTools() {
 				<img src={DockerLogo} alt='' />
 			</OrbitingCircles>
 			<OrbitingCircles
-				className='bg-transparent border-none size-6 sm:size-8'
+				className='bg-transparent border-none size-8'
 				duration={20}
 				delay={10}
 				radius={innerCircleRadius}
@@ -53,7 +53,7 @@ export default function OrbitingCirclesTools() {
 				<img src={InsomniaLogo} alt='' />
 			</OrbitingCircles>
 			<OrbitingCircles
-				className='bg-transparent border-none size-6 sm:size-8'
+				className='bg-transparent border-none size-8'
 				duration={20}
 				delay={55}
 				radius={innerCircleRadius}

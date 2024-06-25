@@ -29,7 +29,7 @@ export default function HomePage() {
 				/>
 				<SkillElement title='React' logo={ReactLogo} alt='React logo' />
 				<SkillElement
-					title='Redux Toolkit'
+					title='TanStack Query'
 					logo={ReduxLogo}
 					alt='Redux logo'
 				/>

@@ -3,6 +3,7 @@ import { ThemeProviderContext } from '../ThemeProvider/ThemeProvider';
 import OrbitingCirclesTools from './OrbitingCirclesTools/OrbitingCirclesTools';
 import OperatingSystemAnimate from '@assets/operating-system-animate.svg';
 import BuildingAnimate from '@assets/building-animate.svg';
+import BookmarksAnimate from '@assets/bookmarks-animate.svg';
 import NotionLogo from '@assets/notion-logo.svg';
 import VercelLogoWhite from '@assets/vercel-logo-white.svg';
 import VercelLogoBlack from '@assets/vercel-logo-black.svg';
@@ -10,7 +11,8 @@ import NetlifyLogo from '@assets/netlify-logo.svg';
 import GithubLogoBlack from '@assets/github-logo-black.svg';
 import GithubLogoWhite from '@assets/github-logo-white.svg';
 import ExcalidrawLogo from '@assets/excalidraw-logo.svg';
-import Whimsical from '@assets/whimsical-logo.svg';
+import WhimsicalLogo from '@assets/whimsical-logo.svg';
+import YoutubeLogo from '@assets/youtube-logo.svg';
 
 export type SoftType = {
 	vscode?: boolean;
@@ -29,39 +31,46 @@ export default function Tools() {
 			</h2>
 			<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:px-4 lg:pb-0 rounded-3xl border-border dark:shadow-none justify-evenly lg:flex-row bg-card'>
 				<OrbitingCirclesTools />
-				<ul className='flex-1 text-center'>
-					<li>
-						<span className='font-bold'>Visual Studio Code</span> is
-						my IDE
-					</li>
-					<li className='mt-2'>
-						<span className='font-bold'>Windows</span> is my main
-						operating system, as I've been using and debugging it
-						for years
-					</li>
-					<li className='mt-2'>
-						<span className='font-bold'>Insomnia</span> is my API
-						testing tool, so I can try and debug my server-side code
-						without the front-end constraints
-					</li>
-					<li className='mt-2'>
-						Sometimes I also use{' '}
-						<span className='font-bold'>Linux</span> (Arch & Debian
-						based distributions) and{' '}
-						<span className='font-bold'>WSL</span>
-					</li>
-					<li className='mt-2'>
-						<span className='font-bold'>Docker</span> allows me to
-						run my apps in a containerized environment, therefore
-						not depending on my own system specs
-					</li>
-				</ul>
+				<div className='flex-1 text-center'>
+					<h3 className='mb-8 text-3xl font-bold sm:mb-12 font-montserrat'>
+						Dev environment
+					</h3>
+					<ul className='flex-1 text-center'>
+						<li>
+							<span className='font-bold'>
+								Visual Studio Code
+							</span>{' '}
+							is my IDE
+						</li>
+						<li className='mt-2'>
+							<span className='font-bold'>Windows</span> is my
+							main operating system, as I've been using and
+							debugging it for years
+						</li>
+						<li className='mt-2'>
+							<span className='font-bold'>Insomnia</span> is my
+							API testing tool, so I can try and debug my
+							server-side code without the front-end constraints
+						</li>
+						<li className='mt-2'>
+							Sometimes I also use{' '}
+							<span className='font-bold'>Linux</span> (Arch &
+							Debian based distributions) and{' '}
+							<span className='font-bold'>WSL</span>
+						</li>
+						<li className='mt-2'>
+							<span className='font-bold'>Docker</span> allows me
+							to run my apps in a containerized environment,
+							therefore not depending on my own system specs
+						</li>
+					</ul>
+				</div>
 			</div>
 
 			<div className='flex flex-col items-center px-4 pb-6 border shadow-md md:gap-4 lg:px-4 lg:pb-0 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
 				<img src={OperatingSystemAnimate} alt='' className='max-w-md' />
 				<div className='text-center'>
-					<h3 className='mb-8 text-3xl font-bold font-montserrat'>
+					<h3 className='mb-8 text-3xl font-bold sm:mb-12 font-montserrat'>
 						Online tools
 					</h3>
 					<ul>
@@ -104,7 +113,7 @@ export default function Tools() {
 								target='_blank'
 							>
 								<img
-									src={Whimsical}
+									src={WhimsicalLogo}
 									className='inline-block size-8'
 									alt='Whimsical logo'
 								/>
@@ -177,8 +186,8 @@ export default function Tools() {
 					alt=''
 					className='max-w-md mb-2 lg:mb-0'
 				/>
-				<div>
-					<h3 className='mt-8 mb-8 text-3xl font-bold text-center font-montserrat'>
+				<div className='px-8'>
+					<h3 className='mb-8 text-3xl font-bold text-center sm:mb-12 mt-14 font-montserrat'>
 						Libraries
 					</h3>
 					Using{' '}
@@ -190,7 +199,7 @@ export default function Tools() {
 						Node Package Manager
 					</a>
 					, I can install my favorite libraries :
-					<ul className='flex flex-col gap-2 mt-2 ml-4 list-disc'>
+					<ul className='flex flex-col flex-wrap gap-2 mt-2 ml-4 list-disc'>
 						<li>
 							<a
 								className='font-bold'
@@ -198,7 +207,8 @@ export default function Tools() {
 								target='_blank'
 							>
 								React
-							</a>
+							</a>{' '}
+							💙
 						</li>
 						<li>
 							<a
@@ -207,6 +217,16 @@ export default function Tools() {
 								target='_blank'
 							>
 								Vite
+							</a>{' '}
+							💙
+						</li>
+						<li>
+							<a
+								className='font-bold'
+								href='https://reactrouter.com'
+								target='_blank'
+							>
+								React Router
 							</a>
 						</li>
 						<li>
@@ -216,7 +236,8 @@ export default function Tools() {
 								target='_blank'
 							>
 								TanStack Query
-							</a>
+							</a>{' '}
+							💙
 						</li>
 						<li>
 							<a
@@ -235,15 +256,7 @@ export default function Tools() {
 							>
 								Tailwind
 							</a>{' '}
-						</li>
-						<li>
-							<a
-								className='font-bold'
-								href='https://ui.shadcn.com'
-								target='_blank'
-							>
-								Shadcn/ui
-							</a>
+							💙
 						</li>
 						<li>
 							<a
@@ -261,7 +274,8 @@ export default function Tools() {
 								target='_blank'
 							>
 								Express
-							</a>
+							</a>{' '}
+							💙
 						</li>
 						<li>
 							<a
@@ -270,6 +284,126 @@ export default function Tools() {
 								target='_blank'
 							>
 								Zod
+							</a>{' '}
+							💙
+						</li>
+						<li>
+							<a
+								className='font-bold'
+								href='https://tanstack.com/table/latest'
+								target='_blank'
+							>
+								TanStack Table
+							</a>
+						</li>
+						<li>
+							<a
+								className='font-bold'
+								href='https://sonner.emilkowal.ski'
+								target='_blank'
+							>
+								Sonner
+							</a>{' '}
+							💙
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div className='flex flex-col items-center px-4 pb-6 border shadow-md md:gap-4 lg:px-4 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
+				<img
+					src={BookmarksAnimate}
+					alt=''
+					className='flex-1 max-w-md mb-2 lg:mb-0'
+				/>
+				<div className='flex-1 px-8'>
+					<h3 className='mb-8 text-3xl font-bold text-center sm:mb-12 mt-14 font-montserrat'>
+						Bookmarks
+					</h3>
+					Various websites I use to get things like prebuilt
+					components, icons, keep myself updated on the development
+					world...
+					<ul className='flex flex-col flex-wrap gap-2 mt-2 ml-4 list-disc'>
+						<li>
+							<a
+								className='font-bold'
+								href='https://ui.shadcn.com'
+								target='_blank'
+							>
+								Shadcn/ui
+							</a>
+						</li>
+						<li>
+							<a
+								className='font-bold'
+								href='https://iconduck.com'
+								target='_blank'
+							>
+								IconDuck
+							</a>
+						</li>
+						<li>
+							<a
+								className='font-bold'
+								href='https://ui.aceternity.com'
+								target='_blank'
+							>
+								Aceternity UI
+							</a>
+						</li>
+						<li>
+							<a
+								className='font-bold'
+								href='https://magicui.design'
+								target='_blank'
+							>
+								Magic UI
+							</a>
+						</li>
+						<li>
+							<a
+								className='font-bold'
+								href='https://ui.jln.dev'
+								target='_blank'
+							>
+								JLN UI
+							</a>
+						</li>
+						<li>
+							<a
+								className='font-bold'
+								href='https://daily.dev'
+								target='_blank'
+							>
+								Daily.dev
+							</a>
+						</li>
+						<li>
+							<a
+								className='font-bold'
+								href='https://www.youtube.com/@Fireship'
+								target='_blank'
+							>
+								<img
+									src={YoutubeLogo}
+									alt=''
+									className='inline-block mr-1 size-6'
+								/>
+								Fireship
+							</a>
+						</li>
+						<li>
+							<a
+								className='font-bold'
+								href='https://www.youtube.com/@melvynxdev'
+								target='_blank'
+							>
+								<img
+									src={YoutubeLogo}
+									alt=''
+									className='inline-block mr-1 size-6'
+								/>
+								Melvynx
 							</a>
 						</li>
 					</ul>
