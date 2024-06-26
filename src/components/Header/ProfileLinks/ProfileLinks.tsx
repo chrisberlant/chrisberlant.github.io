@@ -10,12 +10,19 @@ import PdfLogoWhite from '@assets/pdf-logo-white.svg';
 import CV from '@assets/cv/CV_ChrisBerlant_ReactDev.pdf';
 import { useContext } from 'react';
 import { ThemeProviderContext } from '../../ThemeProvider/ThemeProvider';
+import MyPicture from '@assets/my-picture.png';
 
 export default function ProfileLinks() {
 	const { theme } = useContext(ThemeProviderContext);
 
 	return (
-		<div className='flex flex-wrap gap-2 sm:justify-center sm:ml-8 lg:ml-12 animate-fade-in'>
+		<div className='flex flex-wrap items-center gap-2 md:ml-8 lg:ml-12 animate-fade-in'>
+			<img
+				src={MyPicture}
+				alt='My picture'
+				className='rounded-full size-14 bg-gradient-to-tr to-full-stack from-front-end'
+			/>
+
 			<ExternalLink
 				variant='profile'
 				title='My GitHub profile'

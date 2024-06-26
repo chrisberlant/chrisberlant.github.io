@@ -34,10 +34,18 @@ export default function HomePage() {
 	return (
 		<section className='flex flex-col items-center'>
 			<Description />
+
+			{/* <div className='flex items-center gap-5 p-4 mb-4 text-center border rounded-3xl border-border bg-card'>
+				<span>
+					After working for 10 years in IT as a VIP support, I decided
+					to get back into the development world, which I firstly
+					started diving into during my free time in 2004, then during
+					my studies in 2010.
+				</span>
+			</div> */}
 			<h2 className='mt-2 mb-10 text-3xl font-bold text-center font-montserrat animate-fade-in'>
 				My Stack
 			</h2>
-			{/* <MarqueeDemo /> */}
 			<div className='relative flex max-w-md rounded-md sm:max-w-lg md:max-w-xl font-robotoMono sm:flex-col max-h-52 '>
 				<Marquee className='flex-1' vertical={isSmallScreen}>
 					<GlitchingSkillElement
