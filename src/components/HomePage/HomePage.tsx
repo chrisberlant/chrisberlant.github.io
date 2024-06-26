@@ -37,8 +37,8 @@ export default function HomePage() {
 			<h2 className='mt-2 mb-10 text-3xl font-bold text-center font-montserrat animate-fade-in'>
 				My Stack
 			</h2>
-
-			<div className='flex max-w-md rounded-md sm:max-w-lg md:max-w-xl font-robotoMono sm:flex-col max-h-52 '>
+			{/* <MarqueeDemo /> */}
+			<div className='relative flex max-w-md rounded-md sm:max-w-lg md:max-w-xl font-robotoMono sm:flex-col max-h-52 '>
 				<Marquee className='flex-1' vertical={isSmallScreen}>
 					<GlitchingSkillElement
 						className='animate-glitch'
@@ -81,6 +81,8 @@ export default function HomePage() {
 						alt='Sequelize logo'
 					/>
 				</Marquee>
+				<div className='absolute inset-x-0 top-0 sm:inset-x-auto h-1/4 sm:h-auto bg-gradient-to-b sm:w-1/4 sm:inset-y-0 sm:left-0 sm:bg-gradient-to-r from-background'></div>
+				<div className='absolute inset-x-0 bottom-0 sm:inset-x-auto h-1/4 sm:h-auto bg-gradient-to-t sm:w-1/4 sm:inset-y-0 sm:right-0 sm:bg-gradient-to-l from-background'></div>
 			</div>
 		</section>
 	);
