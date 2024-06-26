@@ -4,16 +4,17 @@ import SequelizeLogo from '@assets/sequelize-logo.svg';
 import ReactLogo from '@assets/react-logo.svg';
 import TanstackQueryLogo from '@assets/tanstack-query-logo.svg';
 import TailwindLogo from '@assets/tailwind-logo.svg';
-import SassLogo from '@assets/sass-logo.svg';
 import Description from '../Header/Description/Description';
 import TypeScriptLogo from '@assets/typescript-logo.svg';
 import JavaScriptLogo from '@assets/javascript-logo.svg';
-import SkillElement from '../SkillsCard/SkillElement/SkillElement';
+import {
+	GlitchingSkillElement,
+	SkillElement,
+} from '../SkillsCard/SkillElement/SkillElement';
 import { useEffect, useRef, useState } from 'react';
 import Marquee from '../ui/Marquee';
 
 export default function HomePage() {
-	const [lang, setLang] = useState(true);
 	const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 640);
 	const prevWidth = useRef(window.innerWidth);
 
@@ -24,12 +25,12 @@ export default function HomePage() {
 				setIsSmallScreen(true);
 			else if (currWidth >= 640 && prevWidth.current < 640)
 				setIsSmallScreen(false);
-
 			prevWidth.current = currWidth;
 		};
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
+
 	return (
 		<section className='flex flex-col items-center'>
 			<Description />
@@ -38,12 +39,13 @@ export default function HomePage() {
 			</h2>
 
 			<div className='flex max-w-md rounded-md sm:max-w-lg md:max-w-xl font-robotoMono sm:flex-col max-h-52 '>
-				<Marquee vertical={isSmallScreen}>
-					<SkillElement
+				<Marquee className='flex-1' vertical={isSmallScreen}>
+					<GlitchingSkillElement
 						className='animate-glitch'
-						onAnimation={() => setLang((prev) => !prev)}
-						title={lang ? 'JavaScript' : 'TypeScript'}
-						logo={lang ? JavaScriptLogo : TypeScriptLogo}
+						title='TypeScript'
+						secondTitle='JavaScript'
+						logo={TypeScriptLogo}
+						secondLogo={JavaScriptLogo}
 						alt='JavaScript/TypeScript logos'
 					/>
 					<SkillElement
@@ -62,7 +64,7 @@ export default function HomePage() {
 						alt='Tailwind logo'
 					/>
 				</Marquee>
-				<Marquee reverse vertical={isSmallScreen}>
+				<Marquee className='flex-1' reverse vertical={isSmallScreen}>
 					<SkillElement
 						title='Node.js'
 						logo={NodeJsLogo}

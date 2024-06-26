@@ -1,4 +1,5 @@
 import { cn } from '@lib/utils';
+import { useState } from 'react';
 
 interface SkillElementProps {
 	title: string;
@@ -8,23 +9,49 @@ interface SkillElementProps {
 	onAnimation?: () => void;
 }
 
-export default function SkillElement({
+export function SkillElement({
 	title,
 	logo,
 	alt,
 	className,
-	onAnimation,
+	onAnimation = undefined,
 }: SkillElementProps) {
 	return (
 		<div
 			onAnimationIteration={onAnimation}
 			className={cn(
-				'flex items-center border-2 shadow-md dark:shadow-none bg-card border-border rounded-2xl p-3 justify-center hover:bg-popover',
+				'flex flex-col sm:flex-row text-center items-center border-2 shadow-md dark:shadow-none bg-card border-border rounded-2xl py-2 sm:px-3 justify-center hover:bg-popover',
 				className
 			)}
 		>
-			<img src={logo} className='mr-3 size-8' alt={alt} />
+			<img src={logo} className='mb-1 sm:mb-0 sm:mr-3 size-8' alt={alt} />
 			<span>{title}</span>
 		</div>
+	);
+}
+
+interface GlitchingSkillElementProps extends SkillElementProps {
+	secondTitle: string;
+	secondLogo: string;
+}
+
+export function GlitchingSkillElement({
+	title,
+	secondTitle,
+	logo,
+	secondLogo,
+	alt,
+	className,
+}: GlitchingSkillElementProps) {
+	const [element, setElement] = useState(true);
+
+	return (
+		<SkillElement
+			title={element ? title : secondTitle}
+			logo={element ? logo : secondLogo}
+			alt={alt}
+			className={className}
+			onAnimation={() => setElement((prev) => !prev)}
+		/>
 	);
 }
