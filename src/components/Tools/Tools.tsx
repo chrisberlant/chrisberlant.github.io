@@ -67,7 +67,7 @@ export default function Tools() {
 				</div>
 			</div>
 
-			<div className='flex flex-col items-center px-4 pb-6 border shadow-md md:gap-4 lg:px-4 lg:pb-0 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
+			<div className='flex flex-col items-center px-4 pb-6 border shadow-md md:gap-4 lg:pb-0 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
 				<img src={OperatingSystemAnimate} alt='' className='max-w-md' />
 				<div className='text-center'>
 					<h3 className='mb-8 text-3xl font-bold sm:mb-12 font-montserrat'>
@@ -180,26 +180,28 @@ export default function Tools() {
 				</div>
 			</div>
 
-			<div className='flex flex-col items-center px-4 pb-6 border shadow-md md:gap-4 lg:px-4 justify-evenly lg:flex-row bg-card rounded-3xl border-border dark:shadow-none'>
+			<div className='flex flex-col items-center px-4 pb-6 border shadow-md sm:pb-4 md:gap-4 lg:px-4 justify-evenly lg:flex-row bg-card rounded-3xl border-border dark:shadow-none'>
 				<img
 					src={BuildingAnimate}
 					alt=''
 					className='max-w-md mb-2 lg:mb-0'
 				/>
-				<div className='pl-8 sm:pr-8'>
-					<h3 className='mb-8 text-3xl font-bold text-center sm:mb-12 mt-14 font-montserrat'>
+				<div className='mt-8 sm:mt-14'>
+					<h3 className='mb-8 text-3xl font-bold text-center sm:mb-12 font-montserrat'>
 						Libraries
 					</h3>
-					Using{' '}
-					<a
-						className='font-bold'
-						href='https://npmjs.com'
-						target='_blank'
-					>
-						Node Package Manager
-					</a>
-					, I can install my favorite libraries :
-					<ul className='flex flex-col flex-wrap gap-2 mt-2 list-disc sm:ml-4 max-h-48'>
+					<div className='text-center'>
+						Using{' '}
+						<a
+							className='font-bold'
+							href='https://npmjs.com'
+							target='_blank'
+						>
+							Node Package Manager
+						</a>
+						, I can install my favorite libraries :
+					</div>
+					<ul className='flex flex-col flex-wrap gap-2 mt-2 ml-10 list-disc max-h-48'>
 						<li>
 							<a
 								className='font-bold'
@@ -319,20 +321,22 @@ export default function Tools() {
 				</div>
 			</div>
 
-			<div className='flex flex-col items-center px-4 pb-6 border shadow-md md:gap-4 lg:px-4 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
+			<div className='flex flex-col items-center px-4 pb-6 border shadow-md sm:pb-4 md:gap-4 lg:px-4 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
 				<img
 					src={BookmarksAnimate}
 					alt=''
 					className='flex-1 max-w-md mb-2 lg:mb-0'
 				/>
-				<div className='flex-1 px-8'>
-					<h3 className='mb-8 text-3xl font-bold text-center sm:mb-12 mt-14 font-montserrat'>
+				<div className='flex-1 mt-8 sm:mt-14'>
+					<h3 className='mb-8 text-3xl font-bold text-center sm:mb-12 font-montserrat'>
 						Bookmarks
 					</h3>
-					Various websites I use to get things like prebuilt
-					components, icons, keep myself updated on the development
-					world...
-					<ul className='flex flex-col flex-wrap gap-2 mt-2 ml-4 list-disc'>
+					<div className='text-center'>
+						Various websites I use to get things like prebuilt
+						components, icons, keep myself updated on the
+						development world...
+					</div>
+					<ul className='flex flex-col flex-wrap gap-2 mt-2 list-disc ml-14 max-h-48'>
 						<li>
 							<a
 								className='font-bold'
