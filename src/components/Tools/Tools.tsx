@@ -186,7 +186,7 @@ export default function Tools() {
 					alt=''
 					className='max-w-md mb-2 lg:mb-0'
 				/>
-				<div className='mt-8 sm:mt-14'>
+				<div className='flex flex-col items-center mt-8 sm:mt-14'>
 					<h3 className='mb-8 text-3xl font-bold text-center sm:mb-12 font-montserrat'>
 						Libraries
 					</h3>
@@ -201,7 +201,7 @@ export default function Tools() {
 						</a>
 						, I can install my favorite libraries :
 					</div>
-					<ul className='flex flex-col flex-wrap gap-2 mt-2 ml-10 list-disc max-h-48'>
+					<ul className='flex flex-col flex-wrap gap-2 mt-2 list-disc max-h-48'>
 						<li>
 							<a
 								className='font-bold'
@@ -231,7 +231,7 @@ export default function Tools() {
 								React Router
 							</a>
 						</li>
-						<li>
+						<li className='mr-6'>
 							<a
 								className='font-bold'
 								href='https://tanstack.com/query/latest'
@@ -327,7 +327,7 @@ export default function Tools() {
 					alt=''
 					className='flex-1 max-w-md mb-2 lg:mb-0'
 				/>
-				<div className='flex-1 mt-8 sm:mt-14'>
+				<div className='flex flex-col items-center flex-1 mt-8 sm:mt-14'>
 					<h3 className='mb-8 text-3xl font-bold text-center sm:mb-12 font-montserrat'>
 						Bookmarks
 					</h3>
@@ -336,7 +336,7 @@ export default function Tools() {
 						components, icons, keep myself updated on the
 						development world...
 					</div>
-					<ul className='flex flex-col flex-wrap gap-2 mt-2 list-disc ml-14 max-h-48'>
+					<ul className='flex flex-col flex-wrap gap-2 mt-2 list-disc max-h-48'>
 						<li>
 							<a
 								className='font-bold'
@@ -355,7 +355,7 @@ export default function Tools() {
 								IconDuck
 							</a>
 						</li>
-						<li>
+						<li className='mr-12'>
 							<a
 								className='font-bold'
 								href='https://ui.aceternity.com'
