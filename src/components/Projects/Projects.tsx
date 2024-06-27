@@ -6,6 +6,7 @@ import ProjectCard, { ProjectType } from './ProjectCard/ProjectCard';
 import { ThemeProviderContext } from '../ThemeProvider/ThemeProvider';
 import { Globe } from 'lucide-react';
 import ExternalLink from '../ExternalLink/ExternalLink';
+import PageTitle from '../PageTitle/PageTitle';
 
 const gestionSmac: ProjectType = {
 	title: 'Gestion SMAC',
@@ -84,9 +85,7 @@ export default function Projects() {
 
 	return (
 		<section className='flex flex-col xl:mx-20 2xl:mx-44'>
-			<h2 className='mb-10 text-3xl font-bold text-center font-montserrat'>
-				My Projects
-			</h2>
+			<PageTitle>My projects</PageTitle>
 			<div className='flex flex-col flex-wrap items-center justify-center gap-10 sm:gap-14'>
 				<MainProjectCard project={gestionSmac}>
 					<div className='flex flex-col items-center justify-between flex-1'>

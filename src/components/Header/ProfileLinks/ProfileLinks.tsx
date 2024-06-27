@@ -16,38 +16,51 @@ export default function ProfileLinks() {
 	const { theme } = useContext(ThemeProviderContext);
 
 	return (
-		<div className='flex flex-wrap items-center gap-2 md:ml-8 lg:ml-12 animate-fade-in'>
+		<div className='flex items-center gap-2 ml-2 md:ml-8 lg:ml-12 animate-fade-in'>
 			<img
 				src={MyPicture}
 				alt='My picture'
-				className='rounded-full size-14 bg-gradient-to-tr to-full-stack from-front-end'
+				className='rounded-full size-16 bg-gradient-to-tr to-full-stack from-front-end'
 			/>
 
-			<ExternalLink
-				variant='profile'
-				title='My GitHub profile'
-				logo={theme === 'light' ? GithubLogoBlack : GithubLogoWhite}
-				link='https://github.com/chrisberlant'
-			/>
-			<ExternalLink
-				variant='profile'
-				title='My LinkedIn profile'
-				logo={theme === 'light' ? LinkedinLogoBlack : LinkedinLogoWhite}
-				link='https://www.linkedin.com/in/chris-berlant/'
-			/>
-			<ExternalLink
-				variant='profile'
-				title='Send me an email'
-				logo={theme === 'light' ? MailLogoBlack : MailLogoWhite}
-				link='mailto:chris.berlant@gmail.com'
-			/>
-			<ExternalLink
-				variant='profile'
-				title='Download my CV'
-				logo={theme === 'light' ? PdfLogoBlack : PdfLogoWhite}
-				link={CV}
-				download='CV_ChrisBerlant_ReactDev.pdf'
-			/>
+			<div className='flex flex-col gap-1'>
+				<div className='text-center font-robotoMono'>Chris Berlant</div>
+				<div className='flex'>
+					<ExternalLink
+						variant='profile'
+						title='My GitHub profile'
+						logo={
+							theme === 'light'
+								? GithubLogoBlack
+								: GithubLogoWhite
+						}
+						link='https://github.com/chrisberlant'
+					/>
+					<ExternalLink
+						variant='profile'
+						title='My LinkedIn profile'
+						logo={
+							theme === 'light'
+								? LinkedinLogoBlack
+								: LinkedinLogoWhite
+						}
+						link='https://www.linkedin.com/in/chris-berlant/'
+					/>
+					<ExternalLink
+						variant='profile'
+						title='Send me an email'
+						logo={theme === 'light' ? MailLogoBlack : MailLogoWhite}
+						link='mailto:chris.berlant@gmail.com'
+					/>
+					<ExternalLink
+						variant='profile'
+						title='Download my CV'
+						logo={theme === 'light' ? PdfLogoBlack : PdfLogoWhite}
+						link={CV}
+						download='CV_ChrisBerlant_ReactDev.pdf'
+					/>
+				</div>
+			</div>
 		</div>
 	);
 }
