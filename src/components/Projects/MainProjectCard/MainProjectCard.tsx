@@ -16,9 +16,9 @@ export default function MainProjectCard({
 				className
 			)}
 		>
-			<h3 className='mb-2 text-2xl font-bold leading-none'>
+			<h2 className='mb-2 text-2xl font-bold leading-none'>
 				Main Project : {title}
-			</h3>
+			</h2>
 
 			<h4 className='mb-4 font-bold text-center'>{description.title}</h4>
 			<div className='flex flex-wrap justify-center gap-2 mb-3'>

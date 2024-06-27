@@ -78,34 +78,33 @@ export default function ExternalLink({
 	download,
 }: ExternalLinkProps) {
 	return (
-		<TooltipProvider>
-			<Tooltip>
-				<TooltipTrigger>
-					<a
-						href={link}
-						target='_blank'
-						download={download}
-						className={cn(
-							buttonVariants({ variant, size, className })
-						)}
-					>
-						{icon}
-						{logo && (
-							<img
-								src={logo}
-								className={cn(logoVariants({ variant }))}
-								alt={logoAlt}
-							/>
-						)}
-						{text}
-					</a>
-				</TooltipTrigger>
-				<TooltipContent side='bottom'>
-					<p className='p-2 border border-border rounded-xl bg-popover'>
-						{title}
-					</p>
-				</TooltipContent>
-			</Tooltip>
-		</TooltipProvider>
+		// <TooltipProvider>
+		// 	<Tooltip>
+		// 		<TooltipTrigger>
+		<a
+			href={link}
+			target='_blank'
+			title={title}
+			download={download}
+			className={cn(buttonVariants({ variant, size, className }))}
+		>
+			{icon}
+			{logo && (
+				<img
+					src={logo}
+					className={cn(logoVariants({ variant }))}
+					alt={logoAlt}
+				/>
+			)}
+			{text}
+		</a>
+		// 		</TooltipTrigger>
+		// 		<TooltipContent side='bottom'>
+		// 			<p className='p-2 border border-border rounded-xl bg-popover'>
+		// 				{title}
+		// 			</p>
+		// 		</TooltipContent>
+		// 	</Tooltip>
+		// </TooltipProvider>
 	);
 }
