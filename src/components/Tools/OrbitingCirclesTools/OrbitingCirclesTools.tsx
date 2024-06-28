@@ -8,15 +8,15 @@ import { useState, useEffect, useRef } from 'react';
 import LaptopAnimate from '@assets/laptop-animate.svg';
 
 export default function OrbitingCirclesTools() {
-	const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 434);
+	const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
 	const prevWidth = useRef(window.innerWidth);
 
 	useEffect(() => {
 		const handleResize = () => {
 			const currWidth = window.innerWidth;
-			if (currWidth < 434 && prevWidth.current >= 434)
+			if (currWidth < 768 && prevWidth.current >= 768)
 				setIsSmallScreen(true);
-			else if (currWidth >= 434 && prevWidth.current < 434)
+			else if (currWidth >= 768 && prevWidth.current < 768)
 				setIsSmallScreen(false);
 
 			prevWidth.current = currWidth;
@@ -29,7 +29,7 @@ export default function OrbitingCirclesTools() {
 	const outerCircleRadius = isSmallScreen ? 140 : 175;
 
 	return (
-		<div className='flex flex-1 max-[433px]:min-h-[22rem] min-h-[28rem] items-center justify-center overflow-hidden'>
+		<div className='flex items-center justify-center flex-1 overflow-hidden min-h-96 md:min-h-[28rem]'>
 			<img src={LaptopAnimate} alt='' className='absolute max-w-40' />
 
 			{/* Inner Circles */}
@@ -60,7 +60,7 @@ export default function OrbitingCirclesTools() {
 
 			{/* Outer Circles (reverse) */}
 			<OrbitingCircles
-				className='bg-transparent border-none size-9 sm:size-12'
+				className='bg-transparent border-none size-9 md:size-12'
 				reverse
 				radius={outerCircleRadius}
 				duration={20}
@@ -68,7 +68,7 @@ export default function OrbitingCirclesTools() {
 				<img src={VSCodeLogo} alt='' />
 			</OrbitingCircles>
 			<OrbitingCircles
-				className='bg-transparent border-none size-9 sm:size-12'
+				className='bg-transparent border-none size-9 md:size-12'
 				reverse
 				radius={outerCircleRadius}
 				duration={20}

@@ -29,37 +29,37 @@ export default function Tools() {
 		<section className='flex flex-col xl:mx-20 2xl:mx-44'>
 			<PageTitle>My tools</PageTitle>
 			<div className='flex flex-col gap-8'>
-				<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:px-4 lg:pb-0 rounded-3xl border-border dark:shadow-none justify-evenly lg:flex-row bg-card'>
+				<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:pr-4 lg:pl-0 lg:pb-0 rounded-3xl border-border dark:shadow-none justify-evenly lg:flex-row bg-card'>
 					<OrbitingCirclesTools />
-					<div className='flex-1 text-center'>
-						<h3 className='mb-8 text-3xl font-bold sm:mb-12 font-montserrat'>
+					<div className='flex-1'>
+						<h3 className='mb-8 text-3xl font-bold text-center sm:mb-12 font-montserrat'>
 							Dev environment
 						</h3>
-						<ul className='flex-1 text-center'>
+						<ul className='flex flex-col flex-wrap items-center gap-2 text-center lg:text-left lg:items-start'>
 							<li>
 								<span className='font-bold'>
 									Visual Studio Code
 								</span>{' '}
 								is my IDE
 							</li>
-							<li className='mt-2'>
+							<li>
 								<span className='font-bold'>Windows</span> is my
 								main operating system, as I've been using and
 								debugging it for years
 							</li>
-							<li className='mt-2'>
+							<li>
 								<span className='font-bold'>Insomnia</span> is
 								my API testing tool, so I can try and debug my
 								server-side code without the front-end
 								constraints
 							</li>
-							<li className='mt-2'>
+							<li>
 								Sometimes I also use{' '}
 								<span className='font-bold'>Linux</span> (Arch &
 								Debian based distributions) and{' '}
 								<span className='font-bold'>WSL</span>
 							</li>
-							<li className='mt-2'>
+							<li>
 								<span className='font-bold'>Docker</span> allows
 								me to run my apps in a containerized
 								environment, therefore not depending on my own
@@ -69,17 +69,17 @@ export default function Tools() {
 					</div>
 				</div>
 
-				<div className='flex flex-col items-center px-4 pb-6 border shadow-md md:gap-4 lg:pb-0 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
+				<div className='flex flex-col items-center flex-1 px-4 pb-6 border shadow-md sm:pb-4 md:gap-4 justify-evenly lg:flex-row-reverse bg-card rounded-3xl border-border dark:shadow-none'>
 					<img
 						src={OperatingSystemAnimate}
 						alt=''
-						className='max-w-md'
+						className='xl:max-w-lg md:max-w-80 max-w-60'
 					/>
-					<div className='text-center'>
-						<h3 className='mb-8 text-3xl font-bold sm:mb-12 font-montserrat'>
+					<div className='flex-1 lg:mt-10 xl:mt-0'>
+						<h3 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
 							Online tools
 						</h3>
-						<ul>
+						<ul className='flex flex-col flex-wrap items-center gap-2.5 text-center lg:text-left lg:ml-5 lg:items-start'>
 							<li>
 								<a
 									className='font-bold'
@@ -96,7 +96,7 @@ export default function Tools() {
 								allows me to keep tracks of my discoveries and
 								notes, and create my own documentations
 							</li>
-							<li className='mt-2'>
+							<li>
 								<a
 									className='font-bold'
 									href='https://excalidraw.com/'
@@ -112,7 +112,7 @@ export default function Tools() {
 								is the place where I can draw diagrams to
 								organize my ideas
 							</li>
-							<li className='mt-2.5'>
+							<li>
 								<a
 									className='font-bold'
 									href='https://whimsical.com/'
@@ -120,7 +120,7 @@ export default function Tools() {
 								>
 									<img
 										src={WhimsicalLogo}
-										className='inline-block size-8'
+										className='inline-block mr-1 size-6'
 										alt='Whimsical logo'
 									/>
 									Whimsical
@@ -128,7 +128,7 @@ export default function Tools() {
 								is the perfect tool to build my responsive
 								wireframes
 							</li>
-							<li className='mt-1'>
+							<li>
 								I use
 								<a
 									className='font-bold'
@@ -148,7 +148,7 @@ export default function Tools() {
 								</a>{' '}
 								to host the source code of my projects
 							</li>
-							<li className='mt-2.5'>
+							<li>
 								I use
 								<a
 									className='font-bold'
@@ -190,10 +190,10 @@ export default function Tools() {
 					<img
 						src={BuildingAnimate}
 						alt=''
-						className='flex-1 max-w-md mb-2 lg:mb-0'
+						className='flex-1 xl:max-w-lg md:max-w-80 max-w-60'
 					/>
-					<div className='flex flex-col items-center flex-1 mt-8 sm:mt-14'>
-						<h3 className='mb-8 text-3xl font-bold text-center sm:mb-12 font-montserrat'>
+					<div className='flex flex-col items-center flex-1 mt-8 lg:mt-14'>
+						<h3 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
 							Libraries
 						</h3>
 						<div className='text-center'>
@@ -331,10 +331,10 @@ export default function Tools() {
 					<img
 						src={BookmarksAnimate}
 						alt=''
-						className='flex-1 max-w-md mb-2 lg:mb-0'
+						className='flex-1 xl:max-w-lg md:max-w-80 max-w-60'
 					/>
-					<div className='flex flex-col items-center flex-1 mt-8 sm:mt-14'>
-						<h3 className='mb-8 text-3xl font-bold text-center sm:mb-12 font-montserrat'>
+					<div className='flex flex-col items-center flex-1 mt-8 lg:mt-14'>
+						<h3 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
 							Bookmarks
 						</h3>
 						<div className='text-center'>
