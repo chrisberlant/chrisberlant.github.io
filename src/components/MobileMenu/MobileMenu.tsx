@@ -14,7 +14,12 @@ export default function MobileMenu() {
 		<nav className='fixed right-6 bottom-4 sm:hidden'>
 			<DropdownMenu>
 				<DropdownMenuTrigger asChild>
-					<Button variant='outline' size='sm' className='bg-popover'>
+					<Button
+						variant='outline'
+						size='sm'
+						className='bg-popover'
+						name='Navigation menu'
+					>
 						<MenuIcon />
 					</Button>
 				</DropdownMenuTrigger>

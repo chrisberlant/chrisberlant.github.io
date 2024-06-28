@@ -44,9 +44,9 @@ export default function ProjectCard({
 				className
 			)}
 		>
-			<h3 className='mb-4 text-2xl font-bold leading-none text-center'>
+			<h2 className='mb-4 text-2xl font-bold leading-none text-center'>
 				{title}
-			</h3>
+			</h2>
 			<Carousel
 				opts={{
 					loop: true,

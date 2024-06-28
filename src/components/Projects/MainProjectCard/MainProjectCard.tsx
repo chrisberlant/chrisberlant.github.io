@@ -20,7 +20,7 @@ export default function MainProjectCard({
 				Main Project : {title}
 			</h2>
 
-			<h4 className='mb-4 font-bold text-center'>{description.title}</h4>
+			<h3 className='mb-4 font-bold text-center'>{description.title}</h3>
 			<div className='flex flex-wrap justify-center gap-2 mb-3'>
 				{Object.keys(badges).map((spec) =>
 					badges[spec as keyof BadgesType].map((tech) => (
@@ -31,7 +31,7 @@ export default function MainProjectCard({
 				)}
 			</div>
 
-			<h4 className='mb-2 font-bold text-center'>Screenshots</h4>
+			<h3 className='mb-2 font-bold text-center'>Screenshots</h3>
 			<div className='flex flex-wrap justify-center gap-2 xl:max-w-80%'>
 				{slidesUrl.map((slide, index) => (
 					<a href={slide} key={slide} target='_blank'>

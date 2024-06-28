@@ -32,9 +32,9 @@ export default function Tools() {
 				<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:pr-4 lg:pl-0 lg:pb-0 rounded-3xl border-border dark:shadow-none justify-evenly lg:flex-row bg-card'>
 					<OrbitingCirclesTools />
 					<div className='flex-1'>
-						<h3 className='mb-8 text-3xl font-bold text-center sm:mb-12 font-montserrat'>
+						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-12 font-montserrat'>
 							Dev environment
-						</h3>
+						</h2>
 						<ul className='flex flex-col flex-wrap items-center gap-2 text-center lg:text-left lg:items-start'>
 							<li>
 								<span className='font-bold'>
@@ -76,9 +76,9 @@ export default function Tools() {
 						className='xl:max-w-lg md:max-w-80 max-w-60'
 					/>
 					<div className='flex-1 lg:mt-10 xl:mt-0'>
-						<h3 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
+						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
 							Online tools
-						</h3>
+						</h2>
 						<ul className='flex flex-col flex-wrap items-center gap-2.5 text-center lg:text-left lg:ml-5 lg:items-start'>
 							<li>
 								<a
@@ -193,9 +193,9 @@ export default function Tools() {
 						className='flex-1 xl:max-w-lg md:max-w-80 max-w-60'
 					/>
 					<div className='flex flex-col items-center flex-1 mt-8 lg:mt-14'>
-						<h3 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
+						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
 							Libraries
-						</h3>
+						</h2>
 						<div className='text-center'>
 							Using{' '}
 							<a
@@ -334,9 +334,9 @@ export default function Tools() {
 						className='flex-1 xl:max-w-lg md:max-w-80 max-w-60'
 					/>
 					<div className='flex flex-col items-center flex-1 mt-8 lg:mt-14'>
-						<h3 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
+						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
 							Bookmarks
-						</h3>
+						</h2>
 						<div className='text-center'>
 							Various websites I use to get things like prebuilt
 							components, icons, keep myself updated on the
