@@ -102,10 +102,10 @@ export default {
 					'0%': {
 						transform: 'translate(0px, 0px) scale(1)',
 					},
-					'33%': {
-						transform: 'translate(-800px, -150px) scale(1.2)',
+					'45%': {
+						transform: 'translate(-800px, -250px) scale(1.2)',
 					},
-					'66%': {
+					'75%': {
 						transform: 'translate(-180px, -500px) scale(0.8)',
 					},
 					'100%': {
