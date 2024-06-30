@@ -68,6 +68,8 @@ export default {
 				sm: 'calc(var(--radius) - 4px)',
 			},
 			animation: {
+				blob: 'blob 30s infinite',
+				blob2: 'blob2 40s infinite',
 				orbit: 'orbit calc(var(--duration)*1s) linear infinite',
 				'fade-in': 'fadeIn 2s ease-in-out',
 				'slide-from-left': 'slideFromLeft 1s ease-in-out',
@@ -82,6 +84,34 @@ export default {
 				pop: 'pop 0.7s cubic-bezier(0.27,0.53,0.28,1.30) forwards',
 			},
 			keyframes: {
+				blob: {
+					'0%': {
+						transform: 'translate(0px, 0px) scale(1)',
+					},
+					'33%': {
+						transform: 'translate(200px, 150px) scale(1.1)',
+					},
+					'66%': {
+						transform: 'translate(60px, 100px) scale(0.9)',
+					},
+					'100%': {
+						transform: 'translate(0px, 0px) scale(1)',
+					},
+				},
+				blob2: {
+					'0%': {
+						transform: 'translate(0px, 0px) scale(1)',
+					},
+					'33%': {
+						transform: 'translate(-800px, -150px) scale(1.2)',
+					},
+					'66%': {
+						transform: 'translate(-180px, -500px) scale(0.8)',
+					},
+					'100%': {
+						transform: 'translate(0px, 0px) scale(1)',
+					},
+				},
 				orbit: {
 					'0%': {
 						transform:

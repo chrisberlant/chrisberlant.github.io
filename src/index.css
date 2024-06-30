@@ -57,3 +57,15 @@
 		@apply flex flex-col min-h-screen px-3 pt-8 pb-4 bg-background text-foreground lg:px-8 sm:px-4;
 	}
 }
+
+@layer utilities {
+	.animation-delay-1000 {
+		animation-delay: 1s;
+	}
+	.animation-delay-2000 {
+		animation-delay: 2s;
+	}
+	.animation-delay-3000 {
+		animation-delay: 3s;
+	}
+}
