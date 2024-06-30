@@ -75,7 +75,7 @@ export default function Tools() {
 						alt=''
 						className='max-w-60 md:max-w-xs xl:max-w-lg'
 					/>
-					<div className='flex-1 text-center lg:mt-10 xl:mt-0'>
+					<div className='flex-1 mt-8 text-center lg:mt-10 xl:mt-0'>
 						<h2 className='mb-8 text-3xl font-bold sm:mb-10 font-montserrat'>
 							Online tools
 						</h2>
@@ -192,7 +192,7 @@ export default function Tools() {
 						alt=''
 						className='flex-1 max-w-60 md:max-w-xs xl:max-w-lg'
 					/>
-					<div className='flex flex-col items-center flex-1 mt-8 lg:mt-14'>
+					<div className='flex flex-col items-center flex-1 mt-8'>
 						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
 							Libraries
 						</h2>
@@ -333,7 +333,7 @@ export default function Tools() {
 						alt=''
 						className='flex-1 max-w-60 md:max-w-xs xl:max-w-lg'
 					/>
-					<div className='flex flex-col items-center flex-1 mt-8 lg:mt-14'>
+					<div className='flex flex-col items-center flex-1 mt-8'>
 						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
 							Bookmarks
 						</h2>
