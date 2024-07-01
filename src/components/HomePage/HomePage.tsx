@@ -88,8 +88,8 @@ export default function HomePage() {
 							alt='Sequelize logo'
 						/>
 					</Marquee>
-					<div className='absolute inset-x-0 top-0 sm:inset-x-auto h-1/4 sm:h-auto bg-gradient-to-b sm:w-1/4 sm:inset-y-0 sm:left-0 sm:bg-gradient-to-r from-card'></div>
-					<div className='absolute inset-x-0 bottom-0 sm:inset-x-auto h-1/4 sm:h-auto bg-gradient-to-t sm:w-1/4 sm:inset-y-0 sm:right-0 sm:bg-gradient-to-l from-card'></div>
+					<div className='absolute inset-x-0 top-0 sm:inset-x-auto h-1/4 sm:h-auto bg-gradient-to-b sm:w-1/4 sm:inset-y-0 sm:left-0 sm:bg-gradient-to-r from-card/80'></div>
+					<div className='absolute inset-x-0 bottom-0 sm:inset-x-auto h-1/4 sm:h-auto bg-gradient-to-t sm:w-1/4 sm:inset-y-0 sm:right-0 sm:bg-gradient-to-l from-card/80'></div>
 				</div>
 			</div>
 			{/* <Timeline /> */}

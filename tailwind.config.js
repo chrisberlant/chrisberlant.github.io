@@ -69,7 +69,8 @@ export default {
 			},
 			animation: {
 				blob: 'blob 30s infinite',
-				blob2: 'blob2 40s infinite',
+				blob2: 'blob2 50s infinite',
+				blob3: 'blob3 40s infinite',
 				orbit: 'orbit calc(var(--duration)*1s) linear infinite',
 				'fade-in': 'fadeIn 2s ease-in-out',
 				'slide-from-left': 'slideFromLeft 1s ease-in-out',
@@ -103,13 +104,33 @@ export default {
 						transform: 'translate(0px, 0px) scale(1)',
 					},
 					'45%': {
-						transform: 'translate(-800px, -250px) scale(1.2)',
+						transform: 'translate(-800px, -250px) scale(1.3)',
 					},
 					'75%': {
-						transform: 'translate(-180px, -500px) scale(0.8)',
+						transform: 'translate(-180px, -500px) scale(0.7)',
 					},
 					'100%': {
 						transform: 'translate(0px, 0px) scale(1)',
+					},
+				},
+				blob3: {
+					'0%': {
+						transform: 'translate(0px, 0px)',
+					},
+					'25%': {
+						transform: 'translate(-500px, 120px)',
+					},
+					'45%': {
+						transform: 'translate(-900px, 50px)',
+					},
+					'60%': {
+						transform: 'translate(-700px, 20px)',
+					},
+					'75%': {
+						transform: 'translate(-400px, 10px)',
+					},
+					'100%': {
+						transform: 'translate(0px, 0px)',
 					},
 				},
 				orbit: {
@@ -240,17 +261,6 @@ export default {
 				'marquee-vertical': {
 					from: { transform: 'translateY(0)' },
 					to: { transform: 'translateY(calc(-100% - var(--gap)))' },
-				},
-				meteor: {
-					'0%': {
-						transform: 'rotate(215deg) translateX(0)',
-						opacity: 1,
-					},
-					'70%': { opacity: 1 },
-					'100%': {
-						transform: 'rotate(215deg) translateX(-500px)',
-						opacity: 0,
-					},
 				},
 			},
 		},

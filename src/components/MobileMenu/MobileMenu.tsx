@@ -18,7 +18,7 @@ export default function MobileMenu() {
 						variant='outline'
 						size='sm'
 						className='bg-popover'
-						name='Navigation menu'
+						aria-label='Navigation menu'
 					>
 						<MenuIcon />
 					</Button>
