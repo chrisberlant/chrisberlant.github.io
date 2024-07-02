@@ -13,15 +13,53 @@ import {
 } from '../SkillsCard/SkillElement/SkillElement';
 import Marquee from '../ui/Marquee';
 import PageTitle from '../PageTitle/PageTitle';
+import DeveloperActivity from '@assets/developer-activity.svg';
 
 export default function HomePage() {
 	return (
 		<section className='flex flex-col items-center gap-8'>
-			<PageTitle>About me</PageTitle>
+			<PageTitle>Chris Berlant's Webpage</PageTitle>
 			<Description />
 
+			<div className='flex flex-col items-center max-w-4xl gap-4 px-4 py-5 border lg:gap-8 lg:flex-row border-border rounded-3xl bg-card/80'>
+				<img
+					src={DeveloperActivity}
+					alt=''
+					className='lg:max-w-48 max-w-36'
+				/>
+				<div className='flex flex-col items-center text-center'>
+					<h2 className='mt-2 mb-5 text-3xl font-bold text-center font-montserrat'>
+						About me
+					</h2>
+
+					<div>
+						<p className='mt-1'>
+							After working for 10 years in IT as a VIP support, I
+							decided to get back into the development world,
+							which I firstly started diving into during my free
+							time in 2004, then during my studies in 2010.
+						</p>
+						<p className='mt-1'>
+							To achieve this, I followed the{' '}
+							<a href='https://oclock.io' target='_blank'>
+								O'clock school
+							</a>
+							's six months intensive program focused on learning
+							how to code using the JavaScript language with solo
+							& group projects, sometimes using pair programming,
+							and built projects on my own.
+						</p>
+						<p className='mt-1'>
+							I love traveling, especially in Asian countries, and
+							discovering new things, related or not to the IT
+							domain.
+						</p>
+					</div>
+				</div>
+			</div>
+
 			<div className='px-4 py-8 border border-border rounded-3xl bg-card/80'>
-				<h2 className='mb-8 text-3xl font-bold text-center font-montserrat animate-fade-in'>
+				<h2 className='mb-8 text-3xl font-bold text-center font-montserrat'>
 					My stack
 				</h2>
 				<div className='relative flex max-w-md rounded-md sm:max-w-lg md:max-w-xl font-robotoMono sm:flex-col max-h-52'>
@@ -71,20 +109,6 @@ export default function HomePage() {
 					<div className='absolute inset-x-0 bottom-0 sm:inset-x-auto h-1/4 sm:h-auto bg-gradient-to-t sm:w-1/4 sm:inset-y-0 sm:right-0 sm:bg-gradient-to-l from-card/80'></div>
 				</div>
 			</div>
-			{/* <Timeline /> */}
-			{/* 
-				<div className='flex flex-col flex-wrap p-4 border border-border rounded-3xl bg-card'>
-					<h2 className='mt-2 mb-10 text-3xl font-bold text-center font-montserrat animate-fade-in'>
-						My career
-					</h2>
-
-					<span>
-						After working for 10 years in IT as a VIP support, I
-						decided to get back into the development world, which I
-						firstly started diving into during my free time in 2004,
-						then during my studies in 2010.
-					</span>
-				</div> */}
 		</section>
 	);
 }

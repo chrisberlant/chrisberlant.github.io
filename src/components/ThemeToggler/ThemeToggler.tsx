@@ -8,7 +8,7 @@ function ThemeToggler() {
 	return (
 		<button
 			onClick={toggleTheme}
-			className='absolute min-[700px]:top-0 top-6 right-4 animate-slide-from-top hover:scale-110 md:right-8 lg:right-20'
+			className='absolute top-8 right-8 animate-slide-from-top hover:scale-110 lg:top-10 lg:right-20'
 			aria-label='Toggle color theme'
 		>
 			{theme === 'light' ? <Sun /> : <Moon />}

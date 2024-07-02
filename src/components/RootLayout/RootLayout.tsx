@@ -9,7 +9,7 @@ import Blob3Svg from '@assets/blob3.svg';
 
 export default function RootLayout() {
 	return (
-		<div className='relative'>
+		<>
 			<Blob
 				svg={BlobSvg}
 				className='fixed top-36 -z-10 opacity-40 animate-blob left-4 size-64 blur-2xl'
@@ -23,11 +23,11 @@ export default function RootLayout() {
 				className='fixed top-0 blur-3xl -z-10 animate-blob3 -right-4 size-44 animation-delay-1000'
 			/>
 			<Header />
-			<main>
+			<main className='flex-grow '>
 				<Outlet />
 			</main>
 			<MobileMenu />
 			<Footer />
-		</div>
+		</>
 	);
 }
