@@ -11,27 +11,10 @@ import {
 	GlitchingSkillElement,
 	SkillElement,
 } from '../SkillsCard/SkillElement/SkillElement';
-import { useEffect, useRef, useState } from 'react';
 import Marquee from '../ui/Marquee';
 import PageTitle from '../PageTitle/PageTitle';
 
 export default function HomePage() {
-	const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 640);
-	const prevWidth = useRef(window.innerWidth);
-
-	useEffect(() => {
-		const handleResize = () => {
-			const currWidth = window.innerWidth;
-			if (currWidth < 640 && prevWidth.current >= 640)
-				setIsSmallScreen(true);
-			else if (currWidth >= 640 && prevWidth.current < 640)
-				setIsSmallScreen(false);
-			prevWidth.current = currWidth;
-		};
-		window.addEventListener('resize', handleResize);
-		return () => window.removeEventListener('resize', handleResize);
-	}, []);
-
 	return (
 		<section className='flex flex-col items-center gap-8'>
 			<PageTitle>About me</PageTitle>
@@ -42,7 +25,7 @@ export default function HomePage() {
 					My stack
 				</h2>
 				<div className='relative flex max-w-md rounded-md sm:max-w-lg md:max-w-xl font-robotoMono sm:flex-col max-h-52'>
-					<Marquee className='flex-1' vertical={isSmallScreen}>
+					<Marquee className='flex-1'>
 						<GlitchingSkillElement
 							className='animate-glitch'
 							title='TypeScript'
@@ -67,11 +50,7 @@ export default function HomePage() {
 							alt='Tailwind logo'
 						/>
 					</Marquee>
-					<Marquee
-						className='flex-1'
-						reverse
-						vertical={isSmallScreen}
-					>
+					<Marquee className='flex-1' reverse>
 						<SkillElement
 							title='Node.js'
 							logo={NodeJsLogo}
