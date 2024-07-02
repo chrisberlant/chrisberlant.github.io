@@ -3,7 +3,7 @@ import MobileMenu from '../MobileMenu/MobileMenu';
 
 export default function Footer() {
 	return (
-		<footer className='flex items-center justify-center pt-8 mt-auto'>
+		<footer className='flex items-center justify-center pt-8'>
 			<div className='flex flex-col items-center text-xs'>
 				<span>
 					Web illustrations by{' '}

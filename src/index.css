@@ -54,7 +54,7 @@
 	}
 
 	body {
-		@apply flex flex-col min-h-screen px-3 pt-8 pb-4 bg-background text-foreground lg:px-8 sm:px-4;
+		@apply flex min-h-screen px-3 pt-8 pb-4 bg-background text-foreground lg:px-8 sm:px-4;
 	}
 
 	#root {
