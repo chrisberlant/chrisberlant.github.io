@@ -29,7 +29,7 @@ export default function Tools() {
 		<section className='flex flex-col items-center'>
 			<PageTitle>My tools</PageTitle>
 			<div className='flex flex-col w-full gap-8 max-w-7xl'>
-				<div className='flex flex-col items-center gap-4 px-4 pb-6 border shadow-md lg:pr-4 lg:pl-0 lg:pb-0 rounded-3xl border-border dark:shadow-none justify-evenly lg:flex-row bg-card/80'>
+				<div className='flex flex-col items-center gap-4 px-4 pb-4 border shadow-md lg:pr-4 lg:pl-0 lg:pb-0 rounded-3xl border-border dark:shadow-none justify-evenly lg:flex-row bg-card/80'>
 					<OrbitingCirclesTools />
 					<div className='flex-1'>
 						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-12 font-montserrat'>
@@ -69,11 +69,11 @@ export default function Tools() {
 					</div>
 				</div>
 
-				<div className='flex flex-col items-center flex-1 px-4 pb-6 border shadow-md sm:pb-4 md:gap-4 justify-evenly lg:flex-row-reverse bg-card/80 rounded-3xl border-border dark:shadow-none'>
+				<div className='flex flex-col items-center flex-1 px-4 pb-4 border shadow-md sm:pb-1 md:gap-4 justify-evenly lg:flex-row-reverse bg-card/80 rounded-3xl border-border dark:shadow-none'>
 					<img
 						src={OperatingSystemAnimate}
 						alt=''
-						className='max-w-60 md:max-w-xs xl:max-w-lg'
+						className='flex-1 max-w-60 md:max-w-xs xl:max-w-md'
 					/>
 					<div className='flex-1 mt-8 text-center lg:mt-10 xl:mt-0'>
 						<h2 className='mb-8 text-3xl font-bold sm:mb-10 font-montserrat'>
@@ -186,11 +186,11 @@ export default function Tools() {
 					</div>
 				</div>
 
-				<div className='flex flex-col items-center px-4 pb-6 border shadow-md sm:pb-4 md:gap-4 lg:px-4 justify-evenly lg:flex-row bg-card/80 rounded-3xl border-border dark:shadow-none'>
+				<div className='flex flex-col items-center px-4 pb-4 border shadow-md sm:pb-1 md:gap-4 lg:px-4 justify-evenly lg:flex-row bg-card/80 rounded-3xl border-border dark:shadow-none'>
 					<img
 						src={BuildingAnimate}
 						alt=''
-						className='flex-1 max-w-60 md:max-w-xs xl:max-w-lg'
+						className='flex-1 max-w-60 md:max-w-xs xl:max-w-md'
 					/>
 					<div className='flex flex-col items-center flex-1 mt-8'>
 						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
@@ -327,11 +327,11 @@ export default function Tools() {
 					</div>
 				</div>
 
-				<div className='flex flex-col items-center px-4 pb-6 border shadow-md sm:pb-4 md:gap-4 lg:px-4 justify-evenly lg:flex-row-reverse bg-card/80 rounded-3xl border-border dark:shadow-none'>
+				<div className='flex flex-col items-center px-4 pb-4 border shadow-md sm:pb-1 md:gap-4 lg:px-4 justify-evenly lg:flex-row-reverse bg-card/80 rounded-3xl border-border dark:shadow-none'>
 					<img
 						src={BookmarksAnimate}
 						alt=''
-						className='flex-1 max-w-60 md:max-w-xs xl:max-w-lg'
+						className='flex-1 max-w-60 md:max-w-xs xl:max-w-md'
 					/>
 					<div className='flex flex-col items-center flex-1 mt-8'>
 						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>

@@ -35,7 +35,8 @@ export default function Marquee({
 							{
 								'group-hover:[animation-play-state:paused]':
 									pauseOnHover,
-								'[animation-direction:reverse]': reverse,
+								'[animation-direction:reverse] sm:[animation-direction:reverse]':
+									reverse,
 							}
 						)}
 					>

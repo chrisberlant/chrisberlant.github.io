@@ -26,11 +26,15 @@ export default function OrbitingCirclesTools() {
 	}, []);
 
 	const innerCircleRadius = isSmallScreen ? 70 : 85;
-	const outerCircleRadius = isSmallScreen ? 140 : 175;
+	const outerCircleRadius = isSmallScreen ? 125 : 145;
 
 	return (
-		<div className='flex items-center justify-center flex-1 overflow-hidden min-h-96 md:min-h-[28rem]'>
-			<img src={LaptopAnimate} alt='' className='absolute max-w-40' />
+		<div className='flex items-center justify-center flex-1 overflow-hidden min-h-[19rem] md:min-h-[23rem]'>
+			<img
+				src={LaptopAnimate}
+				alt=''
+				className='absolute max-w-36 md:max-w-44'
+			/>
 
 			{/* Inner Circles */}
 			<OrbitingCircles
