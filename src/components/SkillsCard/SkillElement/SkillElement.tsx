@@ -20,7 +20,7 @@ export function SkillElement({
 		<div
 			onAnimationIteration={onAnimation}
 			className={cn(
-				'flex flex-col sm:flex-row text-center items-center border-2 bg-background border-border rounded-2xl py-2 sm:px-3 justify-center hover:bg-accent',
+				'flex flex-col select-none sm:flex-row text-center items-center border-2 bg-background border-border rounded-2xl py-2 sm:px-3 justify-center hover:bg-accent',
 				className
 			)}
 		>

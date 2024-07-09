@@ -1,12 +1,6 @@
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@lib/utils';
-import {
-	TooltipProvider,
-	Tooltip,
-	TooltipTrigger,
-	TooltipContent,
-} from '@radix-ui/react-tooltip';
 
 export const buttonVariants = cva(
 	'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
@@ -78,9 +72,6 @@ export default function ExternalLink({
 	download,
 }: ExternalLinkProps) {
 	return (
-		// <TooltipProvider>
-		// 	<Tooltip>
-		// 		<TooltipTrigger>
 		<a
 			href={link}
 			target='_blank'
@@ -98,13 +89,5 @@ export default function ExternalLink({
 			)}
 			{text}
 		</a>
-		// 		</TooltipTrigger>
-		// 		<TooltipContent side='bottom'>
-		// 			<p className='p-2 border border-border rounded-xl bg-popover'>
-		// 				{title}
-		// 			</p>
-		// 		</TooltipContent>
-		// 	</Tooltip>
-		// </TooltipProvider>
 	);
 }

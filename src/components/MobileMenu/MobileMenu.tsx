@@ -11,13 +11,13 @@ import Button from '../Button/Button';
 
 export default function MobileMenu() {
 	return (
-		<nav className='fixed right-6 bottom-4 sm:hidden'>
-			<DropdownMenu>
+		<nav className='fixed right-10 bottom-6 sm:hidden'>
+			<DropdownMenu modal={false}>
 				<DropdownMenuTrigger asChild>
 					<Button
 						variant='outline'
 						size='sm'
-						className='bg-popover'
+						className='bg-popover rounded-xl'
 						aria-label='Navigation menu'
 					>
 						<MenuIcon />
