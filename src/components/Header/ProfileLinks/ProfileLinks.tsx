@@ -23,7 +23,7 @@ export default function ProfileLinks() {
 				className='rounded-full size-16 bg-gradient-to-tr to-full-stack from-front-end'
 			/>
 
-			<div className='flex flex-col gap-1'>
+			<div className='flex flex-col'>
 				<div className='text-center font-robotoMono'>Chris Berlant</div>
 				<div className='flex'>
 					<ExternalLink

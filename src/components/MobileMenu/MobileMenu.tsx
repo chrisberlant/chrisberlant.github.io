@@ -25,19 +25,43 @@ export default function MobileMenu() {
 				</DropdownMenuTrigger>
 				<DropdownMenuContent>
 					<DropdownMenuGroup>
-						<Link to='/'>
+						<Link
+							to='/'
+							onClick={() =>
+								window.scroll({
+									top: 180,
+									behavior: 'smooth',
+								})
+							}
+						>
 							<DropdownMenuItem className='text-lg cursor-pointer hover:bg-accent'>
 								<UserIcon className='mr-2 size-4' />
 								About me
 							</DropdownMenuItem>
 						</Link>
-						<Link to='/tools'>
+						<Link
+							to='/tools'
+							onClick={() =>
+								window.scroll({
+									top: 180,
+									behavior: 'smooth',
+								})
+							}
+						>
 							<DropdownMenuItem className='text-lg cursor-pointer hover:bg-accent'>
 								<WrenchIcon className='mr-2 size-4' />
 								My tools
 							</DropdownMenuItem>
 						</Link>
-						<Link to='/projects'>
+						<Link
+							to='/projects'
+							onClick={() =>
+								window.scroll({
+									top: 180,
+									behavior: 'smooth',
+								})
+							}
+						>
 							<DropdownMenuItem className='text-lg cursor-pointer hover:bg-accent'>
 								<FolderIcon className='mr-2 size-4' />
 								My projects
