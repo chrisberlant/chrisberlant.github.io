@@ -190,7 +190,7 @@ export default function Tools() {
 					<img
 						src={BuildingAnimate}
 						alt=''
-						className='flex-1 max-w-60 md:max-w-xs xl:max-w-md'
+						className='flex-1 pt-1 max-w-60 md:max-w-xs xl:max-w-md lg:pt-0'
 					/>
 					<div className='flex flex-col items-center flex-1 mt-8'>
 						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
@@ -331,7 +331,7 @@ export default function Tools() {
 					<img
 						src={BookmarksAnimate}
 						alt=''
-						className='flex-1 max-w-60 md:max-w-xs xl:max-w-md'
+						className='flex-1 pt-2 max-w-60 md:max-w-xs xl:max-w-md lg:pt-0'
 					/>
 					<div className='flex flex-col items-center flex-1 mt-8'>
 						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
@@ -339,8 +339,8 @@ export default function Tools() {
 						</h2>
 						<div className='text-center'>
 							Various websites I use to get things like prebuilt
-							components, icons, keep myself updated on the
-							development world...
+							components, icons and keep myself updated on the
+							development world.
 						</div>
 						<ul className='flex flex-col flex-wrap gap-2 mt-2 list-disc max-h-48'>
 							<li>
