@@ -69,7 +69,7 @@ export default function Tools() {
 					</div>
 				</div>
 
-				<div className='flex flex-col items-center flex-1 px-4 pb-4 border shadow-md sm:pb-1 md:gap-4 justify-evenly lg:flex-row-reverse bg-card/80 rounded-3xl border-border dark:shadow-none'>
+				<div className='flex flex-col items-center flex-1 px-4 pb-4 border shadow-md md:gap-4 justify-evenly lg:flex-row-reverse bg-card/80 rounded-3xl border-border dark:shadow-none'>
 					<img
 						src={OperatingSystemAnimate}
 						alt=''
@@ -186,7 +186,7 @@ export default function Tools() {
 					</div>
 				</div>
 
-				<div className='flex flex-col items-center px-4 pb-4 border shadow-md sm:pb-1 md:gap-4 lg:px-4 justify-evenly lg:flex-row bg-card/80 rounded-3xl border-border dark:shadow-none'>
+				<div className='flex flex-col items-center px-4 pb-4 border shadow-md md:gap-4 lg:px-4 justify-evenly lg:flex-row bg-card/80 rounded-3xl border-border dark:shadow-none'>
 					<img
 						src={BuildingAnimate}
 						alt=''
@@ -327,7 +327,7 @@ export default function Tools() {
 					</div>
 				</div>
 
-				<div className='flex flex-col items-center px-4 pb-4 border shadow-md sm:pb-1 md:gap-4 lg:px-4 justify-evenly lg:flex-row-reverse bg-card/80 rounded-3xl border-border dark:shadow-none'>
+				<div className='flex flex-col items-center px-4 pb-4 border shadow-md md:gap-4 lg:px-4 justify-evenly lg:flex-row-reverse bg-card/80 rounded-3xl border-border dark:shadow-none'>
 					<img
 						src={BookmarksAnimate}
 						alt=''
