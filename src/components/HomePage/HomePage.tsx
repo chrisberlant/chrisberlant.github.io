@@ -58,7 +58,7 @@ export default function HomePage() {
 				</div>
 			</div>
 
-			<div className='px-4 py-8 border border-border rounded-3xl bg-card/80'>
+			<div className='px-4 py-8 border border-border rounded-3xl bg-card'>
 				<h2 className='mb-8 text-3xl font-bold text-center font-montserrat'>
 					My stack
 				</h2>
