@@ -35,7 +35,7 @@ export default function Tools() {
 						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-12 font-montserrat'>
 							Dev environment
 						</h2>
-						<ul className='flex flex-col flex-wrap items-center gap-2 text-center lg:text-left lg:items-start'>
+						<ul className='flex flex-col flex-wrap items-center gap-2 text-center xl:pr-5 lg:text-left lg:items-start'>
 							<li>
 								<span className='font-bold'>
 									Visual Studio Code
@@ -73,13 +73,13 @@ export default function Tools() {
 					<img
 						src={OperatingSystemAnimate}
 						alt=''
-						className='flex-1 max-w-60 md:max-w-xs xl:max-w-md'
+						className='flex-1 lg:pr-4 max-w-60 md:max-w-xs xl:max-w-md'
 					/>
 					<div className='flex-1 mt-8 text-center lg:mt-10 xl:mt-0'>
 						<h2 className='mb-8 text-3xl font-bold sm:mb-10 font-montserrat'>
 							Online tools
 						</h2>
-						<ul className='flex flex-col flex-wrap items-center gap-2.5 lg:text-left lg:ml-5 lg:items-start'>
+						<ul className='flex flex-col flex-wrap items-center gap-2.5 lg:text-left lg:pl-5 lg:items-start'>
 							<li>
 								<a
 									className='font-bold'
@@ -190,7 +190,7 @@ export default function Tools() {
 					<img
 						src={BuildingAnimate}
 						alt=''
-						className='flex-1 pt-1 max-w-60 md:max-w-xs xl:max-w-md lg:pt-0'
+						className='flex-1 pt-1 lg:pl-4 max-w-60 md:max-w-xs xl:max-w-md lg:pt-0'
 					/>
 					<div className='flex flex-col items-center flex-1 mt-8'>
 						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
@@ -331,7 +331,7 @@ export default function Tools() {
 					<img
 						src={BookmarksAnimate}
 						alt=''
-						className='flex-1 pt-2 max-w-60 md:max-w-xs xl:max-w-md lg:pt-0'
+						className='flex-1 pt-2 lg:pr-4 max-w-60 md:max-w-xs xl:max-w-md lg:pt-0'
 					/>
 					<div className='flex flex-col items-center flex-1 mt-8'>
 						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-10 font-montserrat'>
