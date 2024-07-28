@@ -14,6 +14,7 @@ import ExcalidrawLogo from '@assets/excalidraw-logo.svg';
 import WhimsicalLogo from '@assets/whimsical-logo.svg';
 import YoutubeLogo from '@assets/youtube-logo.svg';
 import PageTitle from '../PageTitle/PageTitle';
+import Card from '../Card/Card';
 
 export type SoftType = {
 	vscode?: boolean;
@@ -29,7 +30,7 @@ export default function Tools() {
 		<section className='flex flex-col items-center'>
 			<PageTitle>My tools</PageTitle>
 			<div className='flex flex-col w-full gap-8 max-w-7xl'>
-				<div className='flex flex-col items-center gap-4 px-4 pb-4 border shadow-md lg:pr-4 lg:pl-0 lg:pb-0 rounded-3xl border-border dark:shadow-none justify-evenly lg:flex-row bg-card/80'>
+				<Card className='gap-4 pb-4 lg:pr-4 lg:pl-0 lg:pb-0 justify-evenly lg:flex-row'>
 					<OrbitingCirclesTools />
 					<div className='flex-1'>
 						<h2 className='mb-8 text-3xl font-bold text-center sm:mb-12 font-montserrat'>
@@ -67,9 +68,9 @@ export default function Tools() {
 							</li>
 						</ul>
 					</div>
-				</div>
+				</Card>
 
-				<div className='flex flex-col items-center flex-1 px-4 pb-4 border shadow-md md:gap-4 justify-evenly lg:flex-row-reverse bg-card/80 rounded-3xl border-border dark:shadow-none'>
+				<Card className='flex-1 pb-4 md:gap-4 justify-evenly lg:flex-row-reverse'>
 					<img
 						src={OperatingSystemAnimate}
 						alt=''
@@ -184,9 +185,9 @@ export default function Tools() {
 							</li>
 						</ul>
 					</div>
-				</div>
+				</Card>
 
-				<div className='flex flex-col items-center px-4 pb-4 border shadow-md md:gap-4 lg:px-4 justify-evenly lg:flex-row bg-card/80 rounded-3xl border-border dark:shadow-none'>
+				<Card className='pb-4 md:gap-4 justify-evenly lg:flex-row'>
 					<img
 						src={BuildingAnimate}
 						alt=''
@@ -325,9 +326,9 @@ export default function Tools() {
 							</li>
 						</ul>
 					</div>
-				</div>
+				</Card>
 
-				<div className='flex flex-col items-center px-4 pb-4 border shadow-md md:gap-4 lg:px-4 justify-evenly lg:flex-row-reverse bg-card/80 rounded-3xl border-border dark:shadow-none'>
+				<Card className='pb-4 md:gap-4 justify-evenly lg:flex-row-reverse'>
 					<img
 						src={BookmarksAnimate}
 						alt=''
@@ -427,7 +428,7 @@ export default function Tools() {
 							</li>
 						</ul>
 					</div>
-				</div>
+				</Card>
 			</div>
 		</section>
 	);

@@ -14,6 +14,8 @@ import {
 import Marquee from '../ui/Marquee';
 import PageTitle from '../PageTitle/PageTitle';
 import DeveloperActivity from '@assets/developer-activity.svg';
+import GitHubActivity from './GitHubActivity/GitHubActivity';
+import Card from '../Card/Card';
 
 export default function HomePage() {
 	return (
@@ -21,14 +23,14 @@ export default function HomePage() {
 			<PageTitle>Chris Berlant's Webpage</PageTitle>
 			<Description />
 
-			<div className='flex flex-col items-center max-w-4xl gap-4 px-4 py-5 border lg:gap-8 lg:flex-row border-border rounded-3xl bg-card/80'>
+			<Card className='max-w-4xl gap-4 pb-5 pt-7 lg:gap-8 lg:flex-row'>
 				<img
 					src={DeveloperActivity}
 					alt=''
 					className='lg:max-w-48 max-w-36'
 				/>
 				<div className='flex flex-col items-center text-center'>
-					<h2 className='mt-2 mb-5 text-3xl font-bold text-center font-montserrat'>
+					<h2 className='mb-5 text-3xl font-bold text-center font-montserrat'>
 						About me
 					</h2>
 
@@ -56,9 +58,9 @@ export default function HomePage() {
 						</p>
 					</div>
 				</div>
-			</div>
+			</Card>
 
-			<div className='px-4 py-8 border border-border rounded-3xl bg-card'>
+			<Card className='py-7 bg-card'>
 				<h2 className='mb-8 text-3xl font-bold text-center font-montserrat'>
 					My stack
 				</h2>
@@ -105,10 +107,11 @@ export default function HomePage() {
 							alt='Sequelize logo'
 						/>
 					</Marquee>
-					<div className='absolute inset-x-0 top-0 sm:inset-x-auto h-1/4 sm:h-auto bg-gradient-to-b sm:w-1/4 sm:inset-y-0 sm:left-0 sm:bg-gradient-to-r from-card/80'></div>
-					<div className='absolute inset-x-0 bottom-0 sm:inset-x-auto h-1/4 sm:h-auto bg-gradient-to-t sm:w-1/4 sm:inset-y-0 sm:right-0 sm:bg-gradient-to-l from-card/80'></div>
+					<div className='absolute inset-x-0 top-0 sm:inset-x-auto h-1/4 sm:h-auto bg-gradient-to-b sm:w-1/4 sm:inset-y-0 sm:left-0 sm:bg-gradient-to-r from-card'></div>
+					<div className='absolute inset-x-0 bottom-0 sm:inset-x-auto h-1/4 sm:h-auto bg-gradient-to-t sm:w-1/4 sm:inset-y-0 sm:right-0 sm:bg-gradient-to-l from-card'></div>
 				</div>
-			</div>
+			</Card>
+			<GitHubActivity />
 		</section>
 	);
 }

@@ -6,8 +6,9 @@ import {
 	CarouselItem,
 	CarouselPrevious,
 	CarouselNext,
-} from '../../ui/carousel';
+} from '@/components/ui/carousel';
 import { ReactNode } from 'react';
+import Card from '@/components/Card/Card';
 
 export type BadgesType = {
 	front: string[];
@@ -38,9 +39,9 @@ export default function ProjectCard({
 }: ProjectCardProps) {
 	const { badges, slidesUrl, title, description } = project;
 	return (
-		<div
+		<Card
 			className={cn(
-				'bg-card/80 flex flex-col items-center text-center rounded-3xl shadow-md dark:shadow-none px-5 md:px-12 py-5 border border-border max-w-7xl',
+				'text-center px-5 md:px-12 py-5 max-w-7xl',
 				className
 			)}
 		>
@@ -89,6 +90,6 @@ export default function ProjectCard({
 			</Carousel>
 
 			<div className='flex h-full mt-4'>{children}</div>
-		</div>
+		</Card>
 	);
 }
