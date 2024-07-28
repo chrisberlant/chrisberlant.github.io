@@ -94,7 +94,7 @@ export default function Projects() {
 	return (
 		<section className='flex flex-col xl:mx-20 2xl:mx-44'>
 			<PageTitle>My projects</PageTitle>
-			<div className='flex flex-col flex-wrap items-center justify-center gap-10 sm:gap-14'>
+			<div className='flex flex-col flex-wrap items-center justify-center gap-8'>
 				<ProjectCard project={gestionSmac}>
 					<div className='flex flex-col items-center justify-between flex-1'>
 						{gestionSmac.description.content}
