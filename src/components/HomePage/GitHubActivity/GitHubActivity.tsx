@@ -86,9 +86,14 @@ export default function GitHubActivity() {
 						>
 							{commit.title} - {dateFormatting(commit.date)}
 						</a>
-						<ol className='text-sm list-disc list-inside font-robotoMono'>
+						<ol className='flex flex-col gap-1 mt-1 text-sm font-robotoMono'>
 							{commit.messages.map((message) => (
-								<li key={message}>{message}</li>
+								<li
+									key={message}
+									className='py-0.5 px-2 bg-muted/60 w-fit rounded-xl'
+								>
+									{message}
+								</li>
 							))}
 						</ol>
 					</li>
