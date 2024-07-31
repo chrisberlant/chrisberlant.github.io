@@ -37,6 +37,7 @@ export default function GitHubActivity() {
 					.filter(
 						(commit) =>
 							commit.repo.id !== 605565490 &&
+							commit.type !== 'CreateEvent' &&
 							!commit.payload.commits.some((commit) =>
 								commit.message.includes('Merge branch')
 							)
