@@ -112,7 +112,7 @@ export default function GitHubActivity() {
 						}
 						className='absolute transform -translate-x-1/2 -translate-y-1/2 opacity-70 -z-10 left-1/2 top-1/2 size-56'
 					/>
-					<ol className='flex flex-col gap-2 sm:pl-4 lg:pl-10 xl:pl-16'>
+					<ol className='flex flex-col gap-2 break-all sm:pl-4 lg:pl-10 xl:pl-16'>
 						{commits.data.map((commit) => (
 							<li key={commit.date}>
 								<a
