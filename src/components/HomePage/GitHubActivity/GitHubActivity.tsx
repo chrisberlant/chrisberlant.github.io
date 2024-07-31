@@ -76,7 +76,7 @@ export default function GitHubActivity() {
 			<h2 className='self-center mb-8 text-3xl font-bold font-montserrat'>
 				Recent GitHub activity
 			</h2>
-			<ol className='flex flex-col gap-2 pl-4 sm:pl-8 lg:pl-10 xl:pl-16'>
+			<ol className='flex flex-col gap-2 sm:pl-4 lg:pl-10 xl:pl-16'>
 				{commits?.map((commit) => (
 					<li key={commit.date}>
 						<a
