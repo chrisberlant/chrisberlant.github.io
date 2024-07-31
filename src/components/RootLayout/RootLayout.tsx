@@ -23,7 +23,7 @@ export default function RootLayout() {
 				className='fixed top-0 blur-3xl -z-10 animate-blob3 -right-4 size-44 animation-delay-1000'
 			/>
 			<Header />
-			<main className='flex-grow '>
+			<main className='flex-grow'>
 				<Outlet />
 			</main>
 			<MobileMenu />

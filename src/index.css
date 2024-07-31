@@ -54,11 +54,11 @@
 	}
 
 	body {
-		@apply flex min-h-screen px-3 pt-8 pb-4 bg-background text-foreground lg:px-8 sm:px-4;
+		@apply flex min-h-screen pt-8 pb-4 bg-background text-foreground sm:px-4;
 	}
 
 	#root {
-		@apply flex flex-col flex-grow;
+		@apply flex flex-col px-3 lg:px-8;
 	}
 }
 
