@@ -82,7 +82,7 @@ export default function GitHubActivity() {
 	return (
 		<Card className='relative pb-5 sm:px-4 pt-7 max-w-7xl'>
 			<h2 className='px-4 mb-8 text-3xl font-bold text-center font-montserrat'>
-				Recent GitHub activity
+				Recent public GitHub activity
 			</h2>
 
 			{commits.loading && (

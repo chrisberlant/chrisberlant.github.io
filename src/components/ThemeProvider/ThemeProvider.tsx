@@ -20,9 +20,8 @@ export default function ThemeProvider({
 	children: React.ReactNode;
 }) {
 	const [theme, setTheme] = useState<Theme>('dark');
-	const toggleTheme = () => {
+	const toggleTheme = () =>
 		theme === 'dark' ? setTheme('light') : setTheme('dark');
-	};
 
 	useEffect(() => {
 		const root = window.document.documentElement;
