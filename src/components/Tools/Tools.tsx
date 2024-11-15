@@ -16,14 +16,6 @@ import YoutubeLogo from '@assets/youtube-logo.svg';
 import PageTitle from '../PageTitle/PageTitle';
 import Card from '../Card/Card';
 
-export type SoftType = {
-	vscode?: boolean;
-	windows?: boolean;
-	insomnia?: boolean;
-	linux?: boolean;
-	docker?: boolean;
-};
-
 export default function Tools() {
 	const { theme } = useContext(ThemeProviderContext);
 	return (
