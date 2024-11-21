@@ -9,7 +9,7 @@ images:
         "/img/gestion-smac4.png",
         "/img/gestion-smac5.png",
         "/img/gestion-smac6.png",
-		"/img/gestion-smac7.png",
+		"/img/gestion-smac7.png"
     ]
 links:
     - url: "https://github.com/chrisberlant/gestion-SMAC-front"

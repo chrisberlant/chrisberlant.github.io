@@ -1,6 +1,5 @@
 ---
 import Badge from "./Badge";
-import { cn } from "@/lib/utils";
 import ImagesCarousel from "./ImagesCarousel";
 import Card from "@/components/Card";
 import type { MarkdownInstance } from "astro";
@@ -38,18 +37,17 @@ export interface ProjectCardProps {
 
 interface Props {
     project: ProjectType;
-    className?: string;
 }
 
-const { project, className } = Astro.props;
+const { project } = Astro.props;
 const { title, images, description, links, tags } = project.frontmatter;
 ---
 
-<Card className={cn("max-w-7xl px-5 py-5 text-center md:px-4", className)}>
+<Card className="px-5 py-5 text-center md:px-4 min-w-full">
     <h2 class="mb-2 text-2xl font-bold leading-none">{title}</h2>
 
     <h3 class="mb-4 font-bold text-center">{description}</h3>
-    <div class="flex flex-wrap justify-center gap-2 mb-4">
+    <div class="flex flex-wrap justify-center gap-2">
         {
             Object.keys(tags).map((spec) =>
                 tags[spec as keyof TagsType].map((tech) => (
@@ -59,13 +57,18 @@ const { title, images, description, links, tags } = project.frontmatter;
         }
     </div>
 
-    <ImagesCarousel images={images} title={title} client:only="react">
-        <ProjectImagesSkeleton slot="fallback" />
-    </ImagesCarousel>
+    {
+        images?.length ? (
+            <ImagesCarousel images={images} title={title} client:only="react">
+                <ProjectImagesSkeleton slot="fallback" />
+            </ImagesCarousel>
+        ) : null
+    }
+
     <div class="flex h-full mt-4 md:px-10">{project.rawContent}</div>
     <div class="flex flex-row flex-wrap justify-center gap-6 mt-4">
         {
-            links.map((link) => (
+            links?.map((link) => (
                 <ExternalLink
                     link={link.url}
                     text={link.text}

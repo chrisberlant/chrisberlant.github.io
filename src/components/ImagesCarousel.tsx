@@ -17,7 +17,7 @@ export default function ImagesCarousel({ images, title }: ImagesCarouselProps) {
             opts={{
                 loop: true,
             }}
-            className="max-w-52 sm:max-w-96 md:max-w-xl min-[840px]:max-w-2xl lg:max-w-3xl"
+            className="max-w-52 mt-4 sm:max-w-96 md:max-w-xl min-[840px]:max-w-2xl lg:max-w-3xl"
         >
             <CarouselContent>
                 {images.map((slide, index) => (
