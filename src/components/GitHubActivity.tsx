@@ -7,7 +7,6 @@ import NotFoundAnimate from "@/assets/not-found-animate.svg";
 import { LoaderCircleIcon } from "lucide-react";
 
 export default function GitHubActivity() {
-    // const [commits, setCommits] = useState<CommitInfosType[]>([]);
     const [commits, setCommits] = useState({
         data: null as CommitInfosType[] | null,
         loading: true,
