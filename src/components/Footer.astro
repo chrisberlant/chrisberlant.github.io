@@ -1,0 +1,26 @@
+---
+import CatppuccinLogo from "@/assets/catppuccin-logo.png";
+import { Image } from "astro:assets";
+---
+
+<footer class="flex items-center justify-center pt-8">
+    <div class="flex flex-col items-center text-xs">
+        <span>
+            Web illustrations by{" "}
+            <a href="https://storyset.com" target="_blank" class="text-xs">
+                Storyset
+            </a>
+        </span>
+        <div class="flex items-center mt-1">
+            Theme by
+            <a
+                href="https://catppuccin.com"
+                target="_blank"
+                class="flex items-center ml-1"
+            >
+                Catppuccin
+                <Image src={CatppuccinLogo} alt="" class="ml-2 size-5" />
+            </a>
+        </div>
+    </div>
+</footer>
