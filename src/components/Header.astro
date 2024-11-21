@@ -1,0 +1,25 @@
+---
+import ProfileLinks from "./ProfileLinks.astro";
+import NavBar from "./NavBar.astro";
+import ThemeToggler from "./ThemeToggler";
+import Button from "./ui/button";
+import { Loader } from "lucide-react";
+---
+
+<header>
+    <ThemeToggler client:only="react" transition:persist>
+        <Button
+            variant="outline"
+            size="icon"
+            className="absolute right-5 top-5 bg-card/80"
+            slot="fallback"
+            ><Loader className="transition-all size-5 animate-spin" /></Button
+        >
+    </ThemeToggler>
+    <div
+        class="mb-8 mt-2 flex flex-col justify-between gap-4 sm:mt-4 min-[700px]:flex-row md:mt-6"
+    >
+        <ProfileLinks />
+        <NavBar />
+    </div>
+</header>

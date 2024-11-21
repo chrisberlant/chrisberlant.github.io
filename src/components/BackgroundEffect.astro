@@ -1,0 +1,24 @@
+---
+import BlobSvg from "@/assets/blob.svg";
+import Blob2Svg from "@/assets/blob2.svg";
+import Blob3Svg from "@/assets/blob3.svg";
+---
+
+<img
+    src={BlobSvg.src}
+    alt=""
+    class="fixed left-4 top-36 -z-40 size-64 animate-blob opacity-40 blur-2xl"
+    transition:persist
+/>
+<img
+    src={Blob2Svg.src}
+    alt=""
+    class="fixed animation-delay-2000 -right-4 bottom-4 -z-40 size-5/12 animate-blob2 opacity-40 blur-3xl"
+    transition:persist
+/>
+<img
+    src={Blob3Svg.src}
+    alt=""
+    class="fixed top-0 animation-delay-1000 -right-4 -z-40 size-44 animate-blob3 blur-3xl"
+    transition:persist
+/>

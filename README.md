@@ -1,3 +1,3 @@
 # My Webpage
 
-This is the webpage containing my skills, portfolio and important links using Vite, TypeScript, React and Tailwind
+This is my updated portfolio containing my skills, projects and important links using Astro, TypeScript, React and Tailwind
