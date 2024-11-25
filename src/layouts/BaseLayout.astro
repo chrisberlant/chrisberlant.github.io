@@ -16,7 +16,7 @@ import "../styles/globals.css";
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>Chris Berlant's Webpage</title>
-        <script>
+        <script is:inline>
             const setTheme = () => {
                 const theme = (() => {
                     const storedTheme = localStorage.getItem("theme");
