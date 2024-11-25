@@ -1,24 +1,10 @@
 ---
-import NodeJsLogo from "@/assets/nodejs-logo.svg";
-import PostgresLogo from "@/assets/postgresql-logo.svg";
-import SequelizeLogo from "@/assets/sequelize-logo.svg";
-import ReactLogo from "@/assets/react-logo.svg";
-import TanstackQueryLogo from "@/assets/tanstack-query-logo.svg";
-import TailwindLogo from "@/assets/tailwind-logo.svg";
-import TypeScriptLogo from "@/assets/typescript-logo.svg";
-import JavaScriptLogo from "@/assets/javascript-logo.svg";
-import DeveloperActivity from "@/assets/developer-activity.svg";
-import Card from "../components/Card";
 import Description from "../components/Description";
 import GitHubActivity from "../components/GitHubActivity";
 import PageTitle from "../components/PageTitle";
-import {
-    GlitchingSkillElement,
-    SkillElement,
-} from "../components/SkillElement";
-import Marquee from "../components/ui/Marquee";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Image } from "astro:assets";
+import MyStack from "../components/MyStack.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <BaseLayout>
@@ -40,101 +26,10 @@ import { Image } from "astro:assets";
             </Description>
         </div>
 
-        <Card className="max-w-4xl gap-4 pb-5 pt-7 lg:flex-row lg:gap-8">
-            <Image
-                src={DeveloperActivity}
-                alt=""
-                class="max-w-36 lg:max-w-48"
-            />
-            <div class="flex flex-col items-center text-center">
-                <h2 class="mb-5 text-3xl font-bold text-center font-montserrat">
-                    About me
-                </h2>
+        <AboutMe />
 
-                <div>
-                    <p class="mt-1">
-                        After working for 10 years in IT as a VIP support, I
-                        decided to get back into the development world, which I
-                        firstly started diving into during my free time in 2004,
-                        then during my studies in 2010.
-                    </p>
-                    <p class="mt-1">
-                        To achieve this, I followed the{" "}
-                        <a href="https://oclock.io" target="_blank">
-                            O'clock school
-                        </a>
-                        's six months intensive program focused on learning how to
-                        code using the JavaScript language with solo & group projects,
-                        sometimes using pair programming, and built projects on my
-                        own.
-                    </p>
-                    <p class="mt-1">
-                        I love traveling, especially in Asian countries, and
-                        discovering new things, related or not to the IT domain.
-                    </p>
-                </div>
-            </div>
-        </Card>
+        <MyStack />
 
-        <Card className="bg-card py-7">
-            <h2 class="mb-8 text-3xl font-bold text-center font-montserrat">
-                My stack
-            </h2>
-            <div
-                class="relative flex max-w-md rounded-md max-h-52 font-robotoMono sm:max-w-lg sm:flex-col md:max-w-xl"
-            >
-                <Marquee className="flex-1">
-                    <GlitchingSkillElement
-                        className="animate-glitch"
-                        title="TypeScript"
-                        secondTitle="JavaScript"
-                        logo={TypeScriptLogo.src}
-                        secondLogo={JavaScriptLogo.src}
-                        alt="JavaScript/TypeScript logos"
-                    />
-                    <SkillElement
-                        title="React"
-                        logo={ReactLogo.src}
-                        alt="React logo"
-                    />
-                    <SkillElement
-                        title="TanStack Query"
-                        logo={TanstackQueryLogo.src}
-                        alt="Tanstack query logo"
-                    />
-                    <SkillElement
-                        title="Tailwind"
-                        logo={TailwindLogo.src}
-                        alt="Tailwind logo"
-                    />
-                </Marquee>
-                <Marquee className="flex-1" reverse>
-                    <SkillElement
-                        title="Node.js"
-                        logo={NodeJsLogo.src}
-                        alt="Node.js logo"
-                    />
-                    <SkillElement
-                        title="PostgreSQL"
-                        logo={PostgresLogo.src}
-                        alt="PostgreSQL logo"
-                    />
-                    <SkillElement
-                        title="Sequelize"
-                        logo={SequelizeLogo.src}
-                        alt="Sequelize logo"
-                    />
-                </Marquee>
-                <div
-                    class="absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-card sm:inset-x-auto sm:inset-y-0 sm:left-0 sm:h-auto sm:w-1/4 sm:bg-gradient-to-r"
-                >
-                </div>
-                <div
-                    class="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-card sm:inset-x-auto sm:inset-y-0 sm:right-0 sm:h-auto sm:w-1/4 sm:bg-gradient-to-l"
-                >
-                </div>
-            </div>
-        </Card>
         <GitHubActivity client:load />
     </section>
 </BaseLayout>
