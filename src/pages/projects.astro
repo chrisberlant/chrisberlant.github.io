@@ -1,13 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
-// import { type ProjectType } from "../components/ProjectCard.astro";
 import PageTitle from "../components/PageTitle";
 import ProjectCard from "../components/ProjectCard.astro";
 const projects = await getCollection("projects");
 ---
 
-{console.log(projects)}
 <BaseLayout
     ><section class="flex flex-col xl:mx-20 2xl:mx-44">
         <PageTitle>My projects</PageTitle>
