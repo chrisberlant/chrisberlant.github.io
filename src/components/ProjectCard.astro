@@ -2,45 +2,16 @@
 import Badge from "./Badge";
 import ImagesCarousel from "./ImagesCarousel";
 import Card from "@/components/Card";
-import type { MarkdownInstance } from "astro";
 import ExternalLink from "./ExternalLink";
 import ProjectImagesSkeleton from "./ProjectImagesSkeleton";
-
-export type TagsType = {
-    front: string[];
-    back: string[];
-    fullStack: string[];
-    appType: string[];
-};
-
-export type ProjectLinkType = {
-    url: string;
-    text: string;
-    title: string;
-    type: "repo" | "app";
-};
-
-export type ProjectFrontmatter = {
-    title: string;
-    images: string[];
-    description: string;
-    links: ProjectLinkType[];
-    tags: TagsType;
-};
-
-export type ProjectType = MarkdownInstance<ProjectFrontmatter>;
-
-export interface ProjectCardProps {
-    project: ProjectType;
-    className?: string;
-}
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-    project: ProjectType;
+    project: CollectionEntry<"projects">;
 }
 
 const { project } = Astro.props;
-const { title, images, description, links, tags } = project.frontmatter;
+const { title, description, images, links, tags } = project.data;
 ---
 
 <Card className="px-5 py-5 text-center md:px-4 min-w-full">
@@ -49,9 +20,9 @@ const { title, images, description, links, tags } = project.frontmatter;
     <h3 class="mb-4 font-bold text-center">{description}</h3>
     <div class="flex flex-wrap justify-center gap-2">
         {
-            Object.keys(tags).map((spec) =>
-                tags[spec as keyof TagsType].map((tech) => (
-                    <Badge variant={spec as keyof TagsType}>{tech}</Badge>
+            Object.entries(tags).map(([spec, tech]) =>
+                tech.map((tech) => (
+                    <Badge variant={spec as keyof typeof tags}>{tech}</Badge>
                 )),
             )
         }
@@ -65,7 +36,7 @@ const { title, images, description, links, tags } = project.frontmatter;
         ) : null
     }
 
-    <div class="flex h-full mt-4 md:px-10">{project.rawContent}</div>
+    <div class="flex h-full mt-4 md:px-10">{project.body}</div>
     <div class="flex flex-row flex-wrap justify-center gap-6 mt-4">
         {
             links?.map((link) => (
