@@ -75,11 +75,14 @@ export default function GitHubActivity() {
     }, []);
 
     return (
-        <Card className="relative pb-5 sm:px-4 pt-7 max-w-7xl">
+        <Card className="relative flex flex-col pb-5 sm:px-4 pt-7 max-w-7xl">
             <h2 className="px-4 mb-8 text-3xl font-bold text-center font-montserrat">
                 Recent public GitHub activity
             </h2>
-            <GithubIcon className="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-70 -z-10 left-1/2 top-1/2 size-56" />
+
+            {!commits.error && (
+                <GithubIcon className="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-70 -z-10 left-1/2 top-1/2 size-56" />
+            )}
 
             {commits.loading && (
                 <LoaderCircleIcon size={120} className="mb-4 animate-spin" />
@@ -100,32 +103,29 @@ export default function GitHubActivity() {
             )}
 
             {commits.data && (
-                <>
-                    <ol className="flex flex-col gap-2 break-all sm:pl-4 lg:pl-10 xl:pl-16">
-                        {commits.data.map((commit) => (
-                            <li key={commit.date}>
-                                <a
-                                    className="text-lg font-semibold"
-                                    href={`https://github.com/${commit.title}`}
-                                    target="_blank"
-                                >
-                                    {commit.title} -{" "}
-                                    {dateFormatting(commit.date)}
-                                </a>
-                                <ol className="mt-1 text-sm font-robotoMono">
-                                    {commit.messages.map((message) => (
-                                        <li
-                                            key={message}
-                                            className="mt-1 py-0.5 px-1.5 w-fit bg-muted/60 rounded-xl"
-                                        >
-                                            {message}
-                                        </li>
-                                    ))}
-                                </ol>
-                            </li>
-                        ))}
-                    </ol>
-                </>
+                <ol className="flex flex-col gap-2 break-all">
+                    {commits.data.map((commit) => (
+                        <li key={commit.date}>
+                            <a
+                                className="text-lg font-semibold"
+                                href={`https://github.com/${commit.title}`}
+                                target="_blank"
+                            >
+                                {commit.title} - {dateFormatting(commit.date)}
+                            </a>
+                            <ol className="mt-1 text-sm font-robotoMono">
+                                {commit.messages.map((message) => (
+                                    <li
+                                        key={message}
+                                        className="mt-1 py-0.5 px-1.5 w-fit bg-muted/60 rounded-xl"
+                                    >
+                                        {message}
+                                    </li>
+                                ))}
+                            </ol>
+                        </li>
+                    ))}
+                </ol>
             )}
         </Card>
     );
