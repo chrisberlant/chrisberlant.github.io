@@ -7,9 +7,9 @@ const projects = await getCollection("projects");
 ---
 
 <BaseLayout
-    ><section class="flex flex-col xl:mx-20 2xl:mx-44">
+    ><section class="flex flex-col items-center">
         <PageTitle>My projects</PageTitle>
-        <div class="flex flex-col flex-wrap items-center justify-center gap-8">
+        <div class="flex flex-col w-full gap-8 max-w-7xl">
             {projects.map((project) => <ProjectCard project={project} />)}
         </div>
     </section></BaseLayout

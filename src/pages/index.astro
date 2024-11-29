@@ -12,18 +12,12 @@ import AboutMe from "../components/AboutMe.astro";
         <PageTitle>Chris Berlant's Webpage</PageTitle>
 
         <div
-            class="flex h-40 flex-col text-center font-robotoMono text-2xl font-bold min-[458px]:h-32 sm:h-40 sm:text-3xl min-[1128px]:h-36"
+            class="flex h-36 flex-col text-center font-robotoMono text-2xl font-bold min-[458px]:h-28 sm:h-32 sm:text-3xl min-[1128px]:h-24"
         >
             <div class="flex justify-center">
                 <span class="mb-4">Hi I'm Chris!</span>
             </div>
-            <Description client:only="react">
-                <div
-                    slot="fallback"
-                    class="h-40 min-[458px]:h-32 sm:h-40 sm:text-3xl min-[1128px]:h-36"
-                >
-                </div>
-            </Description>
+            <Description client:only="react" />
         </div>
 
         <AboutMe />

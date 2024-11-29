@@ -14,7 +14,6 @@ import OrbitingCirclesTools from "../components/OrbitingCirclesTools";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import GithubIcon from "../components/Icons/GithubIcon";
 import { Image } from "astro:assets";
-import { LoaderCircleIcon } from "lucide-react";
 import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkeleton";
 ---
 
@@ -22,9 +21,7 @@ import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkel
     <section class="flex flex-col items-center">
         <PageTitle>My tools</PageTitle>
         <div class="flex flex-col w-full gap-8 max-w-7xl">
-            <Card
-                className="justify-evenly pb-4 gap-4 lg:flex-row lg:pb-0 lg:pl-0 lg:pr-4"
-            >
+            <Card className="pb-4 gap-4 lg:flex-row lg:pb-0">
                 <OrbitingCirclesTools client:only="react">
                     <OrbitingCirclesToolsSkeleton slot="fallback" />
                 </OrbitingCirclesTools>
@@ -35,7 +32,7 @@ import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkel
                         Dev environment
                     </h2>
                     <ul
-                        class="flex flex-col flex-wrap items-center gap-2 text-center lg:items-start lg:text-left xl:pr-5"
+                        class="flex flex-col flex-wrap items-center gap-2 text-center lg:items-start lg:text-left"
                     >
                         <li>
                             <span class="font-bold"> Visual Studio Code</span> is
@@ -65,15 +62,13 @@ import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkel
                 </div>
             </Card>
 
-            <Card
-                className="flex-1 justify-evenly pb-4 md:gap-4 lg:flex-row-reverse"
-            >
+            <Card className="pb-4 md:gap-4 lg:flex-row-reverse">
                 <Image
                     src={OperatingSystemAnimate}
                     alt=""
-                    class="flex-1 max-w-60 md:max-w-xs lg:pr-4 xl:max-w-md"
+                    class="max-w-60 md:max-w-xs lg:pr-4 xl:max-w-md"
                 />
-                <div class="flex-1 mt-8 text-center lg:mt-10 xl:mt-0">
+                <div class="mt-8 text-center lg:mt-10 xl:mt-0">
                     <h2
                         class="mb-8 text-3xl font-bold font-montserrat sm:mb-10"
                     >
@@ -94,7 +89,7 @@ import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkel
                                     alt="Notion logo"
                                 />
                                 Notion
-                            </a>{" "}
+                            </a>
                             allows me to keep tracks of my discoveries and notes,
                             and create my own documentations
                         </li>
@@ -110,7 +105,7 @@ import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkel
                                     alt="Excalidraw logo"
                                 />
                                 Excalidraw
-                            </a>{" "}
+                            </a>
                             is the place where I can draw diagrams to organize my
                             ideas
                         </li>
@@ -126,7 +121,7 @@ import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkel
                                     alt="Whimsical logo"
                                 />
                                 Whimsical
-                            </a>{" "}
+                            </a>
                             is the perfect tool to build my responsive wireframes
                         </li>
                         <li>
@@ -140,7 +135,7 @@ import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkel
                                     className="mx-1 inline-block size-5"
                                 />
                                 GitHub
-                            </a>{" "}
+                            </a>
                             to host the source code of my projects
                         </li>
                         <li>
@@ -156,8 +151,8 @@ import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkel
                                     alt="Vercel logo"
                                 />
                                 Vercel
-                            </a>{" "}
-                            and{" "}
+                            </a>
+                            and
                             <a
                                 class="font-bold"
                                 href="https://www.netlify.com"
@@ -169,7 +164,7 @@ import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkel
                                     alt="Netlify logo"
                                 />
                                 Netlify
-                            </a>{" "}
+                            </a>
                             to host my projects using Continuous Integration and
                             Continuous Deployments (CI/CD)
                         </li>
@@ -177,7 +172,7 @@ import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkel
                 </div>
             </Card>
 
-            <Card className="justify-evenly pb-4 md:gap-4 lg:flex-row">
+            <Card className="pb-4 md:gap-4 lg:flex-row">
                 <Image
                     src={BuildingAnimate}
                     alt=""
@@ -327,9 +322,9 @@ import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkel
                 <Image
                     src={BookmarksAnimate}
                     alt=""
-                    class="flex-1 pt-2 max-w-60 md:max-w-xs lg:pr-4 lg:pt-0 xl:max-w-md"
+                    class="pt-2 max-w-60 md:max-w-xs lg:pr-4 lg:pt-0 xl:max-w-md"
                 />
-                <div class="flex flex-col items-center flex-1 mt-8">
+                <div class="flex flex-col items-center mt-8">
                     <h2
                         class="mb-8 text-3xl font-bold text-center font-montserrat sm:mb-10"
                     >
