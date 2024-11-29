@@ -16,7 +16,11 @@ export default function NavButton({ link, text }: NavButtonProps) {
     return (
         <Button
             variant="linkHover2"
-            className={currentUrl === link ? "font-bold" : ""}
+            className={
+                currentUrl === link || currentUrl === `${link}/`
+                    ? "font-bold"
+                    : ""
+            }
             asChild
         >
             <a href={link}>{text}</a>
