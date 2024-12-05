@@ -20,9 +20,8 @@ import "../styles/globals.css";
             const setTheme = () => {
                 const theme = (() => {
                     const storedTheme = localStorage.getItem("theme");
-                    if (storedTheme === "dark" || storedTheme === "light") {
+                    if (storedTheme === "dark" || storedTheme === "light")
                         return storedTheme;
-                    }
 
                     if (
                         window.matchMedia("(prefers-color-scheme: dark)")
@@ -38,7 +37,6 @@ import "../styles/globals.css";
 
                 localStorage.setItem("theme", theme);
             };
-
             setTheme();
 
             // Executed on page change using ViewTransitions
