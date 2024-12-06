@@ -1,0 +1,26 @@
+---
+import { GlobeIcon } from 'lucide-react';
+import GithubIcon from '@/assets/github-icon.svg';
+import { buttonVariants } from './ui/button';
+
+interface Props {
+	link: string;
+	text: string;
+	title: string;
+	type: 'repo' | 'app';
+}
+
+	const {link, text, title, type} = Astro.props;
+---
+
+
+<a
+	href={link}
+	title={title}
+	target='_blank'
+	class={buttonVariants({ variant: 'externalLink', size: 'sm' })}
+>
+	{type === 'repo' && <GithubIcon class='mr-2 fill-current size-5' />}
+	{type === 'app' && <GlobeIcon className='mr-2 size-5' />}
+	{text}
+</a>
