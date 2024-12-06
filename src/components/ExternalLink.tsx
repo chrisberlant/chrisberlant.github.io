@@ -1,5 +1,5 @@
 import { GlobeIcon } from 'lucide-react';
-import GithubIcon from './Icons/GithubIcon';
+import GithubBackground from './GithubBackground';
 import { buttonVariants } from './ui/button';
 
 interface ExternalLinkProps {
@@ -22,7 +22,7 @@ export default function ExternalLink({
 			target='_blank'
 			className={buttonVariants({ variant: 'externalLink', size: 'sm' })}
 		>
-			{type === 'repo' && <GithubIcon className='mr-2 size-5' />}
+			{type === 'repo' && <GithubBackground className='mr-2 size-5' />}
 			{type === 'app' && <GlobeIcon className='mr-2 size-5' />}
 			{text}
 		</a>

@@ -1,10 +1,10 @@
 ---
 import CV from "@/assets/cv/CV_ChrisBerlant_ReactDev.pdf";
 import MyPicture from "@/assets/my-picture.png";
-import GithubIcon from "./Icons/GithubIcon";
-import LinkedinIcon from "./Icons/LinkedinIcon";
-import MailIcon from "./Icons/MailIcon";
-import PdfIcon from "./Icons/PdfIcon";
+import GithubIcon from "@/assets/github-icon.svg";
+import LinkedinIcon from "@/assets/linkedin-icon.svg";
+import MailIcon from "@/assets/mail-icon.svg";
+import PdfIcon from "@/assets/pdf-icon.svg";
 import SocialLink from "./SocialLink";
 import { Image } from "astro:assets";
 ---
@@ -22,26 +22,26 @@ import { Image } from "astro:assets";
                 title="My GitHub profile"
                 link="https://github.com/chrisberlant"
             >
-                <GithubIcon className="size-5" />
+                <GithubIcon class="fill-current size-5" />
             </SocialLink>
             <SocialLink
                 title="My LinkedIn profile"
                 link="https://www.linkedin.com/in/chris-berlant/"
             >
-                <LinkedinIcon className="size-5" />
+                <LinkedinIcon class="fill-current size-5" />
             </SocialLink>
             <SocialLink
                 title="Send me an email"
                 link="mailto:chris.berlant@gmail.com"
             >
-                <MailIcon className="size-5" />
+                <MailIcon class="fill-current size-5" />
             </SocialLink>
             <SocialLink
                 title="Download my CV"
                 link={CV}
                 download="CV_ChrisBerlant_ReactDev.pdf"
             >
-                <PdfIcon className="size-5" />
+                <PdfIcon class="fill-current size-5" />
             </SocialLink>
         </div>
     </div>

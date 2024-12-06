@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import type { CommitInfosType, CommitType } from '@/lib/types';
 import Card from '@/components/Card';
 import { dateFormatting } from '@/lib/utils';
-import GithubIcon from './Icons/GithubIcon';
+import GithubBackground from './GithubBackground';
 import NotFoundAnimate from '@/assets/not-found-animate.svg';
 import { LoaderCircleIcon } from 'lucide-react';
 
@@ -81,7 +81,7 @@ export default function GitHubActivity() {
 			</h2>
 
 			{!commits.error && (
-				<GithubIcon className='absolute transform -translate-x-1/2 -translate-y-1/2 opacity-70 -z-10 left-1/2 top-1/2 size-56' />
+				<GithubBackground className='absolute transform -translate-x-1/2 -translate-y-1/2 opacity-70 -z-10 left-1/2 top-1/2 size-56' />
 			)}
 
 			{commits.loading && (
