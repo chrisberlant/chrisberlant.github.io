@@ -1,52 +1,59 @@
 ---
-import Badge from "./Badge";
-import ImagesCarousel from "./ImagesCarousel";
-import Card from "@/components/Card";
-import ExternalLink from "./ExternalLink.astro";
-import ProjectImagesSkeleton from "./ProjectImagesSkeleton";
-import type { CollectionEntry } from "astro:content";
+import Badge from './Badge';
+import Card from '@/components/Card';
+import ExternalLink from './ExternalLink.astro';
+import ProjectImagesSkeleton from './ProjectImagesSkeleton';
+import type { CollectionEntry } from 'astro:content';
+import ThumbnailsCarousel from './ThumbnailsCarousel';
+import FullScreenImagesCarousel from './FullScreenCarousel';
+import CarouselComponent from './CarouselComponent';
 
 interface Props {
-    project: CollectionEntry<'projects'>;
+	project: CollectionEntry<'projects'>;
 }
 
 const { project } = Astro.props;
 const { title, description, images, links, tags } = project.data;
 ---
 
-<Card className="px-5 py-5 text-center md:px-4 min-w-full">
-    <h2 class="mb-2 text-2xl font-bold leading-none">{title}</h2>
+<Card className='px-5 py-5 text-center md:px-4 min-w-full'>
+	<h2 class='mb-2 text-2xl font-bold leading-none'>{title}</h2>
 
-    <h3 class="mb-4 font-bold text-center">{description}</h3>
-    <div class="flex flex-wrap justify-center gap-2">
-        {
-            Object.entries(tags).map(([spec, tech]) =>
-                tech.map((tech) => (
-                    <Badge variant={spec as keyof typeof tags}>{tech}</Badge>
-                )),
-            )
-        }
-    </div>
+	<h3 class='mb-4 font-bold text-center'>{description}</h3>
+	<div class='flex flex-wrap justify-center gap-2'>
+		{
+			Object.entries(tags).map(([spec, tech]) =>
+				tech.map((tech) => (
+					<Badge variant={spec as keyof typeof tags}>{tech}</Badge>
+				))
+			)
+		}
+	</div>
 
-    {
-        images?.length ? (
-            <ImagesCarousel images={images} title={title} client:only="react">
-                <ProjectImagesSkeleton slot="fallback" />
-            </ImagesCarousel>
-        ) : null
-    }
+	{
+		images?.length ? (
+			<CarouselComponent
+				images={images}
+				title={title}
+				client:only='react'
+			>
+				<ProjectImagesSkeleton slot='fallback' />
+			</CarouselComponent>
+		) : // <FullScreenImagesCarousel images={images} title={title} client:only="react" />
+		null
+	}
 
-    <div class="flex h-full mt-4 md:px-10">{project.body}</div>
-    <div class="flex flex-row flex-wrap justify-center gap-6 mt-4">
-        {
-            links?.map((link) => (
-                <ExternalLink
-                    link={link.url}
-                    text={link.text}
-                    title={link.title}
-                    type={link.type}
-                />
-            ))
-        }
-    </div>
+	<div class='flex h-full mt-4 md:px-10'>{project.body}</div>
+	<div class='flex flex-row flex-wrap justify-center gap-6 mt-4'>
+		{
+			links?.map((link) => (
+				<ExternalLink
+					link={link.url}
+					text={link.text}
+					title={link.title}
+					type={link.type}
+				/>
+			))
+		}
+	</div>
 </Card>
