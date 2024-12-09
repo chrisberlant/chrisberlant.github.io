@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ThumbnailsCarousel from './ThumbnailsCarousel';
 import FullScreenCarousel from './FullScreenCarousel';
+import useIsSmallScreen from '../hooks/useIsSmallScreen';
 
 interface CarouselComponentProps {
 	images: string[];
@@ -18,17 +19,20 @@ export default function CarouselComponent({
 		view: false,
 		initialIndex: null,
 	});
+	const isSmallScreen = useIsSmallScreen(1024);
 
-	return (
+	return isSmallScreen ? (
+		<ThumbnailsCarousel images={images} title={title} />
+	) : (
 		<>
 			<ThumbnailsCarousel
 				images={images}
 				title={title}
 				setFullScreen={setFullScreen}
 			/>
-			{fullScreen.view ? (
+			{fullScreen.view && (
 				<>
-					<div className='fixed inset-0 z-20 pointer-events-none backdrop-blur-md'></div>
+					<div className='fixed inset-0 z-10 backdrop-blur-md'></div>
 					<FullScreenCarousel
 						images={images}
 						title={title}
@@ -36,7 +40,7 @@ export default function CarouselComponent({
 						setFullScreen={setFullScreen}
 					/>
 				</>
-			) : null}
+			)}
 		</>
 	);
 }

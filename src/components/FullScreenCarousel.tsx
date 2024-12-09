@@ -32,27 +32,35 @@ export default function FullScreenCarousel({
 				loop: true,
 				startIndex: initialIndex ?? 0,
 			}}
-			className='absolute z-20 w-full px-10 py-4 border-2 sm:px-20 border-border blur-none'
+			className='absolute z-30 inset-4'
 		>
 			<Button
 				size='icon'
-				variant='ghost'
+				variant='outline'
 				onClick={() =>
 					setFullScreen({ view: false, initialIndex: null })
 				}
-				className='absolute z-20 right-2 top-2'
+				className='absolute z-30 right-2 top-2'
+				title='Close the carousel'
 			>
-				<SquareXIcon />
+				<SquareXIcon color='#dc2626' />
 			</Button>
 
 			<CarouselContent>
 				{images.map((slide, index) => (
-					<CarouselItem key={slide} className='flex justify-center'>
-						<a href={slide} target='_blank'>
+					<CarouselItem
+						key={slide}
+						className='flex items-start justify-center'
+					>
+						<a
+							href={slide}
+							target='_blank'
+							rel='noopener noreferrer'
+						>
 							<img
 								src={slide}
-								title='Click to open in a separate tab'
-								className='max-h-full rounded-xl'
+								title='Click to open in a new tab'
+								className='rounded-xl'
 								alt={
 									'Screenshot ' +
 									`${title}` +
@@ -64,8 +72,8 @@ export default function FullScreenCarousel({
 					</CarouselItem>
 				))}
 			</CarouselContent>
-			<CarouselPrevious className='left-9' />
-			<CarouselNext className='right-4' />
+			<CarouselPrevious className='size-12 left-9' />
+			<CarouselNext className='right-4 size-12' />
 		</Carousel>
 	);
 }

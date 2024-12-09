@@ -4,27 +4,11 @@ import InsomniaLogo from '@/assets/insomnia-logo.svg';
 import DockerLogo from '@/assets/docker-logo.svg';
 import WindowsLogo from '@/assets/windows-logo.svg';
 import LinuxLogo from '@/assets/linux-logo.svg';
-import { useState, useEffect, useRef } from 'react';
 import LaptopAnimate from '@/assets/laptop-animate.svg';
+import useIsSmallScreen from '../hooks/useIsSmallScreen';
 
 export default function OrbitingCirclesTools() {
-	const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
-	const prevWidth = useRef(window.innerWidth);
-
-	useEffect(() => {
-		const handleResize = () => {
-			const currWidth = window.innerWidth;
-			if (currWidth < 768 && prevWidth.current >= 768)
-				setIsSmallScreen(true);
-			else if (currWidth >= 768 && prevWidth.current < 768)
-				setIsSmallScreen(false);
-
-			prevWidth.current = currWidth;
-		};
-		window.addEventListener('resize', handleResize);
-		return () => window.removeEventListener('resize', handleResize);
-	}, []);
-
+	const isSmallScreen = useIsSmallScreen(768);
 	const innerCircleRadius = isSmallScreen ? 70 : 85;
 	const outerCircleRadius = isSmallScreen ? 125 : 145;
 

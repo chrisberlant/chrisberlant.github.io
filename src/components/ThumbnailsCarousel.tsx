@@ -10,7 +10,7 @@ import {
 interface ThumbnailsCarouselProps {
 	images: string[];
 	title: string;
-	setFullScreen: React.Dispatch<
+	setFullScreen?: React.Dispatch<
 		React.SetStateAction<{
 			view: boolean;
 			initialIndex: number | null;
@@ -36,23 +36,33 @@ export default function ThumbnailsCarousel({
 						key={slide}
 						className='flex justify-center basis-full sm:basis-1/2 md:basis-1/3'
 					>
-						<img
-							src={slide}
-							className='h-28 rounded-md min-[840px]:h-32 lg:h-36 cursor-pointer'
-							title='Click to zoom in'
-							onClick={() =>
-								setFullScreen({
-									view: true,
-									initialIndex: index,
-								})
-							}
-							alt={
-								'Screenshot ' +
-								`${title}` +
-								' ' +
-								`${index + 1}`
-							}
-						/>
+						{setFullScreen ? (
+							<img
+								src={slide}
+								className='h-28 rounded-md min-[840px]:h-32 lg:h-36 cursor-pointer'
+								title='Click to zoom in'
+								onClick={() =>
+									setFullScreen({
+										view: true,
+										initialIndex: index,
+									})
+								}
+								alt={`Screenshot ${title} ${index + 1}`}
+							/>
+						) : (
+							<a
+								href={slide}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								<img
+									src={slide}
+									className='h-28 rounded-md min-[840px]:h-32 lg:h-36 cursor-pointer'
+									title='Click to open in a new tab'
+									alt={`Screenshot ${title} ${index + 1}`}
+								/>
+							</a>
+						)}
 					</CarouselItem>
 				))}
 			</CarouselContent>
