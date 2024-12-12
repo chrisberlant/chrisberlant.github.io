@@ -12,7 +12,7 @@ interface ThumbnailsCarouselProps {
 	title: string;
 	setFullScreen?: React.Dispatch<
 		React.SetStateAction<{
-			view: boolean;
+			active: boolean;
 			initialIndex: number | null;
 		}>
 	>;
@@ -43,7 +43,7 @@ export default function ThumbnailsCarousel({
 								title='Click to zoom in'
 								onClick={() =>
 									setFullScreen({
-										view: true,
+										active: true,
 										initialIndex: index,
 									})
 								}

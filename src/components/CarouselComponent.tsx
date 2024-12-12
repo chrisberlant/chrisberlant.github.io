@@ -13,10 +13,10 @@ export default function CarouselComponent({
 	title,
 }: CarouselComponentProps) {
 	const [fullScreen, setFullScreen] = useState<{
-		view: boolean;
+		active: boolean;
 		initialIndex: number | null;
 	}>({
-		view: false,
+		active: false,
 		initialIndex: null,
 	});
 	const isSmallScreen = useIsSmallScreen(1024);
@@ -30,7 +30,7 @@ export default function CarouselComponent({
 				title={title}
 				setFullScreen={setFullScreen}
 			/>
-			{fullScreen.view && (
+			{fullScreen.active && (
 				<>
 					<div className='fixed inset-0 z-10 backdrop-blur-md'></div>
 					<FullScreenCarousel
