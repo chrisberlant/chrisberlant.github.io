@@ -17,6 +17,7 @@ export default function ThemeToggler() {
 			variant='outline'
 			size='icon'
 			onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+			aria-label='Change theme'
 			className='absolute right-5 top-5 bg-card/80'
 		>
 			{theme === 'dark' ? (
