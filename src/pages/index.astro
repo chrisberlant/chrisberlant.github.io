@@ -1,29 +1,29 @@
 ---
-import Description from "../components/Description";
-import GitHubActivity from "../components/GitHubActivity";
-import PageTitle from "../components/PageTitle";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import MyStack from "../components/MyStack.astro";
-import AboutMe from "../components/AboutMe.astro";
+import Description from '../components/Description';
+import GitHubActivity from '../components/GitHubActivity';
+import PageTitle from '../components/PageTitle';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MyStack from '../components/MyStack.astro';
+import AboutMe from '../components/AboutMe.astro';
 ---
 
 <BaseLayout>
-    <section class="flex flex-col items-center gap-8">
-        <PageTitle>Chris Berlant's Webpage</PageTitle>
+	<section class='flex flex-col items-center gap-8'>
+		<PageTitle>Chris Berlant's Webpage</PageTitle>
 
-        <div
-            class="flex h-36 flex-col text-center font-robotoMono text-2xl font-bold min-[458px]:h-28 sm:h-32 sm:text-3xl min-[1128px]:h-24"
-        >
-            <div class="flex justify-center">
-                <span class="mb-4">Hi I'm Chris!</span>
-            </div>
-            <Description client:only="react" />
-        </div>
+		<div
+			class='flex h-36 flex-col text-center font-robotoMono text-2xl font-bold min-[458px]:h-28 sm:h-32 sm:text-3xl min-[1128px]:h-24'
+		>
+			<div class='flex justify-center'>
+				<span class='mb-4'>Hi I'm Chris!</span>
+			</div>
+			<Description client:only='react' />
+		</div>
 
-        <AboutMe />
+		<AboutMe />
 
-        <MyStack />
+		<MyStack />
 
-        <GitHubActivity client:load />
-    </section>
+		<GitHubActivity client:load />
+	</section>
 </BaseLayout>

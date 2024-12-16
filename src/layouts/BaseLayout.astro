@@ -45,9 +45,9 @@ import '../styles/globals.css';
 	</head>
 	<body>
 		<BackgroundEffect transition:persist />
-		<Header />
-		<main class='flex-grow'><slot /></main>
+		<Header transition:persist />
+		<main><slot /></main>
 		<MobileMenu client:media='(max-width: 639px)' transition:persist />
-		<Footer />
+		<Footer transition:persist />
 	</body>
 </html>

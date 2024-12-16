@@ -75,8 +75,8 @@ export default function GitHubActivity() {
 	}, []);
 
 	return (
-		<Card className='relative flex flex-col pb-5 sm:px-4 pt-7 max-w-7xl'>
-			<h2 className='px-4 mb-8 text-3xl font-bold text-center font-montserrat'>
+		<Card className='relative flex flex-col max-w-4xl pb-5 sm:px-8 pt-7'>
+			<h2 className='mb-8 text-3xl font-bold text-center font-montserrat'>
 				Recent public GitHub activity
 			</h2>
 
@@ -103,7 +103,7 @@ export default function GitHubActivity() {
 			)}
 
 			{commits.data && (
-				<ol className='flex flex-col gap-2 break-all'>
+				<ol className='flex flex-col gap-2'>
 					{commits.data.map((commit) => (
 						<li key={commit.date}>
 							<a

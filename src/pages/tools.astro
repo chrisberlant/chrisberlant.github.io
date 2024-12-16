@@ -1,428 +1,428 @@
 ---
-import OperatingSystemAnimate from "@/assets/operating-system-animate.svg";
-import BuildingAnimate from "@/assets/building-animate.svg";
-import BookmarksAnimate from "@/assets/bookmarks-animate.svg";
-import NotionLogo from "@/assets/notion-logo.svg";
-import VercelLogoWhite from "@/assets/vercel-logo-white.svg";
-import NetlifyLogo from "@/assets/netlify-logo.svg";
-import ExcalidrawLogo from "@/assets/excalidraw-logo.svg";
-import WhimsicalLogo from "@/assets/whimsical-logo.svg";
-import YoutubeLogo from "@/assets/youtube-logo.svg";
-import Card from "../components/Card";
-import PageTitle from "../components/PageTitle";
-import OrbitingCirclesTools from "../components/OrbitingCirclesTools";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import GithubIcon from "../components/GithubBackground";
-import { Image } from "astro:assets";
-import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkeleton";
+import OperatingSystemAnimate from '@/assets/operating-system-animate.svg';
+import BuildingAnimate from '@/assets/building-animate.svg';
+import BookmarksAnimate from '@/assets/bookmarks-animate.svg';
+import NotionLogo from '@/assets/notion-logo.svg';
+import VercelLogoWhite from '@/assets/vercel-logo-white.svg';
+import NetlifyLogo from '@/assets/netlify-logo.svg';
+import ExcalidrawLogo from '@/assets/excalidraw-logo.svg';
+import WhimsicalLogo from '@/assets/whimsical-logo.svg';
+import YoutubeLogo from '@/assets/youtube-logo.svg';
+import Card from '../components/Card';
+import PageTitle from '../components/PageTitle';
+import OrbitingCirclesTools from '../components/OrbitingCirclesTools';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GithubIcon from '../components/GithubBackground';
+import { Image } from 'astro:assets';
+import OrbitingCirclesToolsSkeleton from '../components/OrbitingCirclesToolsSkeleton';
 ---
 
 <BaseLayout>
-    <section class="flex flex-col items-center">
-        <PageTitle>My tools</PageTitle>
-        <div class="flex flex-col w-full gap-8 max-w-7xl">
-            <Card className="pb-4 gap-4 lg:flex-row lg:pb-0">
-                <OrbitingCirclesTools client:only="react">
-                    <OrbitingCirclesToolsSkeleton slot="fallback" />
-                </OrbitingCirclesTools>
-                <div class="flex-1 lg:py-7">
-                    <h2
-                        class="mb-8 text-3xl font-bold text-center font-montserrat sm:mb-12"
-                    >
-                        Dev environment
-                    </h2>
-                    <ul
-                        class="flex flex-col flex-wrap items-center gap-2 text-center lg:items-start lg:text-left"
-                    >
-                        <li>
-                            <span class="font-bold"> Visual Studio Code</span> is
-                            my IDE
-                        </li>
-                        <li>
-                            <span class="font-bold">Windows</span> is my main operating
-                            system, as I've been using and debugging it for years
-                        </li>
-                        <li>
-                            <span class="font-bold">Insomnia</span> is my API testing
-                            tool, so I can try and debug my server-side code without
-                            the front-end constraints
-                        </li>
-                        <li>
-                            Sometimes I also use
-                            <span class="font-bold">Linux</span> (Arch & Debian based
-                            distributions) and
-                            <span class="font-bold">WSL</span>
-                        </li>
-                        <li>
-                            <span class="font-bold">Docker</span> allows me to run
-                            my apps in a containerized environment, therefore not
-                            depending on my own system specs
-                        </li>
-                    </ul>
-                </div>
-            </Card>
+	<section class='flex flex-col items-center'>
+		<PageTitle>My tools</PageTitle>
+		<div class='flex flex-col gap-8 max-w-7xl'>
+			<Card className='pb-4 gap-4 lg:flex-row lg:pb-0'>
+				<OrbitingCirclesTools client:only='react'>
+					<OrbitingCirclesToolsSkeleton slot='fallback' />
+				</OrbitingCirclesTools>
+				<div class='flex-1 lg:py-7'>
+					<h2
+						class='mb-8 text-3xl font-bold text-center font-montserrat sm:mb-12'
+					>
+						Dev environment
+					</h2>
+					<ul
+						class='flex flex-col flex-wrap items-center gap-2 text-center lg:items-start lg:text-left'
+					>
+						<li>
+							<span class='font-bold'> Visual Studio Code</span> is
+							my IDE
+						</li>
+						<li>
+							<span class='font-bold'>Windows</span> is my main operating
+							system, as I've been using and debugging it for years
+						</li>
+						<li>
+							<span class='font-bold'>Insomnia</span> is my API testing
+							tool, so I can try and debug my server-side code without
+							the front-end constraints
+						</li>
+						<li>
+							Sometimes I also use
+							<span class='font-bold'>Linux</span> (Arch & Debian based
+							distributions) and
+							<span class='font-bold'>WSL</span>
+						</li>
+						<li>
+							<span class='font-bold'>Docker</span> allows me to run
+							my apps in a containerized environment, therefore not
+							depending on my own system specs
+						</li>
+					</ul>
+				</div>
+			</Card>
 
-            <Card className="pb-4 md:gap-4 lg:flex-row-reverse">
-                <Image
-                    src={OperatingSystemAnimate}
-                    alt=""
-                    class="max-w-60 md:max-w-xs lg:pr-4 xl:max-w-md"
-                />
-                <div class="mt-8 text-center lg:mt-10 xl:mt-0">
-                    <h2
-                        class="mb-8 text-3xl font-bold font-montserrat sm:mb-10"
-                    >
-                        Online tools
-                    </h2>
-                    <ul
-                        class="flex flex-col flex-wrap items-center gap-2.5 lg:items-start lg:pl-5 lg:text-left"
-                    >
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://www.notion.so"
-                                target="_blank"
-                            >
-                                <Image
-                                    src={NotionLogo}
-                                    class="inline-block mr-1 size-6"
-                                    alt="Notion logo"
-                                />
-                                Notion
-                            </a>
-                            allows me to keep tracks of my discoveries and notes,
-                            and create my own documentations
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://excalidraw.com/"
-                                target="_blank"
-                            >
-                                <Image
-                                    src={ExcalidrawLogo}
-                                    class="inline-block mr-1 size-5"
-                                    alt="Excalidraw logo"
-                                />
-                                Excalidraw
-                            </a>
-                            is the place where I can draw diagrams to organize my
-                            ideas
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://whimsical.com/"
-                                target="_blank"
-                            >
-                                <Image
-                                    src={WhimsicalLogo}
-                                    class="inline-block mr-1 size-6"
-                                    alt="Whimsical logo"
-                                />
-                                Whimsical
-                            </a>
-                            is the perfect tool to build my responsive wireframes
-                        </li>
-                        <li>
-                            I use
-                            <a
-                                class="font-bold"
-                                href="https://www.github.com/"
-                                target="_blank"
-                            >
-                                <GithubIcon
-                                    className="mx-1 inline-block size-5"
-                                />
-                                GitHub
-                            </a>
-                            to host the source code of my projects
-                        </li>
-                        <li>
-                            I use
-                            <a
-                                class="font-bold"
-                                href="https://vercel.com"
-                                target="_blank"
-                            >
-                                <Image
-                                    src={VercelLogoWhite}
-                                    class="inline-block ml-2 mr-1 size-5"
-                                    alt="Vercel logo"
-                                />
-                                Vercel
-                            </a>
-                            and
-                            <a
-                                class="font-bold"
-                                href="https://www.netlify.com"
-                                target="_blank"
-                            >
-                                <Image
-                                    src={NetlifyLogo}
-                                    class="inline-block mx-2 size-5"
-                                    alt="Netlify logo"
-                                />
-                                Netlify
-                            </a>
-                            to host my projects using Continuous Integration and
-                            Continuous Deployments (CI/CD)
-                        </li>
-                    </ul>
-                </div>
-            </Card>
+			<Card className='pb-4 md:gap-4 lg:flex-row-reverse'>
+				<Image
+					src={OperatingSystemAnimate}
+					alt=''
+					class='max-w-60 md:max-w-xs lg:pr-4 xl:max-w-md'
+				/>
+				<div class='mt-8 text-center lg:mt-10 xl:mt-0'>
+					<h2
+						class='mb-8 text-3xl font-bold font-montserrat sm:mb-10'
+					>
+						Online tools
+					</h2>
+					<ul
+						class='flex flex-col flex-wrap items-center gap-2.5 lg:items-start lg:pl-5 lg:text-left'
+					>
+						<li>
+							<a
+								class='font-bold'
+								href='https://www.notion.so'
+								target='_blank'
+							>
+								<Image
+									src={NotionLogo}
+									class='inline-block mr-1 size-6'
+									alt='Notion logo'
+								/>
+								Notion
+							</a>
+							allows me to keep tracks of my discoveries and notes,
+							and create my own documentations
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://excalidraw.com/'
+								target='_blank'
+							>
+								<Image
+									src={ExcalidrawLogo}
+									class='inline-block mr-1 size-5'
+									alt='Excalidraw logo'
+								/>
+								Excalidraw
+							</a>
+							is the place where I can draw diagrams to organize my
+							ideas
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://whimsical.com/'
+								target='_blank'
+							>
+								<Image
+									src={WhimsicalLogo}
+									class='inline-block mr-1 size-6'
+									alt='Whimsical logo'
+								/>
+								Whimsical
+							</a>
+							is the perfect tool to build my responsive wireframes
+						</li>
+						<li>
+							I use
+							<a
+								class='font-bold'
+								href='https://www.github.com/'
+								target='_blank'
+							>
+								<GithubIcon
+									className='mx-1 inline-block size-5'
+								/>
+								GitHub
+							</a>
+							to host the source code of my projects
+						</li>
+						<li>
+							I use
+							<a
+								class='font-bold'
+								href='https://vercel.com'
+								target='_blank'
+							>
+								<Image
+									src={VercelLogoWhite}
+									class='inline-block ml-2 mr-1 size-5'
+									alt='Vercel logo'
+								/>
+								Vercel
+							</a>
+							and
+							<a
+								class='font-bold'
+								href='https://www.netlify.com'
+								target='_blank'
+							>
+								<Image
+									src={NetlifyLogo}
+									class='inline-block mx-2 size-5'
+									alt='Netlify logo'
+								/>
+								Netlify
+							</a>
+							to host my projects using Continuous Integration and
+							Continuous Deployments (CI/CD)
+						</li>
+					</ul>
+				</div>
+			</Card>
 
-            <Card className="pb-4 md:gap-4 lg:flex-row">
-                <Image
-                    src={BuildingAnimate}
-                    alt=""
-                    class="flex-1 pt-1 max-w-60 md:max-w-xs lg:pl-4 lg:pt-0 xl:max-w-md"
-                />
-                <div class="flex flex-col items-center flex-1 mt-8">
-                    <h2
-                        class="mb-8 text-3xl font-bold text-center font-montserrat sm:mb-10"
-                    >
-                        Libraries
-                    </h2>
-                    <div class="text-center">
-                        Using
-                        <a
-                            class="font-bold"
-                            href="https://npmjs.com"
-                            target="_blank"
-                        >
-                            Node Package Manager</a
-                        >, I can install my favorite libraries :
-                    </div>
-                    <ul
-                        class="flex flex-col flex-wrap gap-2 mt-2 list-disc max-h-60 sm:max-h-48"
-                    >
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://react.dev"
-                                target="_blank"
-                            >
-                                React
-                            </a> 💙
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://astro.build/"
-                                target="_blank"
-                            >
-                                Astro
-                            </a> 💙
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://vitejs.dev"
-                                target="_blank"
-                            >
-                                Vite
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://reactrouter.com"
-                                target="_blank"
-                            >
-                                React Router
-                            </a>
-                        </li>
-                        <li class="mr-6">
-                            <a
-                                class="font-bold"
-                                href="https://tanstack.com/query/latest"
-                                target="_blank"
-                            >
-                                TanStack Query
-                            </a> 💙
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://redux-toolkit.js.org"
-                                target="_blank"
-                            >
-                                Redux Toolkit
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://tailwindcss.com"
-                                target="_blank"
-                            >
-                                Tailwind
-                            </a> 💙
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://mantine.dev"
-                                target="_blank"
-                            >
-                                Mantine
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://expressjs.com"
-                                target="_blank"
-                            >
-                                Express
-                            </a> 💙
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://zod.dev"
-                                target="_blank"
-                            >
-                                Zod
-                            </a> 💙
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://tanstack.com/table/latest"
-                                target="_blank"
-                            >
-                                TanStack Table
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://sonner.emilkowal.ski"
-                                target="_blank"
-                            >
-                                Sonner
-                            </a> 💙
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://vitest.dev"
-                                target="_blank"
-                            >
-                                Vitest
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </Card>
+			<Card className='pb-4 md:gap-4 lg:flex-row'>
+				<Image
+					src={BuildingAnimate}
+					alt=''
+					class='flex-1 pt-1 max-w-60 md:max-w-xs lg:pl-4 lg:pt-0 xl:max-w-md'
+				/>
+				<div class='flex flex-col items-center flex-1 mt-8'>
+					<h2
+						class='mb-8 text-3xl font-bold text-center font-montserrat sm:mb-10'
+					>
+						Libraries
+					</h2>
+					<div class='text-center'>
+						Using
+						<a
+							class='font-bold'
+							href='https://npmjs.com'
+							target='_blank'
+						>
+							Node Package Manager</a
+						>, I can install my favorite libraries :
+					</div>
+					<ul
+						class='flex flex-col flex-wrap gap-2 mt-2 list-disc max-h-60 sm:max-h-48'
+					>
+						<li>
+							<a
+								class='font-bold'
+								href='https://react.dev'
+								target='_blank'
+							>
+								React
+							</a> 💙
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://astro.build/'
+								target='_blank'
+							>
+								Astro
+							</a> 💙
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://vitejs.dev'
+								target='_blank'
+							>
+								Vite
+							</a>
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://reactrouter.com'
+								target='_blank'
+							>
+								React Router
+							</a>
+						</li>
+						<li class='mr-6'>
+							<a
+								class='font-bold'
+								href='https://tanstack.com/query/latest'
+								target='_blank'
+							>
+								TanStack Query
+							</a> 💙
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://redux-toolkit.js.org'
+								target='_blank'
+							>
+								Redux Toolkit
+							</a>
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://tailwindcss.com'
+								target='_blank'
+							>
+								Tailwind
+							</a> 💙
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://mantine.dev'
+								target='_blank'
+							>
+								Mantine
+							</a>
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://expressjs.com'
+								target='_blank'
+							>
+								Express
+							</a> 💙
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://zod.dev'
+								target='_blank'
+							>
+								Zod
+							</a> 💙
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://tanstack.com/table/latest'
+								target='_blank'
+							>
+								TanStack Table
+							</a>
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://sonner.emilkowal.ski'
+								target='_blank'
+							>
+								Sonner
+							</a> 💙
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://vitest.dev'
+								target='_blank'
+							>
+								Vitest
+							</a>
+						</li>
+					</ul>
+				</div>
+			</Card>
 
-            <Card className="justify-evenly pb-4 md:gap-4 lg:flex-row-reverse">
-                <Image
-                    src={BookmarksAnimate}
-                    alt=""
-                    class="pt-2 max-w-60 md:max-w-xs lg:pr-4 lg:pt-0 xl:max-w-md"
-                />
-                <div class="flex flex-col items-center mt-8">
-                    <h2
-                        class="mb-8 text-3xl font-bold text-center font-montserrat sm:mb-10"
-                    >
-                        Bookmarks
-                    </h2>
-                    <div class="text-center">
-                        Various websites I use to get things like prebuilt
-                        components, icons and keep myself updated on the
-                        development world.
-                    </div>
-                    <ul
-                        class="flex flex-col flex-wrap gap-2 mt-2 list-disc max-h-48"
-                    >
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://ui.shadcn.com"
-                                target="_blank"
-                            >
-                                Shadcn/ui
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://iconduck.com"
-                                target="_blank"
-                            >
-                                IconDuck
-                            </a>
-                        </li>
-                        <li class="mr-12">
-                            <a
-                                class="font-bold"
-                                href="https://ui.aceternity.com"
-                                target="_blank"
-                            >
-                                Aceternity UI
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://magicui.design"
-                                target="_blank"
-                            >
-                                Magic UI
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://ui.jln.dev"
-                                target="_blank"
-                            >
-                                JLN UI
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://daily.dev"
-                                target="_blank"
-                            >
-                                Daily.dev
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://www.youtube.com/@Fireship"
-                                target="_blank"
-                            >
-                                <Image
-                                    src={YoutubeLogo}
-                                    alt=""
-                                    class="inline-block mr-1 size-5"
-                                />
-                                Fireship
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="font-bold"
-                                href="https://www.youtube.com/@melvynxdev"
-                                target="_blank"
-                            >
-                                <Image
-                                    src={YoutubeLogo}
-                                    alt=""
-                                    class="inline-block mr-1 size-5"
-                                />
-                                Melvynx
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </Card>
-        </div>
-    </section>
+			<Card className='justify-evenly pb-4 md:gap-4 lg:flex-row-reverse'>
+				<Image
+					src={BookmarksAnimate}
+					alt=''
+					class='pt-2 max-w-60 md:max-w-xs lg:pr-4 lg:pt-0 xl:max-w-md'
+				/>
+				<div class='flex flex-col items-center mt-8'>
+					<h2
+						class='mb-8 text-3xl font-bold text-center font-montserrat sm:mb-10'
+					>
+						Bookmarks
+					</h2>
+					<div class='text-center'>
+						Various websites I use to get things like prebuilt
+						components, icons and keep myself updated on the
+						development world.
+					</div>
+					<ul
+						class='flex flex-col flex-wrap gap-2 mt-2 list-disc max-h-48'
+					>
+						<li>
+							<a
+								class='font-bold'
+								href='https://ui.shadcn.com'
+								target='_blank'
+							>
+								Shadcn/ui
+							</a>
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://iconduck.com'
+								target='_blank'
+							>
+								IconDuck
+							</a>
+						</li>
+						<li class='mr-12'>
+							<a
+								class='font-bold'
+								href='https://ui.aceternity.com'
+								target='_blank'
+							>
+								Aceternity UI
+							</a>
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://magicui.design'
+								target='_blank'
+							>
+								Magic UI
+							</a>
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://ui.jln.dev'
+								target='_blank'
+							>
+								JLN UI
+							</a>
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://daily.dev'
+								target='_blank'
+							>
+								Daily.dev
+							</a>
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://www.youtube.com/@Fireship'
+								target='_blank'
+							>
+								<Image
+									src={YoutubeLogo}
+									alt=''
+									class='inline-block mr-1 size-5'
+								/>
+								Fireship
+							</a>
+						</li>
+						<li>
+							<a
+								class='font-bold'
+								href='https://www.youtube.com/@melvynxdev'
+								target='_blank'
+							>
+								<Image
+									src={YoutubeLogo}
+									alt=''
+									class='inline-block mr-1 size-5'
+								/>
+								Melvynx
+							</a>
+						</li>
+					</ul>
+				</div>
+			</Card>
+		</div>
+	</section>
 </BaseLayout>

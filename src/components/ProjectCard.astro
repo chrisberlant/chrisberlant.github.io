@@ -4,8 +4,6 @@ import Card from '@/components/Card';
 import ExternalLink from './ExternalLink.astro';
 import ProjectImagesSkeleton from './ProjectImagesSkeleton';
 import type { CollectionEntry } from 'astro:content';
-import ThumbnailsCarousel from './ThumbnailsCarousel';
-import FullScreenImagesCarousel from './FullScreenCarousel';
 import CarouselComponent from './CarouselComponent';
 
 interface Props {
@@ -16,7 +14,7 @@ const { project } = Astro.props;
 const { title, description, images, links, tags } = project.data;
 ---
 
-<Card className='px-5 py-5 text-center md:px-4 min-w-full'>
+<Card className='px-5 py-5 text-center md:px-4'>
 	<h2 class='mb-2 text-2xl font-bold leading-none'>{title}</h2>
 
 	<h3 class='mb-4 font-bold text-center'>{description}</h3>
@@ -43,7 +41,7 @@ const { title, description, images, links, tags } = project.data;
 		null
 	}
 
-	<div class='flex h-full mt-4 md:px-10'>{project.body}</div>
+	<div class='mt-4 md:px-10'>{project.body}</div>
 	<div class='flex flex-row flex-wrap justify-center gap-6 mt-4'>
 		{
 			links?.map((link) => (
