@@ -1,54 +1,53 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import MobileMenu from "../components/MobileMenu";
-import { ViewTransitions } from "astro:transitions";
-import BackgroundEffect from "../components/BackgroundEffect.astro";
-import "../styles/globals.css";
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import MobileMenu from '../components/MobileMenu';
+import { ClientRouter } from 'astro:transitions';
+import BackgroundEffect from '../components/BackgroundEffect.astro';
+import '../styles/globals.css';
 ---
 
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="description" content="Astro description" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Chris Berlant's Webpage</title>
-        <script is:inline>
-            const setTheme = () => {
-                const theme = (() => {
-                    const storedTheme = localStorage.getItem("theme");
-                    if (storedTheme === "dark" || storedTheme === "light")
-                        return storedTheme;
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='description' content='Astro description' />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<meta name='generator' content={Astro.generator} />
+		<title>Chris Berlant's Webpage</title>
+		<script is:inline>
+			const setTheme = () => {
+				const theme = (() => {
+					const storedTheme = localStorage.getItem('theme');
+					if (storedTheme === 'dark' || storedTheme === 'light')
+						return storedTheme;
 
-                    if (
-                        window.matchMedia("(prefers-color-scheme: dark)")
-                            .matches
-                    )
-                        return "dark";
+					if (
+						window.matchMedia('(prefers-color-scheme: dark)')
+							.matches
+					)
+						return 'dark';
 
-                    return "light";
-                })();
+					return 'light';
+				})();
 
-                document.documentElement.className =
-                    theme === "dark" ? "dark" : "";
+				document.documentElement.className =
+					theme === 'dark' ? 'dark' : '';
+			};
 
-                localStorage.setItem("theme", theme);
-            };
-            setTheme();
+			setTheme();
 
-            // Executed on page change using ViewTransitions
-            document.addEventListener("astro:after-swap", setTheme);
-        </script>
-        <ViewTransitions />
-    </head>
-    <body>
-        <BackgroundEffect transition:persist />
-        <Header />
-        <main class="flex-grow"><slot /></main>
-        <MobileMenu client:media="(max-width: 639px)" transition:persist />
-        <Footer />
-    </body>
+			// Executed on page change using ViewTransitions
+			document.addEventListener('astro:after-swap', setTheme);
+		</script>
+		<ClientRouter />
+	</head>
+	<body>
+		<BackgroundEffect transition:persist />
+		<Header />
+		<main class='flex-grow'><slot /></main>
+		<MobileMenu client:media='(max-width: 639px)' transition:persist />
+		<Footer />
+	</body>
 </html>
