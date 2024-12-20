@@ -34,6 +34,7 @@ import '../styles/globals.css';
 
 				document.documentElement.className =
 					theme === 'dark' ? 'dark' : '';
+				localStorage.setItem('theme', theme);
 			};
 
 			setTheme();
