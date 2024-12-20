@@ -1,91 +1,73 @@
 ---
-import NodeJsLogo from "@/assets/nodejs-logo.svg";
-import PostgresLogo from "@/assets/postgresql-logo.svg";
-import SequelizeLogo from "@/assets/sequelize-logo.svg";
-import ReactLogo from "@/assets/react-logo.svg";
-import TanstackQueryLogo from "@/assets/tanstack-query-logo.svg";
-import TailwindLogo from "@/assets/tailwind-logo.svg";
-import TypeScriptLogo from "@/assets/typescript-logo.svg";
-import JavaScriptLogo from "@/assets/javascript-logo.svg";
-import AstroLogoWhite from "@/assets/astro-logo-white.svg";
-import AstroLogoBlack from "@/assets/astro-logo-black.svg";
-import PrismaLogoWhite from "@/assets/prisma-logo-white.svg";
-import PrismaLogoBlack from "@/assets/prisma-logo-black.svg";
-import Card from "../components/Card";
+import NodeJsLogo from '@/assets/nodejs-logo.svg';
+import PostgresLogo from '@/assets/postgresql-logo.svg';
+import SequelizeLogo from '@/assets/sequelize-logo.svg';
+import ReactLogo from '@/assets/react-logo.svg';
+import TanstackQueryLogo from '@/assets/tanstack-query-logo.svg';
+import TailwindLogo from '@/assets/tailwind-logo.svg';
+import TypeScriptLogo from '@/assets/typescript-logo.svg';
+import JavaScriptLogo from '@/assets/javascript-logo.svg';
+import AstroLogo from '@/assets/astro-logo.svg';
+import PrismaLogo from '@/assets/prisma-logo.svg';
+import Card from '../components/Card';
 import {
-    GlitchingSkillElement,
-    SkillElement,
-} from "../components/SkillElement";
-import Marquee from "../components/ui/Marquee";
+	GlitchingSkillElement,
+	// GlitchingSkillElement,
+	SkillElement,
+} from '../components/SkillElement';
+import Marquee from '../components/ui/Marquee';
 ---
 
-<Card className="bg-card py-7">
-    <h2 class="mb-8 text-3xl font-bold text-center font-montserrat">
-        My stack
-    </h2>
-    <div
-        class="relative flex max-w-md rounded-md max-h-52 font-robotoMono sm:max-w-lg sm:flex-col md:max-w-xl"
-    >
-        <Marquee className="flex-1">
-            <GlitchingSkillElement
-                className="animate-glitch"
-                title="TypeScript"
-                secondTitle="JavaScript"
-                logo={TypeScriptLogo.src}
-                secondLogo={JavaScriptLogo.src}
-                alt="JavaScript/TypeScript logos"
-                client:load
-            />
-            <SkillElement title="React" logo={ReactLogo.src} alt="React logo" />
-            <SkillElement
-                title="TanStack Query"
-                logo={TanstackQueryLogo.src}
-                alt="Tanstack query logo"
-            />
-            <SkillElement
-                title="Tailwind"
-                logo={TailwindLogo.src}
-                alt="Tailwind logo"
-            />
-        </Marquee>
-        <Marquee className="flex-1" reverse>
-            <SkillElement
-                title="Sequelize"
-                logo={SequelizeLogo.src}
-                alt="Sequelize logo"
-            />
-            <SkillElement
-                title="PostgreSQL"
-                logo={PostgresLogo.src}
-                alt="PostgreSQL logo"
-            />
-            <SkillElement
-                title="Node.js"
-                logo={NodeJsLogo.src}
-                alt="Node.js logo"
-            />
-            <SkillElement
-                title="Prisma"
-                logo={PrismaLogoBlack.src}
-                logoDark={PrismaLogoWhite.src}
-                alt="Prisma logo"
-                client:load
-            />
-            <SkillElement
-                title="Astro"
-                logo={AstroLogoBlack.src}
-                logoDark={AstroLogoWhite.src}
-                alt="Astro logo"
-                client:load
-            />
-        </Marquee>
-        <div
-            class="absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-card sm:inset-x-auto sm:inset-y-0 sm:left-0 sm:h-auto sm:w-1/4 sm:bg-gradient-to-r"
-        >
-        </div>
-        <div
-            class="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-card sm:inset-x-auto sm:inset-y-0 sm:right-0 sm:h-auto sm:w-1/4 sm:bg-gradient-to-l"
-        >
-        </div>
-    </div>
+<Card className='bg-card py-7'>
+	<h2 class='mb-8 text-3xl font-bold text-center font-montserrat'>
+		My stack
+	</h2>
+	<div
+		class='relative flex max-w-md rounded-md max-h-52 font-robotoMono sm:max-w-lg sm:flex-col md:max-w-xl'
+	>
+		<Marquee className='flex-1'>
+			<GlitchingSkillElement
+				className='animate-glitch'
+				title='TypeScript'
+				secondTitle='JavaScript'
+				logo={TypeScriptLogo.src}
+				secondLogo={JavaScriptLogo.src}
+				client:load
+			/>
+			<SkillElement title='React'>
+				<ReactLogo />
+			</SkillElement>
+			<SkillElement title='TanStack Query'>
+				<TanstackQueryLogo />
+			</SkillElement>
+			<SkillElement title='Tailwind'>
+				<TailwindLogo />
+			</SkillElement>
+		</Marquee>
+		<Marquee className='flex-1' reverse>
+			<SkillElement title='Sequelize'>
+				<SequelizeLogo />
+			</SkillElement>
+			<SkillElement title='PostgreSQL'>
+				<PostgresLogo class='mb-1 sm:mb-0 sm:mr-3 size-8' />
+			</SkillElement>
+			<SkillElement title='Node.js'>
+				<NodeJsLogo />
+			</SkillElement>
+			<SkillElement title='Prisma'>
+				<PrismaLogo class='mb-1 sm:mb-0 sm:mr-3 size-8' />
+			</SkillElement>
+			<SkillElement title='Astro'>
+				<AstroLogo />
+			</SkillElement>
+		</Marquee>
+		<div
+			class='absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-card sm:inset-x-auto sm:inset-y-0 sm:left-0 sm:h-auto sm:w-1/4 sm:bg-gradient-to-r'
+		>
+		</div>
+		<div
+			class='absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-card sm:inset-x-auto sm:inset-y-0 sm:right-0 sm:h-auto sm:w-1/4 sm:bg-gradient-to-l'
+		>
+		</div>
+	</div>
 </Card>

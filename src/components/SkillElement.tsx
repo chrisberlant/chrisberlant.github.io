@@ -3,37 +3,17 @@ import { useEffect, useState } from 'react';
 
 interface SkillElementProps {
 	title: string;
-	logo: string;
-	logoDark?: string;
-	alt: string;
 	className?: string;
+	children?: React.ReactNode;
 	onAnimation?: () => void;
 }
 
 export function SkillElement({
 	title,
-	logo,
-	logoDark,
-	alt,
 	className,
+	children,
 	onAnimation = undefined,
 }: SkillElementProps) {
-	const [isDarkTheme, setIsDarkTheme] = useState(false);
-
-	useEffect(() => {
-		const updateTheme = () => {
-			setIsDarkTheme(document.documentElement.classList.contains('dark'));
-		};
-
-		const observer = new MutationObserver(updateTheme);
-		observer.observe(document.documentElement, {
-			attributes: true,
-			attributeFilter: ['class'],
-		});
-
-		return () => observer.disconnect();
-	}, []);
-
 	return (
 		<div
 			onAnimationIteration={onAnimation}
@@ -42,11 +22,7 @@ export function SkillElement({
 				className
 			)}
 		>
-			<img
-				src={logoDark && isDarkTheme ? logoDark : logo}
-				className='mb-1 sm:mb-0 sm:mr-3 size-8'
-				alt={alt}
-			/>
+			{children}
 			<span>{title}</span>
 		</div>
 	);
@@ -54,6 +30,7 @@ export function SkillElement({
 
 interface GlitchingSkillElementProps extends SkillElementProps {
 	secondTitle: string;
+	logo: string;
 	secondLogo: string;
 }
 
@@ -62,7 +39,6 @@ export function GlitchingSkillElement({
 	secondTitle,
 	logo,
 	secondLogo,
-	alt,
 	className,
 }: GlitchingSkillElementProps) {
 	const [element, setElement] = useState(true);
@@ -70,10 +46,14 @@ export function GlitchingSkillElement({
 	return (
 		<SkillElement
 			title={element ? title : secondTitle}
-			logo={element ? logo : secondLogo}
-			alt={alt}
 			className={className}
 			onAnimation={() => setElement((prev) => !prev)}
-		/>
+		>
+			<img
+				src={element ? logo : secondLogo}
+				alt=''
+				className='mb-1 sm:mb-0 sm:mr-3 size-8'
+			/>
+		</SkillElement>
 	);
 }

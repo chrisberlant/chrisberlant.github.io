@@ -1,48 +1,48 @@
 ---
-import CV from "@/assets/cv/CV_ChrisBerlant_ReactDev.pdf";
-import MyPicture from "@/assets/my-picture.png";
-import GithubIcon from "@/assets/github-icon.svg";
-import LinkedinIcon from "@/assets/linkedin-icon.svg";
-import MailIcon from "@/assets/mail-icon.svg";
-import PdfIcon from "@/assets/pdf-icon.svg";
-import SocialLink from "./SocialLink";
-import { Image } from "astro:assets";
+import CV from '@/assets/cv/CV_ChrisBerlant_ReactDev.pdf';
+import MyPicture from '@/assets/my-picture.png';
+import GithubIcon from '@/assets/github-icon.svg';
+import LinkedinIcon from '@/assets/linkedin-icon.svg';
+import MailIcon from '@/assets/mail-icon.svg';
+import PdfIcon from '@/assets/pdf-icon.svg';
+import SocialLink from './SocialLink';
+import { Image } from 'astro:assets';
 ---
 
-<div class="flex items-center gap-2 ml-2 md:ml-8 lg:ml-12">
-    <Image
-        src={MyPicture}
-        alt="My picture"
-        class="rounded-full size-16 bg-gradient-to-tr from-front-end to-full-stack"
-    />
-    <div class="flex flex-col">
-        <div class="text-center font-robotoMono">Chris Berlant</div>
-        <div class="flex gap-2">
-            <SocialLink
-                title="My GitHub profile"
-                link="https://github.com/chrisberlant"
-            >
-                <GithubIcon class="fill-current size-5" />
-            </SocialLink>
-            <SocialLink
-                title="My LinkedIn profile"
-                link="https://www.linkedin.com/in/chris-berlant/"
-            >
-                <LinkedinIcon class="fill-current size-5" />
-            </SocialLink>
-            <SocialLink
-                title="Send me an email"
-                link="mailto:chris.berlant@gmail.com"
-            >
-                <MailIcon class="fill-current size-5" />
-            </SocialLink>
-            <SocialLink
-                title="Download my CV"
-                link={CV}
-                download="CV_ChrisBerlant_ReactDev.pdf"
-            >
-                <PdfIcon class="fill-current size-5" />
-            </SocialLink>
-        </div>
-    </div>
+<div class='flex items-center gap-2 ml-2 md:ml-8 lg:ml-12'>
+	<Image
+		src={MyPicture}
+		alt='My picture'
+		class='rounded-full size-16 bg-gradient-to-tr from-front-end to-full-stack'
+	/>
+	<div class='flex flex-col'>
+		<div class='text-center font-robotoMono'>Chris Berlant</div>
+		<div class='flex gap-2'>
+			<SocialLink
+				title='My GitHub profile'
+				link='https://github.com/chrisberlant'
+			>
+				<GithubIcon class='size-5' />
+			</SocialLink>
+			<SocialLink
+				title='My LinkedIn profile'
+				link='https://www.linkedin.com/in/chris-berlant/'
+			>
+				<LinkedinIcon class='size-5' />
+			</SocialLink>
+			<SocialLink
+				title='Send me an email'
+				link='mailto:chris.berlant@gmail.com'
+			>
+				<MailIcon class='size-5' />
+			</SocialLink>
+			<SocialLink
+				title='Download my CV'
+				link={CV}
+				download='CV_ChrisBerlant_ReactDev.pdf'
+			>
+				<PdfIcon class='size-5' />
+			</SocialLink>
+		</div>
+	</div>
 </div>

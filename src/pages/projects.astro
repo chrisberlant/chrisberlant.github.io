@@ -7,10 +7,10 @@ const projects = await getCollection('projects');
 ---
 
 <BaseLayout>
-	<section class='flex flex-col items-center'>
+	<sectio class='flex flex-col items-center'>
 		<PageTitle>My projects</PageTitle>
 		<div class='flex flex-col gap-8 max-w-7xl'>
 			{projects.map((project) => <ProjectCard project={project} />)}
 		</div>
-	</section>
+	</sectio>
 </BaseLayout>
