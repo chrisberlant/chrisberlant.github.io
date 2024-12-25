@@ -10,7 +10,6 @@ import AboutMe from '../components/AboutMe.astro';
 <BaseLayout>
 	<section class='flex flex-col items-center gap-8'>
 		<PageTitle>Chris Berlant's Webpage</PageTitle>
-
 		<div
 			class='flex h-36 flex-col text-center font-robotoMono text-2xl font-bold min-[458px]:h-28 sm:h-32 sm:text-3xl min-[1128px]:h-24'
 		>
@@ -19,11 +18,8 @@ import AboutMe from '../components/AboutMe.astro';
 			</div>
 			<Description client:only='react' />
 		</div>
-
 		<AboutMe />
-
 		<MyStack />
-
 		<GitHubActivity client:load />
 	</section>
 </BaseLayout>
